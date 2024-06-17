@@ -1,0 +1,68 @@
+E:\Do An\MTA Mobile Forensic\MTA Mobile Forensic\bin\Debug\MTA Mobile Forensic.exe.config
+E:\Do An\MTA Mobile Forensic\MTA Mobile Forensic\bin\Debug\MTA Mobile Forensic.exe
+E:\Do An\MTA Mobile Forensic\MTA Mobile Forensic\bin\Debug\MTA Mobile Forensic.pdb
+E:\Do An\MTA Mobile Forensic\MTA Mobile Forensic\bin\Debug\DevComponents.DotNetBar2.dll
+E:\Do An\MTA Mobile Forensic\MTA Mobile Forensic\bin\Debug\DevComponents.TreeGX.dll
+E:\Do An\MTA Mobile Forensic\MTA Mobile Forensic\bin\Debug\DevExpress.Data.Desktop.v21.2.dll
+E:\Do An\MTA Mobile Forensic\MTA Mobile Forensic\bin\Debug\DevExpress.Data.v21.2.dll
+E:\Do An\MTA Mobile Forensic\MTA Mobile Forensic\bin\Debug\DevExpress.Printing.v21.2.Core.dll
+E:\Do An\MTA Mobile Forensic\MTA Mobile Forensic\bin\Debug\DevExpress.Utils.v21.2.dll
+E:\Do An\MTA Mobile Forensic\MTA Mobile Forensic\bin\Debug\DevExpress.Pdf.v21.2.Core.dll
+E:\Do An\MTA Mobile Forensic\MTA Mobile Forensic\bin\Debug\DevExpress.Pdf.v21.2.Drawing.dll
+E:\Do An\MTA Mobile Forensic\MTA Mobile Forensic\bin\Debug\DevComponents.DotNetBar2.xml
+E:\Do An\MTA Mobile Forensic\MTA Mobile Forensic\bin\Debug\DevExpress.Data.Desktop.v21.2.xml
+E:\Do An\MTA Mobile Forensic\MTA Mobile Forensic\bin\Debug\DevExpress.Data.v21.2.xml
+E:\Do An\MTA Mobile Forensic\MTA Mobile Forensic\bin\Debug\DevExpress.Printing.v21.2.Core.xml
+E:\Do An\MTA Mobile Forensic\MTA Mobile Forensic\bin\Debug\DevExpress.Utils.v21.2.xml
+E:\Do An\MTA Mobile Forensic\MTA Mobile Forensic\bin\Debug\DevExpress.Pdf.v21.2.Core.xml
+E:\Do An\MTA Mobile Forensic\MTA Mobile Forensic\bin\Debug\DevExpress.Pdf.v21.2.Drawing.xml
+E:\Do An\MTA Mobile Forensic\MTA Mobile Forensic\bin\Debug\de\DevExpress.Data.v21.2.resources.dll
+E:\Do An\MTA Mobile Forensic\MTA Mobile Forensic\bin\Debug\es\DevExpress.Data.v21.2.resources.dll
+E:\Do An\MTA Mobile Forensic\MTA Mobile Forensic\bin\Debug\ja\DevExpress.Data.v21.2.resources.dll
+E:\Do An\MTA Mobile Forensic\MTA Mobile Forensic\bin\Debug\ru\DevExpress.Data.v21.2.resources.dll
+E:\Do An\MTA Mobile Forensic\MTA Mobile Forensic\bin\Debug\de\DevExpress.Printing.v21.2.Core.resources.dll
+E:\Do An\MTA Mobile Forensic\MTA Mobile Forensic\bin\Debug\es\DevExpress.Printing.v21.2.Core.resources.dll
+E:\Do An\MTA Mobile Forensic\MTA Mobile Forensic\bin\Debug\ja\DevExpress.Printing.v21.2.Core.resources.dll
+E:\Do An\MTA Mobile Forensic\MTA Mobile Forensic\bin\Debug\ru\DevExpress.Printing.v21.2.Core.resources.dll
+E:\Do An\MTA Mobile Forensic\MTA Mobile Forensic\bin\Debug\de\DevExpress.Utils.v21.2.resources.dll
+E:\Do An\MTA Mobile Forensic\MTA Mobile Forensic\bin\Debug\es\DevExpress.Utils.v21.2.resources.dll
+E:\Do An\MTA Mobile Forensic\MTA Mobile Forensic\bin\Debug\ja\DevExpress.Utils.v21.2.resources.dll
+E:\Do An\MTA Mobile Forensic\MTA Mobile Forensic\bin\Debug\ru\DevExpress.Utils.v21.2.resources.dll
+E:\Do An\MTA Mobile Forensic\MTA Mobile Forensic\bin\Debug\de\DevExpress.Pdf.v21.2.Core.resources.dll
+E:\Do An\MTA Mobile Forensic\MTA Mobile Forensic\bin\Debug\es\DevExpress.Pdf.v21.2.Core.resources.dll
+E:\Do An\MTA Mobile Forensic\MTA Mobile Forensic\bin\Debug\ja\DevExpress.Pdf.v21.2.Core.resources.dll
+E:\Do An\MTA Mobile Forensic\MTA Mobile Forensic\bin\Debug\ru\DevExpress.Pdf.v21.2.Core.resources.dll
+E:\Do An\MTA Mobile Forensic\MTA Mobile Forensic\obj\Debug\MTA Mobile Forensic.csproj.AssemblyReference.cache
+E:\Do An\MTA Mobile Forensic\MTA Mobile Forensic\obj\Debug\MTA Mobile Forensic.csproj.SuggestedBindingRedirects.cache
+E:\Do An\MTA Mobile Forensic\MTA Mobile Forensic\obj\Debug\MTA_Mobile_Forensic.frmMain.resources
+E:\Do An\MTA Mobile Forensic\MTA Mobile Forensic\obj\Debug\MTA_Mobile_Forensic.Properties.Resources.resources
+E:\Do An\MTA Mobile Forensic\MTA Mobile Forensic\obj\Debug\MTA Mobile Forensic.csproj.GenerateResource.cache
+E:\Do An\MTA Mobile Forensic\MTA Mobile Forensic\obj\Debug\MTA Mobile Forensic.csproj.CoreCompileInputs.cache
+E:\Do An\MTA Mobile Forensic\MTA Mobile Forensic\obj\Debug\MTA Mobile Forensic.csproj.CopyComplete
+E:\Do An\MTA Mobile Forensic\MTA Mobile Forensic\obj\Debug\MTA Mobile Forensic.exe
+E:\Do An\MTA Mobile Forensic\MTA Mobile Forensic\obj\Debug\MTA Mobile Forensic.pdb
+E:\Do An\MTA Mobile Forensic\MTA Mobile Forensic\bin\Debug\DevComponents.DotNetBar.Design.dll
+E:\Do An\MTA Mobile Forensic\MTA Mobile Forensic\bin\Debug\DevComponents.DotNetBar.Schedule.dll
+E:\Do An\MTA Mobile Forensic\MTA Mobile Forensic\bin\Debug\DevExpress.XtraBars.v21.2.dll
+E:\Do An\MTA Mobile Forensic\MTA Mobile Forensic\bin\Debug\DevExpress.XtraEditors.v21.2.dll
+E:\Do An\MTA Mobile Forensic\MTA Mobile Forensic\bin\Debug\DevExpress.Sparkline.v21.2.Core.dll
+E:\Do An\MTA Mobile Forensic\MTA Mobile Forensic\bin\Debug\DevComponents.DotNetBar.Schedule.xml
+E:\Do An\MTA Mobile Forensic\MTA Mobile Forensic\bin\Debug\DevExpress.XtraBars.v21.2.xml
+E:\Do An\MTA Mobile Forensic\MTA Mobile Forensic\bin\Debug\DevExpress.XtraEditors.v21.2.xml
+E:\Do An\MTA Mobile Forensic\MTA Mobile Forensic\bin\Debug\DevExpress.Sparkline.v21.2.Core.xml
+E:\Do An\MTA Mobile Forensic\MTA Mobile Forensic\bin\Debug\de\DevExpress.XtraBars.v21.2.resources.dll
+E:\Do An\MTA Mobile Forensic\MTA Mobile Forensic\bin\Debug\es\DevExpress.XtraBars.v21.2.resources.dll
+E:\Do An\MTA Mobile Forensic\MTA Mobile Forensic\bin\Debug\ja\DevExpress.XtraBars.v21.2.resources.dll
+E:\Do An\MTA Mobile Forensic\MTA Mobile Forensic\bin\Debug\ru\DevExpress.XtraBars.v21.2.resources.dll
+E:\Do An\MTA Mobile Forensic\MTA Mobile Forensic\bin\Debug\de\DevExpress.XtraEditors.v21.2.resources.dll
+E:\Do An\MTA Mobile Forensic\MTA Mobile Forensic\bin\Debug\es\DevExpress.XtraEditors.v21.2.resources.dll
+E:\Do An\MTA Mobile Forensic\MTA Mobile Forensic\bin\Debug\ja\DevExpress.XtraEditors.v21.2.resources.dll
+E:\Do An\MTA Mobile Forensic\MTA Mobile Forensic\bin\Debug\ru\DevExpress.XtraEditors.v21.2.resources.dll
+E:\Do An\MTA Mobile Forensic\MTA Mobile Forensic\bin\Debug\de\DevExpress.Sparkline.v21.2.Core.resources.dll
+E:\Do An\MTA Mobile Forensic\MTA Mobile Forensic\bin\Debug\es\DevExpress.Sparkline.v21.2.Core.resources.dll
+E:\Do An\MTA Mobile Forensic\MTA Mobile Forensic\bin\Debug\ja\DevExpress.Sparkline.v21.2.Core.resources.dll
+E:\Do An\MTA Mobile Forensic\MTA Mobile Forensic\bin\Debug\ru\DevExpress.Sparkline.v21.2.Core.resources.dll
+E:\Do An\MTA Mobile Forensic\MTA Mobile Forensic\obj\Debug\MTA Mobile Forensic.exe.licenses
+E:\Do An\MTA Mobile Forensic\MTA Mobile Forensic\obj\Debug\MTA_Mobile_Forensic.GUI.Android.usr_TinNhan.resources
+E:\Do An\MTA Mobile Forensic\MTA Mobile Forensic\obj\Debug\MTA_Mobile_Forensic.GUI.Android.usr_CuocGoi.resources
+E:\Do An\MTA Mobile Forensic\MTA Mobile Forensic\obj\Debug\MTA_Mobile_Forensic.GUI.Share.usr_TinNhanMini.resources
