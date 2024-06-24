@@ -1,4 +1,4 @@
-﻿using DevExpress.XtraBars;
+﻿ using DevExpress.XtraBars;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -80,6 +80,8 @@ namespace MTA_Mobile_Forensic
             {
                 usr_TinNhan.BringToFront();
             }
+            lblTieuDe1.Caption = "Điều tra dữ liệu";
+            lblTieuDe2.Caption = "Tin nhắn";
         }
 
         private void btnCuocGoi_Click(object sender, EventArgs e)
@@ -95,6 +97,8 @@ namespace MTA_Mobile_Forensic
             {
                 usr_CuocGoi.BringToFront();
             }
+            lblTieuDe1.Caption = "Điều tra dữ liệu";
+            lblTieuDe2.Caption = "Cuộc gọi";
         }
 
         private void btnDanhBa_Click(object sender, EventArgs e)

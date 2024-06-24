@@ -87,8 +87,24 @@
     <Compile Include="GUI\Share\usr_TinNhanMini.Designer.cs">
       <DependentUpon>usr_TinNhanMini.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Share\usr_TinNhanTroChuyenGui.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Share\usr_TinNhanTroChuyenGui.Designer.cs">
+      <DependentUpon>usr_TinNhanTroChuyenGui.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Share\usr_TinNhanTroChuyenNhan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Share\usr_TinNhanTroChuyenNhan.Designer.cs">
+      <DependentUpon>usr_TinNhanTroChuyenNhan.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Support\adb.cs" />
+    <Compile Include="Support\exiftool.cs" />
+    <Compile Include="Support\function.cs" />
+    <Compile Include="Support\libimobiledevice.cs" />
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -100,6 +116,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Share\usr_TinNhanMini.resx">
       <DependentUpon>usr_TinNhanMini.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Share\usr_TinNhanTroChuyenGui.resx">
+      <DependentUpon>usr_TinNhanTroChuyenGui.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Share\usr_TinNhanTroChuyenNhan.resx">
+      <DependentUpon>usr_TinNhanTroChuyenNhan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -127,7 +149,6 @@
   <ItemGroup>
     <Folder Include="Data\" />
     <Folder Include="GUI\IOS\" />
-    <Folder Include="Support\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
