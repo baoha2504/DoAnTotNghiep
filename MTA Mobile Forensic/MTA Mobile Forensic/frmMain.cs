@@ -20,26 +20,17 @@ namespace MTA_Mobile_Forensic
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-            btnTinNhan_Click(sender, e);
+            btnLich_Click(sender, e);
         }
 
         usr_TinNhan usr_TinNhan;
         usr_CuocGoi usr_CuocGoi;
+        usr_DanhBa usr_DanhBa;
+        usr_Lich usr_Lich;
 
         private void btnTrangChu_Click(object sender, EventArgs e)
         {
-            //if (usr_ThemHocVien == null)
-            //{
-            //    usr_ThemHocVien usr_ThemHocVien = new usr_ThemHocVien();
-            //    usr_ThemHocVien.Dock = DockStyle.Fill;
-            //    mainContainer.Controls.Add(usr_ThemHocVien);
-            //    usr_ThemHocVien.BringToFront();
-            //}
-            //else
-            //{
-            //    usr_ThemHocVien.BringToFront();
-            //}
-            //lblTieuDe.Caption = "Thêm học viên";
+
         }
 
         private void btnThongBao_Click(object sender, EventArgs e)
@@ -103,12 +94,36 @@ namespace MTA_Mobile_Forensic
 
         private void btnDanhBa_Click(object sender, EventArgs e)
         {
-
+            if (usr_DanhBa == null)
+            {
+                usr_DanhBa = new usr_DanhBa();
+                usr_DanhBa.Dock = DockStyle.Fill;
+                mainContainer.Controls.Add(usr_DanhBa);
+                usr_DanhBa.BringToFront();
+            }
+            else
+            {
+                usr_DanhBa.BringToFront();
+            }
+            lblTieuDe1.Caption = "Điều tra dữ liệu";
+            lblTieuDe2.Caption = "Danh bạ";
         }
 
-        private void btnEmail_Click(object sender, EventArgs e)
+        private void btnLich_Click(object sender, EventArgs e)
         {
-
+            if (usr_Lich == null)
+            {
+                usr_Lich = new usr_Lich();
+                usr_Lich.Dock = DockStyle.Fill;
+                mainContainer.Controls.Add(usr_Lich);
+                usr_Lich.BringToFront();
+            }
+            else
+            {
+                usr_Lich.BringToFront();
+            }
+            lblTieuDe1.Caption = "Điều tra dữ liệu";
+            lblTieuDe2.Caption = "Lịch";
         }
 
         private void btnAnh_Click(object sender, EventArgs e)
@@ -240,5 +255,7 @@ namespace MTA_Mobile_Forensic
         {
 
         }
+
+        
     }
 }

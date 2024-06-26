@@ -38,6 +38,23 @@ namespace MTA_Mobile_Forensic.Support
             }
         }
 
+        public string ConvertTimeStamp_Day(string timestampString)
+        {
+            try
+            {
+                long timestamp = ConvertStringToLong(timestampString);
+
+                DateTime dateTime = DateTimeOffset.FromUnixTimeMilliseconds(timestamp).UtcDateTime;
+
+                return dateTime.ToString("dd");
+            }
+            catch (Exception ex)
+            {
+                // Handle the exception (e.g., log it or return an error message)
+                return "Invalid timestamp";
+            }
+        }
+
 
         public string GetValue(string source, string key, string nextKey)
         {

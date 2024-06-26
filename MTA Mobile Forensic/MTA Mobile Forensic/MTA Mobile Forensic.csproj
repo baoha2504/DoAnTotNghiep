@@ -75,11 +75,41 @@
     <Compile Include="GUI\Android\usr_CuocGoi.Designer.cs">
       <DependentUpon>usr_CuocGoi.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Android\usr_DanhBa.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Android\usr_DanhBa.Designer.cs">
+      <DependentUpon>usr_DanhBa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Android\usr_Lich.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Android\usr_Lich.Designer.cs">
+      <DependentUpon>usr_Lich.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Android\usr_TinNhan.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="GUI\Android\usr_TinNhan.Designer.cs">
       <DependentUpon>usr_TinNhan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Share\usr_CuocGoiMini.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Share\usr_CuocGoiMini.Designer.cs">
+      <DependentUpon>usr_CuocGoiMini.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Share\usr_DanhBaMini.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Share\usr_DanhBaMini.Designer.cs">
+      <DependentUpon>usr_DanhBaMini.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Share\usr_LichMini.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Share\usr_LichMini.Designer.cs">
+      <DependentUpon>usr_LichMini.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\Share\usr_TinNhanMini.cs">
       <SubType>UserControl</SubType>
@@ -111,8 +141,23 @@
     <EmbeddedResource Include="GUI\Android\usr_CuocGoi.resx">
       <DependentUpon>usr_CuocGoi.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Android\usr_DanhBa.resx">
+      <DependentUpon>usr_DanhBa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Android\usr_Lich.resx">
+      <DependentUpon>usr_Lich.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Android\usr_TinNhan.resx">
       <DependentUpon>usr_TinNhan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Share\usr_CuocGoiMini.resx">
+      <DependentUpon>usr_CuocGoiMini.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Share\usr_DanhBaMini.resx">
+      <DependentUpon>usr_DanhBaMini.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Share\usr_LichMini.resx">
+      <DependentUpon>usr_LichMini.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Share\usr_TinNhanMini.resx">
       <DependentUpon>usr_TinNhanMini.cs</DependentUpon>

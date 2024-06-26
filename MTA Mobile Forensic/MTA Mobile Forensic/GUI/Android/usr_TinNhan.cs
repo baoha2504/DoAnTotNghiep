@@ -1,17 +1,8 @@
-﻿using DevExpress.XtraEditors.Filtering.Templates;
-using MTA_Mobile_Forensic.GUI.Share;
+﻿using MTA_Mobile_Forensic.GUI.Share;
 using MTA_Mobile_Forensic.Support;
 using System;
-using System.Data;
-using System.Linq;
-using System.Net;
 using System.Text.RegularExpressions;
-using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.Tab;
 
 namespace MTA_Mobile_Forensic.GUI.Android
 {
@@ -49,7 +40,7 @@ namespace MTA_Mobile_Forensic.GUI.Android
 
                 usr_TinNhanMini usr_TinNhanMini = new usr_TinNhanMini(address, body, date, dateSent, read, status, serviceCenter, simId);
                 usr_TinNhanMini.ControlClicked += flpDSTinNhan_Click;
-                usr_TinNhanMini.Width = flpDSTinNhan.Width - 20;
+                usr_TinNhanMini.Width = flpDSTinNhan.Width;
                 flpDSTinNhan.Controls.Add(usr_TinNhanMini);
             }
         }
@@ -64,7 +55,7 @@ namespace MTA_Mobile_Forensic.GUI.Android
             // Duyệt qua tất cả các Control trong parent
             foreach (UserControl control in flpDSTinNhan.Controls)
             {
-                control.Width = flpDSTinNhan.Width - 20;
+                control.Width = flpDSTinNhan.Width;
             }
         }
 
@@ -80,14 +71,15 @@ namespace MTA_Mobile_Forensic.GUI.Android
                 {
                     txtTrangThai.Text = "Chưa đọc";
                 }
-                else if (clickedControl.read == "2")
+                else if (clickedControl.read == "1")
                 {
                     txtTrangThai.Text = "Đã đọc";
                 }
                 if (clickedControl.simId == "1")
                 {
                     txtSimNhan.Text = "Sim 1";
-                } else
+                }
+                else
                 {
                     txtSimNhan.Text = "Sim 2";
                 }
@@ -105,6 +97,7 @@ namespace MTA_Mobile_Forensic.GUI.Android
             txtSimNhan.Text = string.Empty;
             txtTrungTamDichVu.Text = string.Empty;
             txtTimKiem.Text = string.Empty;
+            cbbChonSim.Text = "Tất cả sim";
 
             usr_TinNhan_Load(sender, e);
         }
@@ -154,6 +147,39 @@ namespace MTA_Mobile_Forensic.GUI.Android
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
             TimKiemTinNhan();
+        }
+
+        private void cbbChonSim_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            foreach (usr_TinNhanMini control in flpDSTinNhan.Controls)
+            {
+                if (cbbChonSim.Text == "Tất cả sim")
+                {
+                    control.Visible = true;
+                }
+                else if (cbbChonSim.Text == "Sim 1")
+                {
+                    if(control.simId == "1")
+                    {
+                        control.Visible = true;
+                    }
+                    else
+                    {
+                        control.Visible = false;
+                    }
+                }
+                else if (cbbChonSim.Text == "Sim 2")
+                {
+                    if (control.simId != "1")
+                    {
+                        control.Visible = true;
+                    }
+                    else
+                    {
+                        control.Visible = false;
+                    }
+                }
+            }
         }
     }
 }

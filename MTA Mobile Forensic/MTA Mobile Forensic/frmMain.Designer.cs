@@ -45,7 +45,7 @@
             this.btnTinNhan = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btnCuocGoi = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btnDanhBa = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.btnEmail = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.btnLich = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btnAnh = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btnVideo = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btnUngDung = new DevExpress.XtraBars.Navigation.AccordionControlElement();
@@ -81,10 +81,10 @@
             this.fluentDesignFormControl1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl();
             this.lblTieuDe1 = new DevExpress.XtraBars.BarStaticItem();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
-            this.fluentFormDefaultManager1 = new DevExpress.XtraBars.FluentDesignSystem.FluentFormDefaultManager(this.components);
             this.barStaticItem1 = new DevExpress.XtraBars.BarStaticItem();
             this.barStaticItem2 = new DevExpress.XtraBars.BarStaticItem();
             this.lblTieuDe2 = new DevExpress.XtraBars.BarStaticItem();
+            this.fluentFormDefaultManager1 = new DevExpress.XtraBars.FluentDesignSystem.FluentFormDefaultManager(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentFormDefaultManager1)).BeginInit();
@@ -94,7 +94,7 @@
             // 
             this.mainContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mainContainer.Location = new System.Drawing.Point(296, 39);
-            this.mainContainer.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.mainContainer.Margin = new System.Windows.Forms.Padding(8);
             this.mainContainer.Name = "mainContainer";
             this.mainContainer.Size = new System.Drawing.Size(1093, 683);
             this.mainContainer.TabIndex = 0;
@@ -114,7 +114,7 @@
             this.HUONGDANSUDUNG,
             this.THONGTINPHANMEM});
             this.accordionControl1.Location = new System.Drawing.Point(0, 39);
-            this.accordionControl1.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.accordionControl1.Margin = new System.Windows.Forms.Padding(8);
             this.accordionControl1.Name = "accordionControl1";
             this.accordionControl1.ScrollBarMode = DevExpress.XtraBars.Navigation.ScrollBarMode.Touch;
             this.accordionControl1.Size = new System.Drawing.Size(296, 683);
@@ -196,7 +196,7 @@
             this.btnTinNhan,
             this.btnCuocGoi,
             this.btnDanhBa,
-            this.btnEmail,
+            this.btnLich,
             this.btnAnh,
             this.btnVideo,
             this.btnUngDung,
@@ -232,12 +232,12 @@
             this.btnDanhBa.Text = "Danh bạ";
             this.btnDanhBa.Click += new System.EventHandler(this.btnDanhBa_Click);
             // 
-            // btnEmail
+            // btnLich
             // 
-            this.btnEmail.Name = "btnEmail";
-            this.btnEmail.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.btnEmail.Text = "Email";
-            this.btnEmail.Click += new System.EventHandler(this.btnEmail_Click);
+            this.btnLich.Name = "btnLich";
+            this.btnLich.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.btnLich.Text = "Lịch";
+            this.btnLich.Click += new System.EventHandler(this.btnLich_Click);
             // 
             // btnAnh
             // 
@@ -514,17 +514,6 @@
             this.barButtonItem1.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.LargeImage")));
             this.barButtonItem1.Name = "barButtonItem1";
             // 
-            // fluentFormDefaultManager1
-            // 
-            this.fluentFormDefaultManager1.Form = this;
-            this.fluentFormDefaultManager1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
-            this.lblTieuDe1,
-            this.barButtonItem1,
-            this.barStaticItem1,
-            this.barStaticItem2,
-            this.lblTieuDe2});
-            this.fluentFormDefaultManager1.MaxItemId = 5;
-            // 
             // barStaticItem1
             // 
             this.barStaticItem1.Caption = ">";
@@ -554,6 +543,17 @@
             this.lblTieuDe2.ItemAppearance.Normal.Options.UseFont = true;
             this.lblTieuDe2.ItemAppearance.Normal.Options.UseForeColor = true;
             this.lblTieuDe2.Name = "lblTieuDe2";
+            // 
+            // fluentFormDefaultManager1
+            // 
+            this.fluentFormDefaultManager1.Form = this;
+            this.fluentFormDefaultManager1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
+            this.lblTieuDe1,
+            this.barButtonItem1,
+            this.barStaticItem1,
+            this.barStaticItem2,
+            this.lblTieuDe2});
+            this.fluentFormDefaultManager1.MaxItemId = 5;
             // 
             // frmMain
             // 
@@ -614,7 +614,7 @@
         private DevExpress.XtraBars.Navigation.AccordionControlElement btnTinNhan;
         private DevExpress.XtraBars.Navigation.AccordionControlElement btnCuocGoi;
         private DevExpress.XtraBars.Navigation.AccordionControlElement btnDanhBa;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement btnEmail;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement btnLich;
         private DevExpress.XtraBars.Navigation.AccordionControlElement btnAnh;
         private DevExpress.XtraBars.Navigation.AccordionControlElement btnVideo;
         private DevExpress.XtraBars.Navigation.AccordionControlElement btnUngDung;
