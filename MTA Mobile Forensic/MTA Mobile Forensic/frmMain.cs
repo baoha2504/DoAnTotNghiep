@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using MTA_Mobile_Forensic.GUI.Android;
+using MTA_Mobile_Forensic.GUI.Share;
 
 namespace MTA_Mobile_Forensic
 {
@@ -20,13 +21,15 @@ namespace MTA_Mobile_Forensic
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-            btnLich_Click(sender, e);
+            btnAnh_Click(sender, e);
         }
 
         usr_TinNhan usr_TinNhan;
         usr_CuocGoi usr_CuocGoi;
         usr_DanhBa usr_DanhBa;
         usr_Lich usr_Lich;
+        usr_Anh usr_Anh;
+
 
         private void btnTrangChu_Click(object sender, EventArgs e)
         {
@@ -128,7 +131,19 @@ namespace MTA_Mobile_Forensic
 
         private void btnAnh_Click(object sender, EventArgs e)
         {
-
+            if (usr_Anh == null)
+            {
+                usr_Anh = new usr_Anh();
+                usr_Anh.Dock = DockStyle.Fill;
+                mainContainer.Controls.Add(usr_Anh);
+                usr_Anh.BringToFront();
+            }
+            else
+            {
+                usr_Anh.BringToFront();
+            }
+            lblTieuDe1.Caption = "Điều tra dữ liệu";
+            lblTieuDe2.Caption = "Ảnh";
         }
 
         private void btnVideo_Click(object sender, EventArgs e)

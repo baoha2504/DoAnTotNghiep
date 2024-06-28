@@ -11,10 +11,15 @@ namespace MTA_Mobile_Forensic.GUI.Android
         public usr_TinNhan()
         {
             InitializeComponent();
+
+            searchTimer = new Timer();
+            searchTimer.Interval = 1000; // 1 giây
+            searchTimer.Tick += SearchTimer_Tick;
         }
         adb adb = new adb();
         function function = new function();
         string query = "";
+        Timer searchTimer;
 
         private void Load_flpDSTinNhan()
         {
@@ -43,6 +48,12 @@ namespace MTA_Mobile_Forensic.GUI.Android
                 usr_TinNhanMini.Width = flpDSTinNhan.Width;
                 flpDSTinNhan.Controls.Add(usr_TinNhanMini);
             }
+        }
+
+        private void SearchTimer_Tick(object sender, EventArgs e)
+        {
+            searchTimer.Stop();
+            TimKiemTinNhan();
         }
 
         private void usr_TinNhan_Load(object sender, EventArgs e)
@@ -141,7 +152,8 @@ namespace MTA_Mobile_Forensic.GUI.Android
 
         private void txtTimKiem_TextChanged(object sender, EventArgs e)
         {
-            TimKiemTinNhan();
+            searchTimer.Stop();
+            searchTimer.Start();
         }
 
         private void btnTimKiem_Click(object sender, EventArgs e)

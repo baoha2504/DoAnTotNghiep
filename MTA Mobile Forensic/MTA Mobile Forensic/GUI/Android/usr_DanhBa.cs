@@ -11,11 +11,16 @@ namespace MTA_Mobile_Forensic.GUI.Android
         public usr_DanhBa()
         {
             InitializeComponent();
+
+            searchTimer = new Timer();
+            searchTimer.Interval = 1000; // 1 giây
+            searchTimer.Tick += SearchTimer_Tick;
         }
 
         adb adb = new adb();
         function function = new function();
         string query = "";
+        Timer searchTimer;
 
         private void Load_flpDanhBa()
         {
@@ -43,6 +48,12 @@ namespace MTA_Mobile_Forensic.GUI.Android
                 usr_DanhBaMini.Width = flpDanhBa.Width;
                 flpDanhBa.Controls.Add(usr_DanhBaMini);
             }
+        }
+
+        private void SearchTimer_Tick(object sender, EventArgs e)
+        {
+            searchTimer.Stop();
+            TimKiemDanhBa();
         }
 
         private void usr_DanhBa_Load(object sender, EventArgs e)
@@ -136,7 +147,8 @@ namespace MTA_Mobile_Forensic.GUI.Android
 
         private void txtTimKiem_TextChanged(object sender, EventArgs e)
         {
-            TimKiemDanhBa();
+            searchTimer.Stop();
+            searchTimer.Start();
         }
 
         private void btnXuat_Click(object sender, EventArgs e)

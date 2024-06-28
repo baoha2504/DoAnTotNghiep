@@ -11,11 +11,17 @@ namespace MTA_Mobile_Forensic.GUI.Android
         public usr_Lich()
         {
             InitializeComponent();
+
+            searchTimer = new Timer();
+            searchTimer.Interval = 1000; // 1 giây
+            searchTimer.Tick += SearchTimer_Tick;
         }
 
         adb adb = new adb();
         function function = new function();
         string query = "";
+        Timer searchTimer;
+
 
         private void Load_flpLich()
         {
@@ -49,6 +55,12 @@ namespace MTA_Mobile_Forensic.GUI.Android
             }
         }
 
+        private void SearchTimer_Tick(object sender, EventArgs e)
+        {
+            searchTimer.Stop();
+            TimKiemLich();
+        }
+
         private void usr_Lich_Load(object sender, EventArgs e)
         {
             Load_flpLich();
@@ -68,11 +80,12 @@ namespace MTA_Mobile_Forensic.GUI.Android
                 if (clickedControl.account_type == "com.google")
                 {
                     txtLuuTai.Text = "Tài khoản Google";
-                } else
+                }
+                else
                 {
                     txtLuuTai.Text = "Cục bộ trên thiết bị";
                 }
-                
+
                 txtTaiKhoan.Text = clickedControl.account_name;
             }
         }
@@ -85,7 +98,7 @@ namespace MTA_Mobile_Forensic.GUI.Android
             }
         }
 
-        private void txtTimKiem_TextChanged(object sender, EventArgs e)
+        private void TimKiemLich()
         {
             string searchText = txtTimKiem.Text.ToLower(); // Chuyển về lowercase để tìm kiếm không phân biệt chữ hoa chữ thường
             bool hasSearchText = !string.IsNullOrEmpty(searchText); // Kiểm tra xem có từ khóa tìm kiếm không
@@ -103,6 +116,12 @@ namespace MTA_Mobile_Forensic.GUI.Android
 
                 control.Visible = isVisible;
             }
+        }
+
+        private void txtTimKiem_TextChanged(object sender, EventArgs e)
+        {
+            searchTimer.Stop();
+            searchTimer.Start();
         }
 
         private void cbbTuyChon_SelectedIndexChanged(object sender, EventArgs e)
@@ -167,7 +186,7 @@ namespace MTA_Mobile_Forensic.GUI.Android
         private void btnLamMoi_Click(object sender, EventArgs e)
         {
             flpLich.Controls.Clear();
-            
+
             txtSuKien.Text = string.Empty;
             txtThoiGianBatDau.Text = string.Empty;
             txtThoiGianKetThuc.Text = string.Empty;
@@ -177,7 +196,7 @@ namespace MTA_Mobile_Forensic.GUI.Android
             txtLuuTai.Text = string.Empty;
             txtTaiKhoan.Text = string.Empty;
             cbbTuyChon.Text = "Tất cả";
-            
+
             usr_Lich_Load(sender, e);
         }
     }
