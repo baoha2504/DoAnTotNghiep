@@ -34,6 +34,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.txtThoiGian = new DevComponents.DotNetBar.PanelEx();
             this.txtTenAnh = new DevComponents.DotNetBar.PanelEx();
+            this.checkBox = new DevComponents.DotNetBar.Controls.CheckBoxX();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbAnh)).BeginInit();
             this.panel2.SuspendLayout();
@@ -41,6 +42,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.checkBox);
             this.panel1.Controls.Add(this.pbAnh);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -110,6 +112,19 @@
             this.txtTenAnh.TabIndex = 0;
             this.txtTenAnh.Text = "Tên ảnh";
             // 
+            // checkBox
+            // 
+            // 
+            // 
+            // 
+            this.checkBox.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.checkBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox.Location = new System.Drawing.Point(83, 0);
+            this.checkBox.Name = "checkBox";
+            this.checkBox.Size = new System.Drawing.Size(17, 23);
+            this.checkBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.checkBox.TabIndex = 11;
+            // 
             // usr_AnhMini
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -134,5 +149,6 @@
         private System.Windows.Forms.PictureBox pbAnh;
         private DevComponents.DotNetBar.PanelEx txtThoiGian;
         private DevComponents.DotNetBar.PanelEx txtTenAnh;
+        public DevComponents.DotNetBar.Controls.CheckBoxX checkBox;
     }
 }

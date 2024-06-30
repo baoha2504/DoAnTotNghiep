@@ -110,6 +110,12 @@
     <Compile Include="GUI\Android\usr_TinNhan.Designer.cs">
       <DependentUpon>usr_TinNhan.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Share\frm_Notification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Share\frm_Notification.Designer.cs">
+      <DependentUpon>frm_Notification.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Share\frm_XemAnh.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -182,6 +188,9 @@
     <EmbeddedResource Include="GUI\Android\usr_TinNhan.resx">
       <DependentUpon>usr_TinNhan.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Share\frm_Notification.resx">
+      <DependentUpon>frm_Notification.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Share\frm_XemAnh.resx">
       <DependentUpon>frm_XemAnh.cs</DependentUpon>
     </EmbeddedResource>
@@ -231,8 +240,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Data\" />
     <Folder Include="GUI\IOS\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Data\Image\checked.png" />
+    <Content Include="Data\Image\error.png" />
+    <Content Include="Data\Image\info.png" />
+    <Content Include="Data\Image\warning.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Microsoft.Web.WebView2.1.0.2592.51\build\Microsoft.Web.WebView2.targets" Condition="Exists('..\packages\Microsoft.Web.WebView2.1.0.2592.51\build\Microsoft.Web.WebView2.targets')" />

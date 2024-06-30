@@ -52,6 +52,9 @@
             this.btnChonTatCa = new DevComponents.DotNetBar.ButtonX();
             this.btnNhap = new DevComponents.DotNetBar.ButtonX();
             this.btnXuat = new DevComponents.DotNetBar.ButtonX();
+            this.cbbTuyChon = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.cbb_option_folder = new DevComponents.Editors.ComboItem();
+            this.cbb_option_all = new DevComponents.Editors.ComboItem();
             this.panelEx1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -392,11 +395,13 @@
             this.pbAnhDaChon.Size = new System.Drawing.Size(440, 524);
             this.pbAnhDaChon.TabIndex = 0;
             this.pbAnhDaChon.TabStop = false;
+            this.pbAnhDaChon.DoubleClick += new System.EventHandler(this.pbAnhDaChon_DoubleClick);
             // 
             // panelEx2
             // 
             this.panelEx2.CanvasColor = System.Drawing.SystemColors.Control;
             this.panelEx2.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.panelEx2.Controls.Add(this.cbbTuyChon);
             this.panelEx2.Controls.Add(this.btnLamMoi);
             this.panelEx2.Controls.Add(this.btnBoChonTatCa);
             this.panelEx2.Controls.Add(this.btnChonTatCa);
@@ -426,6 +431,7 @@
             this.btnLamMoi.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnLamMoi.TabIndex = 4;
             this.btnLamMoi.Text = "Làm mới";
+            this.btnLamMoi.Click += new System.EventHandler(this.btnLamMoi_Click);
             // 
             // btnBoChonTatCa
             // 
@@ -437,6 +443,7 @@
             this.btnBoChonTatCa.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnBoChonTatCa.TabIndex = 3;
             this.btnBoChonTatCa.Text = "Bỏ chọn tất cả";
+            this.btnBoChonTatCa.Click += new System.EventHandler(this.btnBoChonTatCa_Click);
             // 
             // btnChonTatCa
             // 
@@ -448,6 +455,7 @@
             this.btnChonTatCa.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnChonTatCa.TabIndex = 2;
             this.btnChonTatCa.Text = "Chọn tất cả";
+            this.btnChonTatCa.Click += new System.EventHandler(this.btnChonTatCa_Click);
             // 
             // btnNhap
             // 
@@ -459,6 +467,7 @@
             this.btnNhap.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnNhap.TabIndex = 1;
             this.btnNhap.Text = "Nhập";
+            this.btnNhap.Click += new System.EventHandler(this.btnNhap_Click);
             // 
             // btnXuat
             // 
@@ -470,6 +479,36 @@
             this.btnXuat.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnXuat.TabIndex = 0;
             this.btnXuat.Text = "Xuất";
+            this.btnXuat.Click += new System.EventHandler(this.btnXuat_Click);
+            // 
+            // cbbTuyChon
+            // 
+            this.cbbTuyChon.DisplayMember = "Text";
+            this.cbbTuyChon.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbbTuyChon.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbTuyChon.ItemHeight = 22;
+            this.cbbTuyChon.Items.AddRange(new object[] {
+            this.cbb_option_folder,
+            this.cbb_option_all});
+            this.cbbTuyChon.Location = new System.Drawing.Point(810, 7);
+            this.cbbTuyChon.Name = "cbbTuyChon";
+            this.cbbTuyChon.Size = new System.Drawing.Size(200, 28);
+            this.cbbTuyChon.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.cbbTuyChon.TabIndex = 6;
+            this.cbbTuyChon.Text = "Trong thư mục";
+            this.cbbTuyChon.SelectedIndexChanged += new System.EventHandler(this.cbbTuyChon_SelectedIndexChanged);
+            // 
+            // cbb_option_folder
+            // 
+            this.cbb_option_folder.FontSize = 10F;
+            this.cbb_option_folder.Image = ((System.Drawing.Image)(resources.GetObject("cbb_option_folder.Image")));
+            this.cbb_option_folder.Text = "Trong thư mục";
+            // 
+            // cbb_option_all
+            // 
+            this.cbb_option_all.FontSize = 10F;
+            this.cbb_option_all.Image = ((System.Drawing.Image)(resources.GetObject("cbb_option_all.Image")));
+            this.cbb_option_all.Text = "Tất cả trong thư mục";
             // 
             // usr_Anh
             // 
@@ -526,5 +565,8 @@
         private System.Windows.Forms.FlowLayoutPanel flpDSAnh;
         private Microsoft.Web.WebView2.WinForms.WebView2 webView21;
         private System.Windows.Forms.PictureBox pbAnhDaChon;
+        private DevComponents.DotNetBar.Controls.ComboBoxEx cbbTuyChon;
+        private DevComponents.Editors.ComboItem cbb_option_folder;
+        private DevComponents.Editors.ComboItem cbb_option_all;
     }
 }

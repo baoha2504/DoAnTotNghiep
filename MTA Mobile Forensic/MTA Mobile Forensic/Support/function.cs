@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Globalization;
 using System.IO;
 using System.Text.RegularExpressions;
 
@@ -80,61 +79,69 @@ namespace MTA_Mobile_Forensic.Support
             }
         }
 
-        public double ParseCoordinate(string gpsString, char positiveDirection, char negativeDirection)
+        public double[] ParseCoordinates(string input)
         {
-            int degreeStart = gpsString.IndexOf("deg") - 3; // Bắt đầu lấy số độ
-            int minuteStart = gpsString.IndexOf("'") - 2;   // Bắt đầu lấy số phút
-            int secondStart = gpsString.IndexOf("\"") - 5;  // Bắt đầu lấy số giây
+            // Define the regular expression pattern
+            string pattern = @"(\d+)\s*deg\s*(\d+)'\s*(\d+\.\d+)\""\s*[NSEW],\s*(\d+)\s*deg\s*(\d+)'\s*(\d+\.\d+)\""\s*[NSEW]";
 
-            // Lấy phần số
-            string degreeStr = gpsString.Substring(degreeStart, 3).Trim();
-            string minuteStr = gpsString.Substring(minuteStart, 2).Trim();
-            string secondStr = gpsString.Substring(secondStart, 5).Trim();
+            // Match the pattern
+            Match match = Regex.Match(input, pattern);
 
-            // Chuyển đổi sang số
-            double degree = double.Parse(degreeStr);
-            double minute = double.Parse(minuteStr);
-            double second = double.Parse(secondStr);
-
-            // Tính toán giá trị toàn cầu
-            double coordinate = degree + (minute / 60) + (second / 3600);
-
-            // Xác định hướng
-            int directionIndex = gpsString.IndexOf(positiveDirection);
-            if (directionIndex == -1)
+            // If a match is found, parse the values
+            if (match.Success)
             {
-                directionIndex = gpsString.IndexOf(negativeDirection);
-                coordinate = -coordinate; // Đổi dấu nếu là hướng phía Nam hoặc phía Tây
+                double[] values = new double[6];
+                for (int i = 1; i <= 6; i++)
+                {
+                    values[i - 1] = double.Parse(match.Groups[i].Value);
+                }
+                return values;
+            }
+            else
+            {
+                throw new FormatException("Input string is not in the correct format.");
+            }
+        }
+
+        public static double DmsToDecimalDegrees(double degrees, double minutes, double seconds)
+        {
+            return degrees + (minutes / 60.0) + (seconds / 3600.0);
+        }
+
+
+        public string GetGPSPositionToText(string input)
+        {
+            try
+            {
+                string gps = GetGPSPositionFromInfo(input);
+                double[] result = new double[6];
+                result = ParseCoordinates(gps);
+
+                double gps1 = Math.Round(DmsToDecimalDegrees(result[0], result[1], result[2]), 8);
+                string latitude = gps1.ToString();
+
+                double gps2 = Math.Round(DmsToDecimalDegrees(result[3], result[4], result[5]), 8);
+                string longitude = gps2.ToString();
+
+                string googleMapsUrl = $"https://www.google.com/maps/search/?api=1&query={latitude},{longitude}";
+
+                return googleMapsUrl;
+            }
+            catch
+            { 
+                return "Error"; 
             }
 
-            return coordinate;
         }
 
-        public string xuly(string gpsString)
-        {
-
-            // Xử lý vĩ độ (Latitude)
-            double latitude = ParseCoordinate(gpsString, 'N', 'S');
-
-            // Xử lý kinh độ (Longitude)
-            double longitude = ParseCoordinate(gpsString, 'E', 'W');
-
-            Console.WriteLine($"Latitude: {latitude}");
-            Console.WriteLine($"Longitude: {longitude}");
-
-            string googleMapsUrl = $"https://www.google.com/maps/search/?api=1&query={latitude},{longitude}";
-            return googleMapsUrl;
-        }
-
-
-        public string GetGPSPositionToLink(string input)
+        public string GetGPSPositionFromInfo(string input)
         {
             string pattern = @"GPS Position\s+:\s+([0-9]+ deg [0-9]+\' [0-9]+(\.[0-9]+)?"" [NS], [0-9]+ deg [0-9]+\' [0-9]+(\.[0-9]+)?"" [EW])";
             Match match = Regex.Match(input, pattern);
 
             if (match.Success)
             {
-                return xuly(match.Groups[1].Value);
+                return match.Groups[1].Value;
             }
 
             return "GPS Position not found";
