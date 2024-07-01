@@ -34,6 +34,12 @@
             this.groupPanel1 = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.groupPanel4 = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.flpDSAnh = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.txtTrangHienTai = new DevComponents.DotNetBar.PanelEx();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.btnTrangTiep = new DevComponents.DotNetBar.ButtonX();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.btnTrangTruoc = new DevComponents.DotNetBar.ButtonX();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -47,14 +53,14 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pbAnhDaChon = new System.Windows.Forms.PictureBox();
             this.panelEx2 = new DevComponents.DotNetBar.PanelEx();
+            this.cbbTuyChon = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.cbb_option_folder = new DevComponents.Editors.ComboItem();
+            this.cbb_option_all = new DevComponents.Editors.ComboItem();
             this.btnLamMoi = new DevComponents.DotNetBar.ButtonX();
             this.btnBoChonTatCa = new DevComponents.DotNetBar.ButtonX();
             this.btnChonTatCa = new DevComponents.DotNetBar.ButtonX();
             this.btnNhap = new DevComponents.DotNetBar.ButtonX();
             this.btnXuat = new DevComponents.DotNetBar.ButtonX();
-            this.cbbTuyChon = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-            this.cbb_option_folder = new DevComponents.Editors.ComboItem();
-            this.cbb_option_all = new DevComponents.Editors.ComboItem();
             this.panelEx1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -62,6 +68,9 @@
             this.splitContainer1.SuspendLayout();
             this.groupPanel1.SuspendLayout();
             this.groupPanel4.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel7.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -110,7 +119,7 @@
             this.splitContainer1.Panel2.Controls.Add(this.groupPanel3);
             this.splitContainer1.Panel2.Controls.Add(this.groupPanel2);
             this.splitContainer1.Size = new System.Drawing.Size(1150, 600);
-            this.splitContainer1.SplitterDistance = 328;
+            this.splitContainer1.SplitterDistance = 311;
             this.splitContainer1.TabIndex = 17;
             // 
             // groupPanel1
@@ -123,7 +132,7 @@
             this.groupPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupPanel1.Location = new System.Drawing.Point(0, 0);
             this.groupPanel1.Name = "groupPanel1";
-            this.groupPanel1.Size = new System.Drawing.Size(328, 600);
+            this.groupPanel1.Size = new System.Drawing.Size(311, 600);
             // 
             // 
             // 
@@ -160,11 +169,12 @@
             this.groupPanel4.CanvasColor = System.Drawing.SystemColors.Control;
             this.groupPanel4.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
             this.groupPanel4.Controls.Add(this.flpDSAnh);
+            this.groupPanel4.Controls.Add(this.panel2);
             this.groupPanel4.DisabledBackColor = System.Drawing.Color.Empty;
             this.groupPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupPanel4.Location = new System.Drawing.Point(0, 40);
             this.groupPanel4.Name = "groupPanel4";
-            this.groupPanel4.Size = new System.Drawing.Size(322, 537);
+            this.groupPanel4.Size = new System.Drawing.Size(305, 537);
             // 
             // 
             // 
@@ -202,10 +212,84 @@
             this.flpDSAnh.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flpDSAnh.Location = new System.Drawing.Point(0, 0);
             this.flpDSAnh.Name = "flpDSAnh";
-            this.flpDSAnh.Size = new System.Drawing.Size(316, 514);
+            this.flpDSAnh.Size = new System.Drawing.Size(299, 484);
             this.flpDSAnh.TabIndex = 0;
             this.flpDSAnh.Click += new System.EventHandler(this.flpDSAnh_Click);
             this.flpDSAnh.Resize += new System.EventHandler(this.flpDSAnh_Resize);
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.txtTrangHienTai);
+            this.panel2.Controls.Add(this.panel7);
+            this.panel2.Controls.Add(this.panel4);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 484);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(299, 30);
+            this.panel2.TabIndex = 1;
+            // 
+            // txtTrangHienTai
+            // 
+            this.txtTrangHienTai.CanvasColor = System.Drawing.SystemColors.Control;
+            this.txtTrangHienTai.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.txtTrangHienTai.DisabledBackColor = System.Drawing.Color.Empty;
+            this.txtTrangHienTai.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtTrangHienTai.Location = new System.Drawing.Point(48, 0);
+            this.txtTrangHienTai.Name = "txtTrangHienTai";
+            this.txtTrangHienTai.Size = new System.Drawing.Size(203, 30);
+            this.txtTrangHienTai.Style.Alignment = System.Drawing.StringAlignment.Center;
+            this.txtTrangHienTai.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
+            this.txtTrangHienTai.Style.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
+            this.txtTrangHienTai.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
+            this.txtTrangHienTai.Style.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
+            this.txtTrangHienTai.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
+            this.txtTrangHienTai.Style.GradientAngle = 90;
+            this.txtTrangHienTai.TabIndex = 2;
+            this.txtTrangHienTai.Text = "Trang x/n";
+            // 
+            // panel7
+            // 
+            this.panel7.Controls.Add(this.btnTrangTiep);
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel7.Location = new System.Drawing.Point(251, 0);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(48, 30);
+            this.panel7.TabIndex = 1;
+            // 
+            // btnTrangTiep
+            // 
+            this.btnTrangTiep.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnTrangTiep.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnTrangTiep.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnTrangTiep.Location = new System.Drawing.Point(0, 0);
+            this.btnTrangTiep.Name = "btnTrangTiep";
+            this.btnTrangTiep.Size = new System.Drawing.Size(48, 30);
+            this.btnTrangTiep.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnTrangTiep.TabIndex = 0;
+            this.btnTrangTiep.Text = ">";
+            this.btnTrangTiep.Click += new System.EventHandler(this.btnTrangTiep_Click);
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.btnTrangTruoc);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(48, 30);
+            this.panel4.TabIndex = 0;
+            // 
+            // btnTrangTruoc
+            // 
+            this.btnTrangTruoc.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnTrangTruoc.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnTrangTruoc.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnTrangTruoc.Location = new System.Drawing.Point(0, 0);
+            this.btnTrangTruoc.Name = "btnTrangTruoc";
+            this.btnTrangTruoc.Size = new System.Drawing.Size(48, 30);
+            this.btnTrangTruoc.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnTrangTruoc.TabIndex = 0;
+            this.btnTrangTruoc.Text = "<";
+            this.btnTrangTruoc.Click += new System.EventHandler(this.btnTrangTruoc_Click);
             // 
             // panel3
             // 
@@ -213,7 +297,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(322, 40);
+            this.panel3.Size = new System.Drawing.Size(305, 40);
             this.panel3.TabIndex = 0;
             // 
             // panel6
@@ -223,7 +307,7 @@
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel6.Location = new System.Drawing.Point(0, 0);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(322, 40);
+            this.panel6.Size = new System.Drawing.Size(305, 40);
             this.panel6.TabIndex = 2;
             // 
             // panel5
@@ -232,7 +316,7 @@
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel5.Location = new System.Drawing.Point(0, 0);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(282, 40);
+            this.panel5.Size = new System.Drawing.Size(265, 40);
             this.panel5.TabIndex = 1;
             // 
             // txtTimKiem
@@ -243,7 +327,7 @@
             this.txtTimKiem.Multiline = true;
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.ReadOnly = true;
-            this.txtTimKiem.Size = new System.Drawing.Size(282, 40);
+            this.txtTimKiem.Size = new System.Drawing.Size(265, 40);
             this.txtTimKiem.TabIndex = 0;
             this.txtTimKiem.TextChanged += new System.EventHandler(this.txtTimKiem_TextChanged);
             // 
@@ -253,7 +337,7 @@
             this.btnChonFolder.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnChonFolder.BackgroundImage")));
             this.btnChonFolder.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnChonFolder.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnChonFolder.Location = new System.Drawing.Point(282, 0);
+            this.btnChonFolder.Location = new System.Drawing.Point(265, 0);
             this.btnChonFolder.Name = "btnChonFolder";
             this.btnChonFolder.Size = new System.Drawing.Size(40, 40);
             this.btnChonFolder.TabIndex = 0;
@@ -268,7 +352,7 @@
             this.groupPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupPanel3.Location = new System.Drawing.Point(0, 547);
             this.groupPanel3.Name = "groupPanel3";
-            this.groupPanel3.Size = new System.Drawing.Size(818, 53);
+            this.groupPanel3.Size = new System.Drawing.Size(835, 53);
             // 
             // 
             // 
@@ -310,7 +394,7 @@
             this.webView21.ForeColor = System.Drawing.Color.White;
             this.webView21.Location = new System.Drawing.Point(0, 0);
             this.webView21.Name = "webView21";
-            this.webView21.Size = new System.Drawing.Size(812, 30);
+            this.webView21.Size = new System.Drawing.Size(829, 30);
             this.webView21.TabIndex = 0;
             this.webView21.ZoomFactor = 1D;
             // 
@@ -324,7 +408,7 @@
             this.groupPanel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupPanel2.Location = new System.Drawing.Point(0, 0);
             this.groupPanel2.Name = "groupPanel2";
-            this.groupPanel2.Size = new System.Drawing.Size(818, 547);
+            this.groupPanel2.Size = new System.Drawing.Size(835, 547);
             // 
             // 
             // 
@@ -362,7 +446,7 @@
             this.panel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel.Location = new System.Drawing.Point(440, 0);
             this.panel.Name = "panel";
-            this.panel.Size = new System.Drawing.Size(372, 524);
+            this.panel.Size = new System.Drawing.Size(389, 524);
             this.panel.TabIndex = 3;
             // 
             // txtThongTinAnh
@@ -373,7 +457,7 @@
             this.txtThongTinAnh.Multiline = true;
             this.txtThongTinAnh.Name = "txtThongTinAnh";
             this.txtThongTinAnh.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtThongTinAnh.Size = new System.Drawing.Size(372, 524);
+            this.txtThongTinAnh.Size = new System.Drawing.Size(389, 524);
             this.txtThongTinAnh.TabIndex = 0;
             // 
             // panel1
@@ -420,6 +504,35 @@
             this.panelEx2.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
             this.panelEx2.Style.GradientAngle = 90;
             this.panelEx2.TabIndex = 13;
+            // 
+            // cbbTuyChon
+            // 
+            this.cbbTuyChon.DisplayMember = "Text";
+            this.cbbTuyChon.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbbTuyChon.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbTuyChon.ItemHeight = 22;
+            this.cbbTuyChon.Items.AddRange(new object[] {
+            this.cbb_option_folder,
+            this.cbb_option_all});
+            this.cbbTuyChon.Location = new System.Drawing.Point(810, 7);
+            this.cbbTuyChon.Name = "cbbTuyChon";
+            this.cbbTuyChon.Size = new System.Drawing.Size(200, 28);
+            this.cbbTuyChon.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.cbbTuyChon.TabIndex = 6;
+            this.cbbTuyChon.Text = "Trong thư mục";
+            this.cbbTuyChon.SelectedIndexChanged += new System.EventHandler(this.cbbTuyChon_SelectedIndexChanged);
+            // 
+            // cbb_option_folder
+            // 
+            this.cbb_option_folder.FontSize = 10F;
+            this.cbb_option_folder.Image = ((System.Drawing.Image)(resources.GetObject("cbb_option_folder.Image")));
+            this.cbb_option_folder.Text = "Trong thư mục";
+            // 
+            // cbb_option_all
+            // 
+            this.cbb_option_all.FontSize = 10F;
+            this.cbb_option_all.Image = ((System.Drawing.Image)(resources.GetObject("cbb_option_all.Image")));
+            this.cbb_option_all.Text = "Tất cả trong thư mục";
             // 
             // btnLamMoi
             // 
@@ -481,35 +594,6 @@
             this.btnXuat.Text = "Xuất";
             this.btnXuat.Click += new System.EventHandler(this.btnXuat_Click);
             // 
-            // cbbTuyChon
-            // 
-            this.cbbTuyChon.DisplayMember = "Text";
-            this.cbbTuyChon.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbbTuyChon.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbTuyChon.ItemHeight = 22;
-            this.cbbTuyChon.Items.AddRange(new object[] {
-            this.cbb_option_folder,
-            this.cbb_option_all});
-            this.cbbTuyChon.Location = new System.Drawing.Point(810, 7);
-            this.cbbTuyChon.Name = "cbbTuyChon";
-            this.cbbTuyChon.Size = new System.Drawing.Size(200, 28);
-            this.cbbTuyChon.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.cbbTuyChon.TabIndex = 6;
-            this.cbbTuyChon.Text = "Trong thư mục";
-            this.cbbTuyChon.SelectedIndexChanged += new System.EventHandler(this.cbbTuyChon_SelectedIndexChanged);
-            // 
-            // cbb_option_folder
-            // 
-            this.cbb_option_folder.FontSize = 10F;
-            this.cbb_option_folder.Image = ((System.Drawing.Image)(resources.GetObject("cbb_option_folder.Image")));
-            this.cbb_option_folder.Text = "Trong thư mục";
-            // 
-            // cbb_option_all
-            // 
-            this.cbb_option_all.FontSize = 10F;
-            this.cbb_option_all.Image = ((System.Drawing.Image)(resources.GetObject("cbb_option_all.Image")));
-            this.cbb_option_all.Text = "Tất cả trong thư mục";
-            // 
             // usr_Anh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -524,6 +608,9 @@
             this.splitContainer1.ResumeLayout(false);
             this.groupPanel1.ResumeLayout(false);
             this.groupPanel4.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel7.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
@@ -568,5 +655,11 @@
         private DevComponents.DotNetBar.Controls.ComboBoxEx cbbTuyChon;
         private DevComponents.Editors.ComboItem cbb_option_folder;
         private DevComponents.Editors.ComboItem cbb_option_all;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel7;
+        private DevComponents.DotNetBar.ButtonX btnTrangTiep;
+        private System.Windows.Forms.Panel panel4;
+        private DevComponents.DotNetBar.ButtonX btnTrangTruoc;
+        private DevComponents.DotNetBar.PanelEx txtTrangHienTai;
     }
 }

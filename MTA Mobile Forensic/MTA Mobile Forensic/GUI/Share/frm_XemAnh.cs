@@ -26,7 +26,6 @@ namespace MTA_Mobile_Forensic.GUI.Share
             InitializeComponent();
             LoadImage(urlImage);
             this.Text = urlImage;
-
             pictureBox.MouseWheel += new MouseEventHandler(OnMouseWheel);
         }
 
@@ -67,6 +66,48 @@ namespace MTA_Mobile_Forensic.GUI.Share
             // Cập nhật vị trí PictureBox để luôn hiển thị ở giữa Form
             pictureBox.Left = (this.ClientSize.Width - pictureBox.Width) / 2;
             pictureBox.Top = (this.ClientSize.Height - pictureBox.Height) / 2;
+        }
+
+        private void btnXoayTrai_Click(object sender, EventArgs e)
+        {
+            if (pictureBox.Image != null)
+            {
+                pictureBox.Image.RotateFlip(RotateFlipType.Rotate270FlipNone);
+                pictureBox.Refresh();
+            }
+        }
+
+        private void img_XoayTrai_Click(object sender, EventArgs e)
+        {
+            btnXoayTrai_Click(sender, e);
+        }
+
+        private void btnDoiXung_Click(object sender, EventArgs e)
+        {
+            if (pictureBox.Image != null)
+            {
+                pictureBox.Image.RotateFlip(RotateFlipType.RotateNoneFlipX);
+                pictureBox.Refresh();
+            }
+        }
+
+        private void img_DoiXung_Click(object sender, EventArgs e)
+        {
+            btnDoiXung_Click(sender, e);
+        }
+
+        private void btnXoayPhai_Click(object sender, EventArgs e)
+        {
+            if (pictureBox.Image != null)
+            {
+                pictureBox.Image.RotateFlip(RotateFlipType.Rotate90FlipNone);
+                pictureBox.Refresh();
+            }
+        }
+
+        private void imgXoayPhai_Click(object sender, EventArgs e)
+        {
+            btnXoayPhai_Click(sender, e);
         }
     }
 }

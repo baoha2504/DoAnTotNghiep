@@ -1,10 +1,12 @@
 ﻿using MTA_Mobile_Forensic.GUI.Share;
 using MTA_Mobile_Forensic.Support;
 using System;
+using System.Collections.Generic;
 using System.Data;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
+using static System.Net.WebRequestMethods;
 
 namespace MTA_Mobile_Forensic.GUI.Android
 {
@@ -19,6 +21,9 @@ namespace MTA_Mobile_Forensic.GUI.Android
         function function = new function();
         exiftool exiftool = new exiftool();
         string linkanhdachon = "";
+        int itemsPerPage = 20;
+        int currentPage = 0;
+        private List<string> imageFiles;
 
         private async void LoadWeb(string link)
         {
@@ -57,7 +62,7 @@ namespace MTA_Mobile_Forensic.GUI.Android
                 string[] imageExtensions = new string[] { ".jpg", ".jpeg", ".png", ".bmp", ".gif", ".tiff", ".webp" };
 
                 // Lấy tất cả các tệp dạng ảnh trong thư mục
-                var imageFiles = Directory.GetFiles(folderPath)
+                 imageFiles = Directory.GetFiles(folderPath)
                                           .Where(file => imageExtensions.Contains(Path.GetExtension(file).ToLower()))
                                           .ToList();
 
@@ -73,23 +78,31 @@ namespace MTA_Mobile_Forensic.GUI.Android
                         imageFiles.AddRange(subDirFiles);
                     }
                 }
-
-                // Clear và add các file ảnh vào flpDSAnh
-                flpDSAnh.Controls.Clear();
-                foreach (var file in imageFiles)
-                {
-                    usr_AnhMini usr_AnhMini = new usr_AnhMini(file, Path.GetFileName(file), function.GetLastModified(file));
-                    usr_AnhMini.ControlClicked += flpDSAnh_Click;
-                    flpDSAnh.Controls.Add(usr_AnhMini);
-                }
+                Add_usr_AnhMini(currentPage);
             }
             catch (Exception ex)
             {
-                frm_Notification frm_Notification = new frm_Notification("success", ex.ToString());
+                frm_Notification frm_Notification = new frm_Notification("error", ex.ToString());
                 frm_Notification.ShowDialog();
             }
         }
 
+        private void Add_usr_AnhMini(int pageNumber)
+        {
+            flpDSAnh.Controls.Clear();
+
+            int start = pageNumber * itemsPerPage;
+            int end = Math.Min(start + itemsPerPage, imageFiles.Count);
+
+            txtTrangHienTai.Text = $"Trang {pageNumber + 1} / {Math.Ceiling((double)imageFiles.Count / itemsPerPage)}";
+
+            for (int i = start; i < end; i++)
+            {
+                usr_AnhMini usr_AnhMini = new usr_AnhMini(imageFiles[i], Path.GetFileName(imageFiles[i]), function.GetLastModified(imageFiles[i]));
+                usr_AnhMini.ControlClicked += flpDSAnh_Click;
+                flpDSAnh.Controls.Add(usr_AnhMini);
+            }
+        }
 
         private void btnChonFolder_Click(object sender, EventArgs e)
         {
@@ -132,8 +145,11 @@ namespace MTA_Mobile_Forensic.GUI.Android
 
         private void pbAnhDaChon_DoubleClick(object sender, EventArgs e)
         {
-            frm_XemAnh frm_XemAnh = new frm_XemAnh(linkanhdachon);
-            frm_XemAnh.Show();
+            if (linkanhdachon != String.Empty)
+            {
+                frm_XemAnh frm_XemAnh = new frm_XemAnh(linkanhdachon);
+                frm_XemAnh.Show();
+            }
         }
 
         private void btnXuat_Click(object sender, EventArgs e)
@@ -174,6 +190,33 @@ namespace MTA_Mobile_Forensic.GUI.Android
         private void cbbTuyChon_SelectedIndexChanged(object sender, EventArgs e)
         {
             GetImageInFolder(txtTimKiem.Text);
+        }
+
+        private void btnTrangTruoc_Click(object sender, EventArgs e)
+        {
+            btnTrangTiep.Enabled = true;
+            if (currentPage > 0)
+            {
+                currentPage--;
+                Add_usr_AnhMini(currentPage);
+            } else
+            {
+                btnTrangTruoc.Enabled = false;
+            }
+        }
+
+        private void btnTrangTiep_Click(object sender, EventArgs e)
+        {
+            btnTrangTruoc.Enabled = true;
+            if (currentPage < (imageFiles.Count - 1) / itemsPerPage)
+            {
+                currentPage++;
+                Add_usr_AnhMini(currentPage);
+            }
+            else
+            {
+                btnTrangTiep.Enabled = false;
+            }
         }
     }
 }

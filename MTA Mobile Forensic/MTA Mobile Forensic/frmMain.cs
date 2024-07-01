@@ -21,7 +21,7 @@ namespace MTA_Mobile_Forensic
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-            btnAnh_Click(sender, e);
+            btnVideo_Click(sender, e);
         }
 
         usr_TinNhan usr_TinNhan;
@@ -29,6 +29,7 @@ namespace MTA_Mobile_Forensic
         usr_DanhBa usr_DanhBa;
         usr_Lich usr_Lich;
         usr_Anh usr_Anh;
+        usr_Video usr_Video;
 
 
         private void btnTrangChu_Click(object sender, EventArgs e)
@@ -148,7 +149,19 @@ namespace MTA_Mobile_Forensic
 
         private void btnVideo_Click(object sender, EventArgs e)
         {
-
+            if (usr_Video == null)
+            {
+                usr_Video = new usr_Video();
+                usr_Video.Dock = DockStyle.Fill;
+                mainContainer.Controls.Add(usr_Video);
+                usr_Video.BringToFront();
+            }
+            else
+            {
+                usr_Video.BringToFront();
+            }
+            lblTieuDe1.Caption = "Điều tra dữ liệu";
+            lblTieuDe2.Caption = "Video";
         }
 
         private void btnUngDung_Click(object sender, EventArgs e)
