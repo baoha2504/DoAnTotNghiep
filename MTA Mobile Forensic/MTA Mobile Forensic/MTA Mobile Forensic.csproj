@@ -57,6 +57,9 @@
     <Reference Include="Microsoft.Web.WebView2.Wpf, Version=1.0.2592.51, Culture=neutral, PublicKeyToken=2a8ab48044d2601e, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Web.WebView2.1.0.2592.51\lib\net462\Microsoft.Web.WebView2.Wpf.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="System" />
     <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
@@ -126,6 +129,12 @@
     <Compile Include="GUI\Android\usr_TinNhan.Designer.cs">
       <DependentUpon>usr_TinNhan.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Android\usr_UngDung.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Android\usr_UngDung.Designer.cs">
+      <DependentUpon>usr_UngDung.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Android\usr_Video.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -143,6 +152,12 @@
     </Compile>
     <Compile Include="GUI\Share\frm_XemAnh.Designer.cs">
       <DependentUpon>frm_XemAnh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Share\frm_XemUngDung.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Share\frm_XemUngDung.Designer.cs">
+      <DependentUpon>frm_XemUngDung.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\Share\frm_XemVideo.cs">
       <SubType>Form</SubType>
@@ -198,9 +213,12 @@
     <Compile Include="GUI\Share\usr_VideoMini.Designer.cs">
       <DependentUpon>usr_VideoMini.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\AppInfo.cs" />
+    <Compile Include="Model\TinNhan.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Support\adb.cs" />
+    <Compile Include="Support\api.cs" />
     <Compile Include="Support\exiftool.cs" />
     <Compile Include="Support\ffmpeg.cs" />
     <Compile Include="Support\function.cs" />
@@ -223,6 +241,9 @@
     <EmbeddedResource Include="GUI\Android\usr_TinNhan.resx">
       <DependentUpon>usr_TinNhan.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Android\usr_UngDung.resx">
+      <DependentUpon>usr_UngDung.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Android\usr_Video.resx">
       <DependentUpon>usr_Video.cs</DependentUpon>
     </EmbeddedResource>
@@ -231,6 +252,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Share\frm_XemAnh.resx">
       <DependentUpon>frm_XemAnh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Share\frm_XemUngDung.resx">
+      <DependentUpon>frm_XemUngDung.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Share\frm_XemVideo.resx">
       <DependentUpon>frm_XemVideo.cs</DependentUpon>
@@ -287,6 +311,7 @@
     <Folder Include="GUI\IOS\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Data\Image\app.png" />
     <Content Include="Data\Image\checked.png" />
     <Content Include="Data\Image\error.png" />
     <Content Include="Data\Image\info.png" />

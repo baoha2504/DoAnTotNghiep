@@ -33,9 +33,8 @@ namespace MTA_Mobile_Forensic.Support
 
                 return dateTime.ToString("HH:mm:ss dd/MM/yyyy");
             }
-            catch (Exception ex)
+            catch 
             {
-                // Handle the exception (e.g., log it or return an error message)
                 return "Invalid timestamp";
             }
         }
@@ -50,9 +49,8 @@ namespace MTA_Mobile_Forensic.Support
 
                 return dateTime.ToString("dd");
             }
-            catch (Exception ex)
+            catch
             {
-                // Handle the exception (e.g., log it or return an error message)
                 return "Invalid timestamp";
             }
         }

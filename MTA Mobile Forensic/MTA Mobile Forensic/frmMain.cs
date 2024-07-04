@@ -1,4 +1,4 @@
-﻿ using DevExpress.XtraBars;
+﻿using DevExpress.XtraBars;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,7 +21,7 @@ namespace MTA_Mobile_Forensic
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-            btnVideo_Click(sender, e);
+            btnUngDung_Click(sender, e);
         }
 
         usr_TinNhan usr_TinNhan;
@@ -30,6 +30,7 @@ namespace MTA_Mobile_Forensic
         usr_Lich usr_Lich;
         usr_Anh usr_Anh;
         usr_Video usr_Video;
+        usr_UngDung usr_UngDung;
 
 
         private void btnTrangChu_Click(object sender, EventArgs e)
@@ -166,7 +167,19 @@ namespace MTA_Mobile_Forensic
 
         private void btnUngDung_Click(object sender, EventArgs e)
         {
-
+            if (usr_UngDung == null)
+            {
+                usr_UngDung = new usr_UngDung();
+                usr_UngDung.Dock = DockStyle.Fill;
+                mainContainer.Controls.Add(usr_UngDung);
+                usr_UngDung.BringToFront();
+            }
+            else
+            {
+                usr_UngDung.BringToFront();
+            }
+            lblTieuDe1.Caption = "Điều tra dữ liệu";
+            lblTieuDe2.Caption = "Ứng dụng";
         }
 
         private void btnCaiDatCuaThietBi_Click(object sender, EventArgs e)

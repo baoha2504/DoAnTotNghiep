@@ -65,6 +65,12 @@
             this.btnChonTatCa = new DevComponents.DotNetBar.ButtonX();
             this.btnNhap = new DevComponents.DotNetBar.ButtonX();
             this.btnXuat = new DevComponents.DotNetBar.ButtonX();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.txtTrangHienTai = new DevComponents.DotNetBar.PanelEx();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.btnTrangTiep = new DevComponents.DotNetBar.ButtonX();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.btnTrangTruoc = new DevComponents.DotNetBar.ButtonX();
             this.panelEx1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -79,6 +85,9 @@
             this.txtNguoiGui.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panelEx2.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel7.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelEx1
@@ -165,6 +174,7 @@
             // panel4
             // 
             this.panel4.Controls.Add(this.flpDSTinNhan);
+            this.panel4.Controls.Add(this.panel2);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(0, 40);
             this.panel4.Name = "panel4";
@@ -177,7 +187,7 @@
             this.flpDSTinNhan.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flpDSTinNhan.Location = new System.Drawing.Point(0, 0);
             this.flpDSTinNhan.Name = "flpDSTinNhan";
-            this.flpDSTinNhan.Size = new System.Drawing.Size(305, 537);
+            this.flpDSTinNhan.Size = new System.Drawing.Size(305, 507);
             this.flpDSTinNhan.TabIndex = 0;
             this.flpDSTinNhan.SizeChanged += new System.EventHandler(this.flpDSTinNhan_SizeChanged);
             this.flpDSTinNhan.Click += new System.EventHandler(this.flpDSTinNhan_Click);
@@ -586,6 +596,80 @@
             this.btnXuat.TabIndex = 0;
             this.btnXuat.Text = "Xuất";
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.txtTrangHienTai);
+            this.panel2.Controls.Add(this.panel7);
+            this.panel2.Controls.Add(this.panel5);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 507);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(305, 30);
+            this.panel2.TabIndex = 2;
+            // 
+            // txtTrangHienTai
+            // 
+            this.txtTrangHienTai.CanvasColor = System.Drawing.SystemColors.Control;
+            this.txtTrangHienTai.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.txtTrangHienTai.DisabledBackColor = System.Drawing.Color.Empty;
+            this.txtTrangHienTai.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtTrangHienTai.Location = new System.Drawing.Point(48, 0);
+            this.txtTrangHienTai.Name = "txtTrangHienTai";
+            this.txtTrangHienTai.Size = new System.Drawing.Size(209, 30);
+            this.txtTrangHienTai.Style.Alignment = System.Drawing.StringAlignment.Center;
+            this.txtTrangHienTai.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
+            this.txtTrangHienTai.Style.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
+            this.txtTrangHienTai.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
+            this.txtTrangHienTai.Style.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
+            this.txtTrangHienTai.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
+            this.txtTrangHienTai.Style.GradientAngle = 90;
+            this.txtTrangHienTai.TabIndex = 2;
+            this.txtTrangHienTai.Text = "Trang x/n";
+            // 
+            // panel7
+            // 
+            this.panel7.Controls.Add(this.btnTrangTiep);
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel7.Location = new System.Drawing.Point(257, 0);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(48, 30);
+            this.panel7.TabIndex = 1;
+            // 
+            // btnTrangTiep
+            // 
+            this.btnTrangTiep.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnTrangTiep.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnTrangTiep.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnTrangTiep.Location = new System.Drawing.Point(0, 0);
+            this.btnTrangTiep.Name = "btnTrangTiep";
+            this.btnTrangTiep.Size = new System.Drawing.Size(48, 30);
+            this.btnTrangTiep.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnTrangTiep.TabIndex = 0;
+            this.btnTrangTiep.Text = ">";
+            this.btnTrangTiep.Click += new System.EventHandler(this.btnTrangTiep_Click);
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.btnTrangTruoc);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel5.Location = new System.Drawing.Point(0, 0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(48, 30);
+            this.panel5.TabIndex = 0;
+            // 
+            // btnTrangTruoc
+            // 
+            this.btnTrangTruoc.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnTrangTruoc.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnTrangTruoc.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnTrangTruoc.Location = new System.Drawing.Point(0, 0);
+            this.btnTrangTruoc.Name = "btnTrangTruoc";
+            this.btnTrangTruoc.Size = new System.Drawing.Size(48, 30);
+            this.btnTrangTruoc.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnTrangTruoc.TabIndex = 0;
+            this.btnTrangTruoc.Text = "<";
+            this.btnTrangTruoc.Click += new System.EventHandler(this.btnTrangTruoc_Click);
+            // 
             // usr_TinNhan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -611,6 +695,9 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panelEx2.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel7.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -653,5 +740,11 @@
         private DevComponents.Editors.ComboItem cbb_option_sim1;
         private DevComponents.Editors.ComboItem cbb_option_sim2;
         private DevComponents.Editors.ComboItem cbb_option_simall;
+        private System.Windows.Forms.Panel panel2;
+        private DevComponents.DotNetBar.PanelEx txtTrangHienTai;
+        private System.Windows.Forms.Panel panel7;
+        private DevComponents.DotNetBar.ButtonX btnTrangTiep;
+        private System.Windows.Forms.Panel panel5;
+        private DevComponents.DotNetBar.ButtonX btnTrangTruoc;
     }
 }

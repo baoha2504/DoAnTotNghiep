@@ -79,6 +79,8 @@
             // 
             // pbAnh
             // 
+            this.pbAnh.BackColor = System.Drawing.Color.White;
+            this.pbAnh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pbAnh.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pbAnh.Image = ((System.Drawing.Image)(resources.GetObject("pbAnh.Image")));
             this.pbAnh.Location = new System.Drawing.Point(0, 0);
