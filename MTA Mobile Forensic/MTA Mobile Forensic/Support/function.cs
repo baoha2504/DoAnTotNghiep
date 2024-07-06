@@ -31,6 +31,8 @@ namespace MTA_Mobile_Forensic.Support
 
                 DateTime dateTime = DateTimeOffset.FromUnixTimeMilliseconds(timestamp).UtcDateTime;
 
+                dateTime = dateTime.AddHours(7);
+
                 return dateTime.ToString("HH:mm:ss dd/MM/yyyy");
             }
             catch 

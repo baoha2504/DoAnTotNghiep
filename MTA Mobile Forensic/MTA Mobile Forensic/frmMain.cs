@@ -21,7 +21,7 @@ namespace MTA_Mobile_Forensic
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-            btnUngDung_Click(sender, e);
+            btnCaiDatCuaThietBi_Click(sender, e);
         }
 
         usr_TinNhan usr_TinNhan;
@@ -31,14 +31,9 @@ namespace MTA_Mobile_Forensic
         usr_Anh usr_Anh;
         usr_Video usr_Video;
         usr_UngDung usr_UngDung;
-
+        usr_CaiDat usr_CaiDat;
 
         private void btnTrangChu_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnThongBao_Click(object sender, EventArgs e)
         {
 
         }
@@ -65,6 +60,8 @@ namespace MTA_Mobile_Forensic
 
         private void btnTinNhan_Click(object sender, EventArgs e)
         {
+            lblTieuDe1.Caption = "Điều tra dữ liệu";
+            lblTieuDe2.Caption = "Tin nhắn";
             if (usr_TinNhan == null)
             {
                 usr_TinNhan = new usr_TinNhan();
@@ -76,12 +73,12 @@ namespace MTA_Mobile_Forensic
             {
                 usr_TinNhan.BringToFront();
             }
-            lblTieuDe1.Caption = "Điều tra dữ liệu";
-            lblTieuDe2.Caption = "Tin nhắn";
         }
 
         private void btnCuocGoi_Click(object sender, EventArgs e)
         {
+            lblTieuDe1.Caption = "Điều tra dữ liệu";
+            lblTieuDe2.Caption = "Cuộc gọi";
             if (usr_CuocGoi == null)
             {
                 usr_CuocGoi = new usr_CuocGoi();
@@ -93,12 +90,12 @@ namespace MTA_Mobile_Forensic
             {
                 usr_CuocGoi.BringToFront();
             }
-            lblTieuDe1.Caption = "Điều tra dữ liệu";
-            lblTieuDe2.Caption = "Cuộc gọi";
         }
 
         private void btnDanhBa_Click(object sender, EventArgs e)
         {
+            lblTieuDe1.Caption = "Điều tra dữ liệu";
+            lblTieuDe2.Caption = "Danh bạ";
             if (usr_DanhBa == null)
             {
                 usr_DanhBa = new usr_DanhBa();
@@ -110,12 +107,12 @@ namespace MTA_Mobile_Forensic
             {
                 usr_DanhBa.BringToFront();
             }
-            lblTieuDe1.Caption = "Điều tra dữ liệu";
-            lblTieuDe2.Caption = "Danh bạ";
         }
 
         private void btnLich_Click(object sender, EventArgs e)
         {
+            lblTieuDe1.Caption = "Điều tra dữ liệu";
+            lblTieuDe2.Caption = "Lịch";
             if (usr_Lich == null)
             {
                 usr_Lich = new usr_Lich();
@@ -127,12 +124,12 @@ namespace MTA_Mobile_Forensic
             {
                 usr_Lich.BringToFront();
             }
-            lblTieuDe1.Caption = "Điều tra dữ liệu";
-            lblTieuDe2.Caption = "Lịch";
         }
 
         private void btnAnh_Click(object sender, EventArgs e)
         {
+            lblTieuDe1.Caption = "Điều tra dữ liệu";
+            lblTieuDe2.Caption = "Ảnh";
             if (usr_Anh == null)
             {
                 usr_Anh = new usr_Anh();
@@ -144,12 +141,12 @@ namespace MTA_Mobile_Forensic
             {
                 usr_Anh.BringToFront();
             }
-            lblTieuDe1.Caption = "Điều tra dữ liệu";
-            lblTieuDe2.Caption = "Ảnh";
         }
 
         private void btnVideo_Click(object sender, EventArgs e)
         {
+            lblTieuDe1.Caption = "Điều tra dữ liệu";
+            lblTieuDe2.Caption = "Video";
             if (usr_Video == null)
             {
                 usr_Video = new usr_Video();
@@ -161,12 +158,12 @@ namespace MTA_Mobile_Forensic
             {
                 usr_Video.BringToFront();
             }
-            lblTieuDe1.Caption = "Điều tra dữ liệu";
-            lblTieuDe2.Caption = "Video";
         }
 
         private void btnUngDung_Click(object sender, EventArgs e)
         {
+            lblTieuDe1.Caption = "Điều tra dữ liệu";
+            lblTieuDe2.Caption = "Ứng dụng";
             if (usr_UngDung == null)
             {
                 usr_UngDung = new usr_UngDung();
@@ -178,13 +175,23 @@ namespace MTA_Mobile_Forensic
             {
                 usr_UngDung.BringToFront();
             }
-            lblTieuDe1.Caption = "Điều tra dữ liệu";
-            lblTieuDe2.Caption = "Ứng dụng";
         }
 
         private void btnCaiDatCuaThietBi_Click(object sender, EventArgs e)
         {
-
+            lblTieuDe1.Caption = "Điều tra dữ liệu";
+            lblTieuDe2.Caption = "Cài đặt trên thiết bị";
+            if (usr_CaiDat == null)
+            {
+                usr_CaiDat = new usr_CaiDat();
+                usr_CaiDat.Dock = DockStyle.Fill;
+                mainContainer.Controls.Add(usr_CaiDat);
+                usr_CaiDat.BringToFront();
+            }
+            else
+            {
+                usr_CaiDat.BringToFront();
+            }
         }
 
         private void btnLichSuTruyCap_Click(object sender, EventArgs e)

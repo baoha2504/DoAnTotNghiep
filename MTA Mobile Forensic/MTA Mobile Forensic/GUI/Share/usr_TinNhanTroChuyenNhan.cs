@@ -16,5 +16,14 @@ namespace MTA_Mobile_Forensic.GUI.Share
         {
             InitializeComponent();
         }
+
+        public usr_TinNhanTroChuyenNhan(string noidung, string thoigian, int chieurong)
+        {
+            InitializeComponent();
+            lblNoiDung.Text = noidung;
+            lblThoiGian.Text = thoigian;
+            lblNoiDung.MaximumSize = new Size(chieurong, 0);
+            lblThoiGian.MaximumSize = new Size(chieurong, 0);
+        }
     }
 }

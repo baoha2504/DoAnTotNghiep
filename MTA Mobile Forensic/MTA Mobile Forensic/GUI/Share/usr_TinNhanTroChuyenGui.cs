@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DevExpress.DXTemplateGallery.Extensions;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,20 @@ namespace MTA_Mobile_Forensic.GUI.Share
         public usr_TinNhanTroChuyenGui()
         {
             InitializeComponent();
+        }
+
+        public usr_TinNhanTroChuyenGui(string noidung, string thoigian, int chieurong)
+        {
+            InitializeComponent();
+            lblNoiDung.Text = noidung;
+            lblThoiGian.Text = thoigian;
+            lblNoiDung.MaximumSize = new Size(chieurong, 0);
+            lblThoiGian.MaximumSize = new Size(chieurong, 0);
+        }
+
+        private void usr_TinNhanTroChuyenGui_Resize(object sender, EventArgs e)
+        {
+
         }
     }
 }

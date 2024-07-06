@@ -16,5 +16,7 @@ namespace MTA_Mobile_Forensic.Model
         public string status { get; set; }
         public string serviceCenter { get; set; }
         public string simId { get; set; }
+        public int sentMessage { get; set; }
+
     }
 }

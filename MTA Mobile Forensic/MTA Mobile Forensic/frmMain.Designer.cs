@@ -34,7 +34,6 @@
             this.accordionControl1 = new DevExpress.XtraBars.Navigation.AccordionControl();
             this.TRANGCHU = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btnTrangChu = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.btnThongBao = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.KETNOITHIETBI = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btnTatCaThietBi = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btnKetNoiThietBi = new DevExpress.XtraBars.Navigation.AccordionControlElement();
@@ -124,8 +123,7 @@
             // TRANGCHU
             // 
             this.TRANGCHU.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
-            this.btnTrangChu,
-            this.btnThongBao});
+            this.btnTrangChu});
             this.TRANGCHU.Expanded = true;
             this.TRANGCHU.Name = "TRANGCHU";
             this.TRANGCHU.Text = "TRANG CHỦ";
@@ -136,13 +134,6 @@
             this.btnTrangChu.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.btnTrangChu.Text = "Trang chủ";
             this.btnTrangChu.Click += new System.EventHandler(this.btnTrangChu_Click);
-            // 
-            // btnThongBao
-            // 
-            this.btnThongBao.Name = "btnThongBao";
-            this.btnThongBao.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.btnThongBao.Text = "Thông báo";
-            this.btnThongBao.Click += new System.EventHandler(this.btnThongBao_Click);
             // 
             // KETNOITHIETBI
             // 
@@ -447,7 +438,6 @@
             this.NANGCAO.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.btnMoKhoaThietBi,
             this.btnRoot_JailbreakThietBi});
-            this.NANGCAO.Expanded = true;
             this.NANGCAO.Name = "NANGCAO";
             this.NANGCAO.Text = "NÂNG CAO";
             // 
@@ -629,7 +619,6 @@
         private DevExpress.XtraBars.Navigation.AccordionControlElement btnDieuTraAudio;
         private DevExpress.XtraBars.Navigation.AccordionControlElement TRANGCHU;
         private DevExpress.XtraBars.Navigation.AccordionControlElement btnTrangChu;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement btnThongBao;
         private DevExpress.XtraBars.Navigation.AccordionControlElement btnFileSystem;
         private DevExpress.XtraBars.BarStaticItem lblTieuDe1;
         private DevExpress.XtraBars.BarButtonItem barButtonItem1;

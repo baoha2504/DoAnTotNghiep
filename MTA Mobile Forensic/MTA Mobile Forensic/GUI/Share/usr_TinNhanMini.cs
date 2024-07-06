@@ -1,16 +1,7 @@
-﻿using DevExpress.XtraEditors.Filtering.Templates;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+﻿using System;
 using System.Drawing;
-using System.Linq;
-using System.Net;
-using System.Text;
-using System.Threading.Tasks;
+using System.IO;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.Tab;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 namespace MTA_Mobile_Forensic.GUI.Share
 {
     public partial class usr_TinNhanMini : UserControl
@@ -30,7 +21,7 @@ namespace MTA_Mobile_Forensic.GUI.Share
         public string simId = "";
         public event EventHandler ControlClicked;
 
-        public usr_TinNhanMini(string diachi, string tinnhan, string thoigian, string dateSent, string read,string status, string serviceCenter, string simId)
+        public usr_TinNhanMini(string diachi, string tinnhan, string thoigian, string dateSent, string read, string status, string serviceCenter, string simId, int sentMessage)
         {
             InitializeComponent();
 
@@ -46,6 +37,23 @@ namespace MTA_Mobile_Forensic.GUI.Share
             txtAddress.Text = diachi;
             txtTinNhan.Text = tinnhan;
             txtThoiGian.Text = thoigian;
+
+            string sourceDirectory = AppDomain.CurrentDomain.BaseDirectory;
+            string projectDirectory = Directory.GetParent(sourceDirectory).Parent.Parent.FullName;
+            string imagePath = Path.Combine(projectDirectory, "Data", "Image");
+            string fullImagePath = Path.Combine(imagePath, "message.png");
+
+
+            if (sentMessage == 0)
+            {
+                // tin nhắn nhận được
+                panel2.BackgroundImage = Image.FromFile(fullImagePath);
+            }
+            else if (sentMessage == 1)
+            {
+                // tin nhắn gửi đi
+                // giữ hình đã setup sẵn
+            }
         }
 
         private void panel1_MouseEnter(object sender, EventArgs e)

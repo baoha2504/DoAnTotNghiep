@@ -105,6 +105,12 @@
     <Compile Include="GUI\Android\usr_Anh.Designer.cs">
       <DependentUpon>usr_Anh.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Android\usr_CaiDat.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Android\usr_CaiDat.Designer.cs">
+      <DependentUpon>usr_CaiDat.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Android\usr_CuocGoi.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -229,6 +235,9 @@
     <EmbeddedResource Include="GUI\Android\usr_Anh.resx">
       <DependentUpon>usr_Anh.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Android\usr_CaiDat.resx">
+      <DependentUpon>usr_CaiDat.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Android\usr_CuocGoi.resx">
       <DependentUpon>usr_CuocGoi.cs</DependentUpon>
     </EmbeddedResource>
@@ -315,6 +324,7 @@
     <Content Include="Data\Image\checked.png" />
     <Content Include="Data\Image\error.png" />
     <Content Include="Data\Image\info.png" />
+    <Content Include="Data\Image\message.png" />
     <Content Include="Data\Image\warning.png" />
   </ItemGroup>
   <ItemGroup>
