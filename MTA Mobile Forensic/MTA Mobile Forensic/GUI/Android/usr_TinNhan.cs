@@ -191,17 +191,16 @@ namespace MTA_Mobile_Forensic.GUI.Android
                     if (item.sentMessage == 0)
                     {
                         // tin nhắn nhận được
-                        usr_TinNhanTroChuyenGui usr_TinNhanTroChuyenGui = new usr_TinNhanTroChuyenGui(item.body, item.date, flpChiTietTinNhan.Width);
-                        usr_TinNhanTroChuyenGui.Width = flpChiTietTinNhan.Width;
-                        flpChiTietTinNhan.Controls.Add(usr_TinNhanTroChuyenGui);
-
+                        usr_TinNhanTroChuyenNhan usr_TinNhanTroChuyenNhan = new usr_TinNhanTroChuyenNhan(item.body, item.date, flpChiTietTinNhan.Width);
+                        usr_TinNhanTroChuyenNhan.Width = flpChiTietTinNhan.Width;
+                        flpChiTietTinNhan.Controls.Add(usr_TinNhanTroChuyenNhan);
                     }
                     else if (item.sentMessage == 1)
                     {
                         // tin nhắn gửi đi
-                        usr_TinNhanTroChuyenNhan usr_TinNhanTroChuyenNhan = new usr_TinNhanTroChuyenNhan(item.body, item.date, flpChiTietTinNhan.Width);
-                        usr_TinNhanTroChuyenNhan.Width = flpChiTietTinNhan.Width;
-                        flpChiTietTinNhan.Controls.Add(usr_TinNhanTroChuyenNhan);
+                        usr_TinNhanTroChuyenGui usr_TinNhanTroChuyenGui = new usr_TinNhanTroChuyenGui(item.body, item.date, flpChiTietTinNhan.Width);
+                        usr_TinNhanTroChuyenGui.Width = flpChiTietTinNhan.Width;
+                        flpChiTietTinNhan.Controls.Add(usr_TinNhanTroChuyenGui);
                     }
                 }
             }

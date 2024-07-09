@@ -6,7 +6,6 @@ using System.Data;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
-using static System.Net.WebRequestMethods;
 
 namespace MTA_Mobile_Forensic.GUI.Android
 {
@@ -56,34 +55,37 @@ namespace MTA_Mobile_Forensic.GUI.Android
 
         private void GetImageInFolder(string folderPath)
         {
-            try
+            if (folderPath != string.Empty)
             {
-                // Các đuôi file dạng ảnh
-                string[] imageExtensions = new string[] { ".jpg", ".jpeg", ".png", ".bmp", ".gif", ".tiff", ".webp" };
-
-                // Lấy tất cả các tệp dạng ảnh trong thư mục
-                 imageFiles = Directory.GetFiles(folderPath)
-                                          .Where(file => imageExtensions.Contains(Path.GetExtension(file).ToLower()))
-                                          .ToList();
-
-                // Nếu cbbTuyChon.Text không phải là "Trong thư mục", lấy thêm các tệp ảnh trong các thư mục con
-                if (cbbTuyChon.Text != "Trong thư mục")
+                try
                 {
-                    var subDirectories = Directory.GetDirectories(folderPath);
-                    foreach (var subDir in subDirectories)
+                    // Các đuôi file dạng ảnh
+                    string[] imageExtensions = new string[] { ".jpg", ".jpeg", ".png", ".bmp", ".gif", ".tiff", ".webp" };
+
+                    // Lấy tất cả các tệp dạng ảnh trong thư mục
+                    imageFiles = Directory.GetFiles(folderPath)
+                                             .Where(file => imageExtensions.Contains(Path.GetExtension(file).ToLower()))
+                                             .ToList();
+
+                    // Nếu cbbTuyChon.Text không phải là "Trong thư mục", lấy thêm các tệp ảnh trong các thư mục con
+                    if (cbbTuyChon.Text != "Trong thư mục")
                     {
-                        var subDirFiles = Directory.GetFiles(subDir)
-                                                   .Where(file => imageExtensions.Contains(Path.GetExtension(file).ToLower()))
-                                                   .ToList();
-                        imageFiles.AddRange(subDirFiles);
+                        var subDirectories = Directory.GetDirectories(folderPath);
+                        foreach (var subDir in subDirectories)
+                        {
+                            var subDirFiles = Directory.GetFiles(subDir)
+                                                       .Where(file => imageExtensions.Contains(Path.GetExtension(file).ToLower()))
+                                                       .ToList();
+                            imageFiles.AddRange(subDirFiles);
+                        }
                     }
+                    Add_usr_AnhMini(currentPage);
                 }
-                Add_usr_AnhMini(currentPage);
-            }
-            catch (Exception ex)
-            {
-                frm_Notification frm_Notification = new frm_Notification("error", ex.ToString());
-                frm_Notification.ShowDialog();
+                catch (Exception ex)
+                {
+                    frm_Notification frm_Notification = new frm_Notification("error", ex.ToString());
+                    frm_Notification.ShowDialog();
+                }
             }
         }
 
@@ -199,7 +201,8 @@ namespace MTA_Mobile_Forensic.GUI.Android
             {
                 currentPage--;
                 Add_usr_AnhMini(currentPage);
-            } else
+            }
+            else
             {
                 btnTrangTruoc.Enabled = false;
             }

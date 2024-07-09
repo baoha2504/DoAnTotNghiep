@@ -51,10 +51,8 @@
             this.btnCaiDatCuaThietBi = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btnLichSuTruyCap = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btnMangDaKetNoi = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.btnTheSim = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.btnMaHash = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.btnThongTinKhac = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btnFileSystem = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.btnThongTinKhac = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.DIEUKHIENTHIETBI = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btnCaiDatUngDung = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btnGoCaiDat = new DevExpress.XtraBars.Navigation.AccordionControlElement();
@@ -84,6 +82,7 @@
             this.barStaticItem2 = new DevExpress.XtraBars.BarStaticItem();
             this.lblTieuDe2 = new DevExpress.XtraBars.BarStaticItem();
             this.fluentFormDefaultManager1 = new DevExpress.XtraBars.FluentDesignSystem.FluentFormDefaultManager(this.components);
+            this.btnGhiAm = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentFormDefaultManager1)).BeginInit();
@@ -190,14 +189,13 @@
             this.btnLich,
             this.btnAnh,
             this.btnVideo,
+            this.btnGhiAm,
             this.btnUngDung,
             this.btnCaiDatCuaThietBi,
             this.btnLichSuTruyCap,
             this.btnMangDaKetNoi,
-            this.btnTheSim,
-            this.btnMaHash,
-            this.btnThongTinKhac,
-            this.btnFileSystem});
+            this.btnFileSystem,
+            this.btnThongTinKhac});
             this.DIEUTRADULIEU.Expanded = true;
             this.DIEUTRADULIEU.Name = "DIEUTRADULIEU";
             this.DIEUTRADULIEU.Text = "ĐIỀU TRA DỮ LIỆU";
@@ -272,19 +270,12 @@
             this.btnMangDaKetNoi.Text = "Mạng đã kết nối";
             this.btnMangDaKetNoi.Click += new System.EventHandler(this.btnMangDaKetNoi_Click);
             // 
-            // btnTheSim
+            // btnFileSystem
             // 
-            this.btnTheSim.Name = "btnTheSim";
-            this.btnTheSim.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.btnTheSim.Text = "Thẻ Sim";
-            this.btnTheSim.Click += new System.EventHandler(this.btnTheSim_Click);
-            // 
-            // btnMaHash
-            // 
-            this.btnMaHash.Name = "btnMaHash";
-            this.btnMaHash.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.btnMaHash.Text = "Mã hash file";
-            this.btnMaHash.Click += new System.EventHandler(this.btnMaHash_Click);
+            this.btnFileSystem.Name = "btnFileSystem";
+            this.btnFileSystem.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.btnFileSystem.Text = "File hệ thống";
+            this.btnFileSystem.Click += new System.EventHandler(this.btnFileSystem_Click);
             // 
             // btnThongTinKhac
             // 
@@ -292,13 +283,6 @@
             this.btnThongTinKhac.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.btnThongTinKhac.Text = "Thông tin khác";
             this.btnThongTinKhac.Click += new System.EventHandler(this.btnThongTinKhac_Click);
-            // 
-            // btnFileSystem
-            // 
-            this.btnFileSystem.Name = "btnFileSystem";
-            this.btnFileSystem.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.btnFileSystem.Text = "File hệ thống";
-            this.btnFileSystem.Click += new System.EventHandler(this.btnFileSystem_Click);
             // 
             // DIEUKHIENTHIETBI
             // 
@@ -399,7 +383,7 @@
             // 
             this.btnVirusTotal.Name = "btnVirusTotal";
             this.btnVirusTotal.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.btnVirusTotal.Text = "Virustotal";
+            this.btnVirusTotal.Text = "Điều tra file";
             this.btnVirusTotal.Click += new System.EventHandler(this.btnVirusTotal_Click);
             // 
             // SAOLUUKHOIPUC
@@ -438,6 +422,7 @@
             this.NANGCAO.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.btnMoKhoaThietBi,
             this.btnRoot_JailbreakThietBi});
+            this.NANGCAO.Expanded = true;
             this.NANGCAO.Name = "NANGCAO";
             this.NANGCAO.Text = "NÂNG CAO";
             // 
@@ -545,6 +530,13 @@
             this.lblTieuDe2});
             this.fluentFormDefaultManager1.MaxItemId = 5;
             // 
+            // btnGhiAm
+            // 
+            this.btnGhiAm.Name = "btnGhiAm";
+            this.btnGhiAm.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.btnGhiAm.Text = "Ghi âm";
+            this.btnGhiAm.Click += new System.EventHandler(this.btnGhiAm_Click);
+            // 
             // frmMain
             // 
             this.Appearance.BackColor = System.Drawing.Color.White;
@@ -611,9 +603,7 @@
         private DevExpress.XtraBars.Navigation.AccordionControlElement btnCaiDatCuaThietBi;
         private DevExpress.XtraBars.Navigation.AccordionControlElement btnLichSuTruyCap;
         private DevExpress.XtraBars.Navigation.AccordionControlElement btnMangDaKetNoi;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement btnTheSim;
         private DevExpress.XtraBars.Navigation.AccordionControlElement btnThongTinKhac;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement btnMaHash;
         private DevExpress.XtraBars.Navigation.AccordionControlElement btnImportDuLieu;
         private DevExpress.XtraBars.Navigation.AccordionControlElement btnDieuTraVideo;
         private DevExpress.XtraBars.Navigation.AccordionControlElement btnDieuTraAudio;
@@ -625,5 +615,6 @@
         private DevExpress.XtraBars.BarStaticItem barStaticItem1;
         private DevExpress.XtraBars.BarStaticItem barStaticItem2;
         private DevExpress.XtraBars.BarStaticItem lblTieuDe2;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement btnGhiAm;
     }
 }

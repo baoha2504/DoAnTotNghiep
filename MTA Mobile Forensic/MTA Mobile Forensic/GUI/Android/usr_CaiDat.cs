@@ -310,10 +310,5 @@ namespace MTA_Mobile_Forensic.GUI.Android
             LoadTab_BaoMat();
             LoadTab_CucBo();
         }
-
-        private void btnTimKiem_Click(object sender, System.EventArgs e)
-        {
-
-        }
     }
 }

@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             this.panelEx1 = new DevComponents.DotNetBar.PanelEx();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.lblThoiGian = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.lblNoiDung = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.lblThoiGian = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.panelEx1.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelEx1
@@ -62,14 +62,6 @@
             this.panelEx1.Style.GradientAngle = 90;
             this.panelEx1.TabIndex = 0;
             // 
-            // panel1
-            // 
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(59, 55);
-            this.panel1.TabIndex = 0;
-            // 
             // panel2
             // 
             this.panel2.AutoSize = true;
@@ -80,27 +72,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(516, 55);
             this.panel2.TabIndex = 1;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.lblThoiGian);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 35);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(516, 20);
-            this.panel3.TabIndex = 0;
-            // 
-            // lblThoiGian
-            // 
-            this.lblThoiGian.AutoSize = true;
-            this.lblThoiGian.Dock = System.Windows.Forms.DockStyle.Right;
-            this.lblThoiGian.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblThoiGian.ForeColor = System.Drawing.Color.White;
-            this.lblThoiGian.Location = new System.Drawing.Point(453, 0);
-            this.lblThoiGian.Name = "lblThoiGian";
-            this.lblThoiGian.Size = new System.Drawing.Size(63, 16);
-            this.lblThoiGian.TabIndex = 4;
-            this.lblThoiGian.Text = "Thời gian";
             // 
             // panel4
             // 
@@ -124,6 +95,35 @@
             this.lblNoiDung.TabIndex = 3;
             this.lblNoiDung.Text = "Nội dung";
             // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.lblThoiGian);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel3.Location = new System.Drawing.Point(0, 35);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(516, 20);
+            this.panel3.TabIndex = 0;
+            // 
+            // lblThoiGian
+            // 
+            this.lblThoiGian.AutoSize = true;
+            this.lblThoiGian.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lblThoiGian.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblThoiGian.ForeColor = System.Drawing.Color.White;
+            this.lblThoiGian.Location = new System.Drawing.Point(458, 0);
+            this.lblThoiGian.Name = "lblThoiGian";
+            this.lblThoiGian.Size = new System.Drawing.Size(58, 15);
+            this.lblThoiGian.TabIndex = 4;
+            this.lblThoiGian.Text = "Thời gian";
+            // 
+            // panel1
+            // 
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(59, 55);
+            this.panel1.TabIndex = 0;
+            // 
             // usr_TinNhanTroChuyenGui
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -139,10 +139,10 @@
             this.panelEx1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -14,6 +14,7 @@ namespace MTA_Mobile_Forensic.GUI.Share
         public frm_XemVideo()
         {
             InitializeComponent();
+            axWindowsMediaPlayer1.settings.volume = 100;
         }
 
         public string videoPath = "";

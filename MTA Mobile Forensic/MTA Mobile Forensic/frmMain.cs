@@ -21,7 +21,7 @@ namespace MTA_Mobile_Forensic
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-            btnCaiDatCuaThietBi_Click(sender, e);
+            btnGhiAm_Click(sender, e);
         }
 
         usr_TinNhan usr_TinNhan;
@@ -30,8 +30,10 @@ namespace MTA_Mobile_Forensic
         usr_Lich usr_Lich;
         usr_Anh usr_Anh;
         usr_Video usr_Video;
+        usr_GhiAm usr_GhiAm;
         usr_UngDung usr_UngDung;
         usr_CaiDat usr_CaiDat;
+        usr_FileHeThong usr_FileHeThong;
 
         private void btnTrangChu_Click(object sender, EventArgs e)
         {
@@ -160,6 +162,23 @@ namespace MTA_Mobile_Forensic
             }
         }
 
+        private void btnGhiAm_Click(object sender, EventArgs e)
+        {
+            lblTieuDe1.Caption = "Điều tra dữ liệu";
+            lblTieuDe2.Caption = "Ghi âm";
+            if (usr_GhiAm == null)
+            {
+                usr_GhiAm = new usr_GhiAm();
+                usr_GhiAm.Dock = DockStyle.Fill;
+                mainContainer.Controls.Add(usr_GhiAm);
+                usr_GhiAm.BringToFront();
+            }
+            else
+            {
+                usr_GhiAm.BringToFront();
+            }
+        }
+
         private void btnUngDung_Click(object sender, EventArgs e)
         {
             lblTieuDe1.Caption = "Điều tra dữ liệu";
@@ -196,7 +215,7 @@ namespace MTA_Mobile_Forensic
 
         private void btnLichSuTruyCap_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void btnMangDaKetNoi_Click(object sender, EventArgs e)
@@ -204,22 +223,24 @@ namespace MTA_Mobile_Forensic
 
         }
 
-        private void btnTheSim_Click(object sender, EventArgs e)
+        private void btnFileSystem_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void btnMaHash_Click(object sender, EventArgs e)
-        {
-
+            lblTieuDe1.Caption = "Điều tra dữ liệu";
+            lblTieuDe2.Caption = "File hệ thống";
+            if (usr_FileHeThong == null)
+            {
+                usr_FileHeThong = new usr_FileHeThong();
+                usr_FileHeThong.Dock = DockStyle.Fill;
+                mainContainer.Controls.Add(usr_FileHeThong);
+                usr_FileHeThong.BringToFront();
+            }
+            else
+            {
+                usr_FileHeThong.BringToFront();
+            }
         }
 
         private void btnThongTinKhac_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnFileSystem_Click(object sender, EventArgs e)
         {
 
         }

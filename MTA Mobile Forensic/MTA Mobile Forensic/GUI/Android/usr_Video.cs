@@ -62,31 +62,34 @@ namespace MTA_Mobile_Forensic.GUI.Android
 
         private void GetVideoInFolder(string folderPath)
         {
-            try
+            if (folderPath != string.Empty)
             {
-                string[] videoExtensions = new string[] { ".mp4", ".avi", ".mov", ".wmv", ".flv", ".mkv", ".webm", ".m4v", ".mpeg", ".mpg" };
-
-                videoFiles = Directory.GetFiles(folderPath)
-                                         .Where(file => videoExtensions.Contains(Path.GetExtension(file).ToLower()))
-                                         .ToList();
-
-                if (cbbTuyChon.Text != "Trong thư mục")
+                try
                 {
-                    var subDirectories = Directory.GetDirectories(folderPath);
-                    foreach (var subDir in subDirectories)
+                    string[] videoExtensions = new string[] { ".mp4", ".avi", ".mov", ".wmv", ".flv", ".mkv", ".webm", ".m4v", ".mpeg", ".mpg" };
+
+                    videoFiles = Directory.GetFiles(folderPath)
+                                             .Where(file => videoExtensions.Contains(Path.GetExtension(file).ToLower()))
+                                             .ToList();
+
+                    if (cbbTuyChon.Text != "Trong thư mục")
                     {
-                        var subDirFiles = Directory.GetFiles(subDir)
-                                                   .Where(file => videoExtensions.Contains(Path.GetExtension(file).ToLower()))
-                                                   .ToList();
-                        videoFiles.AddRange(subDirFiles);
+                        var subDirectories = Directory.GetDirectories(folderPath);
+                        foreach (var subDir in subDirectories)
+                        {
+                            var subDirFiles = Directory.GetFiles(subDir)
+                                                       .Where(file => videoExtensions.Contains(Path.GetExtension(file).ToLower()))
+                                                       .ToList();
+                            videoFiles.AddRange(subDirFiles);
+                        }
                     }
+                    Add_usr_VideoMini(currentPage);
                 }
-                Add_usr_VideoMini(currentPage);
-            }
-            catch (Exception ex)
-            {
-                frm_Notification frm_Notification = new frm_Notification("error", ex.ToString());
-                frm_Notification.ShowDialog();
+                catch (Exception ex)
+                {
+                    frm_Notification frm_Notification = new frm_Notification("error", ex.ToString());
+                    frm_Notification.ShowDialog();
+                }
             }
         }
 

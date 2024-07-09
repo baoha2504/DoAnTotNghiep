@@ -45,6 +45,8 @@
     <Reference Include="DevExpress.Utils.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraBars.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="MediaToolkit, Version=1.1.0.1, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\MediaToolkit.1.1.0.1\lib\net40\MediaToolkit.dll</HintPath>
     </Reference>
@@ -123,6 +125,18 @@
     <Compile Include="GUI\Android\usr_DanhBa.Designer.cs">
       <DependentUpon>usr_DanhBa.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Android\usr_FileHeThong.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Android\usr_FileHeThong.Designer.cs">
+      <DependentUpon>usr_FileHeThong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Android\usr_GhiAm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Android\usr_GhiAm.Designer.cs">
+      <DependentUpon>usr_GhiAm.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Android\usr_Lich.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -189,6 +203,18 @@
     <Compile Include="GUI\Share\usr_DanhBaMini.Designer.cs">
       <DependentUpon>usr_DanhBaMini.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Share\usr_FileMini.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Share\usr_FileMini.Designer.cs">
+      <DependentUpon>usr_FileMini.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Share\usr_GhiAmMini.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Share\usr_GhiAmMini.Designer.cs">
+      <DependentUpon>usr_GhiAmMini.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Share\usr_LichMini.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -244,6 +270,12 @@
     <EmbeddedResource Include="GUI\Android\usr_DanhBa.resx">
       <DependentUpon>usr_DanhBa.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Android\usr_FileHeThong.resx">
+      <DependentUpon>usr_FileHeThong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Android\usr_GhiAm.resx">
+      <DependentUpon>usr_GhiAm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Android\usr_Lich.resx">
       <DependentUpon>usr_Lich.cs</DependentUpon>
     </EmbeddedResource>
@@ -276,6 +308,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Share\usr_DanhBaMini.resx">
       <DependentUpon>usr_DanhBaMini.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Share\usr_FileMini.resx">
+      <DependentUpon>usr_FileMini.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Share\usr_GhiAmMini.resx">
+      <DependentUpon>usr_GhiAmMini.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Share\usr_LichMini.resx">
       <DependentUpon>usr_LichMini.cs</DependentUpon>
