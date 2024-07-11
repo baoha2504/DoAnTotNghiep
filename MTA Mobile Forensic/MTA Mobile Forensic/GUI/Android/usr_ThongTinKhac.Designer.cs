@@ -2266,11 +2266,11 @@
             this.label17.AutoSize = true;
             this.label17.Dock = System.Windows.Forms.DockStyle.Right;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(183, 0);
+            this.label17.Location = new System.Drawing.Point(88, 0);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(84, 20);
+            this.label17.Size = new System.Drawing.Size(179, 20);
             this.label17.TabIndex = 0;
-            this.label17.Text = "Số lần bật";
+            this.label17.Text = "Số lần bật tiết kiệm pin";
             // 
             // panel47
             // 

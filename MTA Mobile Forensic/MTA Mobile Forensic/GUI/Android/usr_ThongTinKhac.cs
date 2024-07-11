@@ -204,11 +204,11 @@ namespace MTA_Mobile_Forensic.GUI.Android
             string scale = GetValue(str_InfoPin, "scale");
             txtThangDo.Text = scale;
 
-            string voltage = GetValue(str_InfoPin, "voltage");
-            txtDienApHienTai.Text = (Int32.Parse(voltage) / 1000).ToString() + "V";
+            string voltage = GetValue(str_InfoPin, "\r\nvoltage");
+            txtDienApHienTai.Text = (Double.Parse(voltage) / 1000).ToString() + "V";
 
             string temperature = GetValue(str_InfoPin, "temperature");
-            txtNhietDoPin.Text = temperature + "°C";
+            txtNhietDoPin.Text = (Double.Parse(temperature) / 10).ToString() + "°C";
 
             string technology = GetValue(str_InfoPin, "technology");
             txtCongNghePin.Text = technology;
