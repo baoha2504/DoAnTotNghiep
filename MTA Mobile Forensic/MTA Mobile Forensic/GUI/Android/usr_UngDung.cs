@@ -16,7 +16,6 @@ namespace MTA_Mobile_Forensic.GUI.Android
     {
         api api = new api();
         adb adb = new adb();
-        function function = new function();
         string query = "";
         string fullImagePath = "";
         ImageList imageList;
@@ -36,19 +35,17 @@ namespace MTA_Mobile_Forensic.GUI.Android
             searchTimer = new Timer();
             searchTimer.Interval = 500;
             searchTimer.Tick += SearchTimer_Tick;
-        }
 
-        private void Load_UngDung()
-        {
-            listView.View = View.Details;
-            // Thêm các cột vào ListView
             listView.Columns.Add("Ảnh", 70, HorizontalAlignment.Center);
             listView.Columns.Add("Package", 200, HorizontalAlignment.Left);
             listView.Columns.Add("Tên ứng dụng", 300, HorizontalAlignment.Left);
             listView.Columns.Add("Ngày cài đặt", 170, HorizontalAlignment.Center);
             listView.Columns.Add("Cập nhật lần cuối", 170, HorizontalAlignment.Center);
             listView.Columns.Add("Phiên bản", 180, HorizontalAlignment.Center);
+        }
 
+        private void Load_UngDung()
+        {
             imageList = new ImageList
             {
                 ImageSize = new Size(50, 50)
@@ -63,14 +60,13 @@ namespace MTA_Mobile_Forensic.GUI.Android
         private void Clear_ListView()
         {
             listView.Items.Clear();
-
         }
 
         private void LayDanhSachPackage()
         {
             query = "shell pm list packages";
             string str = adb.adbCommand(query);
-            if (str == null)
+            if (str == string.Empty)
             {
                 str = "package:com.miui.screenrecorder\r\npackage:com.android.cts.priv.ctsshim\r\npackage:com.qualcomm.qti.qms.service.telemetry\r\npackage:com.google.android.youtube\r\npackage:com.qualcomm.qti.qcolor\r\npackage:com.android.internal.display.cutout.emulation.corner\r\npackage:com.google.android.ext.services\r\npackage:com.qualcomm.qti.improvetouch.service\r\npackage:com.android.internal.display.cutout.emulation.double\r\npackage:com.android.providers.telephony\r\npackage:com.android.dynsystem\r\npackage:com.miui.powerkeeper\r\npackage:com.xiaomi.miplay_client\r\npackage:com.google.android.googlequicksearchbox\r\npackage:cn.wps.xiaomi.abroad.lite\r\npackage:com.miui.fm\r\npackage:com.t7.busmap\r\npackage:com.android.providers.calendar\r\npackage:com.zing.zalo\r\npackage:org.telegram.messenger\r\npackage:com.android.providers.media";
             }
@@ -238,7 +234,14 @@ namespace MTA_Mobile_Forensic.GUI.Android
             if (currentPage > 0)
             {
                 currentPage--;
-                //Add_UngDung(matches, currentPage);
+                if (txtTimKiem.Text == string.Empty)
+                {
+                    Add_UngDung(matches, currentPage);
+                }
+                else
+                {
+                    Add_UngDung_TimKiem(matches, currentPage);
+                }
                 searchTimer.Stop();
                 searchTimer.Start();
             }
@@ -254,7 +257,14 @@ namespace MTA_Mobile_Forensic.GUI.Android
             if (currentPage < (matches.Count - 1) / itemsPerPage)
             {
                 currentPage++;
-                //Add_UngDung(matches, currentPage);
+                if (txtTimKiem.Text == string.Empty)
+                {
+                    Add_UngDung(matches, currentPage);
+                }
+                else
+                {
+                    Add_UngDung_TimKiem(matches, currentPage);
+                }
                 searchTimer.Stop();
                 searchTimer.Start();
             }
@@ -291,9 +301,18 @@ namespace MTA_Mobile_Forensic.GUI.Android
                 query = $"shell dumpsys package {matches[i].Groups[1].Value}";
 
                 string str2 = adb.adbCommand(query);
-                ngaycaidat = LayThongTinNgayCaiDat(str2);
-                capnhatlancuoi = LayThongTinNgayCapNhatCuoi(str2);
-                phienban = LayThongTinPhienBan(str2);
+                if(str2 != string.Empty)
+                {
+                    ngaycaidat = LayThongTinNgayCaiDat(str2);
+                    capnhatlancuoi = LayThongTinNgayCapNhatCuoi(str2);
+                    phienban = LayThongTinPhienBan(str2);
+                }
+                else
+                {
+                    ngaycaidat = "Không tìm thấy";
+                    capnhatlancuoi = "Không tìm thấy";
+                    phienban = "Không tìm thấy";
+                }
 
                 if (apps[i - start].tenungdung != "" && apps[i - start].duongdananh != "")
                 {
@@ -350,9 +369,18 @@ namespace MTA_Mobile_Forensic.GUI.Android
                 query = $"shell dumpsys package {matchValues_TimKiem[i - start]}";
 
                 string str2 = adb.adbCommand(query);
-                ngaycaidat = LayThongTinNgayCaiDat(str2);
-                capnhatlancuoi = LayThongTinNgayCapNhatCuoi(str2);
-                phienban = LayThongTinPhienBan(str2);
+                if (str2 != string.Empty)
+                {
+                    ngaycaidat = LayThongTinNgayCaiDat(str2);
+                    capnhatlancuoi = LayThongTinNgayCapNhatCuoi(str2);
+                    phienban = LayThongTinPhienBan(str2);
+                }
+                else
+                {
+                    ngaycaidat = "Không tìm thấy";
+                    capnhatlancuoi = "Không tìm thấy";
+                    phienban = "Không tìm thấy";
+                }
 
                 if (apps_TimKiem[i - start].tenungdung != "" && apps_TimKiem[i - start].duongdananh != "")
                 {

@@ -42,13 +42,13 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panelEx2 = new DevComponents.DotNetBar.PanelEx();
+            this.txtTimKiem = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.btnTimKiem = new DevComponents.DotNetBar.ButtonX();
             this.btnLamMoi = new DevComponents.DotNetBar.ButtonX();
             this.btnBoChonTatCa = new DevComponents.DotNetBar.ButtonX();
             this.btnChonTatCa = new DevComponents.DotNetBar.ButtonX();
             this.btnNhap = new DevComponents.DotNetBar.ButtonX();
             this.btnXuat = new DevComponents.DotNetBar.ButtonX();
-            this.btnTimKiem = new DevComponents.DotNetBar.ButtonX();
-            this.txtTimKiem = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.panelEx1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupPanel1.SuspendLayout();
@@ -141,6 +141,7 @@
             this.listView.DisabledBackColor = System.Drawing.Color.Empty;
             this.listView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listView.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listView.FullRowSelect = true;
             this.listView.GridLines = true;
             this.listView.HideSelection = false;
             this.listView.Location = new System.Drawing.Point(0, 0);
@@ -148,6 +149,7 @@
             this.listView.Size = new System.Drawing.Size(1144, 547);
             this.listView.TabIndex = 0;
             this.listView.UseCompatibleStateImageBehavior = false;
+            this.listView.View = System.Windows.Forms.View.Details;
             this.listView.SelectedIndexChanged += new System.EventHandler(this.listView_SelectedIndexChanged);
             // 
             // panel2a
@@ -276,6 +278,33 @@
             this.panelEx2.Style.GradientAngle = 90;
             this.panelEx2.TabIndex = 13;
             // 
+            // txtTimKiem
+            // 
+            // 
+            // 
+            // 
+            this.txtTimKiem.Border.Class = "TextBoxBorder";
+            this.txtTimKiem.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTimKiem.Location = new System.Drawing.Point(810, 12);
+            this.txtTimKiem.Name = "txtTimKiem";
+            this.txtTimKiem.PreventEnterBeep = true;
+            this.txtTimKiem.Size = new System.Drawing.Size(159, 24);
+            this.txtTimKiem.TabIndex = 6;
+            this.txtTimKiem.TextChanged += new System.EventHandler(this.txtTimKiem_TextChanged);
+            // 
+            // btnTimKiem
+            // 
+            this.btnTimKiem.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnTimKiem.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnTimKiem.Location = new System.Drawing.Point(975, 7);
+            this.btnTimKiem.Name = "btnTimKiem";
+            this.btnTimKiem.Size = new System.Drawing.Size(130, 35);
+            this.btnTimKiem.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnTimKiem.TabIndex = 5;
+            this.btnTimKiem.Text = "Tìm kiếm package";
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
+            // 
             // btnLamMoi
             // 
             this.btnLamMoi.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
@@ -335,33 +364,6 @@
             this.btnXuat.TabIndex = 0;
             this.btnXuat.Text = "Xuất";
             this.btnXuat.Click += new System.EventHandler(this.btnXuat_Click);
-            // 
-            // btnTimKiem
-            // 
-            this.btnTimKiem.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnTimKiem.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnTimKiem.Location = new System.Drawing.Point(975, 7);
-            this.btnTimKiem.Name = "btnTimKiem";
-            this.btnTimKiem.Size = new System.Drawing.Size(130, 35);
-            this.btnTimKiem.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnTimKiem.TabIndex = 5;
-            this.btnTimKiem.Text = "Tìm kiếm package";
-            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
-            // 
-            // txtTimKiem
-            // 
-            // 
-            // 
-            // 
-            this.txtTimKiem.Border.Class = "TextBoxBorder";
-            this.txtTimKiem.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTimKiem.Location = new System.Drawing.Point(810, 12);
-            this.txtTimKiem.Name = "txtTimKiem";
-            this.txtTimKiem.PreventEnterBeep = true;
-            this.txtTimKiem.Size = new System.Drawing.Size(159, 24);
-            this.txtTimKiem.TabIndex = 6;
-            this.txtTimKiem.TextChanged += new System.EventHandler(this.txtTimKiem_TextChanged);
             // 
             // usr_UngDung
             // 

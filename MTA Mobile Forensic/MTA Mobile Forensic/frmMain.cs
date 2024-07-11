@@ -21,7 +21,7 @@ namespace MTA_Mobile_Forensic
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-            btnGhiAm_Click(sender, e);
+            btnThongTinKhac_Click(sender, e);
         }
 
         usr_TinNhan usr_TinNhan;
@@ -34,6 +34,7 @@ namespace MTA_Mobile_Forensic
         usr_UngDung usr_UngDung;
         usr_CaiDat usr_CaiDat;
         usr_FileHeThong usr_FileHeThong;
+        usr_ThongTinKhac usr_ThongTinKhac;
 
         private void btnTrangChu_Click(object sender, EventArgs e)
         {
@@ -242,7 +243,19 @@ namespace MTA_Mobile_Forensic
 
         private void btnThongTinKhac_Click(object sender, EventArgs e)
         {
-
+            lblTieuDe1.Caption = "Điều tra dữ liệu";
+            lblTieuDe2.Caption = "Thông tin khác";
+            if (usr_ThongTinKhac == null)
+            {
+                usr_ThongTinKhac = new usr_ThongTinKhac();
+                usr_ThongTinKhac.Dock = DockStyle.Fill;
+                mainContainer.Controls.Add(usr_ThongTinKhac);
+                usr_ThongTinKhac.BringToFront();
+            }
+            else
+            {
+                usr_ThongTinKhac.BringToFront();
+            }
         }
 
         private void btnCaiDatUngDung_Click(object sender, EventArgs e)

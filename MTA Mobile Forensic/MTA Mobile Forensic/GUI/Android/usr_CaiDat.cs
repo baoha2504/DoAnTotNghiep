@@ -1,4 +1,5 @@
 ﻿using MTA_Mobile_Forensic.Support;
+using System;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
@@ -19,7 +20,14 @@ namespace MTA_Mobile_Forensic.GUI.Android
 
             setuptab0 = 1;
             width = tabControlPanel1.Width;
-            splitContainer1.SplitterDistance = (int)(width / 2);
+            try
+            {
+                splitContainer1.SplitterDistance = (int)(width / 2);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Lỗi khi thay đổi kích thước: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
             LoadTab_HeThong();
             LoadTab_BaoMat();
@@ -29,25 +37,32 @@ namespace MTA_Mobile_Forensic.GUI.Android
 
         private void tabControl1_SelectedTabChanged(object sender, DevComponents.DotNetBar.TabStripTabChangedEventArgs e)
         {
-            int selectedIndex = tabControl1.SelectedTabIndex;
-            if (selectedIndex == 0 && setuptab0 == 0)
+            try
             {
-                setuptab0 = 1;
-                width = tabControlPanel1.Width;
-                splitContainer1.SplitterDistance = (int)(width / 2);
+                int selectedIndex = tabControl1.SelectedTabIndex;
+                if (selectedIndex == 0 && setuptab0 == 0)
+                {
+                    setuptab0 = 1;
+                    width = tabControlPanel1.Width;
+                    splitContainer1.SplitterDistance = (int)(width / 2);
+                }
+                else if (selectedIndex == 1 && setuptab1 == 0)
+                {
+                    setuptab1 = 1;
+                    width = tabControlPanel2.Width;
+                    splitContainer2.SplitterDistance = (int)(width / 2);
+                }
+                else if (selectedIndex == 2 && setuptab2 == 0)
+                {
+                    setuptab2 = 1;
+                    width = tabControlPanel4.Width;
+                    panel63.Width = (int)(width * 0.3);
+                    splitContainer3.SplitterDistance = (int)(width / 2);
+                }
             }
-            else if (selectedIndex == 1 && setuptab1 == 0)
+            catch (Exception ex)
             {
-                setuptab1 = 1;
-                width = tabControlPanel2.Width;
-                splitContainer2.SplitterDistance = (int)(width / 2);
-            }
-            else if (selectedIndex == 2 && setuptab2 == 0)
-            {
-                setuptab2 = 1;
-                width = tabControlPanel4.Width;
-                panel63.Width = (int)(width * 0.3);
-                splitContainer3.SplitterDistance = (int)(width / 2);
+                MessageBox.Show($"Lỗi khi thay đổi kích thước: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

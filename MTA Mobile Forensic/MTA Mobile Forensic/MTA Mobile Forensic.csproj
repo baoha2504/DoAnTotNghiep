@@ -143,6 +143,12 @@
     <Compile Include="GUI\Android\usr_Lich.Designer.cs">
       <DependentUpon>usr_Lich.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Android\usr_ThongTinKhac.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Android\usr_ThongTinKhac.Designer.cs">
+      <DependentUpon>usr_ThongTinKhac.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Android\usr_TinNhan.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -278,6 +284,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Android\usr_Lich.resx">
       <DependentUpon>usr_Lich.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Android\usr_ThongTinKhac.resx">
+      <DependentUpon>usr_ThongTinKhac.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Android\usr_TinNhan.resx">
       <DependentUpon>usr_TinNhan.cs</DependentUpon>

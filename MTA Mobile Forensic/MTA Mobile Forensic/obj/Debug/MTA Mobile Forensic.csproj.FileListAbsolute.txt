@@ -192,3 +192,4 @@ E:\Do An\DoAnTotNghiep\MTA Mobile Forensic\MTA Mobile Forensic\obj\Debug\MTA_Mob
 E:\Do An\DoAnTotNghiep\MTA Mobile Forensic\MTA Mobile Forensic\obj\Debug\MTA_Mobile_Forensic.GUI.Share.usr_FileMini.resources
 E:\Do An\DoAnTotNghiep\MTA Mobile Forensic\MTA Mobile Forensic\obj\Debug\MTA_Mobile_Forensic.GUI.Android.usr_GhiAm.resources
 E:\Do An\DoAnTotNghiep\MTA Mobile Forensic\MTA Mobile Forensic\obj\Debug\MTA_Mobile_Forensic.GUI.Share.usr_GhiAmMini.resources
+E:\Do An\DoAnTotNghiep\MTA Mobile Forensic\MTA Mobile Forensic\obj\Debug\MTA_Mobile_Forensic.GUI.Android.usr_ThongTinKhac.resources

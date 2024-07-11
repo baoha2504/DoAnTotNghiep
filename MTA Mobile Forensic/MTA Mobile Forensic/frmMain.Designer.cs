@@ -47,6 +47,7 @@
             this.btnLich = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btnAnh = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btnVideo = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.btnGhiAm = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btnUngDung = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btnCaiDatCuaThietBi = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btnLichSuTruyCap = new DevExpress.XtraBars.Navigation.AccordionControlElement();
@@ -82,7 +83,6 @@
             this.barStaticItem2 = new DevExpress.XtraBars.BarStaticItem();
             this.lblTieuDe2 = new DevExpress.XtraBars.BarStaticItem();
             this.fluentFormDefaultManager1 = new DevExpress.XtraBars.FluentDesignSystem.FluentFormDefaultManager(this.components);
-            this.btnGhiAm = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentFormDefaultManager1)).BeginInit();
@@ -91,10 +91,10 @@
             // mainContainer
             // 
             this.mainContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mainContainer.Location = new System.Drawing.Point(327, 39);
-            this.mainContainer.Margin = new System.Windows.Forms.Padding(10);
+            this.mainContainer.Location = new System.Drawing.Point(409, 39);
+            this.mainContainer.Margin = new System.Windows.Forms.Padding(12, 12, 12, 12);
             this.mainContainer.Name = "mainContainer";
-            this.mainContainer.Size = new System.Drawing.Size(1062, 683);
+            this.mainContainer.Size = new System.Drawing.Size(980, 683);
             this.mainContainer.TabIndex = 0;
             // 
             // accordionControl1
@@ -112,10 +112,10 @@
             this.HUONGDANSUDUNG,
             this.THONGTINPHANMEM});
             this.accordionControl1.Location = new System.Drawing.Point(0, 39);
-            this.accordionControl1.Margin = new System.Windows.Forms.Padding(10);
+            this.accordionControl1.Margin = new System.Windows.Forms.Padding(12, 12, 12, 12);
             this.accordionControl1.Name = "accordionControl1";
             this.accordionControl1.ScrollBarMode = DevExpress.XtraBars.Navigation.ScrollBarMode.Touch;
-            this.accordionControl1.Size = new System.Drawing.Size(327, 683);
+            this.accordionControl1.Size = new System.Drawing.Size(409, 683);
             this.accordionControl1.TabIndex = 1;
             this.accordionControl1.ViewType = DevExpress.XtraBars.Navigation.AccordionControlViewType.HamburgerMenu;
             // 
@@ -241,6 +241,13 @@
             this.btnVideo.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.btnVideo.Text = "Video";
             this.btnVideo.Click += new System.EventHandler(this.btnVideo_Click);
+            // 
+            // btnGhiAm
+            // 
+            this.btnGhiAm.Name = "btnGhiAm";
+            this.btnGhiAm.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.btnGhiAm.Text = "Ghi âm";
+            this.btnGhiAm.Click += new System.EventHandler(this.btnGhiAm_Click);
             // 
             // btnUngDung
             // 
@@ -529,13 +536,6 @@
             this.barStaticItem2,
             this.lblTieuDe2});
             this.fluentFormDefaultManager1.MaxItemId = 5;
-            // 
-            // btnGhiAm
-            // 
-            this.btnGhiAm.Name = "btnGhiAm";
-            this.btnGhiAm.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.btnGhiAm.Text = "Ghi âm";
-            this.btnGhiAm.Click += new System.EventHandler(this.btnGhiAm_Click);
             // 
             // frmMain
             // 
