@@ -51,7 +51,6 @@
             this.btnUngDung = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btnCaiDatCuaThietBi = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btnLichSuTruyCap = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.btnMangDaKetNoi = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btnFileSystem = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btnThongTinKhac = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.DIEUKHIENTHIETBI = new DevExpress.XtraBars.Navigation.AccordionControlElement();
@@ -193,7 +192,6 @@
             this.btnUngDung,
             this.btnCaiDatCuaThietBi,
             this.btnLichSuTruyCap,
-            this.btnMangDaKetNoi,
             this.btnFileSystem,
             this.btnThongTinKhac});
             this.DIEUTRADULIEU.Expanded = true;
@@ -269,13 +267,6 @@
             this.btnLichSuTruyCap.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.btnLichSuTruyCap.Text = "Lịch sử truy cập";
             this.btnLichSuTruyCap.Click += new System.EventHandler(this.btnLichSuTruyCap_Click);
-            // 
-            // btnMangDaKetNoi
-            // 
-            this.btnMangDaKetNoi.Name = "btnMangDaKetNoi";
-            this.btnMangDaKetNoi.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.btnMangDaKetNoi.Text = "Mạng đã kết nối";
-            this.btnMangDaKetNoi.Click += new System.EventHandler(this.btnMangDaKetNoi_Click);
             // 
             // btnFileSystem
             // 
@@ -602,7 +593,6 @@
         private DevExpress.XtraBars.Navigation.AccordionControlElement btnUngDung;
         private DevExpress.XtraBars.Navigation.AccordionControlElement btnCaiDatCuaThietBi;
         private DevExpress.XtraBars.Navigation.AccordionControlElement btnLichSuTruyCap;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement btnMangDaKetNoi;
         private DevExpress.XtraBars.Navigation.AccordionControlElement btnThongTinKhac;
         private DevExpress.XtraBars.Navigation.AccordionControlElement btnImportDuLieu;
         private DevExpress.XtraBars.Navigation.AccordionControlElement btnDieuTraVideo;

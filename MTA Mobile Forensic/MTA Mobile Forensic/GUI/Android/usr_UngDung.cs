@@ -277,47 +277,53 @@ namespace MTA_Mobile_Forensic.GUI.Android
         private async void Add_UngDung(MatchCollection matches, int pageNumber)
         {
             Clear_ListView();
-
-            int start = pageNumber * itemsPerPage;
-            int end = Math.Min(start + itemsPerPage, matches.Count);
-
-            txtTrangHienTai.Text = $"Trang {pageNumber + 1} / {Math.Ceiling((double)matches.Count / itemsPerPage)}";
-
-            string ngaycaidat = "";
-            string capnhatlancuoi = "";
-            string phienban = "";
-
-            matchValues.Clear();
-            for (int i = start; i < end; i++)
+            try
             {
-                matchValues.Add(matches[i].Groups[1].Value);
+                int start = pageNumber * itemsPerPage;
+                int end = Math.Min(start + itemsPerPage, matches.Count);
+
+                txtTrangHienTai.Text = $"Trang {pageNumber + 1} / {Math.Ceiling((double)matches.Count / itemsPerPage)}";
+
+                string ngaycaidat = "";
+                string capnhatlancuoi = "";
+                string phienban = "";
+
+                matchValues.Clear();
+                for (int i = start; i < end; i++)
+                {
+                    matchValues.Add(matches[i].Groups[1].Value);
+                }
+
+                apps.Clear();
+                apps = await LayThongTinUngDung(matchValues);
+
+                for (int i = start; i < end; i++)
+                {
+                    query = $"shell dumpsys package {matches[i].Groups[1].Value}";
+
+                    string str2 = adb.adbCommand(query);
+                    if (str2 != string.Empty)
+                    {
+                        ngaycaidat = LayThongTinNgayCaiDat(str2);
+                        capnhatlancuoi = LayThongTinNgayCapNhatCuoi(str2);
+                        phienban = LayThongTinPhienBan(str2);
+                    }
+                    else
+                    {
+                        ngaycaidat = "Không tìm thấy";
+                        capnhatlancuoi = "Không tìm thấy";
+                        phienban = "Không tìm thấy";
+                    }
+
+                    if (apps[i - start].tenungdung != "" && apps[i - start].duongdananh != "")
+                    {
+                        AddData(matches[i].Groups[1].Value, apps[i - start].tenungdung, ngaycaidat, capnhatlancuoi, phienban, apps[i - start].duongdananh);
+                    }
+                }
             }
-
-            apps.Clear();
-            apps = await LayThongTinUngDung(matchValues);
-
-            for (int i = start; i < end; i++)
+            catch (Exception ex)
             {
-                query = $"shell dumpsys package {matches[i].Groups[1].Value}";
-
-                string str2 = adb.adbCommand(query);
-                if(str2 != string.Empty)
-                {
-                    ngaycaidat = LayThongTinNgayCaiDat(str2);
-                    capnhatlancuoi = LayThongTinNgayCapNhatCuoi(str2);
-                    phienban = LayThongTinPhienBan(str2);
-                }
-                else
-                {
-                    ngaycaidat = "Không tìm thấy";
-                    capnhatlancuoi = "Không tìm thấy";
-                    phienban = "Không tìm thấy";
-                }
-
-                if (apps[i - start].tenungdung != "" && apps[i - start].duongdananh != "")
-                {
-                    AddData(matches[i].Groups[1].Value, apps[i - start].tenungdung, ngaycaidat, capnhatlancuoi, phienban, apps[i - start].duongdananh);
-                }
+                MessageBox.Show($"Lỗi: {ex.ToString()}", "Lỗi");
             }
         }
 
@@ -339,53 +345,59 @@ namespace MTA_Mobile_Forensic.GUI.Android
         private async void Add_UngDung_TimKiem(MatchCollection matches, int pageNumber)
         {
             Clear_ListView();
-
-            int start = pageNumber * itemsPerPage;
-            int end = Math.Min(start + itemsPerPage, matches.Count);
-
-            string ngaycaidat = "";
-            string capnhatlancuoi = "";
-            string phienban = "";
-            string searchText = txtTimKiem.Text.ToLower();
-
-            matchValues_TimKiem.Clear();
-            for (int i = start; i < end; i++)
+            try
             {
-                if (matches[i].Groups[1].Value.ToLower().Contains(searchText))
+                int start = pageNumber * itemsPerPage;
+                int end = Math.Min(start + itemsPerPage, matches.Count);
+
+                string ngaycaidat = "";
+                string capnhatlancuoi = "";
+                string phienban = "";
+                string searchText = txtTimKiem.Text.ToLower();
+
+                matchValues_TimKiem.Clear();
+                for (int i = start; i < end; i++)
                 {
-                    matchValues_TimKiem.Add(matches[i].Groups[1].Value);
+                    if (matches[i].Groups[1].Value.ToLower().Contains(searchText))
+                    {
+                        matchValues_TimKiem.Add(matches[i].Groups[1].Value);
+                    }
+                }
+
+                apps_TimKiem.Clear();
+                apps_TimKiem = await LayThongTinUngDung(matchValues_TimKiem);
+
+                end = Math.Min(start + itemsPerPage, matchValues_TimKiem.Count);
+
+                txtTrangHienTai.Text = $"Trang {pageNumber + 1} / {Math.Ceiling((double)matchValues_TimKiem.Count / itemsPerPage)}";
+
+                for (int i = start; i < end; i++)
+                {
+                    query = $"shell dumpsys package {matchValues_TimKiem[i - start]}";
+
+                    string str2 = adb.adbCommand(query);
+                    if (str2 != string.Empty)
+                    {
+                        ngaycaidat = LayThongTinNgayCaiDat(str2);
+                        capnhatlancuoi = LayThongTinNgayCapNhatCuoi(str2);
+                        phienban = LayThongTinPhienBan(str2);
+                    }
+                    else
+                    {
+                        ngaycaidat = "Không tìm thấy";
+                        capnhatlancuoi = "Không tìm thấy";
+                        phienban = "Không tìm thấy";
+                    }
+
+                    if (apps_TimKiem[i - start].tenungdung != "" && apps_TimKiem[i - start].duongdananh != "")
+                    {
+                        AddData(matchValues_TimKiem[i - start], apps_TimKiem[i - start].tenungdung, ngaycaidat, capnhatlancuoi, phienban, apps_TimKiem[i - start].duongdananh);
+                    }
                 }
             }
-
-            apps_TimKiem.Clear();
-            apps_TimKiem = await LayThongTinUngDung(matchValues_TimKiem);
-
-            end = Math.Min(start + itemsPerPage, matchValues_TimKiem.Count);
-
-            txtTrangHienTai.Text = $"Trang {pageNumber + 1} / {Math.Ceiling((double)matchValues_TimKiem.Count / itemsPerPage)}";
-
-            for (int i = start; i < end; i++)
+            catch (Exception ex)
             {
-                query = $"shell dumpsys package {matchValues_TimKiem[i - start]}";
-
-                string str2 = adb.adbCommand(query);
-                if (str2 != string.Empty)
-                {
-                    ngaycaidat = LayThongTinNgayCaiDat(str2);
-                    capnhatlancuoi = LayThongTinNgayCapNhatCuoi(str2);
-                    phienban = LayThongTinPhienBan(str2);
-                }
-                else
-                {
-                    ngaycaidat = "Không tìm thấy";
-                    capnhatlancuoi = "Không tìm thấy";
-                    phienban = "Không tìm thấy";
-                }
-
-                if (apps_TimKiem[i - start].tenungdung != "" && apps_TimKiem[i - start].duongdananh != "")
-                {
-                    AddData(matchValues_TimKiem[i - start], apps_TimKiem[i - start].tenungdung, ngaycaidat, capnhatlancuoi, phienban, apps_TimKiem[i - start].duongdananh);
-                }
+                MessageBox.Show($"Lỗi: {ex.ToString()}", "Lỗi");
             }
         }
     }

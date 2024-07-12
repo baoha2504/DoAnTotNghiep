@@ -184,25 +184,32 @@ namespace MTA_Mobile_Forensic.GUI.Android
         private void Load_flpChiTietTinNhan(string address)
         {
             flpChiTietTinNhan.Controls.Clear();
-            foreach (var item in messages)
+            try
             {
-                if (item.address == address)
+                foreach (var item in messages)
                 {
-                    if (item.sentMessage == 0)
+                    if (item.address == address)
                     {
-                        // tin nhắn nhận được
-                        usr_TinNhanTroChuyenNhan usr_TinNhanTroChuyenNhan = new usr_TinNhanTroChuyenNhan(item.body, item.date, flpChiTietTinNhan.Width);
-                        usr_TinNhanTroChuyenNhan.Width = flpChiTietTinNhan.Width;
-                        flpChiTietTinNhan.Controls.Add(usr_TinNhanTroChuyenNhan);
-                    }
-                    else if (item.sentMessage == 1)
-                    {
-                        // tin nhắn gửi đi
-                        usr_TinNhanTroChuyenGui usr_TinNhanTroChuyenGui = new usr_TinNhanTroChuyenGui(item.body, item.date, flpChiTietTinNhan.Width);
-                        usr_TinNhanTroChuyenGui.Width = flpChiTietTinNhan.Width;
-                        flpChiTietTinNhan.Controls.Add(usr_TinNhanTroChuyenGui);
+                        if (item.sentMessage == 0)
+                        {
+                            // tin nhắn nhận được
+                            usr_TinNhanTroChuyenNhan usr_TinNhanTroChuyenNhan = new usr_TinNhanTroChuyenNhan(item.body, item.date, flpChiTietTinNhan.Width);
+                            usr_TinNhanTroChuyenNhan.Width = flpChiTietTinNhan.Width;
+                            flpChiTietTinNhan.Controls.Add(usr_TinNhanTroChuyenNhan);
+                        }
+                        else if (item.sentMessage == 1)
+                        {
+                            // tin nhắn gửi đi
+                            usr_TinNhanTroChuyenGui usr_TinNhanTroChuyenGui = new usr_TinNhanTroChuyenGui(item.body, item.date, flpChiTietTinNhan.Width);
+                            usr_TinNhanTroChuyenGui.Width = flpChiTietTinNhan.Width;
+                            flpChiTietTinNhan.Controls.Add(usr_TinNhanTroChuyenGui);
+                        }
                     }
                 }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Lỗi: {ex.ToString()}", "Lỗi");
             }
         }
 

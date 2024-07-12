@@ -219,11 +219,6 @@ namespace MTA_Mobile_Forensic
             
         }
 
-        private void btnMangDaKetNoi_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnFileSystem_Click(object sender, EventArgs e)
         {
             lblTieuDe1.Caption = "Điều tra dữ liệu";
