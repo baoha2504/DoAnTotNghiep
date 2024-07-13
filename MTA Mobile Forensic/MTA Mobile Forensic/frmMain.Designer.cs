@@ -55,10 +55,8 @@
             this.btnThongTinKhac = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.DIEUKHIENTHIETBI = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btnCaiDatUngDung = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.btnGoCaiDat = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btnThayDoiMatKhau = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.btnDeviceMirroring = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.btnChupAnhManHinh = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.btnPhanChieuThietBi = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.DIEUTRATHONGTIN = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btnDieuTraNguoiDung = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btnDieuTraAnh = new DevExpress.XtraBars.Navigation.AccordionControlElement();
@@ -90,10 +88,10 @@
             // mainContainer
             // 
             this.mainContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mainContainer.Location = new System.Drawing.Point(305, 39);
-            this.mainContainer.Margin = new System.Windows.Forms.Padding(12);
+            this.mainContainer.Location = new System.Drawing.Point(381, 39);
+            this.mainContainer.Margin = new System.Windows.Forms.Padding(15, 15, 15, 15);
             this.mainContainer.Name = "mainContainer";
-            this.mainContainer.Size = new System.Drawing.Size(1084, 683);
+            this.mainContainer.Size = new System.Drawing.Size(1008, 683);
             this.mainContainer.TabIndex = 0;
             // 
             // accordionControl1
@@ -111,10 +109,10 @@
             this.HUONGDANSUDUNG,
             this.THONGTINPHANMEM});
             this.accordionControl1.Location = new System.Drawing.Point(0, 39);
-            this.accordionControl1.Margin = new System.Windows.Forms.Padding(12);
+            this.accordionControl1.Margin = new System.Windows.Forms.Padding(15, 15, 15, 15);
             this.accordionControl1.Name = "accordionControl1";
             this.accordionControl1.ScrollBarMode = DevExpress.XtraBars.Navigation.ScrollBarMode.Touch;
-            this.accordionControl1.Size = new System.Drawing.Size(305, 683);
+            this.accordionControl1.Size = new System.Drawing.Size(381, 683);
             this.accordionControl1.TabIndex = 1;
             this.accordionControl1.ViewType = DevExpress.XtraBars.Navigation.AccordionControlViewType.HamburgerMenu;
             // 
@@ -286,10 +284,8 @@
             // 
             this.DIEUKHIENTHIETBI.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.btnCaiDatUngDung,
-            this.btnGoCaiDat,
             this.btnThayDoiMatKhau,
-            this.btnDeviceMirroring,
-            this.btnChupAnhManHinh});
+            this.btnPhanChieuThietBi});
             this.DIEUKHIENTHIETBI.Expanded = true;
             this.DIEUKHIENTHIETBI.Name = "DIEUKHIENTHIETBI";
             this.DIEUKHIENTHIETBI.Text = "ĐIỀU KHIỂN THIẾT BỊ";
@@ -301,13 +297,6 @@
             this.btnCaiDatUngDung.Text = "Cài đặt ứng dụng";
             this.btnCaiDatUngDung.Click += new System.EventHandler(this.btnCaiDatUngDung_Click);
             // 
-            // btnGoCaiDat
-            // 
-            this.btnGoCaiDat.Name = "btnGoCaiDat";
-            this.btnGoCaiDat.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.btnGoCaiDat.Text = "Gỡ cài đặt";
-            this.btnGoCaiDat.Click += new System.EventHandler(this.btnGoCaiDat_Click);
-            // 
             // btnThayDoiMatKhau
             // 
             this.btnThayDoiMatKhau.Name = "btnThayDoiMatKhau";
@@ -315,19 +304,12 @@
             this.btnThayDoiMatKhau.Text = "Thay đổi mật khẩu";
             this.btnThayDoiMatKhau.Click += new System.EventHandler(this.btnThayDoiMatKhau_Click);
             // 
-            // btnDeviceMirroring
+            // btnPhanChieuThietBi
             // 
-            this.btnDeviceMirroring.Name = "btnDeviceMirroring";
-            this.btnDeviceMirroring.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.btnDeviceMirroring.Text = "Device Mirroring";
-            this.btnDeviceMirroring.Click += new System.EventHandler(this.btnDeviceMirroring_Click);
-            // 
-            // btnChupAnhManHinh
-            // 
-            this.btnChupAnhManHinh.Name = "btnChupAnhManHinh";
-            this.btnChupAnhManHinh.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.btnChupAnhManHinh.Text = "Chụp ảnh màn hình";
-            this.btnChupAnhManHinh.Click += new System.EventHandler(this.btnChupAnhManHinh_Click);
+            this.btnPhanChieuThietBi.Name = "btnPhanChieuThietBi";
+            this.btnPhanChieuThietBi.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.btnPhanChieuThietBi.Text = "Phản chiếu thiết bị";
+            this.btnPhanChieuThietBi.Click += new System.EventHandler(this.btnPhanChieuThietBi_Click);
             // 
             // DIEUTRATHONGTIN
             // 
@@ -572,10 +554,8 @@
         private DevExpress.XtraBars.Navigation.AccordionControlElement btnTongQuanSoLieuDieuTra;
         private DevExpress.XtraBars.Navigation.AccordionControlElement btnTongQuanThietBiKetNoi;
         private DevExpress.XtraBars.Navigation.AccordionControlElement btnCaiDatUngDung;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement btnGoCaiDat;
         private DevExpress.XtraBars.Navigation.AccordionControlElement btnThayDoiMatKhau;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement btnDeviceMirroring;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement btnChupAnhManHinh;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement btnPhanChieuThietBi;
         private DevExpress.XtraBars.Navigation.AccordionControlElement btnDieuTraNguoiDung;
         private DevExpress.XtraBars.Navigation.AccordionControlElement btnDieuTraAnh;
         private DevExpress.XtraBars.Navigation.AccordionControlElement btnDieuTraMap;

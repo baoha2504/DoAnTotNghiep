@@ -1,3 +1,15 @@
-2024/07/11-21:11:09.586 4a4c Reusing MANIFEST E:\Do An\DoAnTotNghiep\MTA Mobile Forensic\MTA Mobile Forensic\bin\Debug\MTA Mobile Forensic.exe.WebView2\EBWebView\Default\Local Storage\leveldb/MANIFEST-000001
-2024/07/11-21:11:09.595 4a4c Recovering log #11
-2024/07/11-21:11:09.597 4a4c Reusing old log E:\Do An\DoAnTotNghiep\MTA Mobile Forensic\MTA Mobile Forensic\bin\Debug\MTA Mobile Forensic.exe.WebView2\EBWebView\Default\Local Storage\leveldb/000011.log 
+2024/07/13-11:39:54.636 5660 Reusing MANIFEST E:\Do An\DoAnTotNghiep\MTA Mobile Forensic\MTA Mobile Forensic\bin\Debug\MTA Mobile Forensic.exe.WebView2\EBWebView\Default\Local Storage\leveldb/MANIFEST-000001
+2024/07/13-11:39:54.646 5660 Recovering log #20
+2024/07/13-11:39:54.649 5660 Reusing old log E:\Do An\DoAnTotNghiep\MTA Mobile Forensic\MTA Mobile Forensic\bin\Debug\MTA Mobile Forensic.exe.WebView2\EBWebView\Default\Local Storage\leveldb/000020.log 
+2024/07/13-11:40:03.004 1ff4 Level-0 table #23: started
+2024/07/13-11:40:03.015 1ff4 Level-0 table #23: 12710 bytes OK
+2024/07/13-11:40:03.019 1ff4 Delete type=0 #20
+2024/07/13-11:40:03.020 1ff4 Compacting 4@0 + 1@1 files
+2024/07/13-11:40:03.026 1ff4 Generated table #24@0: 30 keys, 3793 bytes
+2024/07/13-11:40:03.026 1ff4 Compacted 4@0 + 1@1 files => 3793 bytes
+2024/07/13-11:40:03.028 1ff4 compacted to: files[ 0 1 0 0 0 0 0 ]
+2024/07/13-11:40:03.029 1ff4 Delete type=2 #13
+2024/07/13-11:40:03.029 1ff4 Delete type=2 #15
+2024/07/13-11:40:03.029 1ff4 Delete type=2 #18
+2024/07/13-11:40:03.029 1ff4 Delete type=2 #20
+2024/07/13-11:40:03.029 1ff4 Delete type=2 #23

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(usr_UngDung));
             this.panelEx1 = new DevComponents.DotNetBar.PanelEx();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupPanel1 = new DevComponents.DotNetBar.Controls.GroupPanel();
@@ -49,6 +50,9 @@
             this.btnChonTatCa = new DevComponents.DotNetBar.ButtonX();
             this.btnNhap = new DevComponents.DotNetBar.ButtonX();
             this.btnXuat = new DevComponents.DotNetBar.ButtonX();
+            this.cbbTuyChon = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.cbb_option_user = new DevComponents.Editors.ComboItem();
+            this.cbb_option_all = new DevComponents.Editors.ComboItem();
             this.panelEx1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupPanel1.SuspendLayout();
@@ -69,7 +73,7 @@
             this.panelEx1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelEx1.Location = new System.Drawing.Point(0, 0);
             this.panelEx1.Name = "panelEx1";
-            this.panelEx1.Size = new System.Drawing.Size(1150, 650);
+            this.panelEx1.Size = new System.Drawing.Size(1300, 650);
             this.panelEx1.Style.Alignment = System.Drawing.StringAlignment.Center;
             this.panelEx1.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
             this.panelEx1.Style.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
@@ -85,7 +89,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 50);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1150, 600);
+            this.panel1.Size = new System.Drawing.Size(1300, 600);
             this.panel1.TabIndex = 21;
             // 
             // groupPanel1
@@ -98,7 +102,7 @@
             this.groupPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupPanel1.Location = new System.Drawing.Point(0, 0);
             this.groupPanel1.Name = "groupPanel1";
-            this.groupPanel1.Size = new System.Drawing.Size(1150, 600);
+            this.groupPanel1.Size = new System.Drawing.Size(1300, 600);
             // 
             // 
             // 
@@ -146,7 +150,7 @@
             this.listView.HideSelection = false;
             this.listView.Location = new System.Drawing.Point(0, 0);
             this.listView.Name = "listView";
-            this.listView.Size = new System.Drawing.Size(1144, 547);
+            this.listView.Size = new System.Drawing.Size(1294, 547);
             this.listView.TabIndex = 0;
             this.listView.UseCompatibleStateImageBehavior = false;
             this.listView.View = System.Windows.Forms.View.Details;
@@ -160,7 +164,7 @@
             this.panel2a.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2a.Location = new System.Drawing.Point(0, 547);
             this.panel2a.Name = "panel2a";
-            this.panel2a.Size = new System.Drawing.Size(1144, 30);
+            this.panel2a.Size = new System.Drawing.Size(1294, 30);
             this.panel2a.TabIndex = 1;
             // 
             // panel2
@@ -171,7 +175,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(400, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(344, 30);
+            this.panel2.Size = new System.Drawing.Size(494, 30);
             this.panel2.TabIndex = 3;
             // 
             // txtTrangHienTai
@@ -182,7 +186,7 @@
             this.txtTrangHienTai.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtTrangHienTai.Location = new System.Drawing.Point(48, 0);
             this.txtTrangHienTai.Name = "txtTrangHienTai";
-            this.txtTrangHienTai.Size = new System.Drawing.Size(248, 30);
+            this.txtTrangHienTai.Size = new System.Drawing.Size(398, 30);
             this.txtTrangHienTai.Style.Alignment = System.Drawing.StringAlignment.Center;
             this.txtTrangHienTai.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
             this.txtTrangHienTai.Style.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
@@ -197,7 +201,7 @@
             // 
             this.panel7.Controls.Add(this.btnTrangTiep);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel7.Location = new System.Drawing.Point(296, 0);
+            this.panel7.Location = new System.Drawing.Point(446, 0);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(48, 30);
             this.panel7.TabIndex = 1;
@@ -240,7 +244,7 @@
             // panel4
             // 
             this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel4.Location = new System.Drawing.Point(744, 0);
+            this.panel4.Location = new System.Drawing.Point(894, 0);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(400, 30);
             this.panel4.TabIndex = 1;
@@ -257,6 +261,7 @@
             // 
             this.panelEx2.CanvasColor = System.Drawing.SystemColors.Control;
             this.panelEx2.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.panelEx2.Controls.Add(this.cbbTuyChon);
             this.panelEx2.Controls.Add(this.txtTimKiem);
             this.panelEx2.Controls.Add(this.btnTimKiem);
             this.panelEx2.Controls.Add(this.btnLamMoi);
@@ -268,7 +273,7 @@
             this.panelEx2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelEx2.Location = new System.Drawing.Point(0, 0);
             this.panelEx2.Name = "panelEx2";
-            this.panelEx2.Size = new System.Drawing.Size(1150, 50);
+            this.panelEx2.Size = new System.Drawing.Size(1300, 50);
             this.panelEx2.Style.Alignment = System.Drawing.StringAlignment.Center;
             this.panelEx2.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
             this.panelEx2.Style.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
@@ -365,13 +370,42 @@
             this.btnXuat.Text = "Xuất";
             this.btnXuat.Click += new System.EventHandler(this.btnXuat_Click);
             // 
+            // cbbTuyChon
+            // 
+            this.cbbTuyChon.DisplayMember = "Text";
+            this.cbbTuyChon.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbbTuyChon.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbTuyChon.ItemHeight = 19;
+            this.cbbTuyChon.Items.AddRange(new object[] {
+            this.cbb_option_user,
+            this.cbb_option_all});
+            this.cbbTuyChon.Location = new System.Drawing.Point(1130, 12);
+            this.cbbTuyChon.Name = "cbbTuyChon";
+            this.cbbTuyChon.Size = new System.Drawing.Size(161, 25);
+            this.cbbTuyChon.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.cbbTuyChon.TabIndex = 7;
+            this.cbbTuyChon.Text = "Người dùng";
+            this.cbbTuyChon.SelectedIndexChanged += new System.EventHandler(this.cbbTuyChon_SelectedIndexChanged);
+            // 
+            // cbb_option_user
+            // 
+            this.cbb_option_user.FontSize = 10F;
+            this.cbb_option_user.Image = ((System.Drawing.Image)(resources.GetObject("cbb_option_user.Image")));
+            this.cbb_option_user.Text = "Người dùng";
+            // 
+            // cbb_option_all
+            // 
+            this.cbb_option_all.FontSize = 10F;
+            this.cbb_option_all.Image = ((System.Drawing.Image)(resources.GetObject("cbb_option_all.Image")));
+            this.cbb_option_all.Text = "Tất cả";
+            // 
             // usr_UngDung
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panelEx1);
             this.Name = "usr_UngDung";
-            this.Size = new System.Drawing.Size(1150, 650);
+            this.Size = new System.Drawing.Size(1300, 650);
             this.panelEx1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.groupPanel1.ResumeLayout(false);
@@ -407,5 +441,8 @@
         private DevComponents.DotNetBar.ButtonX btnTrangTruoc;
         private DevComponents.DotNetBar.ButtonX btnTimKiem;
         private DevComponents.DotNetBar.Controls.TextBoxX txtTimKiem;
+        private DevComponents.DotNetBar.Controls.ComboBoxEx cbbTuyChon;
+        private DevComponents.Editors.ComboItem cbb_option_user;
+        private DevComponents.Editors.ComboItem cbb_option_all;
     }
 }

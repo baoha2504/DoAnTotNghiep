@@ -21,9 +21,19 @@ namespace MTA_Mobile_Forensic
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-            btnThongTinKhac_Click(sender, e);
+            btnPhanChieuThietBi_Click(sender, e);
         }
 
+        //Trang chủ
+
+
+        //Kết nối thiết bị
+
+
+        //Tổng quan
+
+
+        //Điều tra dữ liệu
         usr_TinNhan usr_TinNhan;
         usr_CuocGoi usr_CuocGoi;
         usr_DanhBa usr_DanhBa;
@@ -35,6 +45,26 @@ namespace MTA_Mobile_Forensic
         usr_CaiDat usr_CaiDat;
         usr_FileHeThong usr_FileHeThong;
         usr_ThongTinKhac usr_ThongTinKhac;
+
+
+        //Điều khiển thiết bị
+        usr_CaiDatUngDung usr_CaiDatUngDung;
+        usr_PhanChieuThietBi usr_PhanChieuThietBi;
+
+        //Điều tra thông tin
+
+
+        //Sao lưu khôi phục
+
+
+        //Nâng cao
+
+
+        //Hướng dẫn sử dụng
+
+
+        //Thông tin phần mềm
+
 
         private void btnTrangChu_Click(object sender, EventArgs e)
         {
@@ -255,12 +285,19 @@ namespace MTA_Mobile_Forensic
 
         private void btnCaiDatUngDung_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void btnGoCaiDat_Click(object sender, EventArgs e)
-        {
-
+            lblTieuDe1.Caption = "Điều khiển thiết bị";
+            lblTieuDe2.Caption = "Cài đặt và gỡ cài đặt";
+            if (usr_CaiDatUngDung == null)
+            {
+                usr_CaiDatUngDung = new usr_CaiDatUngDung();
+                usr_CaiDatUngDung.Dock = DockStyle.Fill;
+                mainContainer.Controls.Add(usr_CaiDatUngDung);
+                usr_CaiDatUngDung.BringToFront();
+            }
+            else
+            {
+                usr_CaiDatUngDung.BringToFront();
+            }
         }
 
         private void btnThayDoiMatKhau_Click(object sender, EventArgs e)
@@ -268,14 +305,21 @@ namespace MTA_Mobile_Forensic
 
         }
 
-        private void btnDeviceMirroring_Click(object sender, EventArgs e)
+        private void btnPhanChieuThietBi_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void btnChupAnhManHinh_Click(object sender, EventArgs e)
-        {
-
+            lblTieuDe1.Caption = "Điều khiển thiết bị";
+            lblTieuDe2.Caption = "Phản chiếu thiết bị";
+            if (usr_PhanChieuThietBi == null)
+            {
+                usr_PhanChieuThietBi = new usr_PhanChieuThietBi();
+                usr_PhanChieuThietBi.Dock = DockStyle.Fill;
+                mainContainer.Controls.Add(usr_PhanChieuThietBi);
+                usr_PhanChieuThietBi.BringToFront();
+            }
+            else
+            {
+                usr_PhanChieuThietBi.BringToFront();
+            }
         }
 
         private void btnDieuTraNguoiDung_Click(object sender, EventArgs e)
@@ -332,7 +376,5 @@ namespace MTA_Mobile_Forensic
         {
 
         }
-
-        
     }
 }

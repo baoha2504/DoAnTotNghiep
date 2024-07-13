@@ -318,13 +318,21 @@ namespace MTA_Mobile_Forensic.GUI.Android
             {
                 str_InfoPowerDisplay = "mServiceState={mVoiceRegState=0(IN_SERVICE), mDataRegState=0(IN_SERVICE), mChannelNumber=1700, duplexMode()=1, mCellBandwidths=[15000], mVoiceOperatorAlphaLong=Viettel, mVoiceOperatorAlphaShort=Viettel, mDataOperatorAlphaLong=Viettel, mDataOperatorAlphaShort=Viettel, isManualNetworkSelection=false(automatic), getRilVoiceRadioTechnology=14(LTE), getRilDataRadioTechnology=14(LTE), mCssIndicator=unsupported, mNetworkId=-1, mSystemId=-1, mCdmaRoamingIndicator=-1, mCdmaDefaultRoamingIndicator=-1, mIsEmergencyOnly=false, isUsingCarrierAggregation=false, mLteEarfcnRsrpBoost=0, mNetworkRegistrationInfos=[NetworkRegistrationInfo{ domain=CS transportType=WWAN registrationState=HOME roamingType=NOT_ROAMING accessNetworkTechnology=LTE rejectCause=0 emergencyEnabled=false availableServices=[VOICE,SMS,VIDEO] cellIdentity=CellIdentityLte:{ mBandwidth=15000 mMcc=452 mMnc=04 mAlphaLong=Viettel mAlphaShort=Viettel} voiceSpecificInfo=VoiceSpecificRegistrationInfo { mCssSupported=false mRoamingIndicator=1 mSystemIsInPrl=-1 mDefaultRoamingIndicator=-1} dataSpecificInfo=null nrState=NONE}, NetworkRegistrationInfo{ domain=PS transportType=WWAN registrationState=HOME roamingType=NOT_ROAMING accessNetworkTechnology=LTE rejectCause=0 emergencyEnabled=false availableServices=[DATA] cellIdentity=CellIdentityLte:{ mBandwidth=15000 mMcc=452 mMnc=04 mAlphaLong=Viettel mAlphaShort=Viettel} voiceSpecificInfo=null dataSpecificInfo=android.telephony.DataSpecificRegistrationInfo :{ maxDataCalls = 20 isDcNrRestricted = false isNrAvailable = false isEnDcAvailable = false LteVopsSupportInfo :  mVopsSupport = 2 mEmcBearerSupport = 3 mIsUsingCarrierAggregation = false } nrState=NONE}], mNrFrequencyRange=-1, mOperatorAlphaLongRaw=Viettel, mOperatorAlphaShortRaw=Viettel, mIsIwlanPreferred=false}\r\nmServiceState={mVoiceRegState=0(IN_SERVICE), mDataRegState=0(IN_SERVICE), mChannelNumber=1700, duplexMode()=1, mCellBandwidths=[15000], mVoiceOperatorAlphaLong=Viettel, mVoiceOperatorAlphaShort=Vinaphone, mDataOperatorAlphaLong=Viettel, mDataOperatorAlphaShort=Viettel, isManualNetworkSelection=false(automatic), getRilVoiceRadioTechnology=14(LTE), getRilDataRadioTechnology=14(LTE), mCssIndicator=unsupported, mNetworkId=-1, mSystemId=-1, mCdmaRoamingIndicator=-1, mCdmaDefaultRoamingIndicator=-1, mIsEmergencyOnly=false, isUsingCarrierAggregation=false, mLteEarfcnRsrpBoost=0, mNetworkRegistrationInfos=[NetworkRegistrationInfo{ domain=CS transportType=WWAN registrationState=HOME roamingType=NOT_ROAMING accessNetworkTechnology=LTE rejectCause=0 emergencyEnabled=false availableServices=[VOICE,SMS,VIDEO] cellIdentity=CellIdentityLte:{ mBandwidth=15000 mMcc=452 mMnc=04 mAlphaLong=Viettel mAlphaShort=Viettel} voiceSpecificInfo=VoiceSpecificRegistrationInfo { mCssSupported=false mRoamingIndicator=1 mSystemIsInPrl=-1 mDefaultRoamingIndicator=-1} dataSpecificInfo=null nrState=NONE}, NetworkRegistrationInfo{ domain=PS transportType=WWAN registrationState=HOME roamingType=NOT_ROAMING accessNetworkTechnology=LTE rejectCause=0 emergencyEnabled=false availableServices=[DATA] cellIdentity=CellIdentityLte:{ mBandwidth=15000 mMcc=452 mMnc=04 mAlphaLong=Viettel mAlphaShort=Viettel} voiceSpecificInfo=null dataSpecificInfo=android.telephony.DataSpecificRegistrationInfo :{ maxDataCalls = 20 isDcNrRestricted = false isNrAvailable = false isEnDcAvailable = false LteVopsSupportInfo :  mVopsSupport = 2 mEmcBearerSupport = 3 mIsUsingCarrierAggregation = false } nrState=NONE}], mNrFrequencyRange=-1, mOperatorAlphaLongRaw=Viettel, mOperatorAlphaShortRaw=Viettel, mIsIwlanPreferred=false}";
             }
+
             //text
             List<string> list_sim = GetValueList1(str_InfoPowerDisplay, "mVoiceOperatorAlphaShort");
-            string sim1 = list_sim[0];
-            txtSim1.Text = sim1;
-
-            string sim2 = list_sim[1];
-            txtSim2.Text = sim2;
+            try
+            {
+                string sim1 = list_sim[0];
+                txtSim1.Text = sim1;
+            }
+            catch { }
+            try
+            {
+                string sim2 = list_sim[1];
+                txtSim2.Text = sim2;
+            }
+            catch { }
         }
 
         private double ConvertKbToGb(long kilobytes)
@@ -374,9 +382,14 @@ namespace MTA_Mobile_Forensic.GUI.Android
             int number_Lost_RAM = Int32.Parse(Lost_RAM.Replace(",", ""));
             double number_Lost_RAM_GB = ConvertKbToGb(number_Lost_RAM);
 
-            string ZRAM = GetValueMemory(str_InfoRam, "ZRAM");
-            int ZRAM_RAM = Int32.Parse(ZRAM.Replace(",", ""));
-            double ZRAM_RAM_GB = ConvertKbToGb(ZRAM_RAM);
+            double ZRAM_RAM_GB = 0;
+            try
+            {
+                string ZRAM = GetValueMemory(str_InfoRam, "ZRAM");
+                int ZRAM_RAM = Int32.Parse(ZRAM.Replace(",", ""));
+                ZRAM_RAM_GB = ConvertKbToGb(ZRAM_RAM);
+            }
+            catch { }
 
             total_Ram_GB = number_Free_RAM_GB + number_Used_RAM_GB - number_Lost_RAM_GB + ZRAM_RAM_GB;
             txtRamTotal.Text = total_Ram_GB.ToString() + "GB";

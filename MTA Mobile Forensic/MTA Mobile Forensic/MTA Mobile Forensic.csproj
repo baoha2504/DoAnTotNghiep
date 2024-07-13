@@ -113,6 +113,12 @@
     <Compile Include="GUI\Android\usr_CaiDat.Designer.cs">
       <DependentUpon>usr_CaiDat.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Android\usr_CaiDatUngDung.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Android\usr_CaiDatUngDung.Designer.cs">
+      <DependentUpon>usr_CaiDatUngDung.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Android\usr_CuocGoi.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -142,6 +148,12 @@
     </Compile>
     <Compile Include="GUI\Android\usr_Lich.Designer.cs">
       <DependentUpon>usr_Lich.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Android\usr_PhanChieuThietBi.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Android\usr_PhanChieuThietBi.Designer.cs">
+      <DependentUpon>usr_PhanChieuThietBi.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\Android\usr_ThongTinKhac.cs">
       <SubType>UserControl</SubType>
@@ -270,6 +282,9 @@
     <EmbeddedResource Include="GUI\Android\usr_CaiDat.resx">
       <DependentUpon>usr_CaiDat.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Android\usr_CaiDatUngDung.resx">
+      <DependentUpon>usr_CaiDatUngDung.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Android\usr_CuocGoi.resx">
       <DependentUpon>usr_CuocGoi.cs</DependentUpon>
     </EmbeddedResource>
@@ -284,6 +299,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Android\usr_Lich.resx">
       <DependentUpon>usr_Lich.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Android\usr_PhanChieuThietBi.resx">
+      <DependentUpon>usr_PhanChieuThietBi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Android\usr_ThongTinKhac.resx">
       <DependentUpon>usr_ThongTinKhac.cs</DependentUpon>

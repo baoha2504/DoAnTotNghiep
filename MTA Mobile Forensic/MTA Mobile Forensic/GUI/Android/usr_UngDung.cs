@@ -64,17 +64,34 @@ namespace MTA_Mobile_Forensic.GUI.Android
 
         private void LayDanhSachPackage()
         {
-            query = "shell pm list packages";
-            string str = adb.adbCommand(query);
-            if (str == string.Empty)
+            if (cbbTuyChon.Text == "Người dùng")
             {
-                str = "package:com.miui.screenrecorder\r\npackage:com.android.cts.priv.ctsshim\r\npackage:com.qualcomm.qti.qms.service.telemetry\r\npackage:com.google.android.youtube\r\npackage:com.qualcomm.qti.qcolor\r\npackage:com.android.internal.display.cutout.emulation.corner\r\npackage:com.google.android.ext.services\r\npackage:com.qualcomm.qti.improvetouch.service\r\npackage:com.android.internal.display.cutout.emulation.double\r\npackage:com.android.providers.telephony\r\npackage:com.android.dynsystem\r\npackage:com.miui.powerkeeper\r\npackage:com.xiaomi.miplay_client\r\npackage:com.google.android.googlequicksearchbox\r\npackage:cn.wps.xiaomi.abroad.lite\r\npackage:com.miui.fm\r\npackage:com.t7.busmap\r\npackage:com.android.providers.calendar\r\npackage:com.zing.zalo\r\npackage:org.telegram.messenger\r\npackage:com.android.providers.media";
+                query = "shell pm list packages -3";
+                string str = adb.adbCommand(query);
+                if (str == string.Empty)
+                {
+                    str = "package:com.miui.screenrecorder\r\npackage:com.android.cts.priv.ctsshim\r\npackage:com.qualcomm.qti.qms.service.telemetry\r\npackage:com.google.android.youtube\r\npackage:com.qualcomm.qti.qcolor\r\npackage:com.android.internal.display.cutout.emulation.corner\r\npackage:com.google.android.ext.services\r\npackage:com.qualcomm.qti.improvetouch.service\r\npackage:com.android.internal.display.cutout.emulation.double\r\npackage:com.android.providers.telephony\r\npackage:com.android.dynsystem\r\npackage:com.miui.powerkeeper\r\npackage:com.xiaomi.miplay_client\r\npackage:com.google.android.googlequicksearchbox\r\npackage:cn.wps.xiaomi.abroad.lite\r\npackage:com.miui.fm\r\npackage:com.t7.busmap\r\npackage:com.android.providers.calendar\r\npackage:com.zing.zalo\r\npackage:org.telegram.messenger\r\npackage:com.android.providers.media";
+                }
+                string pattern = @"package:(\S+)";
+
+                matches = Regex.Matches(str, pattern);
+
+                Add_UngDung(matches, currentPage);
             }
-            string pattern = @"package:(\S+)";
+            else if (cbbTuyChon.Text == "Tất cả")
+            {
+                query = "shell pm list packages";
+                string str = adb.adbCommand(query);
+                if (str == string.Empty)
+                {
+                    str = "package:com.miui.screenrecorder\r\npackage:com.android.cts.priv.ctsshim\r\npackage:com.qualcomm.qti.qms.service.telemetry\r\npackage:com.google.android.youtube\r\npackage:com.qualcomm.qti.qcolor\r\npackage:com.android.internal.display.cutout.emulation.corner\r\npackage:com.google.android.ext.services\r\npackage:com.qualcomm.qti.improvetouch.service\r\npackage:com.android.internal.display.cutout.emulation.double\r\npackage:com.android.providers.telephony\r\npackage:com.android.dynsystem\r\npackage:com.miui.powerkeeper\r\npackage:com.xiaomi.miplay_client\r\npackage:com.google.android.googlequicksearchbox\r\npackage:cn.wps.xiaomi.abroad.lite\r\npackage:com.miui.fm\r\npackage:com.t7.busmap\r\npackage:com.android.providers.calendar\r\npackage:com.zing.zalo\r\npackage:org.telegram.messenger\r\npackage:com.android.providers.media";
+                }
+                string pattern = @"package:(\S+)";
 
-            matches = Regex.Matches(str, pattern);
+                matches = Regex.Matches(str, pattern);
 
-            Add_UngDung(matches, currentPage);
+                Add_UngDung(matches, currentPage);
+            }
         }
 
         private string LayThongTinNgayCaiDat(string input)
@@ -399,6 +416,12 @@ namespace MTA_Mobile_Forensic.GUI.Android
             {
                 MessageBox.Show($"Lỗi: {ex.ToString()}", "Lỗi");
             }
+        }
+
+        private void cbbTuyChon_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Clear_ListView();
+            Load_UngDung();
         }
     }
 }

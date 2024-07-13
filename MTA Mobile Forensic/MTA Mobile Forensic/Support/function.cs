@@ -79,6 +79,21 @@ namespace MTA_Mobile_Forensic.Support
             }
         }
 
+        public string GetFileSizeInMB(string path)
+        {
+            if (File.Exists(path))
+            {
+                FileInfo fileInfo = new FileInfo(path);
+                long fileSizeInBytes = fileInfo.Length;
+                double fileSizeInMB = (double)fileSizeInBytes / (1024 * 1024);
+                return fileSizeInMB.ToString("F2") + " MB";
+            }
+            else
+            {
+                return "File does not exist.";
+            }
+        }
+
         public double[] ParseCoordinates(string input)
         {
             // Define the regular expression pattern
