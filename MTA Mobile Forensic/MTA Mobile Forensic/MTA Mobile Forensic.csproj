@@ -382,6 +382,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Cache\" />
     <Folder Include="GUI\IOS\" />
   </ItemGroup>
   <ItemGroup>

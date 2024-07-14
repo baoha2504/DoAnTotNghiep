@@ -139,7 +139,7 @@
             this.txtTenVideo.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
             this.txtTenVideo.Style.GradientAngle = 90;
             this.txtTenVideo.TabIndex = 0;
-            this.txtTenVideo.Text = "Tên ảnh";
+            this.txtTenVideo.Text = "Tên video";
             // 
             // usr_VideoMini
             // 
