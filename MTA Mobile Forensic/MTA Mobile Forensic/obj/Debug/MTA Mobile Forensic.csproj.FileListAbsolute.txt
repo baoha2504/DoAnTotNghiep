@@ -195,3 +195,12 @@ E:\Do An\DoAnTotNghiep\MTA Mobile Forensic\MTA Mobile Forensic\obj\Debug\MTA_Mob
 E:\Do An\DoAnTotNghiep\MTA Mobile Forensic\MTA Mobile Forensic\obj\Debug\MTA_Mobile_Forensic.GUI.Android.usr_ThongTinKhac.resources
 E:\Do An\DoAnTotNghiep\MTA Mobile Forensic\MTA Mobile Forensic\obj\Debug\MTA_Mobile_Forensic.GUI.Android.usr_CaiDatUngDung.resources
 E:\Do An\DoAnTotNghiep\MTA Mobile Forensic\MTA Mobile Forensic\obj\Debug\MTA_Mobile_Forensic.GUI.Android.usr_PhanChieuThietBi.resources
+E:\Do An\DoAnTotNghiep\MTA Mobile Forensic\MTA Mobile Forensic\obj\Debug\MTA_Mobile_Forensic.GUI.Forensic.usr_DieuTraNguoiDung.resources
+E:\Do An\DoAnTotNghiep\MTA Mobile Forensic\MTA Mobile Forensic\bin\Debug\DevExpress.XtraPdfViewer.v21.2.dll
+E:\Do An\DoAnTotNghiep\MTA Mobile Forensic\MTA Mobile Forensic\bin\Debug\DevExpress.XtraPdfViewer.v21.2.xml
+E:\Do An\DoAnTotNghiep\MTA Mobile Forensic\MTA Mobile Forensic\bin\Debug\de\DevExpress.XtraPdfViewer.v21.2.resources.dll
+E:\Do An\DoAnTotNghiep\MTA Mobile Forensic\MTA Mobile Forensic\bin\Debug\es\DevExpress.XtraPdfViewer.v21.2.resources.dll
+E:\Do An\DoAnTotNghiep\MTA Mobile Forensic\MTA Mobile Forensic\bin\Debug\ja\DevExpress.XtraPdfViewer.v21.2.resources.dll
+E:\Do An\DoAnTotNghiep\MTA Mobile Forensic\MTA Mobile Forensic\bin\Debug\ru\DevExpress.XtraPdfViewer.v21.2.resources.dll
+E:\Do An\DoAnTotNghiep\MTA Mobile Forensic\MTA Mobile Forensic\obj\Debug\MTA_Mobile_Forensic.GUI.Forensic.frm_OpenWeb.resources
+E:\Do An\DoAnTotNghiep\MTA Mobile Forensic\MTA Mobile Forensic\obj\Debug\MTA_Mobile_Forensic.GUI.Forensic.usr_DieuTraMap.resources

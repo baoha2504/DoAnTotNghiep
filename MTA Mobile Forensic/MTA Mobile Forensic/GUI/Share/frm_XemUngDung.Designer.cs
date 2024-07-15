@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_XemUngDung));
             this.panelEx1 = new DevComponents.DotNetBar.PanelEx();
             this.groupPanel2 = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.webView21 = new Microsoft.Web.WebView2.WinForms.WebView2();
@@ -270,6 +271,7 @@
             this.ClientSize = new System.Drawing.Size(1182, 753);
             this.Controls.Add(this.panelEx1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frm_XemUngDung";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frm_XemUngDung";

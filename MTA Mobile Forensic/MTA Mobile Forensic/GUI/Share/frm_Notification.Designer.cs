@@ -31,8 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Notification));
             this.panelEx1 = new DevComponents.DotNetBar.PanelEx();
             this.pnThongBao = new DevComponents.DotNetBar.PanelEx();
-            this.btnSaoChep = new DevComponents.DotNetBar.ButtonX();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnSaoChep = new DevComponents.DotNetBar.ButtonX();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelEx1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -80,6 +80,16 @@
             this.pnThongBao.TabIndex = 9;
             this.pnThongBao.Text = "Thông báo";
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.btnSaoChep);
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(482, 209);
+            this.panel1.TabIndex = 8;
+            // 
             // btnSaoChep
             // 
             this.btnSaoChep.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
@@ -92,16 +102,6 @@
             this.btnSaoChep.TabIndex = 0;
             this.btnSaoChep.Text = "Sao chép";
             this.btnSaoChep.Click += new System.EventHandler(this.btnSaoChep_Click);
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.btnSaoChep);
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(482, 209);
-            this.panel1.TabIndex = 8;
             // 
             // pictureBox1
             // 
@@ -121,6 +121,7 @@
             this.ClientSize = new System.Drawing.Size(482, 273);
             this.Controls.Add(this.panelEx1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frm_Notification";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thông báo";

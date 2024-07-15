@@ -9,6 +9,7 @@ using System.Text;
 using System.Windows.Forms;
 using MTA_Mobile_Forensic.GUI.Android;
 using MTA_Mobile_Forensic.GUI.Share;
+using MTA_Mobile_Forensic.GUI.Forensic;
 
 namespace MTA_Mobile_Forensic
 {
@@ -21,7 +22,7 @@ namespace MTA_Mobile_Forensic
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-            btnPhanChieuThietBi_Click(sender, e);
+            btnDieuTraMap_Click(sender, e);
         }
 
         //Trang chủ
@@ -52,7 +53,10 @@ namespace MTA_Mobile_Forensic
         usr_PhanChieuThietBi usr_PhanChieuThietBi;
 
         //Điều tra thông tin
+        usr_DieuTraNguoiDung usr_DieuTraNguoiDung;
 
+
+        usr_DieuTraMap usr_DieuTraMap;
 
         //Sao lưu khôi phục
 
@@ -324,7 +328,19 @@ namespace MTA_Mobile_Forensic
 
         private void btnDieuTraNguoiDung_Click(object sender, EventArgs e)
         {
-
+            lblTieuDe1.Caption = "Điều tra thông tin";
+            lblTieuDe2.Caption = "Thông tin người dùng";
+            if (usr_DieuTraNguoiDung == null)
+            {
+                usr_DieuTraNguoiDung = new usr_DieuTraNguoiDung();
+                usr_DieuTraNguoiDung.Dock = DockStyle.Fill;
+                mainContainer.Controls.Add(usr_DieuTraNguoiDung);
+                usr_DieuTraNguoiDung.BringToFront();
+            }
+            else
+            {
+                usr_DieuTraNguoiDung.BringToFront();
+            }
         }
 
         private void btnDieuTraAnh_Click(object sender, EventArgs e)
@@ -344,7 +360,19 @@ namespace MTA_Mobile_Forensic
 
         private void btnDieuTraMap_Click(object sender, EventArgs e)
         {
-
+            lblTieuDe1.Caption = "Điều tra thông tin";
+            lblTieuDe2.Caption = "Map";
+            if (usr_DieuTraMap == null)
+            {
+                usr_DieuTraMap = new usr_DieuTraMap();
+                usr_DieuTraMap.Dock = DockStyle.Fill;
+                mainContainer.Controls.Add(usr_DieuTraMap);
+                usr_DieuTraMap.BringToFront();
+            }
+            else
+            {
+                usr_DieuTraMap.BringToFront();
+            }
         }
 
         private void btnVirusTotal_Click(object sender, EventArgs e)

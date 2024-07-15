@@ -41,11 +41,14 @@
     <Reference Include="DevComponents.TreeGX, Version=12.8.0.6, Culture=neutral, PublicKeyToken=055db68f670cfeab, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Data.Desktop.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Data.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Pdf.v21.2.Core, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Pdf.v21.2.Drawing, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Printing.v21.2.Core, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Utils.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraBars.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraLayout.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPdfViewer.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraTreeList.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="MediaToolkit, Version=1.1.0.1, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\MediaToolkit.1.1.0.1\lib\net40\MediaToolkit.dll</HintPath>
@@ -178,6 +181,24 @@
     </Compile>
     <Compile Include="GUI\Android\usr_Video.Designer.cs">
       <DependentUpon>usr_Video.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Forensic\frm_OpenWeb.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Forensic\frm_OpenWeb.Designer.cs">
+      <DependentUpon>frm_OpenWeb.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Forensic\usr_DieuTraMap.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Forensic\usr_DieuTraMap.Designer.cs">
+      <DependentUpon>usr_DieuTraMap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Forensic\usr_DieuTraNguoiDung.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Forensic\usr_DieuTraNguoiDung.Designer.cs">
+      <DependentUpon>usr_DieuTraNguoiDung.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\Share\frm_Notification.cs">
       <SubType>Form</SubType>
@@ -314,6 +335,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Android\usr_Video.resx">
       <DependentUpon>usr_Video.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Forensic\frm_OpenWeb.resx">
+      <DependentUpon>frm_OpenWeb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Forensic\usr_DieuTraMap.resx">
+      <DependentUpon>usr_DieuTraMap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Forensic\usr_DieuTraNguoiDung.resx">
+      <DependentUpon>usr_DieuTraNguoiDung.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Share\frm_Notification.resx">
       <DependentUpon>frm_Notification.cs</DependentUpon>
