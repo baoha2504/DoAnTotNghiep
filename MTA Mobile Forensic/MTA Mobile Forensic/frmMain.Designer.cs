@@ -62,10 +62,10 @@
             this.btnDieuTraVideo = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btnDieuTraAudio = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btnDieuTraMap = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.btnVirusTotal = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.btnDieuTraFile = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.SAOLUUKHOIPUC = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btnSaoLuu_KhoiPhuc = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.btnKhoiPhucDuLieuDaXoa = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.btnPhucHoiDuLieuDaXoa = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.NANGCAO = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btnMoKhoaThietBi = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btnRoot_JailbreakThietBi = new DevExpress.XtraBars.Navigation.AccordionControlElement();
@@ -310,7 +310,7 @@
             this.btnDieuTraVideo,
             this.btnDieuTraAudio,
             this.btnDieuTraMap,
-            this.btnVirusTotal});
+            this.btnDieuTraFile});
             this.DIEUTRATHONGTIN.Expanded = true;
             this.DIEUTRATHONGTIN.Name = "DIEUTRATHONGTIN";
             this.DIEUTRATHONGTIN.Text = "ĐIỀU TRA THÔNG TIN";
@@ -350,18 +350,18 @@
             this.btnDieuTraMap.Text = "Điều tra map";
             this.btnDieuTraMap.Click += new System.EventHandler(this.btnDieuTraMap_Click);
             // 
-            // btnVirusTotal
+            // btnDieuTraFile
             // 
-            this.btnVirusTotal.Name = "btnVirusTotal";
-            this.btnVirusTotal.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.btnVirusTotal.Text = "Điều tra file";
-            this.btnVirusTotal.Click += new System.EventHandler(this.btnVirusTotal_Click);
+            this.btnDieuTraFile.Name = "btnDieuTraFile";
+            this.btnDieuTraFile.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.btnDieuTraFile.Text = "Điều tra file";
+            this.btnDieuTraFile.Click += new System.EventHandler(this.btnDieuTraFile_Click);
             // 
             // SAOLUUKHOIPUC
             // 
             this.SAOLUUKHOIPUC.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.btnSaoLuu_KhoiPhuc,
-            this.btnKhoiPhucDuLieuDaXoa});
+            this.btnPhucHoiDuLieuDaXoa});
             this.SAOLUUKHOIPUC.Expanded = true;
             this.SAOLUUKHOIPUC.Name = "SAOLUUKHOIPUC";
             this.SAOLUUKHOIPUC.Text = "SAO LƯU VÀ KHÔI PHỤC";
@@ -373,12 +373,12 @@
             this.btnSaoLuu_KhoiPhuc.Text = "Sao lưu và khôi phục";
             this.btnSaoLuu_KhoiPhuc.Click += new System.EventHandler(this.btnSaoLuu_KhoiPhuc_Click);
             // 
-            // btnKhoiPhucDuLieuDaXoa
+            // btnPhucHoiDuLieuDaXoa
             // 
-            this.btnKhoiPhucDuLieuDaXoa.Name = "btnKhoiPhucDuLieuDaXoa";
-            this.btnKhoiPhucDuLieuDaXoa.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.btnKhoiPhucDuLieuDaXoa.Text = "Khôi phục dữ liệu đã xóa";
-            this.btnKhoiPhucDuLieuDaXoa.Click += new System.EventHandler(this.btnKhoiPhucDuLieuDaXoa_Click);
+            this.btnPhucHoiDuLieuDaXoa.Name = "btnPhucHoiDuLieuDaXoa";
+            this.btnPhucHoiDuLieuDaXoa.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.btnPhucHoiDuLieuDaXoa.Text = "Phục hồi dữ liệu đã xóa";
+            this.btnPhucHoiDuLieuDaXoa.Click += new System.EventHandler(this.btnPhucHoiDuLieuDaXoa_Click);
             // 
             // NANGCAO
             // 
@@ -549,9 +549,9 @@
         private DevExpress.XtraBars.Navigation.AccordionControlElement btnDieuTraNguoiDung;
         private DevExpress.XtraBars.Navigation.AccordionControlElement btnDieuTraAnh;
         private DevExpress.XtraBars.Navigation.AccordionControlElement btnDieuTraMap;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement btnVirusTotal;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement btnDieuTraFile;
         private DevExpress.XtraBars.Navigation.AccordionControlElement btnSaoLuu_KhoiPhuc;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement btnKhoiPhucDuLieuDaXoa;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement btnPhucHoiDuLieuDaXoa;
         private DevExpress.XtraBars.Navigation.AccordionControlElement btnMoKhoaThietBi;
         private DevExpress.XtraBars.Navigation.AccordionControlElement btnRoot_JailbreakThietBi;
         private DevExpress.XtraBars.Navigation.AccordionControlElement btnTinNhan;

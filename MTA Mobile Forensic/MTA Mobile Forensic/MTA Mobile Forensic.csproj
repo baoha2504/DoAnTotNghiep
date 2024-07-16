@@ -188,6 +188,12 @@
     <Compile Include="GUI\Forensic\frm_OpenWeb.Designer.cs">
       <DependentUpon>frm_OpenWeb.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Forensic\usr_DieuTraFile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Forensic\usr_DieuTraFile.Designer.cs">
+      <DependentUpon>usr_DieuTraFile.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Forensic\usr_DieuTraMap.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -338,6 +344,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Forensic\frm_OpenWeb.resx">
       <DependentUpon>frm_OpenWeb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Forensic\usr_DieuTraFile.resx">
+      <DependentUpon>usr_DieuTraFile.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Forensic\usr_DieuTraMap.resx">
       <DependentUpon>usr_DieuTraMap.cs</DependentUpon>

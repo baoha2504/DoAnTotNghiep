@@ -22,7 +22,7 @@ namespace MTA_Mobile_Forensic
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-            btnDieuTraMap_Click(sender, e);
+            btnDieuTraFile_Click(sender, e);
         }
 
         //Trang chủ
@@ -57,6 +57,7 @@ namespace MTA_Mobile_Forensic
 
 
         usr_DieuTraMap usr_DieuTraMap;
+        usr_DieuTraFile usr_DieuTraFile;
 
         //Sao lưu khôi phục
 
@@ -370,9 +371,21 @@ namespace MTA_Mobile_Forensic
             }
         }
 
-        private void btnVirusTotal_Click(object sender, EventArgs e)
+        private void btnDieuTraFile_Click(object sender, EventArgs e)
         {
-
+            lblTieuDe1.Caption = "Điều tra thông tin";
+            lblTieuDe2.Caption = "File";
+            if (usr_DieuTraFile == null)
+            {
+                usr_DieuTraFile = new usr_DieuTraFile();
+                usr_DieuTraFile.Dock = DockStyle.Fill;
+                mainContainer.Controls.Add(usr_DieuTraFile);
+                usr_DieuTraFile.BringToFront();
+            }
+            else
+            {
+                usr_DieuTraFile.BringToFront();
+            }
         }
 
         private void btnSaoLuu_KhoiPhuc_Click(object sender, EventArgs e)
@@ -380,7 +393,7 @@ namespace MTA_Mobile_Forensic
 
         }
 
-        private void btnKhoiPhucDuLieuDaXoa_Click(object sender, EventArgs e)
+        private void btnPhucHoiDuLieuDaXoa_Click(object sender, EventArgs e)
         {
 
         }
