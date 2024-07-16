@@ -42,5 +42,13 @@ namespace MTA_Mobile_Forensic.GUI.Share
         {
             ControlClicked?.Invoke(this, EventArgs.Empty);
         }
+
+        private void pbAnh_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                this.DoDragDrop(this, DragDropEffects.Move);
+            }
+        }
     }
 }

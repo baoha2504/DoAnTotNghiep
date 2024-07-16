@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Text.RegularExpressions;
+using System.Windows.Forms;
 
 namespace MTA_Mobile_Forensic.Support
 {
@@ -146,7 +147,30 @@ namespace MTA_Mobile_Forensic.Support
             { 
                 return "Error"; 
             }
+        }
 
+        public string GetGPSPositionNoLinkToText(string input)
+        {
+            try
+            {
+                string gps = GetGPSPositionFromInfo(input);
+                double[] result = new double[6];
+                result = ParseCoordinates(gps);
+
+                double gps1 = Math.Round(DmsToDecimalDegrees(result[0], result[1], result[2]), 8);
+                string latitude = gps1.ToString();
+
+                double gps2 = Math.Round(DmsToDecimalDegrees(result[3], result[4], result[5]), 8);
+                string longitude = gps2.ToString();
+
+                string googleMapsUrl = $"{longitude}, {latitude}";
+
+                return googleMapsUrl;
+            }
+            catch
+            {
+                return "Error";
+            }
         }
 
         public string GetGPSPositionFromInfo(string input)
@@ -160,6 +184,31 @@ namespace MTA_Mobile_Forensic.Support
             }
 
             return "GPS Position not found";
+        }
+
+        public void CopyFileToFolder(string filePath, string folderPath)
+        {
+            try
+            {
+                if (!File.Exists(filePath))
+                {
+                    throw new FileNotFoundException("The source file does not exist.", filePath);
+                }
+
+                if (!Directory.Exists(folderPath))
+                {
+                    Directory.CreateDirectory(folderPath);
+                }
+
+                string fileName = Path.GetFileName(filePath);
+                string destFilePath = Path.Combine(folderPath, fileName);
+
+                File.Copy(filePath, destFilePath, true);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred: {ex.Message}");
+            }
         }
     }
 }

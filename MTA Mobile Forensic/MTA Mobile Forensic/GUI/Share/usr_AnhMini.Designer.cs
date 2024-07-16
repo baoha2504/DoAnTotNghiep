@@ -74,6 +74,7 @@
             this.pbAnh.TabIndex = 0;
             this.pbAnh.TabStop = false;
             this.pbAnh.Click += new System.EventHandler(this.pbAnh_Click);
+            this.pbAnh.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pbAnh_MouseDown);
             // 
             // panel2
             // 

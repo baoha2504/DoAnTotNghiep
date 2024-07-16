@@ -304,11 +304,6 @@ namespace MTA_Mobile_Forensic
             }
         }
 
-        private void btnThayDoiMatKhau_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnPhanChieuThietBi_Click(object sender, EventArgs e)
         {
             lblTieuDe1.Caption = "Điều khiển thiết bị";
@@ -380,17 +375,17 @@ namespace MTA_Mobile_Forensic
 
         }
 
-        private void btnSaoLuuDuLieu_Click(object sender, EventArgs e)
+        private void btnSaoLuu_KhoiPhuc_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void btnKhoiPhucDuLieu_Click(object sender, EventArgs e)
+        private void btnKhoiPhucDuLieuDaXoa_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void btnImportDuLieu_Click(object sender, EventArgs e)
+        private void btnThayDoiMatKhau_Click(object sender, EventArgs e)
         {
 
         }
