@@ -33,14 +33,18 @@
             this.mainContainer = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer();
             this.accordionControl1 = new DevExpress.XtraBars.Navigation.AccordionControl();
             this.TRANGCHU = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement1 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btnTrangChu = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.KETNOITHIETBI = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement2 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btnTatCaThietBi = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btnKetNoiThietBi = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.TONGQUAN = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement3 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btnTongQuanSoLieuDieuTra = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btnTongQuanThietBiKetNoi = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.DIEUTRADULIEU = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement4 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btnTinNhan = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btnCuocGoi = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btnDanhBa = new DevExpress.XtraBars.Navigation.AccordionControlElement();
@@ -54,9 +58,11 @@
             this.btnFileSystem = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btnThongTinKhac = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.DIEUKHIENTHIETBI = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement5 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btnCaiDatUngDung = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btnPhanChieuThietBi = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.DIEUTRATHONGTIN = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement6 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btnDieuTraNguoiDung = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btnDieuTraAnh = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btnDieuTraVideo = new DevExpress.XtraBars.Navigation.AccordionControlElement();
@@ -64,9 +70,11 @@
             this.btnDieuTraMap = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btnDieuTraFile = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.SAOLUUKHOIPUC = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement7 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btnSaoLuu_KhoiPhuc = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.btnPhucHoiDuLieuDaXoa = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.NANGCAO = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement8 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.btnThayDoiMatKhau = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btnMoKhoaThietBi = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btnRoot_JailbreakThietBi = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.HUONGDANSUDUNG = new DevExpress.XtraBars.Navigation.AccordionControlElement();
@@ -78,7 +86,6 @@
             this.barStaticItem2 = new DevExpress.XtraBars.BarStaticItem();
             this.lblTieuDe2 = new DevExpress.XtraBars.BarStaticItem();
             this.fluentFormDefaultManager1 = new DevExpress.XtraBars.FluentDesignSystem.FluentFormDefaultManager(this.components);
-            this.btnThayDoiMatKhau = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentFormDefaultManager1)).BeginInit();
@@ -87,10 +94,10 @@
             // mainContainer
             // 
             this.mainContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mainContainer.Location = new System.Drawing.Point(381, 39);
-            this.mainContainer.Margin = new System.Windows.Forms.Padding(15);
+            this.mainContainer.Location = new System.Drawing.Point(340, 39);
+            this.mainContainer.Margin = new System.Windows.Forms.Padding(38, 38, 38, 38);
             this.mainContainer.Name = "mainContainer";
-            this.mainContainer.Size = new System.Drawing.Size(1008, 683);
+            this.mainContainer.Size = new System.Drawing.Size(1049, 683);
             this.mainContainer.TabIndex = 0;
             // 
             // accordionControl1
@@ -108,20 +115,26 @@
             this.HUONGDANSUDUNG,
             this.THONGTINPHANMEM});
             this.accordionControl1.Location = new System.Drawing.Point(0, 39);
-            this.accordionControl1.Margin = new System.Windows.Forms.Padding(15);
+            this.accordionControl1.Margin = new System.Windows.Forms.Padding(38, 38, 38, 38);
             this.accordionControl1.Name = "accordionControl1";
             this.accordionControl1.ScrollBarMode = DevExpress.XtraBars.Navigation.ScrollBarMode.Touch;
-            this.accordionControl1.Size = new System.Drawing.Size(381, 683);
+            this.accordionControl1.Size = new System.Drawing.Size(340, 683);
             this.accordionControl1.TabIndex = 1;
             this.accordionControl1.ViewType = DevExpress.XtraBars.Navigation.AccordionControlViewType.HamburgerMenu;
             // 
             // TRANGCHU
             // 
             this.TRANGCHU.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
-            this.btnTrangChu});
+            this.btnTrangChu,
+            this.accordionControlElement1});
             this.TRANGCHU.Expanded = true;
             this.TRANGCHU.Name = "TRANGCHU";
             this.TRANGCHU.Text = "TRANG CHỦ";
+            // 
+            // accordionControlElement1
+            // 
+            this.accordionControlElement1.Name = "accordionControlElement1";
+            this.accordionControlElement1.Visible = false;
             // 
             // btnTrangChu
             // 
@@ -134,10 +147,16 @@
             // 
             this.KETNOITHIETBI.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.btnTatCaThietBi,
-            this.btnKetNoiThietBi});
+            this.btnKetNoiThietBi,
+            this.accordionControlElement2});
             this.KETNOITHIETBI.Expanded = true;
             this.KETNOITHIETBI.Name = "KETNOITHIETBI";
             this.KETNOITHIETBI.Text = "KẾT NỐI THIẾT BỊ";
+            // 
+            // accordionControlElement2
+            // 
+            this.accordionControlElement2.Name = "accordionControlElement2";
+            this.accordionControlElement2.Visible = false;
             // 
             // btnTatCaThietBi
             // 
@@ -157,10 +176,16 @@
             // 
             this.TONGQUAN.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.btnTongQuanSoLieuDieuTra,
-            this.btnTongQuanThietBiKetNoi});
+            this.btnTongQuanThietBiKetNoi,
+            this.accordionControlElement3});
             this.TONGQUAN.Expanded = true;
             this.TONGQUAN.Name = "TONGQUAN";
             this.TONGQUAN.Text = "TỔNG QUAN";
+            // 
+            // accordionControlElement3
+            // 
+            this.accordionControlElement3.Name = "accordionControlElement3";
+            this.accordionControlElement3.Visible = false;
             // 
             // btnTongQuanSoLieuDieuTra
             // 
@@ -190,10 +215,16 @@
             this.btnCaiDatCuaThietBi,
             this.btnLichSuTruyCap,
             this.btnFileSystem,
-            this.btnThongTinKhac});
+            this.btnThongTinKhac,
+            this.accordionControlElement4});
             this.DIEUTRADULIEU.Expanded = true;
             this.DIEUTRADULIEU.Name = "DIEUTRADULIEU";
             this.DIEUTRADULIEU.Text = "ĐIỀU TRA DỮ LIỆU";
+            // 
+            // accordionControlElement4
+            // 
+            this.accordionControlElement4.Name = "accordionControlElement4";
+            this.accordionControlElement4.Visible = false;
             // 
             // btnTinNhan
             // 
@@ -283,10 +314,16 @@
             // 
             this.DIEUKHIENTHIETBI.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.btnCaiDatUngDung,
-            this.btnPhanChieuThietBi});
+            this.btnPhanChieuThietBi,
+            this.accordionControlElement5});
             this.DIEUKHIENTHIETBI.Expanded = true;
             this.DIEUKHIENTHIETBI.Name = "DIEUKHIENTHIETBI";
             this.DIEUKHIENTHIETBI.Text = "ĐIỀU KHIỂN THIẾT BỊ";
+            // 
+            // accordionControlElement5
+            // 
+            this.accordionControlElement5.Name = "accordionControlElement5";
+            this.accordionControlElement5.Visible = false;
             // 
             // btnCaiDatUngDung
             // 
@@ -310,10 +347,16 @@
             this.btnDieuTraVideo,
             this.btnDieuTraAudio,
             this.btnDieuTraMap,
-            this.btnDieuTraFile});
+            this.btnDieuTraFile,
+            this.accordionControlElement6});
             this.DIEUTRATHONGTIN.Expanded = true;
             this.DIEUTRATHONGTIN.Name = "DIEUTRATHONGTIN";
             this.DIEUTRATHONGTIN.Text = "ĐIỀU TRA THÔNG TIN";
+            // 
+            // accordionControlElement6
+            // 
+            this.accordionControlElement6.Name = "accordionControlElement6";
+            this.accordionControlElement6.Visible = false;
             // 
             // btnDieuTraNguoiDung
             // 
@@ -361,10 +404,15 @@
             // 
             this.SAOLUUKHOIPUC.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.btnSaoLuu_KhoiPhuc,
-            this.btnPhucHoiDuLieuDaXoa});
+            this.accordionControlElement7});
             this.SAOLUUKHOIPUC.Expanded = true;
             this.SAOLUUKHOIPUC.Name = "SAOLUUKHOIPUC";
             this.SAOLUUKHOIPUC.Text = "SAO LƯU VÀ KHÔI PHỤC";
+            // 
+            // accordionControlElement7
+            // 
+            this.accordionControlElement7.Name = "accordionControlElement7";
+            this.accordionControlElement7.Visible = false;
             // 
             // btnSaoLuu_KhoiPhuc
             // 
@@ -373,22 +421,28 @@
             this.btnSaoLuu_KhoiPhuc.Text = "Sao lưu và khôi phục";
             this.btnSaoLuu_KhoiPhuc.Click += new System.EventHandler(this.btnSaoLuu_KhoiPhuc_Click);
             // 
-            // btnPhucHoiDuLieuDaXoa
-            // 
-            this.btnPhucHoiDuLieuDaXoa.Name = "btnPhucHoiDuLieuDaXoa";
-            this.btnPhucHoiDuLieuDaXoa.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.btnPhucHoiDuLieuDaXoa.Text = "Phục hồi dữ liệu đã xóa";
-            this.btnPhucHoiDuLieuDaXoa.Click += new System.EventHandler(this.btnPhucHoiDuLieuDaXoa_Click);
-            // 
             // NANGCAO
             // 
             this.NANGCAO.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.btnThayDoiMatKhau,
             this.btnMoKhoaThietBi,
-            this.btnRoot_JailbreakThietBi});
+            this.btnRoot_JailbreakThietBi,
+            this.accordionControlElement8});
             this.NANGCAO.Expanded = true;
             this.NANGCAO.Name = "NANGCAO";
             this.NANGCAO.Text = "NÂNG CAO";
+            // 
+            // accordionControlElement8
+            // 
+            this.accordionControlElement8.Name = "accordionControlElement8";
+            this.accordionControlElement8.Visible = false;
+            // 
+            // btnThayDoiMatKhau
+            // 
+            this.btnThayDoiMatKhau.Name = "btnThayDoiMatKhau";
+            this.btnThayDoiMatKhau.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.btnThayDoiMatKhau.Text = "Thay đổi mật khẩu";
+            this.btnThayDoiMatKhau.Click += new System.EventHandler(this.btnThayDoiMatKhau_Click);
             // 
             // btnMoKhoaThietBi
             // 
@@ -494,13 +548,6 @@
             this.lblTieuDe2});
             this.fluentFormDefaultManager1.MaxItemId = 5;
             // 
-            // btnThayDoiMatKhau
-            // 
-            this.btnThayDoiMatKhau.Name = "btnThayDoiMatKhau";
-            this.btnThayDoiMatKhau.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.btnThayDoiMatKhau.Text = "Thay đổi mật khẩu";
-            this.btnThayDoiMatKhau.Click += new System.EventHandler(this.btnThayDoiMatKhau_Click);
-            // 
             // frmMain
             // 
             this.Appearance.BackColor = System.Drawing.Color.White;
@@ -551,7 +598,6 @@
         private DevExpress.XtraBars.Navigation.AccordionControlElement btnDieuTraMap;
         private DevExpress.XtraBars.Navigation.AccordionControlElement btnDieuTraFile;
         private DevExpress.XtraBars.Navigation.AccordionControlElement btnSaoLuu_KhoiPhuc;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement btnPhucHoiDuLieuDaXoa;
         private DevExpress.XtraBars.Navigation.AccordionControlElement btnMoKhoaThietBi;
         private DevExpress.XtraBars.Navigation.AccordionControlElement btnRoot_JailbreakThietBi;
         private DevExpress.XtraBars.Navigation.AccordionControlElement btnTinNhan;
@@ -576,5 +622,13 @@
         private DevExpress.XtraBars.BarStaticItem lblTieuDe2;
         private DevExpress.XtraBars.Navigation.AccordionControlElement btnGhiAm;
         private DevExpress.XtraBars.Navigation.AccordionControlElement btnThayDoiMatKhau;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement2;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement1;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement3;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement4;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement5;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement6;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement7;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement8;
     }
 }

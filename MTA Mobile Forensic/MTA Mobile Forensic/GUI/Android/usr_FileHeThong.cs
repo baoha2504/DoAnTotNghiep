@@ -56,6 +56,9 @@ namespace MTA_Mobile_Forensic.GUI.Android
             fullImagePath = Path.Combine(imagePath, "pdf-16x16.png");
             imageList.Images.Add("pdf", Image.FromFile(fullImagePath));
 
+            fullImagePath = Path.Combine(imagePath, "apk-16x16.png");
+            imageList.Images.Add("apk", Image.FromFile(fullImagePath));
+
             //fullImagePath = Path.Combine(imagePath, "file-16x16.png");
             fullImagePath = Path.Combine(imagePath, "folder-16x16.png");
             imageList.Images.Add("file", Image.FromFile(fullImagePath));
@@ -151,13 +154,24 @@ namespace MTA_Mobile_Forensic.GUI.Android
 
         private bool IsDirectory(string path)
         {
-            // Để đơn giản, kiểm tra xem path có kết thúc bằng dấu "/" là thư mục
-            //return path.EndsWith("/");
-
             string extension = Path.GetExtension(path).ToLower();
 
-            string[] imageExtensions = { ".png", ".jpg", ".jpeg", ".gif", ".bmp", ".mp4", ".avi", ".mov", ".mkv", ".mp3", ".wav", ".ogg", ".flac", ".aac", ".m4a", ".wma", ".doc", ".docx", ".xls", ".xlsx", ".ppt", ".pptx", ".pdf" };
-            return !Array.Exists(imageExtensions, ext => ext == extension);
+            string[] fileExtensions = {
+                // Image formats
+                ".png", ".jpg", ".jpeg", ".gif", ".bmp", ".webp", ".tiff", ".ico",
+                // Video formats
+                ".mp4", ".avi", ".mov", ".mkv", ".flv", ".wmv", ".3gp", ".webm", ".m4v",
+                // Audio formats
+                ".mp3", ".wav", ".ogg", ".flac", ".aac", ".m4a", ".wma", ".amr", ".opus",
+                // Document formats
+                ".doc", ".docx", ".xls", ".xlsx", ".ppt", ".pptx", ".pdf", ".txt", ".rtf", ".odt", ".ods", ".odp",
+                // Archive formats
+                ".zip", ".rar", ".7z", ".tar", ".gz", ".bz2", ".xz", ".iso",
+                // Others
+                ".apk", ".exe", ".bat", ".sh", ".html", ".css", ".js", ".json", ".xml", ".csv"
+            };
+
+            return !Array.Exists(fileExtensions, ext => ext == extension);
         }
 
         private string GetFileTypeImageKey(string fileName)
@@ -178,6 +192,8 @@ namespace MTA_Mobile_Forensic.GUI.Android
                 return "powerpoint";
             else if (IsPdfExtension(extension))
                 return "pdf";
+            else if (IsApkExtension(extension))
+                return "apk";
             else
                 return "file"; // Mặc định cho các loại file khác
         }
@@ -221,6 +237,12 @@ namespace MTA_Mobile_Forensic.GUI.Android
         private bool IsPdfExtension(string extension)
         {
             string[] documentExtensions = { ".pdf" };
+            return Array.Exists(documentExtensions, ext => ext == extension);
+        }
+
+        private bool IsApkExtension(string extension)
+        {
+            string[] documentExtensions = { ".apk" };
             return Array.Exists(documentExtensions, ext => ext == extension);
         }
 

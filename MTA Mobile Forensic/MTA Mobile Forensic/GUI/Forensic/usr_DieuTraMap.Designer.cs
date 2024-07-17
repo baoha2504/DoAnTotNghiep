@@ -240,6 +240,7 @@
             this.txtPathChoiseFile.Multiline = true;
             this.txtPathChoiseFile.Name = "txtPathChoiseFile";
             this.txtPathChoiseFile.ReadOnly = true;
+            this.txtPathChoiseFile.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
             this.txtPathChoiseFile.Size = new System.Drawing.Size(172, 35);
             this.txtPathChoiseFile.TabIndex = 0;
             this.txtPathChoiseFile.TextChanged += new System.EventHandler(this.txtPathChoiseFile_TextChanged);

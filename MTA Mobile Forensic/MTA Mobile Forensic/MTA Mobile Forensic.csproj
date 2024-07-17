@@ -158,6 +158,12 @@
     <Compile Include="GUI\Android\usr_PhanChieuThietBi.Designer.cs">
       <DependentUpon>usr_PhanChieuThietBi.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Android\usr_SaoLuuKhoiPhuc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Android\usr_SaoLuuKhoiPhuc.Designer.cs">
+      <DependentUpon>usr_SaoLuuKhoiPhuc.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Android\usr_ThongTinKhac.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -299,6 +305,8 @@
     <Compile Include="Support\exiftool.cs" />
     <Compile Include="Support\ffmpeg.cs" />
     <Compile Include="Support\function.cs" />
+    <Compile Include="Support\hash.cs" />
+    <Compile Include="Support\hxd.cs" />
     <Compile Include="Support\libimobiledevice.cs" />
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
@@ -329,6 +337,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Android\usr_PhanChieuThietBi.resx">
       <DependentUpon>usr_PhanChieuThietBi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Android\usr_SaoLuuKhoiPhuc.resx">
+      <DependentUpon>usr_SaoLuuKhoiPhuc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Android\usr_ThongTinKhac.resx">
       <DependentUpon>usr_ThongTinKhac.cs</DependentUpon>

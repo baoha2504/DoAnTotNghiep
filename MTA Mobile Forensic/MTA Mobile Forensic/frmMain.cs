@@ -18,11 +18,12 @@ namespace MTA_Mobile_Forensic
         public frmMain()
         {
             InitializeComponent();
+            accordionControl1.Width = 260;
         }
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-            btnDieuTraFile_Click(sender, e);
+            btnSaoLuu_KhoiPhuc_Click(sender, e);
         }
 
         //Trang chủ
@@ -56,11 +57,12 @@ namespace MTA_Mobile_Forensic
         usr_DieuTraNguoiDung usr_DieuTraNguoiDung;
 
 
+
         usr_DieuTraMap usr_DieuTraMap;
         usr_DieuTraFile usr_DieuTraFile;
 
         //Sao lưu khôi phục
-
+        usr_SaoLuuKhoiPhuc usr_SaoLuuKhoiPhuc;
 
         //Nâng cao
 
@@ -390,12 +392,19 @@ namespace MTA_Mobile_Forensic
 
         private void btnSaoLuu_KhoiPhuc_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void btnPhucHoiDuLieuDaXoa_Click(object sender, EventArgs e)
-        {
-
+            lblTieuDe1.Caption = "Sao lưu và khôi phục";
+            lblTieuDe2.Caption = "Sao lưu và khôi phục dữ liệu";
+            if (usr_SaoLuuKhoiPhuc == null)
+            {
+                usr_SaoLuuKhoiPhuc = new usr_SaoLuuKhoiPhuc();
+                usr_SaoLuuKhoiPhuc.Dock = DockStyle.Fill;
+                mainContainer.Controls.Add(usr_SaoLuuKhoiPhuc);
+                usr_SaoLuuKhoiPhuc.BringToFront();
+            }
+            else
+            {
+                usr_SaoLuuKhoiPhuc.BringToFront();
+            }
         }
 
         private void btnThayDoiMatKhau_Click(object sender, EventArgs e)
