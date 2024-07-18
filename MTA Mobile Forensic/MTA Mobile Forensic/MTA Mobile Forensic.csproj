@@ -300,6 +300,7 @@
     <Compile Include="Model\TinNhan.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Support\abe.cs" />
     <Compile Include="Support\adb.cs" />
     <Compile Include="Support\api.cs" />
     <Compile Include="Support\exiftool.cs" />
@@ -308,6 +309,7 @@
     <Compile Include="Support\hash.cs" />
     <Compile Include="Support\hxd.cs" />
     <Compile Include="Support\libimobiledevice.cs" />
+    <Compile Include="Support\winrar.cs" />
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
