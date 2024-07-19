@@ -24,9 +24,8 @@ namespace MTA_Mobile_Forensic.GUI.Android
             {
                 splitContainer1.SplitterDistance = (int)(width / 2);
             }
-            catch (Exception ex)
+            catch 
             {
-                MessageBox.Show($"Lỗi khi thay đổi kích thước: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
             LoadTab_HeThong();

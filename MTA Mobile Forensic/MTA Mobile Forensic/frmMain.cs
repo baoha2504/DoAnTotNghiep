@@ -23,16 +23,13 @@ namespace MTA_Mobile_Forensic
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-            btnSaoLuu_KhoiPhuc_Click(sender, e);
+            btnMoKhoaThietBi_Click(sender, e);
         }
 
         //Trang chủ
 
 
         //Kết nối thiết bị
-
-
-        //Tổng quan
 
 
         //Điều tra dữ liệu
@@ -65,12 +62,11 @@ namespace MTA_Mobile_Forensic
         usr_SaoLuuKhoiPhuc usr_SaoLuuKhoiPhuc;
 
         //Nâng cao
+        usr_ThayDoiMatKhau usr_ThayDoiMatKhau;
+        usr_MoKhoaThietBi usr_MoKhoaThietBi;
+        usr_RootJailbreakThietBi usr_RootJailbreakThietBi;
 
-
-        //Hướng dẫn sử dụng
-
-
-        //Thông tin phần mềm
+        //Trợ giúp
 
 
         private void btnTrangChu_Click(object sender, EventArgs e)
@@ -232,6 +228,11 @@ namespace MTA_Mobile_Forensic
             {
                 usr_UngDung.BringToFront();
             }
+        }
+
+        private void btnDuLieuLog_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void btnCaiDatCuaThietBi_Click(object sender, EventArgs e)
@@ -409,17 +410,53 @@ namespace MTA_Mobile_Forensic
 
         private void btnThayDoiMatKhau_Click(object sender, EventArgs e)
         {
-
+            lblTieuDe1.Caption = "Nâng cao";
+            lblTieuDe2.Caption = "Thay đổi mật khẩu";
+            if (usr_ThayDoiMatKhau == null)
+            {
+                usr_ThayDoiMatKhau = new usr_ThayDoiMatKhau();
+                usr_ThayDoiMatKhau.Dock = DockStyle.Fill;
+                mainContainer.Controls.Add(usr_ThayDoiMatKhau);
+                usr_ThayDoiMatKhau.BringToFront();
+            }
+            else
+            {
+                usr_ThayDoiMatKhau.BringToFront();
+            }
         }
 
         private void btnMoKhoaThietBi_Click(object sender, EventArgs e)
         {
-
+            lblTieuDe1.Caption = "Nâng cao";
+            lblTieuDe2.Caption = "Mở khóa thiết bị";
+            if (usr_MoKhoaThietBi == null)
+            {
+                usr_MoKhoaThietBi = new usr_MoKhoaThietBi();
+                usr_MoKhoaThietBi.Dock = DockStyle.Fill;
+                mainContainer.Controls.Add(usr_MoKhoaThietBi);
+                usr_MoKhoaThietBi.BringToFront();
+            }
+            else
+            {
+                usr_MoKhoaThietBi.BringToFront();
+            }
         }
 
         private void btnRoot_JailbreakThietBi_Click(object sender, EventArgs e)
         {
-
+            lblTieuDe1.Caption = "Nâng cao";
+            lblTieuDe2.Caption = "Root và Jailbreak";
+            if (usr_RootJailbreakThietBi == null)
+            {
+                usr_RootJailbreakThietBi = new usr_RootJailbreakThietBi();
+                usr_RootJailbreakThietBi.Dock = DockStyle.Fill;
+                mainContainer.Controls.Add(usr_RootJailbreakThietBi);
+                usr_RootJailbreakThietBi.BringToFront();
+            }
+            else
+            {
+                usr_RootJailbreakThietBi.BringToFront();
+            }
         }
     }
 }

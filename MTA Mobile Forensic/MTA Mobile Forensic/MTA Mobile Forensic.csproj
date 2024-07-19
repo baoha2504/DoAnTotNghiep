@@ -152,17 +152,35 @@
     <Compile Include="GUI\Android\usr_Lich.Designer.cs">
       <DependentUpon>usr_Lich.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Android\usr_MoKhoaThietBi.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Android\usr_MoKhoaThietBi.Designer.cs">
+      <DependentUpon>usr_MoKhoaThietBi.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Android\usr_PhanChieuThietBi.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="GUI\Android\usr_PhanChieuThietBi.Designer.cs">
       <DependentUpon>usr_PhanChieuThietBi.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Android\usr_RootJailbreakThietBi.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Android\usr_RootJailbreakThietBi.Designer.cs">
+      <DependentUpon>usr_RootJailbreakThietBi.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Android\usr_SaoLuuKhoiPhuc.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="GUI\Android\usr_SaoLuuKhoiPhuc.Designer.cs">
       <DependentUpon>usr_SaoLuuKhoiPhuc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Android\usr_ThayDoiMatKhau.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Android\usr_ThayDoiMatKhau.Designer.cs">
+      <DependentUpon>usr_ThayDoiMatKhau.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\Android\usr_ThongTinKhac.cs">
       <SubType>UserControl</SubType>
@@ -337,11 +355,20 @@
     <EmbeddedResource Include="GUI\Android\usr_Lich.resx">
       <DependentUpon>usr_Lich.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Android\usr_MoKhoaThietBi.resx">
+      <DependentUpon>usr_MoKhoaThietBi.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Android\usr_PhanChieuThietBi.resx">
       <DependentUpon>usr_PhanChieuThietBi.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Android\usr_RootJailbreakThietBi.resx">
+      <DependentUpon>usr_RootJailbreakThietBi.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Android\usr_SaoLuuKhoiPhuc.resx">
       <DependentUpon>usr_SaoLuuKhoiPhuc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Android\usr_ThayDoiMatKhau.resx">
+      <DependentUpon>usr_ThayDoiMatKhau.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Android\usr_ThongTinKhac.resx">
       <DependentUpon>usr_ThongTinKhac.cs</DependentUpon>
