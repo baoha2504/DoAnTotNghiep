@@ -312,6 +312,18 @@ namespace MTA_Mobile_Forensic.GUI.Forensic
                 CreateKmlFile(fullFilePath, kmlContent);
                 lblLink.Text = fileName;
                 lblLink.Visible = true;
+
+                using (FolderBrowserDialog folderBrowserDialog = new FolderBrowserDialog())
+                {
+                    folderBrowserDialog.Description = "Chọn thư mục lưu dữ liệu thu được";
+                    DialogResult result = folderBrowserDialog.ShowDialog();
+                    if (result == DialogResult.OK && !string.IsNullOrWhiteSpace(folderBrowserDialog.SelectedPath))
+                    {
+                        string outputPath = folderBrowserDialog.SelectedPath;
+                        CopyFile(fullFilePath, outputPath);
+                        MessageBox.Show($"Lưu thành công file!");
+                    }
+                }
             }
         }
 
@@ -361,24 +373,6 @@ namespace MTA_Mobile_Forensic.GUI.Forensic
             }
         }
 
-        private void btnLuuFile_Click(object sender, EventArgs e)
-        {
-            if (lblLink.Text != string.Empty)
-            {
-                using (FolderBrowserDialog folderBrowserDialog = new FolderBrowserDialog())
-                {
-                    folderBrowserDialog.Description = "Chọn thư mục lưu dữ liệu thu được";
-                    DialogResult result = folderBrowserDialog.ShowDialog();
-                    if (result == DialogResult.OK && !string.IsNullOrWhiteSpace(folderBrowserDialog.SelectedPath))
-                    {
-                        string outputPath = folderBrowserDialog.SelectedPath;
-                        CopyFile(fullFilePath, outputPath);
-                        MessageBox.Show($"Lưu thành công file!");
-                    }
-                }
-            }
-        }
-
         private void btnLamMoi_Click(object sender, EventArgs e)
         {
             LoadWeb("https://earth.google.com/web/");
@@ -386,15 +380,19 @@ namespace MTA_Mobile_Forensic.GUI.Forensic
 
         private void btnOpenBigForm_Click(object sender, EventArgs e)
         {
-            if(webView21.Source.ToString() != "about:blank" || webView21.Source.ToString() != string.Empty)
+            try
             {
-                frm_OpenWeb frm_OpenWeb = new frm_OpenWeb(webView21.Source.ToString());
-                frm_OpenWeb.ShowDialog();
+                if (webView21.Source.ToString() != "about:blank" || webView21.Source.ToString() != string.Empty)
+                {
+                    frm_OpenWeb frm_OpenWeb = new frm_OpenWeb(webView21.Source.ToString());
+                    frm_OpenWeb.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("Trang web hiện tại trống", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
-            else
-            {
-                MessageBox.Show("Trang web hiện tại trống", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            catch { }
         }
     }
 }

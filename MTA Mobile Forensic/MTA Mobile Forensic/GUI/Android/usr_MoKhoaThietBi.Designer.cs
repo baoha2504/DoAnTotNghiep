@@ -48,6 +48,7 @@
             this.panel39 = new System.Windows.Forms.Panel();
             this.panel43 = new System.Windows.Forms.Panel();
             this.panel47 = new System.Windows.Forms.Panel();
+            this.txtThongTinTamDung = new System.Windows.Forms.TextBox();
             this.panel46 = new System.Windows.Forms.Panel();
             this.panel40 = new System.Windows.Forms.Panel();
             this.panel45 = new System.Windows.Forms.Panel();
@@ -108,7 +109,6 @@
             this.sw_MatMa = new DevExpress.XtraEditors.ToggleSwitch();
             this.panel2_MatMa = new System.Windows.Forms.Panel();
             this.panel31 = new System.Windows.Forms.Panel();
-            this.txtThongTinTamDung = new System.Windows.Forms.TextBox();
             this.panelEx1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -430,6 +430,20 @@
             this.panel47.Name = "panel47";
             this.panel47.Size = new System.Drawing.Size(261, 35);
             this.panel47.TabIndex = 9;
+            // 
+            // txtThongTinTamDung
+            // 
+            this.txtThongTinTamDung.BackColor = System.Drawing.Color.White;
+            this.txtThongTinTamDung.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtThongTinTamDung.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtThongTinTamDung.ForeColor = System.Drawing.Color.Green;
+            this.txtThongTinTamDung.Location = new System.Drawing.Point(15, 0);
+            this.txtThongTinTamDung.Multiline = true;
+            this.txtThongTinTamDung.Name = "txtThongTinTamDung";
+            this.txtThongTinTamDung.ReadOnly = true;
+            this.txtThongTinTamDung.Size = new System.Drawing.Size(246, 35);
+            this.txtThongTinTamDung.TabIndex = 11;
+            this.txtThongTinTamDung.Visible = false;
             // 
             // panel46
             // 
@@ -1095,20 +1109,6 @@
             this.panel31.Name = "panel31";
             this.panel31.Size = new System.Drawing.Size(40, 579);
             this.panel31.TabIndex = 0;
-            // 
-            // txtThongTinTamDung
-            // 
-            this.txtThongTinTamDung.BackColor = System.Drawing.Color.White;
-            this.txtThongTinTamDung.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtThongTinTamDung.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtThongTinTamDung.ForeColor = System.Drawing.Color.Green;
-            this.txtThongTinTamDung.Location = new System.Drawing.Point(15, 0);
-            this.txtThongTinTamDung.Multiline = true;
-            this.txtThongTinTamDung.Name = "txtThongTinTamDung";
-            this.txtThongTinTamDung.ReadOnly = true;
-            this.txtThongTinTamDung.Size = new System.Drawing.Size(246, 35);
-            this.txtThongTinTamDung.TabIndex = 11;
-            this.txtThongTinTamDung.Visible = false;
             // 
             // usr_MoKhoaThietBi
             // 

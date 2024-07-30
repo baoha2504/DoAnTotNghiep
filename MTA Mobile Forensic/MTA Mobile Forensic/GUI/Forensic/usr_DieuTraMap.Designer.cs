@@ -51,8 +51,6 @@
             this.panel19 = new System.Windows.Forms.Panel();
             this.panel18 = new System.Windows.Forms.Panel();
             this.btnXuatFile = new DevComponents.DotNetBar.ButtonX();
-            this.panel16 = new System.Windows.Forms.Panel();
-            this.btnLuuFile = new DevComponents.DotNetBar.ButtonX();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
             this.btnBoChonTatCa = new DevComponents.DotNetBar.ButtonX();
@@ -347,8 +345,6 @@
             // 
             this.panel13.Controls.Add(this.panel17);
             this.panel13.Controls.Add(this.btnXuatFile);
-            this.panel13.Controls.Add(this.panel16);
-            this.panel13.Controls.Add(this.btnLuuFile);
             this.panel13.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel13.Location = new System.Drawing.Point(0, 537);
             this.panel13.Name = "panel13";
@@ -363,7 +359,7 @@
             this.panel17.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel17.Location = new System.Drawing.Point(0, 0);
             this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(59, 35);
+            this.panel17.Size = new System.Drawing.Size(199, 35);
             this.panel17.TabIndex = 9;
             // 
             // panel20
@@ -372,7 +368,7 @@
             this.panel20.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel20.Location = new System.Drawing.Point(0, 7);
             this.panel20.Name = "panel20";
-            this.panel20.Size = new System.Drawing.Size(59, 21);
+            this.panel20.Size = new System.Drawing.Size(199, 21);
             this.panel20.TabIndex = 12;
             // 
             // lblLink
@@ -394,7 +390,7 @@
             this.panel19.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel19.Location = new System.Drawing.Point(0, 28);
             this.panel19.Name = "panel19";
-            this.panel19.Size = new System.Drawing.Size(59, 7);
+            this.panel19.Size = new System.Drawing.Size(199, 7);
             this.panel19.TabIndex = 11;
             // 
             // panel18
@@ -402,7 +398,7 @@
             this.panel18.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel18.Location = new System.Drawing.Point(0, 0);
             this.panel18.Name = "panel18";
-            this.panel18.Size = new System.Drawing.Size(59, 7);
+            this.panel18.Size = new System.Drawing.Size(199, 7);
             this.panel18.TabIndex = 10;
             // 
             // btnXuatFile
@@ -410,34 +406,13 @@
             this.btnXuatFile.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnXuatFile.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btnXuatFile.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnXuatFile.Location = new System.Drawing.Point(59, 0);
+            this.btnXuatFile.Location = new System.Drawing.Point(199, 0);
             this.btnXuatFile.Name = "btnXuatFile";
             this.btnXuatFile.Size = new System.Drawing.Size(120, 35);
             this.btnXuatFile.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnXuatFile.TabIndex = 7;
             this.btnXuatFile.Text = "Xuất file";
             this.btnXuatFile.Click += new System.EventHandler(this.btnXuatFile_Click);
-            // 
-            // panel16
-            // 
-            this.panel16.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel16.Location = new System.Drawing.Point(179, 0);
-            this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(20, 35);
-            this.panel16.TabIndex = 8;
-            // 
-            // btnLuuFile
-            // 
-            this.btnLuuFile.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnLuuFile.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnLuuFile.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnLuuFile.Location = new System.Drawing.Point(199, 0);
-            this.btnLuuFile.Name = "btnLuuFile";
-            this.btnLuuFile.Size = new System.Drawing.Size(120, 35);
-            this.btnLuuFile.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnLuuFile.TabIndex = 6;
-            this.btnLuuFile.Text = "Lưu file";
-            this.btnLuuFile.Click += new System.EventHandler(this.btnLuuFile_Click);
             // 
             // panel7
             // 
@@ -698,8 +673,6 @@
         private System.Windows.Forms.FlowLayoutPanel flpChonAnh;
         private System.Windows.Forms.FlowLayoutPanel flpAnhDaChon;
         private DevComponents.DotNetBar.ButtonX btnXuatFile;
-        private DevComponents.DotNetBar.ButtonX btnLuuFile;
-        private System.Windows.Forms.Panel panel16;
         private System.Windows.Forms.Panel panel17;
         private System.Windows.Forms.Panel panel20;
         private System.Windows.Forms.Panel panel19;

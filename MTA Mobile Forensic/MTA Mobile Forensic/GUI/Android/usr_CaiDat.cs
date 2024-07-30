@@ -59,10 +59,7 @@ namespace MTA_Mobile_Forensic.GUI.Android
                     splitContainer3.SplitterDistance = (int)(width / 2);
                 }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Lỗi khi thay đổi kích thước: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            catch { }
         }
 
         private string GetValue(string input, string key)

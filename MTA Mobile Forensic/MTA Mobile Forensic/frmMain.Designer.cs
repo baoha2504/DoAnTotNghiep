@@ -37,6 +37,7 @@
             this.accordionControlElement1 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.KETNOITHIETBI = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btnKetNoiThietBi = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.btnTongQuanThietBiKetNoi = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btnDuLieuDaDieuTra = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement2 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.DIEUTRADULIEU = new DevExpress.XtraBars.Navigation.AccordionControlElement();
@@ -48,6 +49,7 @@
             this.btnVideo = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btnGhiAm = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btnUngDung = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.btnDuLieuLog = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btnCaiDatCuaThietBi = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btnLichSuTruyCap = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btnFileSystem = new DevExpress.XtraBars.Navigation.AccordionControlElement();
@@ -62,6 +64,7 @@
             this.btnDieuTraAnh = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btnDieuTraVideo = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btnDieuTraAudio = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.btnDieuTraTaiLieu = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btnDieuTraMap = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btnDieuTraFile = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement6 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
@@ -84,8 +87,6 @@
             this.barStaticItem2 = new DevExpress.XtraBars.BarStaticItem();
             this.lblTieuDe2 = new DevExpress.XtraBars.BarStaticItem();
             this.fluentFormDefaultManager1 = new DevExpress.XtraBars.FluentDesignSystem.FluentFormDefaultManager(this.components);
-            this.btnTongQuanThietBiKetNoi = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.btnDuLieuLog = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentFormDefaultManager1)).BeginInit();
@@ -95,7 +96,7 @@
             // 
             this.mainContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mainContainer.Location = new System.Drawing.Point(313, 39);
-            this.mainContainer.Margin = new System.Windows.Forms.Padding(60, 60, 60, 60);
+            this.mainContainer.Margin = new System.Windows.Forms.Padding(60);
             this.mainContainer.Name = "mainContainer";
             this.mainContainer.Size = new System.Drawing.Size(1076, 683);
             this.mainContainer.TabIndex = 0;
@@ -113,7 +114,7 @@
             this.NANGCAO,
             this.TROGIUP});
             this.accordionControl1.Location = new System.Drawing.Point(0, 39);
-            this.accordionControl1.Margin = new System.Windows.Forms.Padding(60, 60, 60, 60);
+            this.accordionControl1.Margin = new System.Windows.Forms.Padding(60);
             this.accordionControl1.Name = "accordionControl1";
             this.accordionControl1.ScrollBarMode = DevExpress.XtraBars.Navigation.ScrollBarMode.Touch;
             this.accordionControl1.Size = new System.Drawing.Size(313, 683);
@@ -158,6 +159,12 @@
             this.btnKetNoiThietBi.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.btnKetNoiThietBi.Text = "Kết nối thiết bị";
             this.btnKetNoiThietBi.Click += new System.EventHandler(this.btnTatCaThietBi_Click);
+            // 
+            // btnTongQuanThietBiKetNoi
+            // 
+            this.btnTongQuanThietBiKetNoi.Name = "btnTongQuanThietBiKetNoi";
+            this.btnTongQuanThietBiKetNoi.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.btnTongQuanThietBiKetNoi.Text = "Tổng quan thiết bị kết nối";
             // 
             // btnDuLieuDaDieuTra
             // 
@@ -248,6 +255,13 @@
             this.btnUngDung.Text = "Ứng dụng";
             this.btnUngDung.Click += new System.EventHandler(this.btnUngDung_Click);
             // 
+            // btnDuLieuLog
+            // 
+            this.btnDuLieuLog.Name = "btnDuLieuLog";
+            this.btnDuLieuLog.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.btnDuLieuLog.Text = "Dữ liệu log";
+            this.btnDuLieuLog.Click += new System.EventHandler(this.btnDuLieuLog_Click);
+            // 
             // btnCaiDatCuaThietBi
             // 
             this.btnCaiDatCuaThietBi.Name = "btnCaiDatCuaThietBi";
@@ -317,6 +331,7 @@
             this.btnDieuTraAnh,
             this.btnDieuTraVideo,
             this.btnDieuTraAudio,
+            this.btnDieuTraTaiLieu,
             this.btnDieuTraMap,
             this.btnDieuTraFile,
             this.accordionControlElement6});
@@ -351,6 +366,13 @@
             this.btnDieuTraAudio.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.btnDieuTraAudio.Text = "Điều tra audio";
             this.btnDieuTraAudio.Click += new System.EventHandler(this.btnDieuTraAudio_Click);
+            // 
+            // btnDieuTraTaiLieu
+            // 
+            this.btnDieuTraTaiLieu.Name = "btnDieuTraTaiLieu";
+            this.btnDieuTraTaiLieu.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.btnDieuTraTaiLieu.Text = "Điều tra tài liệu";
+            this.btnDieuTraTaiLieu.Click += new System.EventHandler(this.btnDieuTraTaiLieu_Click);
             // 
             // btnDieuTraMap
             // 
@@ -489,7 +511,7 @@
             // 
             // barButtonItem1
             // 
-            this.barButtonItem1.Caption = "barButtonItem1";
+            this.barButtonItem1.Caption = "Trang chủ";
             this.barButtonItem1.Id = 1;
             this.barButtonItem1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.Image")));
             this.barButtonItem1.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.LargeImage")));
@@ -535,19 +557,6 @@
             this.barStaticItem2,
             this.lblTieuDe2});
             this.fluentFormDefaultManager1.MaxItemId = 5;
-            // 
-            // btnTongQuanThietBiKetNoi
-            // 
-            this.btnTongQuanThietBiKetNoi.Name = "btnTongQuanThietBiKetNoi";
-            this.btnTongQuanThietBiKetNoi.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.btnTongQuanThietBiKetNoi.Text = "Tổng quan thiết bị kết nối";
-            // 
-            // btnDuLieuLog
-            // 
-            this.btnDuLieuLog.Name = "btnDuLieuLog";
-            this.btnDuLieuLog.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.btnDuLieuLog.Text = "Dữ liệu log";
-            this.btnDuLieuLog.Click += new System.EventHandler(this.btnDuLieuLog_Click);
             // 
             // frmMain
             // 
@@ -631,5 +640,6 @@
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement11;
         private DevExpress.XtraBars.Navigation.AccordionControlElement btnTongQuanThietBiKetNoi;
         private DevExpress.XtraBars.Navigation.AccordionControlElement btnDuLieuLog;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement btnDieuTraTaiLieu;
     }
 }

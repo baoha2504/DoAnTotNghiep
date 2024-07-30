@@ -134,6 +134,12 @@
     <Compile Include="GUI\Android\usr_DanhBa.Designer.cs">
       <DependentUpon>usr_DanhBa.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Android\usr_DuLieuLog.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Android\usr_DuLieuLog.Designer.cs">
+      <DependentUpon>usr_DuLieuLog.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Android\usr_FileHeThong.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -211,6 +217,12 @@
     </Compile>
     <Compile Include="GUI\Forensic\frm_OpenWeb.Designer.cs">
       <DependentUpon>frm_OpenWeb.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Forensic\usr_DieuTraAnh.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Forensic\usr_DieuTraAnh.Designer.cs">
+      <DependentUpon>usr_DieuTraAnh.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\Forensic\usr_DieuTraFile.cs">
       <SubType>UserControl</SubType>
@@ -346,6 +358,9 @@
     <EmbeddedResource Include="GUI\Android\usr_DanhBa.resx">
       <DependentUpon>usr_DanhBa.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Android\usr_DuLieuLog.resx">
+      <DependentUpon>usr_DuLieuLog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Android\usr_FileHeThong.resx">
       <DependentUpon>usr_FileHeThong.cs</DependentUpon>
     </EmbeddedResource>
@@ -384,6 +399,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Forensic\frm_OpenWeb.resx">
       <DependentUpon>frm_OpenWeb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Forensic\usr_DieuTraAnh.resx">
+      <DependentUpon>usr_DieuTraAnh.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Forensic\usr_DieuTraFile.resx">
       <DependentUpon>usr_DieuTraFile.cs</DependentUpon>

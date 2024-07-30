@@ -1,15 +1,7 @@
-﻿using DevExpress.XtraBars;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Windows.Forms;
-using MTA_Mobile_Forensic.GUI.Android;
-using MTA_Mobile_Forensic.GUI.Share;
+﻿using MTA_Mobile_Forensic.GUI.Android;
 using MTA_Mobile_Forensic.GUI.Forensic;
+using System;
+using System.Windows.Forms;
 
 namespace MTA_Mobile_Forensic
 {
@@ -23,7 +15,7 @@ namespace MTA_Mobile_Forensic
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-            btnMoKhoaThietBi_Click(sender, e);
+            btnDieuTraAnh_Click(sender, e);
         }
 
         //Trang chủ
@@ -41,6 +33,7 @@ namespace MTA_Mobile_Forensic
         usr_Video usr_Video;
         usr_GhiAm usr_GhiAm;
         usr_UngDung usr_UngDung;
+        usr_DuLieuLog usr_DuLieuLog;
         usr_CaiDat usr_CaiDat;
         usr_FileHeThong usr_FileHeThong;
         usr_ThongTinKhac usr_ThongTinKhac;
@@ -52,6 +45,7 @@ namespace MTA_Mobile_Forensic
 
         //Điều tra thông tin
         usr_DieuTraNguoiDung usr_DieuTraNguoiDung;
+        usr_DieuTraAnh usr_DieuTraAnh;
 
 
 
@@ -232,7 +226,19 @@ namespace MTA_Mobile_Forensic
 
         private void btnDuLieuLog_Click(object sender, EventArgs e)
         {
-
+            lblTieuDe1.Caption = "Điều tra dữ liệu";
+            lblTieuDe2.Caption = "Log hệ thống";
+            if (usr_DuLieuLog == null)
+            {
+                usr_DuLieuLog = new usr_DuLieuLog();
+                usr_DuLieuLog.Dock = DockStyle.Fill;
+                mainContainer.Controls.Add(usr_DuLieuLog);
+                usr_DuLieuLog.BringToFront();
+            }
+            else
+            {
+                usr_DuLieuLog.BringToFront();
+            }
         }
 
         private void btnCaiDatCuaThietBi_Click(object sender, EventArgs e)
@@ -254,7 +260,7 @@ namespace MTA_Mobile_Forensic
 
         private void btnLichSuTruyCap_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void btnFileSystem_Click(object sender, EventArgs e)
@@ -344,7 +350,19 @@ namespace MTA_Mobile_Forensic
 
         private void btnDieuTraAnh_Click(object sender, EventArgs e)
         {
-
+            lblTieuDe1.Caption = "Điều tra thông tin";
+            lblTieuDe2.Caption = "Ảnh";
+            if (usr_DieuTraAnh == null)
+            {
+                usr_DieuTraAnh = new usr_DieuTraAnh();
+                usr_DieuTraAnh.Dock = DockStyle.Fill;
+                mainContainer.Controls.Add(usr_DieuTraAnh);
+                usr_DieuTraAnh.BringToFront();
+            }
+            else
+            {
+                usr_DieuTraAnh.BringToFront();
+            }
         }
 
         private void btnDieuTraVideo_Click(object sender, EventArgs e)
@@ -353,6 +371,11 @@ namespace MTA_Mobile_Forensic
         }
 
         private void btnDieuTraAudio_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDieuTraTaiLieu_Click(object sender, EventArgs e)
         {
 
         }
@@ -445,7 +468,7 @@ namespace MTA_Mobile_Forensic
         private void btnRoot_JailbreakThietBi_Click(object sender, EventArgs e)
         {
             lblTieuDe1.Caption = "Nâng cao";
-            lblTieuDe2.Caption = "Root và Jailbreak";
+            lblTieuDe2.Caption = "Root thiết bị";
             if (usr_RootJailbreakThietBi == null)
             {
                 usr_RootJailbreakThietBi = new usr_RootJailbreakThietBi();
@@ -458,5 +481,7 @@ namespace MTA_Mobile_Forensic
                 usr_RootJailbreakThietBi.BringToFront();
             }
         }
+
+
     }
 }
