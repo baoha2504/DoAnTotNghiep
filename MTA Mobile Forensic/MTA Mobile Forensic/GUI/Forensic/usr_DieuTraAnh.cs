@@ -115,8 +115,6 @@ namespace MTA_Mobile_Forensic.GUI.Forensic
                                                    .ToList();
                         imageFiles.AddRange(subDirFiles);
                     }
-
-                    imageFiles_TamThoi = imageFiles;
                 }
                 catch (Exception ex)
                 {
@@ -126,20 +124,38 @@ namespace MTA_Mobile_Forensic.GUI.Forensic
             }
         }
 
-        private async Task<List<string>> LayPathKhuonMatTimKiem(string path, List<string> listPath)
+        private async Task LayPathKhuonMatTimKiem(string path, List<string> listPath)
         {
-            string[] listPathArray = listPath.ToArray();
+            List<string> results = new List<string>();
+            int batchSize = 10;
 
-            var response = await api.TimKiemKhuonMatAnh(path, listPathArray);
+            for (int i = 0; i < listPath.Count; i += batchSize)
+            {
+                List<string> batch = listPath.Skip(i).Take(batchSize).ToList();
+                string[] batchArray = batch.ToArray();
 
-            if (response != null)
-            {
-                return response;
-            }
-            else
-            {
-                MessageBox.Show("Failed to get a response from the API.");
-                return null;
+                var response = await api.TimKiemKhuonMatAnh(path, batchArray);
+
+                if (response != null)
+                {
+                    results.AddRange(response);
+
+                    for (int j = 0; j < batch.Count; j++)
+                    {
+                        if (response[j] == "true")
+                        {
+                            int index = i + j;
+                            usr_AnhMini usr_AnhMini = new usr_AnhMini(imageFiles[index], Path.GetFileName(imageFiles[index]), function.GetLastModified(imageFiles[index]));
+                            usr_AnhMini.ControlClicked += flpAnhDaTimThay_Click;
+                            usr_AnhMini.checkBox.Visible = false;
+                            flpAnhDaTimThay.Controls.Add(usr_AnhMini);
+                        }
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Failed to get a response from the API.");
+                }
             }
         }
 
@@ -156,22 +172,12 @@ namespace MTA_Mobile_Forensic.GUI.Forensic
             else
             {
                 flpAnhDaTimThay.Controls.Clear();
-                pathsTimKiem = await LayPathKhuonMatTimKiem(txtPathAnhMau.Text, imageFiles);
-                if (pathsTimKiem != null)
-                {
-                    for (int i = 0; i < pathsTimKiem.Count; i++)
-                    {
-                        if (pathsTimKiem[i] == "true")
-                        {
-                            usr_AnhMini usr_AnhMini = new usr_AnhMini(imageFiles[i], Path.GetFileName(imageFiles[i]), function.GetLastModified(imageFiles[i]));
-                            usr_AnhMini.ControlClicked += flpAnhDaTimThay_Click;
-                            usr_AnhMini.checkBox.Visible = false;
-                            flpAnhDaTimThay.Controls.Add(usr_AnhMini);
-                        }
-                    }
-                }
+                btnTimKiemKhuonMat.Text = "Đang tìm kiếm ...";
+                await LayPathKhuonMatTimKiem(txtPathAnhMau.Text, imageFiles);
+                btnTimKiemKhuonMat.Text = "Tìm kiếm";
             }
         }
+
 
         private void flpAnhDaTimThay_Click(object sender, EventArgs e)
         {
@@ -226,21 +232,16 @@ namespace MTA_Mobile_Forensic.GUI.Forensic
         {
             if (flpAnhDaTimThay.Controls != null)
             {
+                imageFiles_TamThoi.Clear();
                 using (FolderBrowserDialog folderBrowserDialog = new FolderBrowserDialog())
                 {
                     DialogResult result = folderBrowserDialog.ShowDialog();
 
                     if (result == DialogResult.OK && !string.IsNullOrWhiteSpace(folderBrowserDialog.SelectedPath))
                     {
-                        if (pathsTimKiem != null)
+                        foreach (usr_AnhMini control in flpAnhDaTimThay.Controls)
                         {
-                            for (int i = pathsTimKiem.Count-1; i >= 0; i--)
-                            {
-                                if (pathsTimKiem[i] != "true")
-                                {
-                                    imageFiles_TamThoi.Remove(imageFiles_TamThoi[i]);
-                                }
-                            }
+                            imageFiles_TamThoi.Add(control.linkanh);
                         }
 
                         string selectedFolder = folderBrowserDialog.SelectedPath;
@@ -294,6 +295,7 @@ namespace MTA_Mobile_Forensic.GUI.Forensic
             else
             {
                 flpAnhDaTrichXuat.Controls.Clear();
+                btnTrichXuat.Text = "Đang trích xuất ...";
                 pathsTrichXuat = await LayPathKhuonMatTrichXuat(txtPathAnhTrichXuat.Text);
                 if (pathsTrichXuat != null)
                 {
@@ -305,6 +307,7 @@ namespace MTA_Mobile_Forensic.GUI.Forensic
                         flpAnhDaTrichXuat.Controls.Add(usr_AnhMini);
                     }
                 }
+                btnTrichXuat.Text = "Trích xuất";
             }
         }
 
@@ -412,8 +415,6 @@ namespace MTA_Mobile_Forensic.GUI.Forensic
                                                    .ToList();
                         imageFiles_NhieuKhuonMat.AddRange(subDirFiles);
                     }
-                    imageFiles_NhieuKhuonMat_TamThoi = imageFiles_NhieuKhuonMat;
-
                 }
                 catch (Exception ex)
                 {
@@ -438,20 +439,38 @@ namespace MTA_Mobile_Forensic.GUI.Forensic
             }
         }
 
-        private async Task<List<string>> LayPathNhieuKhuonMatTimKiem(string path1, string path2, List<string> listPath)
+        private async Task LayPathNhieuKhuonMatTimKiem(string path1, string path2, List<string> listPath)
         {
-            string[] listPathArray = listPath.ToArray();
+            List<string> results = new List<string>();
+            int batchSize = 10;
 
-            var response = await api.LayPathNhieuKhuonMatTimKiem(path1, path2, listPathArray);
+            for (int i = 0; i < listPath.Count; i += batchSize)
+            {
+                List<string> batch = listPath.Skip(i).Take(batchSize).ToList();
+                string[] batchArray = batch.ToArray();
 
-            if (response != null)
-            {
-                return response;
-            }
-            else
-            {
-                MessageBox.Show("Failed to get a response from the API.");
-                return null;
+                var response = await api.LayPathNhieuKhuonMatTimKiem(path1, path2, batchArray);
+
+                if (response != null)
+                {
+                    results.AddRange(response);
+
+                    for (int j = 0; j < batch.Count; j++)
+                    {
+                        if (response[j] == "true")
+                        {
+                            int index = i + j;
+                            usr_AnhMini usr_AnhMini = new usr_AnhMini(imageFiles_NhieuKhuonMat[index], Path.GetFileName(imageFiles_NhieuKhuonMat[index]), function.GetLastModified(imageFiles_NhieuKhuonMat[index]));
+                            usr_AnhMini.ControlClicked += flpAnhNhieuKhuonMat_Click;
+                            usr_AnhMini.checkBox.Visible = false;
+                            flpAnhNhieuKhuonMat.Controls.Add(usr_AnhMini);
+                        }
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Failed to get a response from the API.");
+                }
             }
         }
 
@@ -472,20 +491,9 @@ namespace MTA_Mobile_Forensic.GUI.Forensic
             else
             {
                 flpAnhNhieuKhuonMat.Controls.Clear();
-                pathsTimKiemNhieuKhuonMat = await LayPathNhieuKhuonMatTimKiem(txtPathAnhMau1.Text, txtPathAnhMau2.Text, imageFiles_NhieuKhuonMat);
-                if (pathsTimKiemNhieuKhuonMat != null)
-                {
-                    for (int i = 0; i < pathsTimKiemNhieuKhuonMat.Count; i++)
-                    {
-                        if (pathsTimKiemNhieuKhuonMat[i] == "true")
-                        {
-                            usr_AnhMini usr_AnhMini = new usr_AnhMini(imageFiles_NhieuKhuonMat[i], Path.GetFileName(imageFiles_NhieuKhuonMat[i]), function.GetLastModified(imageFiles_NhieuKhuonMat[i]));
-                            usr_AnhMini.ControlClicked += flpAnhNhieuKhuonMat_Click;
-                            usr_AnhMini.checkBox.Visible = false;
-                            flpAnhNhieuKhuonMat.Controls.Add(usr_AnhMini);
-                        }
-                    }
-                }
+                btnTimKiemNhieuKhuonMat.Text = "Đang tìm kiếm ...";
+                await LayPathNhieuKhuonMatTimKiem(txtPathAnhMau1.Text, txtPathAnhMau2.Text, imageFiles_NhieuKhuonMat);
+                btnTimKiemNhieuKhuonMat.Text = "Tìm kiếm";
             }
         }
 
@@ -504,19 +512,14 @@ namespace MTA_Mobile_Forensic.GUI.Forensic
             {
                 using (FolderBrowserDialog folderBrowserDialog = new FolderBrowserDialog())
                 {
+                    imageFiles_NhieuKhuonMat_TamThoi.Clear();
                     DialogResult result = folderBrowserDialog.ShowDialog();
 
                     if (result == DialogResult.OK && !string.IsNullOrWhiteSpace(folderBrowserDialog.SelectedPath))
                     {
-                        if (pathsTimKiemNhieuKhuonMat != null)
+                        foreach (usr_AnhMini control in flpAnhNhieuKhuonMat.Controls)
                         {
-                            for (int i = pathsTimKiemNhieuKhuonMat.Count - 1; i >= 0; i--)
-                            {
-                                if (pathsTimKiemNhieuKhuonMat[i] != "true")
-                                {
-                                    imageFiles_NhieuKhuonMat_TamThoi.Remove(imageFiles_NhieuKhuonMat_TamThoi[i]);
-                                }
-                            }
+                            imageFiles_NhieuKhuonMat_TamThoi.Add(control.linkanh);
                         }
 
                         string selectedFolder = folderBrowserDialog.SelectedPath;

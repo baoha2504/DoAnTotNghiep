@@ -481,7 +481,5 @@ namespace MTA_Mobile_Forensic
                 usr_RootJailbreakThietBi.BringToFront();
             }
         }
-
-
     }
 }
