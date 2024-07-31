@@ -24,11 +24,7 @@ namespace MTA_Mobile_Forensic.GUI.Forensic
         api api = new api();
         function function = new function();
         private List<string> imageFiles;
-        private List<string> imageFiles_TamThoi;
         private List<string> imageFiles_NhieuKhuonMat;
-        private List<string> imageFiles_NhieuKhuonMat_TamThoi;
-        private List<string> pathsTimKiem;
-        private List<string> pathsTimKiemNhieuKhuonMat;
         private List<string> pathsTrichXuat;
 
         private void tabControl1_SelectedTabChanged(object sender, DevComponents.DotNetBar.TabStripTabChangedEventArgs e)
@@ -232,7 +228,7 @@ namespace MTA_Mobile_Forensic.GUI.Forensic
         {
             if (flpAnhDaTimThay.Controls != null)
             {
-                imageFiles_TamThoi.Clear();
+                List<string> imageFiles_TamThoi = new List<string>();
                 using (FolderBrowserDialog folderBrowserDialog = new FolderBrowserDialog())
                 {
                     DialogResult result = folderBrowserDialog.ShowDialog();
@@ -512,7 +508,7 @@ namespace MTA_Mobile_Forensic.GUI.Forensic
             {
                 using (FolderBrowserDialog folderBrowserDialog = new FolderBrowserDialog())
                 {
-                    imageFiles_NhieuKhuonMat_TamThoi.Clear();
+                    List<string> imageFiles_NhieuKhuonMat_TamThoi = new List<string>();
                     DialogResult result = folderBrowserDialog.ShowDialog();
 
                     if (result == DialogResult.OK && !string.IsNullOrWhiteSpace(folderBrowserDialog.SelectedPath))
