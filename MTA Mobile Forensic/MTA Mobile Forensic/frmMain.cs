@@ -15,7 +15,7 @@ namespace MTA_Mobile_Forensic
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-            btnDieuTraAnh_Click(sender, e);
+            btnDieuTraAudio_Click(sender, e);
         }
 
         //Trang chủ
@@ -47,7 +47,7 @@ namespace MTA_Mobile_Forensic
         usr_DieuTraNguoiDung usr_DieuTraNguoiDung;
         usr_DieuTraAnh usr_DieuTraAnh;
 
-
+        usr_DieuTraAudio usr_DieuTraAudio;
 
         usr_DieuTraMap usr_DieuTraMap;
         usr_DieuTraFile usr_DieuTraFile;
@@ -372,7 +372,19 @@ namespace MTA_Mobile_Forensic
 
         private void btnDieuTraAudio_Click(object sender, EventArgs e)
         {
-
+            lblTieuDe1.Caption = "Điều tra thông tin";
+            lblTieuDe2.Caption = "Âm thanh";
+            if (usr_DieuTraAudio == null)
+            {
+                usr_DieuTraAudio = new usr_DieuTraAudio();
+                usr_DieuTraAudio.Dock = DockStyle.Fill;
+                mainContainer.Controls.Add(usr_DieuTraAudio);
+                usr_DieuTraAudio.BringToFront();
+            }
+            else
+            {
+                usr_DieuTraAudio.BringToFront();
+            }
         }
 
         private void btnDieuTraTaiLieu_Click(object sender, EventArgs e)

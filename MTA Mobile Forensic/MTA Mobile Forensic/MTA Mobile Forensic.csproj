@@ -224,6 +224,12 @@
     <Compile Include="GUI\Forensic\usr_DieuTraAnh.Designer.cs">
       <DependentUpon>usr_DieuTraAnh.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Forensic\usr_DieuTraAudio.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Forensic\usr_DieuTraAudio.Designer.cs">
+      <DependentUpon>usr_DieuTraAudio.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Forensic\usr_DieuTraFile.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -402,6 +408,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Forensic\usr_DieuTraAnh.resx">
       <DependentUpon>usr_DieuTraAnh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Forensic\usr_DieuTraAudio.resx">
+      <DependentUpon>usr_DieuTraAudio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Forensic\usr_DieuTraFile.resx">
       <DependentUpon>usr_DieuTraFile.cs</DependentUpon>

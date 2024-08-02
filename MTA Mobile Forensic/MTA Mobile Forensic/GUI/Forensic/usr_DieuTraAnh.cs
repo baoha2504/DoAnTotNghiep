@@ -16,6 +16,7 @@ namespace MTA_Mobile_Forensic.GUI.Forensic
         public usr_DieuTraAnh()
         {
             InitializeComponent();
+            tabControl1.SelectedTabIndex = 0;
         }
 
         int setup1 = 0;
@@ -153,6 +154,16 @@ namespace MTA_Mobile_Forensic.GUI.Forensic
                     MessageBox.Show("Failed to get a response from the API.");
                 }
             }
+            if (flpAnhDaTimThay.Controls.Count == 0)
+            {
+                Label noAudioLabel = new Label();
+                noAudioLabel.Text = "Không tìm thấy ảnh nào";
+                noAudioLabel.AutoSize = true;
+                noAudioLabel.ForeColor = Color.Red;
+                noAudioLabel.Font = new Font(noAudioLabel.Font.FontFamily, 9);
+                flpAnhDaTimThay.Controls.Add(noAudioLabel);
+                btnLuuAnhDaTimKiem.Enabled = false;
+            }
         }
 
         private async void btnTimKiemKhuonMat_Click(object sender, EventArgs e)
@@ -168,6 +179,7 @@ namespace MTA_Mobile_Forensic.GUI.Forensic
             else
             {
                 flpAnhDaTimThay.Controls.Clear();
+                btnLuuAnhDaTimKiem.Enabled = true;
                 btnTimKiemKhuonMat.Text = "Đang tìm kiếm ...";
                 await LayPathKhuonMatTimKiem(txtPathAnhMau.Text, imageFiles);
                 btnTimKiemKhuonMat.Text = "Tìm kiếm";
@@ -291,6 +303,7 @@ namespace MTA_Mobile_Forensic.GUI.Forensic
             else
             {
                 flpAnhDaTrichXuat.Controls.Clear();
+                btnLuuAnhDaTrichXuat.Enabled = true;
                 btnTrichXuat.Text = "Đang trích xuất ...";
                 pathsTrichXuat = await LayPathKhuonMatTrichXuat(txtPathAnhTrichXuat.Text);
                 if (pathsTrichXuat != null)
@@ -304,6 +317,16 @@ namespace MTA_Mobile_Forensic.GUI.Forensic
                     }
                 }
                 btnTrichXuat.Text = "Trích xuất";
+            }
+            if (flpAnhDaTrichXuat.Controls.Count == 0)
+            {
+                Label noAudioLabel = new Label();
+                noAudioLabel.Text = "Không tìm thấy ảnh nào";
+                noAudioLabel.AutoSize = true;
+                noAudioLabel.ForeColor = Color.Red;
+                noAudioLabel.Font = new Font(noAudioLabel.Font.FontFamily, 9);
+                flpAnhDaTrichXuat.Controls.Add(noAudioLabel);
+                btnLuuAnhDaTrichXuat.Enabled = false;
             }
         }
 
@@ -468,6 +491,16 @@ namespace MTA_Mobile_Forensic.GUI.Forensic
                     MessageBox.Show("Failed to get a response from the API.");
                 }
             }
+            if (flpAnhNhieuKhuonMat.Controls.Count == 0)
+            {
+                Label noAudioLabel = new Label();
+                noAudioLabel.Text = "Không tìm thấy ảnh nào";
+                noAudioLabel.AutoSize = true;
+                noAudioLabel.ForeColor = Color.Red;
+                noAudioLabel.Font = new Font(noAudioLabel.Font.FontFamily, 9);
+                flpAnhNhieuKhuonMat.Controls.Add(noAudioLabel);
+                btnLuuAnhNhieuKhuonMat.Enabled = false;
+            }
         }
 
         private async void btnTimKiemNhieuKhuonMat_Click(object sender, EventArgs e)
@@ -487,6 +520,7 @@ namespace MTA_Mobile_Forensic.GUI.Forensic
             else
             {
                 flpAnhNhieuKhuonMat.Controls.Clear();
+                btnLuuAnhNhieuKhuonMat.Enabled = false;
                 btnTimKiemNhieuKhuonMat.Text = "Đang tìm kiếm ...";
                 await LayPathNhieuKhuonMatTimKiem(txtPathAnhMau1.Text, txtPathAnhMau2.Text, imageFiles_NhieuKhuonMat);
                 btnTimKiemNhieuKhuonMat.Text = "Tìm kiếm";
