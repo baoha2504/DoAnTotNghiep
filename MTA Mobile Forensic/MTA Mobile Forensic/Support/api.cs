@@ -178,7 +178,103 @@ namespace MTA_Mobile_Forensic.Support
                 Console.WriteLine($"Request error: {e.Message}");
                 return null;
             }
-        
+        }
+
+        public async Task<List<string>> TimKiemGiongNoiVideo(string path, string[] listPathArray)
+        {
+            var requestUrl = $"{url}/api/TimKiemGiongNoiVideo";
+
+            // Create the JSON payload
+            var jsonPayload = new
+            {
+                path = path,
+                listpath = listPathArray
+            };
+
+            var content = new StringContent(
+                JsonConvert.SerializeObject(jsonPayload),
+                System.Text.Encoding.UTF8,
+                "application/json");
+
+            try
+            {
+                var response = await client.PostAsync(requestUrl, content);
+                response.EnsureSuccessStatusCode();
+
+                var jsonResponse = await response.Content.ReadAsStringAsync();
+                var dataWebs = JsonConvert.DeserializeObject<List<string>>(jsonResponse);
+
+                return dataWebs;
+            }
+            catch (HttpRequestException e)
+            {
+                Console.WriteLine($"Request error: {e.Message}");
+                return null;
+            }
+        }
+
+        public async Task<AudioResponse> TrichXuatThongTinAudio(string path)
+        {
+            var requestUrl = $"{url}/api/TrichXuatThongTinAudio";
+
+            // Create the JSON payload
+            var jsonPayload = new
+            {
+                path = path
+            };
+
+            var content = new StringContent(
+                JsonConvert.SerializeObject(jsonPayload),
+                System.Text.Encoding.UTF8,
+                "application/json");
+
+            try
+            {
+                var response = await client.PostAsync(requestUrl, content);
+                response.EnsureSuccessStatusCode();
+
+                var jsonResponse = await response.Content.ReadAsStringAsync();
+                var dataWebs = JsonConvert.DeserializeObject<AudioResponse>(jsonResponse);
+
+                return dataWebs;
+            }
+            catch (HttpRequestException e)
+            {
+                Console.WriteLine($"Request error: {e.Message}");
+                return null;
+            }
+        }
+
+        public async Task<AudioResponse> TrichXuatThongTinAudioTrongVideo(string path)
+        {
+            var requestUrl = $"{url}/api/TrichXuatThongTinAudioTrongVideo";
+
+            // Create the JSON payload
+            var jsonPayload = new
+            {
+                path = path
+            };
+
+            var content = new StringContent(
+                JsonConvert.SerializeObject(jsonPayload),
+                System.Text.Encoding.UTF8,
+                "application/json");
+
+            try
+            {
+                var response = await client.PostAsync(requestUrl, content);
+                response.EnsureSuccessStatusCode();
+
+                var jsonResponse = await response.Content.ReadAsStringAsync();
+                var dataWebs = JsonConvert.DeserializeObject<AudioResponse>(jsonResponse);
+
+                return dataWebs;
+            }
+            catch (HttpRequestException e)
+            {
+                Console.WriteLine($"Request error: {e.Message}");
+                return null;
+            }
         }
     }
 }

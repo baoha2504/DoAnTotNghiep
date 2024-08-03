@@ -333,6 +333,7 @@
       <DependentUpon>usr_VideoMini.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\AppInfo.cs" />
+    <Compile Include="Model\AudioResponse.cs" />
     <Compile Include="Model\TinNhan.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
