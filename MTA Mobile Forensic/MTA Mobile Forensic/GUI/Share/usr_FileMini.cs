@@ -74,6 +74,11 @@ namespace MTA_Mobile_Forensic.GUI.Share
                 fullImagePath = Path.Combine(imagePath, "pdf.png");
                 pictureBox1.Image = Image.FromFile(fullImagePath);
             }
+            else if (loai == "txt")
+            {
+                fullImagePath = Path.Combine(imagePath, "txt.png");
+                pictureBox1.Image = Image.FromFile(fullImagePath);
+            }
             else
             {
                 fullImagePath = Path.Combine(imagePath, "file.png");
@@ -124,6 +129,11 @@ namespace MTA_Mobile_Forensic.GUI.Share
         }
 
         private void pnTen_DoubleClick(object sender, EventArgs e)
+        {
+            ControlClicked?.Invoke(this, EventArgs.Empty);
+        }
+
+        private void pnTen_Click(object sender, EventArgs e)
         {
             ControlClicked?.Invoke(this, EventArgs.Empty);
         }

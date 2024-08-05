@@ -64,6 +64,7 @@
             this.pnTen.Style.GradientAngle = 90;
             this.pnTen.TabIndex = 1;
             this.pnTen.Text = "Tên";
+            this.pnTen.Click += new System.EventHandler(this.pnTen_Click);
             this.pnTen.DoubleClick += new System.EventHandler(this.pnTen_DoubleClick);
             // 
             // pictureBox1

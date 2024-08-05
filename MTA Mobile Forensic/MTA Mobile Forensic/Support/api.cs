@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Net.Http;
+﻿using MTA_Mobile_Forensic.Model;
 using Newtonsoft.Json;
-using System.Data;
-using MTA_Mobile_Forensic.Model;
+using System;
+using System.Collections.Generic;
+using System.Net.Http;
+using System.Threading.Tasks;
 
 
 namespace MTA_Mobile_Forensic.Support
@@ -267,6 +264,39 @@ namespace MTA_Mobile_Forensic.Support
 
                 var jsonResponse = await response.Content.ReadAsStringAsync();
                 var dataWebs = JsonConvert.DeserializeObject<AudioResponse>(jsonResponse);
+
+                return dataWebs;
+            }
+            catch (HttpRequestException e)
+            {
+                Console.WriteLine($"Request error: {e.Message}");
+                return null;
+            }
+        }
+
+        public async Task<AnalysisDocument> AskQuestionGroqAsync(string extension, string path)
+        {
+            var requestUrl = $"{url}/api/PhanTichNoiDungTaiLieu";
+
+            // Create the JSON payload
+            var jsonPayload = new
+            {
+                extension = extension,
+                path = path
+            };
+
+            var content = new StringContent(
+                JsonConvert.SerializeObject(jsonPayload),
+                System.Text.Encoding.UTF8,
+                "application/json");
+
+            try
+            {
+                var response = await client.PostAsync(requestUrl, content);
+                response.EnsureSuccessStatusCode();
+
+                var jsonResponse = await response.Content.ReadAsStringAsync();
+                var dataWebs = JsonConvert.DeserializeObject<AnalysisDocument>(jsonResponse);
 
                 return dataWebs;
             }
