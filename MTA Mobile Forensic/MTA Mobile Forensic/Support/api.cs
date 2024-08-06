@@ -306,5 +306,105 @@ namespace MTA_Mobile_Forensic.Support
                 return null;
             }
         }
+
+        public async Task<string> ScanDocument(string destinationPath, string[] listPath)
+        {
+            var requestUrl = $"{url}/api/ScanDocument";
+
+            // Create the JSON payload
+            var jsonPayload = new
+            {
+                destinationPath = destinationPath,
+                listPath = listPath
+            };
+
+            var content = new StringContent(
+                JsonConvert.SerializeObject(jsonPayload),
+                System.Text.Encoding.UTF8,
+                "application/json");
+
+            try
+            {
+                var response = await client.PostAsync(requestUrl, content);
+                response.EnsureSuccessStatusCode();
+
+                var jsonResponse = await response.Content.ReadAsStringAsync();
+                var dataWebs = JsonConvert.DeserializeObject<string>(jsonResponse);
+
+                return dataWebs;
+            }
+            catch (HttpRequestException e)
+            {
+                Console.WriteLine($"Request error: {e.Message}");
+                return null;
+            }
+        }
+
+        public async Task<OCR> XuLyOCRAnh(string filePath, string outputPath)
+        {
+            var requestUrl = $"{url}/api/OCRDocument";
+
+            // Create the JSON payload
+            var jsonPayload = new
+            {
+                filePath = filePath,
+                outputPath = outputPath
+            };
+
+            var content = new StringContent(
+                JsonConvert.SerializeObject(jsonPayload),
+                System.Text.Encoding.UTF8,
+                "application/json");
+
+            try
+            {
+                var response = await client.PostAsync(requestUrl, content);
+                response.EnsureSuccessStatusCode();
+
+                var jsonResponse = await response.Content.ReadAsStringAsync();
+                var dataWebs = JsonConvert.DeserializeObject<OCR>(jsonResponse);
+
+                return dataWebs;
+            }
+            catch (HttpRequestException e)
+            {
+                Console.WriteLine($"Request error: {e.Message}");
+                return null;
+            }
+        }
+
+        public async Task<string> XoayAnhVaLuu(string imagepath, string targetfolder, string rotationdegrees)
+        {
+            var requestUrl = $"{url}/api/XoayVaLuuAnh";
+
+            // Create the JSON payload
+            var jsonPayload = new
+            {
+                imagepath = imagepath,
+                targetfolder = targetfolder,
+                rotationdegrees = rotationdegrees
+            };
+
+            var content = new StringContent(
+                JsonConvert.SerializeObject(jsonPayload),
+                System.Text.Encoding.UTF8,
+                "application/json");
+
+            try
+            {
+                var response = await client.PostAsync(requestUrl, content);
+                response.EnsureSuccessStatusCode();
+
+                var jsonResponse = await response.Content.ReadAsStringAsync();
+                var dataWebs = JsonConvert.DeserializeObject<string>(jsonResponse);
+
+                return dataWebs;
+            }
+            catch (HttpRequestException e)
+            {
+                Console.WriteLine($"Request error: {e.Message}");
+                return null;
+            }
+        }
     }
 }

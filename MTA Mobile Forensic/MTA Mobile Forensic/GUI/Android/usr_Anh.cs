@@ -133,7 +133,6 @@ namespace MTA_Mobile_Forensic.GUI.Android
                 pbAnhDaChon.Load(clickedControl.linkanh);
                 CheckInfoImage(clickedControl.linkanh);
                 linkanhdachon = clickedControl.linkanh;
-
             }
         }
 
