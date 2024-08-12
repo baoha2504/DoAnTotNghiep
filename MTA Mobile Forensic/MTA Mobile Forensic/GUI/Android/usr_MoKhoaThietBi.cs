@@ -1,4 +1,5 @@
-﻿using MTA_Mobile_Forensic.Support;
+﻿using MTA_Mobile_Forensic.Model;
+using MTA_Mobile_Forensic.Support;
 using System;
 using System.Diagnostics;
 using System.IO;
@@ -71,7 +72,7 @@ namespace MTA_Mobile_Forensic.GUI.Android
                 ProcessStartInfo startInfo = new ProcessStartInfo
                 {
                     FileName = "scrcpy.exe",
-                    Arguments = "", // Thêm các tham số cho scrcpy nếu cần
+                    Arguments = $"-s {DeviceInfo.serialDevice}", // Thêm các tham số cho scrcpy nếu cần
                     UseShellExecute = false,
                     RedirectStandardOutput = true,
                     RedirectStandardError = true,

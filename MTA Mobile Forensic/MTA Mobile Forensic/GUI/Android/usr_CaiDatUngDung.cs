@@ -259,30 +259,37 @@ namespace MTA_Mobile_Forensic.GUI.Android
                     matchValues.Add(matches[i].Groups[1].Value);
                 }
 
-                apps.Clear();
+                if (apps != null)
+                {
+                    apps.Clear();
+                
+                }
                 apps = await LayThongTinUngDung(matchValues);
 
-                for (int i = start; i < end; i++)
+                if (apps != null)
                 {
-                    query = $"shell dumpsys package {matches[i].Groups[1].Value}";
+                    for (int i = start; i < end; i++)
+                    {
+                        query = $"shell dumpsys package {matches[i].Groups[1].Value}";
 
-                    string str2 = adb.adbCommand(query);
-                    if (str2 != string.Empty)
-                    {
-                        ngaycaidat = LayThongTinNgayCaiDat(str2);
-                        capnhatlancuoi = LayThongTinNgayCapNhatCuoi(str2);
-                        phienban = LayThongTinPhienBan(str2);
-                    }
-                    else
-                    {
-                        ngaycaidat = "Không tìm thấy";
-                        capnhatlancuoi = "Không tìm thấy";
-                        phienban = "Không tìm thấy";
-                    }
+                        string str2 = adb.adbCommand(query);
+                        if (str2 != string.Empty)
+                        {
+                            ngaycaidat = LayThongTinNgayCaiDat(str2);
+                            capnhatlancuoi = LayThongTinNgayCapNhatCuoi(str2);
+                            phienban = LayThongTinPhienBan(str2);
+                        }
+                        else
+                        {
+                            ngaycaidat = "Không tìm thấy";
+                            capnhatlancuoi = "Không tìm thấy";
+                            phienban = "Không tìm thấy";
+                        }
 
-                    if (apps[i - start].tenungdung != "" && apps[i - start].duongdananh != "")
-                    {
-                        AddData(matches[i].Groups[1].Value, apps[i - start].tenungdung, ngaycaidat, capnhatlancuoi, phienban, apps[i - start].duongdananh);
+                        if (apps[i - start].tenungdung != "" && apps[i - start].duongdananh != "")
+                        {
+                            AddData(matches[i].Groups[1].Value, apps[i - start].tenungdung, ngaycaidat, capnhatlancuoi, phienban, apps[i - start].duongdananh);
+                        }
                     }
                 }
             }

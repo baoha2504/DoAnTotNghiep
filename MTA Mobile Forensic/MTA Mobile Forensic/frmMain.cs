@@ -11,18 +11,17 @@ namespace MTA_Mobile_Forensic
         {
             InitializeComponent();
             accordionControl1.Width = 260;
+            HienThiForm(0);
         }
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-            btnDieuTraTaiLieu_Click(sender, e);
+            btnKetNoiThietBi_Click(sender, e);
         }
 
         //Trang chủ
 
-
-        //Kết nối thiết bị
-
+        usr_KetNoiThietBi usr_KetNoiThietBi;
 
         //Điều tra dữ liệu
         usr_TinNhan usr_TinNhan;
@@ -62,31 +61,108 @@ namespace MTA_Mobile_Forensic
 
         //Trợ giúp
 
+        public void HienThiForm(int hienthi)
+        {
+            if (hienthi == 1)
+            {
+                btnTinNhan.Enabled = true;
+                btnCuocGoi.Enabled = true;
+                btnDanhBa.Enabled = true;
+                btnLich.Enabled = true;
+                btnAnh.Enabled = true;
+                btnVideo.Enabled = true;
+                btnGhiAm.Enabled = true;
+                btnUngDung.Enabled = true;
+                btnDuLieuLog.Enabled = true;
+                btnCaiDatCuaThietBi.Enabled = true;
+                btnLichSuTruyCap.Enabled = true;
+                btnFileSystem.Enabled = true;
+                btnThongTinKhac.Enabled = true;
+                btnCaiDatUngDung.Enabled = true;
+                btnPhanChieuThietBi.Enabled = true;
+                btnDieuTraNguoiDung.Enabled = true;
+                btnDieuTraAnh.Enabled = true;
+                btnDieuTraVideo.Enabled = true;
+                btnDieuTraAudio.Enabled = true;
+                btnDieuTraTaiLieu.Enabled = true;
+                btnDieuTraMap.Enabled = true;
+                btnDieuTraFile.Enabled = true;
+                btnSaoLuu_KhoiPhuc.Enabled = true;
+                btnPhucHoiDuLieu.Enabled = true;
+                btnThayDoiMatKhau.Enabled = true;
+                btnMoKhoaThietBi.Enabled = true;
+                btnRoot_JailbreakThietBi.Enabled = true;
+            }
+            else if (hienthi == 0)
+            {
+                btnTinNhan.Enabled = false;
+                btnCuocGoi.Enabled = false;
+                btnDanhBa.Enabled = false;
+                btnLich.Enabled = false;
+                btnAnh.Enabled = false;
+                btnVideo.Enabled = false;
+                btnGhiAm.Enabled = false;
+                btnUngDung.Enabled = false;
+                btnDuLieuLog.Enabled = false;
+                btnCaiDatCuaThietBi.Enabled = false;
+                btnLichSuTruyCap.Enabled = false;
+                btnFileSystem.Enabled = false;
+                btnThongTinKhac.Enabled = false;
+                btnCaiDatUngDung.Enabled = false;
+                btnPhanChieuThietBi.Enabled = false;
+                btnDieuTraNguoiDung.Enabled = false;
+                btnDieuTraAnh.Enabled = false;
+                btnDieuTraVideo.Enabled = false;
+                btnDieuTraAudio.Enabled = false;
+                btnDieuTraTaiLieu.Enabled = false;
+                btnDieuTraMap.Enabled = false;
+                btnDieuTraFile.Enabled = false;
+                btnSaoLuu_KhoiPhuc.Enabled = false;
+                btnPhucHoiDuLieu.Enabled = false;
+                btnThayDoiMatKhau.Enabled = false;
+                btnMoKhoaThietBi.Enabled = false;
+                btnRoot_JailbreakThietBi.Enabled = false;
+            }
+        }
+
+        private void CheckTypeDevice()
+        {
+            if (lblTenThietBi.Caption != string.Empty)
+            {
+                if (lblTenThietBi.Caption.Contains("IPHONE"))
+                {
+                    
+                }
+                else
+                {
+
+                }
+            }
+        }
+
 
         private void btnTrangChu_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void btnTatCaThietBi_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnKetNoiThietBi_Click(object sender, EventArgs e)
         {
-
+            lblTieuDe1.Caption = "Trang chủ";
+            lblTieuDe2.Caption = "Kết nối thiết bị";
+            if (usr_KetNoiThietBi == null)
+            {
+                usr_KetNoiThietBi = new usr_KetNoiThietBi(this);
+                usr_KetNoiThietBi.Dock = DockStyle.Fill;
+                mainContainer.Controls.Add(usr_KetNoiThietBi);
+                usr_KetNoiThietBi.BringToFront();
+            }
+            else
+            {
+                usr_KetNoiThietBi.BringToFront();
+            }
         }
 
-        private void btnTongQuanSoLieuDieuTra_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnTongQuanThietBiKetNoi_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void btnTinNhan_Click(object sender, EventArgs e)
         {
@@ -452,6 +528,23 @@ namespace MTA_Mobile_Forensic
             else
             {
                 usr_SaoLuuKhoiPhuc.BringToFront();
+            }
+        }
+
+        private void btnPhucHoiDuLieu_Click(object sender, EventArgs e)
+        {
+            lblTieuDe1.Caption = "Điều khiển thiết bị";
+            lblTieuDe2.Caption = "Phục hồi dữ liệu";
+            if (usr_CaiDatUngDung == null)
+            {
+                usr_CaiDatUngDung = new usr_CaiDatUngDung();
+                usr_CaiDatUngDung.Dock = DockStyle.Fill;
+                mainContainer.Controls.Add(usr_CaiDatUngDung);
+                usr_CaiDatUngDung.BringToFront();
+            }
+            else
+            {
+                usr_CaiDatUngDung.BringToFront();
             }
         }
 

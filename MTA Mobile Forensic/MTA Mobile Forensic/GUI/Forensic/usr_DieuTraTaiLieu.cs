@@ -304,7 +304,6 @@ namespace MTA_Mobile_Forensic.GUI.Forensic
         }
         #endregion
 
-
         #region================================  TAB2  ====================================================================
         private void Flp_DragEnter(object sender, DragEventArgs e)
         {
@@ -493,7 +492,7 @@ namespace MTA_Mobile_Forensic.GUI.Forensic
         }
         #endregion
 
-
+        #region================================  TAB3  ====================================================================
         private void tab3_Add_To_flpChonAnh()
         {
             tab3_flpAnh.Controls.Clear();
@@ -676,5 +675,8 @@ namespace MTA_Mobile_Forensic.GUI.Forensic
             float angle = tab3_zoomTrackBarControl.Value - 90;
             tab3_pictureBoxImage2.Image = RotateImage(originalImage, angle);
         }
+        #endregion
+    
+        
     }
 }

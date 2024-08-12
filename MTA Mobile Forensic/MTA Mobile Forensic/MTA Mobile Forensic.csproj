@@ -189,6 +189,12 @@
     <Compile Include="GUI\Android\usr_GhiAm.Designer.cs">
       <DependentUpon>usr_GhiAm.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Android\usr_KetNoiThietBi.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Android\usr_KetNoiThietBi.Designer.cs">
+      <DependentUpon>usr_KetNoiThietBi.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Android\usr_Lich.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -351,6 +357,12 @@
     <Compile Include="GUI\Share\usr_LichMini.Designer.cs">
       <DependentUpon>usr_LichMini.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Share\usr_ThietBiMini.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Share\usr_ThietBiMini.Designer.cs">
+      <DependentUpon>usr_ThietBiMini.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Share\usr_TinNhanMini.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -378,6 +390,7 @@
     <Compile Include="Model\AnalysisDocument.cs" />
     <Compile Include="Model\AppInfo.cs" />
     <Compile Include="Model\AudioResponse.cs" />
+    <Compile Include="Model\DeviceInfo.cs" />
     <Compile Include="Model\OCR.cs" />
     <Compile Include="Model\TinNhan.cs" />
     <Compile Include="Program.cs" />
@@ -418,6 +431,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Android\usr_GhiAm.resx">
       <DependentUpon>usr_GhiAm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Android\usr_KetNoiThietBi.resx">
+      <DependentUpon>usr_KetNoiThietBi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Android\usr_Lich.resx">
       <DependentUpon>usr_Lich.cs</DependentUpon>
@@ -500,6 +516,9 @@
     <EmbeddedResource Include="GUI\Share\usr_LichMini.resx">
       <DependentUpon>usr_LichMini.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Share\usr_ThietBiMini.resx">
+      <DependentUpon>usr_ThietBiMini.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Share\usr_TinNhanMini.resx">
       <DependentUpon>usr_TinNhanMini.cs</DependentUpon>
     </EmbeddedResource>
@@ -541,6 +560,17 @@
     <Folder Include="GUI\IOS\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Data\Device\bphone-3-black.png" />
+    <Content Include="Data\Device\huawei-nova-3i.png" />
+    <Content Include="Data\Device\iphone-5s.png" />
+    <Content Include="Data\Device\lg-q7.png" />
+    <Content Include="Data\Device\microsoft-lumia-640.png" />
+    <Content Include="Data\Device\oppo-a3s.png" />
+    <Content Include="Data\Device\phone.png" />
+    <Content Include="Data\Device\samsung-galaxy-a6.png" />
+    <Content Include="Data\Device\vivo.png" />
+    <Content Include="Data\Device\vsmart-live-blue.png" />
+    <Content Include="Data\Device\xiaomi-mi9t.png" />
     <Content Include="Data\Image\app.png" />
     <Content Include="Data\Image\checked.png" />
     <Content Include="Data\Image\error.png" />

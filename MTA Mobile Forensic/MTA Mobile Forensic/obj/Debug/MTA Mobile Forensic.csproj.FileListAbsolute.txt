@@ -237,3 +237,5 @@ E:\Do An\DoAnTotNghiep\MTA Mobile Forensic\MTA Mobile Forensic\bin\Debug\Microso
 E:\Do An\DoAnTotNghiep\MTA Mobile Forensic\MTA Mobile Forensic\bin\Debug\Microsoft.Extensions.Options.xml
 E:\Do An\DoAnTotNghiep\MTA Mobile Forensic\MTA Mobile Forensic\bin\Debug\Microsoft.Extensions.Primitives.xml
 E:\Do An\DoAnTotNghiep\MTA Mobile Forensic\MTA Mobile Forensic\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+E:\Do An\DoAnTotNghiep\MTA Mobile Forensic\MTA Mobile Forensic\obj\Debug\MTA_Mobile_Forensic.GUI.Android.usr_KetNoiThietBi.resources
+E:\Do An\DoAnTotNghiep\MTA Mobile Forensic\MTA Mobile Forensic\obj\Debug\MTA_Mobile_Forensic.GUI.Share.usr_ThietBiMini.resources

@@ -416,6 +416,8 @@
             this.pictureBox_SearchGoogle.TabStop = false;
             this.pictureBox_SearchGoogle.Click += new System.EventHandler(this.pictureBox_SearchGoogle_Click);
             this.pictureBox_SearchGoogle.DoubleClick += new System.EventHandler(this.pictureBox_SearchGoogle_DoubleClick);
+            this.pictureBox_SearchGoogle.MouseEnter += new System.EventHandler(this.pictureBox_SearchGoogle_MouseEnter);
+            this.pictureBox_SearchGoogle.MouseLeave += new System.EventHandler(this.pictureBox_SearchGoogle_MouseLeave);
             // 
             // panel2
             // 
@@ -634,6 +636,8 @@
             this.pictureBox_SearchFacebook.TabStop = false;
             this.pictureBox_SearchFacebook.Click += new System.EventHandler(this.pictureBox_SearchFacebook_Click);
             this.pictureBox_SearchFacebook.DoubleClick += new System.EventHandler(this.pictureBox_SearchFacebook_DoubleClick);
+            this.pictureBox_SearchFacebook.MouseEnter += new System.EventHandler(this.pictureBox_SearchFacebook_MouseEnter);
+            this.pictureBox_SearchFacebook.MouseLeave += new System.EventHandler(this.pictureBox_SearchFacebook_MouseLeave);
             // 
             // panel3
             // 
@@ -807,6 +811,8 @@
             this.pictureBox_SearchZalo.TabStop = false;
             this.pictureBox_SearchZalo.Click += new System.EventHandler(this.pictureBox_SearchZalo_Click);
             this.pictureBox_SearchZalo.DoubleClick += new System.EventHandler(this.pictureBox_SearchZalo_DoubleClick);
+            this.pictureBox_SearchZalo.MouseEnter += new System.EventHandler(this.pictureBox_SearchZalo_MouseEnter);
+            this.pictureBox_SearchZalo.MouseLeave += new System.EventHandler(this.pictureBox_SearchZalo_MouseLeave);
             // 
             // panel4
             // 
@@ -961,6 +967,8 @@
             this.pictureBox_SearchTelegram.TabStop = false;
             this.pictureBox_SearchTelegram.Click += new System.EventHandler(this.pictureBox_SearchTelegram_Click);
             this.pictureBox_SearchTelegram.DoubleClick += new System.EventHandler(this.pictureBox_SearchTelegram_DoubleClick);
+            this.pictureBox_SearchTelegram.MouseEnter += new System.EventHandler(this.pictureBox_SearchTelegram_MouseEnter);
+            this.pictureBox_SearchTelegram.MouseLeave += new System.EventHandler(this.pictureBox_SearchTelegram_MouseLeave);
             // 
             // panel5
             // 

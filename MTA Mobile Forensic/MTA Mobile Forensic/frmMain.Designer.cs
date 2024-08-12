@@ -34,12 +34,8 @@
             this.accordionControl1 = new DevExpress.XtraBars.Navigation.AccordionControl();
             this.TRANGCHU = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btnTrangChu = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.accordionControlElement1 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.KETNOITHIETBI = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btnKetNoiThietBi = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.btnTongQuanThietBiKetNoi = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.btnDuLieuDaDieuTra = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.accordionControlElement2 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement1 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.DIEUTRADULIEU = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btnTinNhan = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btnCuocGoi = new DevExpress.XtraBars.Navigation.AccordionControlElement();
@@ -68,8 +64,9 @@
             this.btnDieuTraMap = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btnDieuTraFile = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement6 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.SAOLUUKHOIPUC = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.SAOLUUKHOIPHUC = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btnSaoLuu_KhoiPhuc = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.btnPhucHoiDuLieu = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement7 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.NANGCAO = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btnThayDoiMatKhau = new DevExpress.XtraBars.Navigation.AccordionControlElement();
@@ -86,6 +83,8 @@
             this.barStaticItem1 = new DevExpress.XtraBars.BarStaticItem();
             this.barStaticItem2 = new DevExpress.XtraBars.BarStaticItem();
             this.lblTieuDe2 = new DevExpress.XtraBars.BarStaticItem();
+            this.lblTenThietBi = new DevExpress.XtraBars.BarStaticItem();
+            this.lblText = new DevExpress.XtraBars.BarStaticItem();
             this.fluentFormDefaultManager1 = new DevExpress.XtraBars.FluentDesignSystem.FluentFormDefaultManager(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).BeginInit();
@@ -95,10 +94,10 @@
             // mainContainer
             // 
             this.mainContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mainContainer.Location = new System.Drawing.Point(313, 39);
-            this.mainContainer.Margin = new System.Windows.Forms.Padding(60);
+            this.mainContainer.Location = new System.Drawing.Point(391, 39);
+            this.mainContainer.Margin = new System.Windows.Forms.Padding(75);
             this.mainContainer.Name = "mainContainer";
-            this.mainContainer.Size = new System.Drawing.Size(1076, 683);
+            this.mainContainer.Size = new System.Drawing.Size(998, 683);
             this.mainContainer.TabIndex = 0;
             // 
             // accordionControl1
@@ -106,18 +105,17 @@
             this.accordionControl1.Dock = System.Windows.Forms.DockStyle.Left;
             this.accordionControl1.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.TRANGCHU,
-            this.KETNOITHIETBI,
             this.DIEUTRADULIEU,
             this.DIEUKHIENTHIETBI,
             this.DIEUTRATHONGTIN,
-            this.SAOLUUKHOIPUC,
+            this.SAOLUUKHOIPHUC,
             this.NANGCAO,
             this.TROGIUP});
             this.accordionControl1.Location = new System.Drawing.Point(0, 39);
-            this.accordionControl1.Margin = new System.Windows.Forms.Padding(60);
+            this.accordionControl1.Margin = new System.Windows.Forms.Padding(75);
             this.accordionControl1.Name = "accordionControl1";
             this.accordionControl1.ScrollBarMode = DevExpress.XtraBars.Navigation.ScrollBarMode.Touch;
-            this.accordionControl1.Size = new System.Drawing.Size(313, 683);
+            this.accordionControl1.Size = new System.Drawing.Size(391, 683);
             this.accordionControl1.TabIndex = 1;
             this.accordionControl1.ViewType = DevExpress.XtraBars.Navigation.AccordionControlViewType.HamburgerMenu;
             // 
@@ -125,6 +123,7 @@
             // 
             this.TRANGCHU.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.btnTrangChu,
+            this.btnKetNoiThietBi,
             this.accordionControlElement1});
             this.TRANGCHU.Expanded = true;
             this.TRANGCHU.Name = "TRANGCHU";
@@ -137,46 +136,17 @@
             this.btnTrangChu.Text = "Trang chủ";
             this.btnTrangChu.Click += new System.EventHandler(this.btnTrangChu_Click);
             // 
-            // accordionControlElement1
-            // 
-            this.accordionControlElement1.Name = "accordionControlElement1";
-            this.accordionControlElement1.Visible = false;
-            // 
-            // KETNOITHIETBI
-            // 
-            this.KETNOITHIETBI.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
-            this.btnKetNoiThietBi,
-            this.btnTongQuanThietBiKetNoi,
-            this.btnDuLieuDaDieuTra,
-            this.accordionControlElement2});
-            this.KETNOITHIETBI.Expanded = true;
-            this.KETNOITHIETBI.Name = "KETNOITHIETBI";
-            this.KETNOITHIETBI.Text = "KẾT NỐI THIẾT BỊ";
-            // 
             // btnKetNoiThietBi
             // 
             this.btnKetNoiThietBi.Name = "btnKetNoiThietBi";
             this.btnKetNoiThietBi.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.btnKetNoiThietBi.Text = "Kết nối thiết bị";
-            this.btnKetNoiThietBi.Click += new System.EventHandler(this.btnTatCaThietBi_Click);
+            this.btnKetNoiThietBi.Click += new System.EventHandler(this.btnKetNoiThietBi_Click);
             // 
-            // btnTongQuanThietBiKetNoi
+            // accordionControlElement1
             // 
-            this.btnTongQuanThietBiKetNoi.Name = "btnTongQuanThietBiKetNoi";
-            this.btnTongQuanThietBiKetNoi.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.btnTongQuanThietBiKetNoi.Text = "Tổng quan thiết bị kết nối";
-            // 
-            // btnDuLieuDaDieuTra
-            // 
-            this.btnDuLieuDaDieuTra.Name = "btnDuLieuDaDieuTra";
-            this.btnDuLieuDaDieuTra.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.btnDuLieuDaDieuTra.Text = "Dữ liệu đã điều tra";
-            this.btnDuLieuDaDieuTra.Click += new System.EventHandler(this.btnKetNoiThietBi_Click);
-            // 
-            // accordionControlElement2
-            // 
-            this.accordionControlElement2.Name = "accordionControlElement2";
-            this.accordionControlElement2.Visible = false;
+            this.accordionControlElement1.Name = "accordionControlElement1";
+            this.accordionControlElement1.Visible = false;
             // 
             // DIEUTRADULIEU
             // 
@@ -393,14 +363,15 @@
             this.accordionControlElement6.Name = "accordionControlElement6";
             this.accordionControlElement6.Visible = false;
             // 
-            // SAOLUUKHOIPUC
+            // SAOLUUKHOIPHUC
             // 
-            this.SAOLUUKHOIPUC.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
+            this.SAOLUUKHOIPHUC.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.btnSaoLuu_KhoiPhuc,
+            this.btnPhucHoiDuLieu,
             this.accordionControlElement7});
-            this.SAOLUUKHOIPUC.Expanded = true;
-            this.SAOLUUKHOIPUC.Name = "SAOLUUKHOIPUC";
-            this.SAOLUUKHOIPUC.Text = "SAO LƯU VÀ KHÔI PHỤC";
+            this.SAOLUUKHOIPHUC.Expanded = true;
+            this.SAOLUUKHOIPHUC.Name = "SAOLUUKHOIPHUC";
+            this.SAOLUUKHOIPHUC.Text = "SAO LƯU VÀ KHÔI PHỤC";
             // 
             // btnSaoLuu_KhoiPhuc
             // 
@@ -408,6 +379,13 @@
             this.btnSaoLuu_KhoiPhuc.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.btnSaoLuu_KhoiPhuc.Text = "Sao lưu và khôi phục";
             this.btnSaoLuu_KhoiPhuc.Click += new System.EventHandler(this.btnSaoLuu_KhoiPhuc_Click);
+            // 
+            // btnPhucHoiDuLieu
+            // 
+            this.btnPhucHoiDuLieu.Name = "btnPhucHoiDuLieu";
+            this.btnPhucHoiDuLieu.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.btnPhucHoiDuLieu.Text = "Phục hồi dữ liệu";
+            this.btnPhucHoiDuLieu.Click += new System.EventHandler(this.btnPhucHoiDuLieu_Click);
             // 
             // accordionControlElement7
             // 
@@ -486,7 +464,9 @@
             this.barButtonItem1,
             this.barStaticItem1,
             this.barStaticItem2,
-            this.lblTieuDe2});
+            this.lblTieuDe2,
+            this.lblTenThietBi,
+            this.lblText});
             this.fluentDesignFormControl1.Location = new System.Drawing.Point(0, 0);
             this.fluentDesignFormControl1.Manager = this.fluentFormDefaultManager1;
             this.fluentDesignFormControl1.Name = "fluentDesignFormControl1";
@@ -498,6 +478,8 @@
             this.fluentDesignFormControl1.TitleItemLinks.Add(this.lblTieuDe1);
             this.fluentDesignFormControl1.TitleItemLinks.Add(this.barStaticItem2);
             this.fluentDesignFormControl1.TitleItemLinks.Add(this.lblTieuDe2);
+            this.fluentDesignFormControl1.TitleItemLinks.Add(this.lblTenThietBi);
+            this.fluentDesignFormControl1.TitleItemLinks.Add(this.lblText);
             // 
             // lblTieuDe1
             // 
@@ -547,6 +529,24 @@
             this.lblTieuDe2.ItemAppearance.Normal.Options.UseForeColor = true;
             this.lblTieuDe2.Name = "lblTieuDe2";
             // 
+            // lblTenThietBi
+            // 
+            this.lblTenThietBi.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right;
+            this.lblTenThietBi.Id = 5;
+            this.lblTenThietBi.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTenThietBi.ItemAppearance.Normal.ForeColor = System.Drawing.Color.Red;
+            this.lblTenThietBi.ItemAppearance.Normal.Options.UseFont = true;
+            this.lblTenThietBi.ItemAppearance.Normal.Options.UseForeColor = true;
+            this.lblTenThietBi.Name = "lblTenThietBi";
+            // 
+            // lblText
+            // 
+            this.lblText.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right;
+            this.lblText.Id = 6;
+            this.lblText.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblText.ItemAppearance.Normal.Options.UseFont = true;
+            this.lblText.Name = "lblText";
+            // 
             // fluentFormDefaultManager1
             // 
             this.fluentFormDefaultManager1.Form = this;
@@ -555,8 +555,10 @@
             this.barButtonItem1,
             this.barStaticItem1,
             this.barStaticItem2,
-            this.lblTieuDe2});
-            this.fluentFormDefaultManager1.MaxItemId = 5;
+            this.lblTieuDe2,
+            this.lblTenThietBi,
+            this.lblText});
+            this.fluentFormDefaultManager1.MaxItemId = 7;
             // 
             // frmMain
             // 
@@ -588,15 +590,13 @@
         private DevExpress.XtraBars.Navigation.AccordionControl accordionControl1;
         private DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl fluentDesignFormControl1;
         private DevExpress.XtraBars.FluentDesignSystem.FluentFormDefaultManager fluentFormDefaultManager1;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement KETNOITHIETBI;
         private DevExpress.XtraBars.Navigation.AccordionControlElement DIEUTRADULIEU;
         private DevExpress.XtraBars.Navigation.AccordionControlElement DIEUKHIENTHIETBI;
         private DevExpress.XtraBars.Navigation.AccordionControlElement DIEUTRATHONGTIN;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement SAOLUUKHOIPUC;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement SAOLUUKHOIPHUC;
         private DevExpress.XtraBars.Navigation.AccordionControlElement NANGCAO;
         private DevExpress.XtraBars.Navigation.AccordionControlElement TROGIUP;
         private DevExpress.XtraBars.Navigation.AccordionControlElement btnKetNoiThietBi;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement btnDuLieuDaDieuTra;
         private DevExpress.XtraBars.Navigation.AccordionControlElement btnCaiDatUngDung;
         private DevExpress.XtraBars.Navigation.AccordionControlElement btnPhanChieuThietBi;
         private DevExpress.XtraBars.Navigation.AccordionControlElement btnDieuTraNguoiDung;
@@ -628,7 +628,6 @@
         private DevExpress.XtraBars.BarStaticItem lblTieuDe2;
         private DevExpress.XtraBars.Navigation.AccordionControlElement btnGhiAm;
         private DevExpress.XtraBars.Navigation.AccordionControlElement btnThayDoiMatKhau;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement2;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement1;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement4;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement5;
@@ -638,8 +637,10 @@
         private DevExpress.XtraBars.Navigation.AccordionControlElement btnHuongDanSuDung;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement10;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement11;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement btnTongQuanThietBiKetNoi;
         private DevExpress.XtraBars.Navigation.AccordionControlElement btnDuLieuLog;
         private DevExpress.XtraBars.Navigation.AccordionControlElement btnDieuTraTaiLieu;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement btnPhucHoiDuLieu;
+        public DevExpress.XtraBars.BarStaticItem lblText;
+        public DevExpress.XtraBars.BarStaticItem lblTenThietBi;
     }
 }

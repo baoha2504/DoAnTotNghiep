@@ -89,8 +89,7 @@ namespace MTA_Mobile_Forensic.GUI.Android
         {
             try
             {
-                splitContainer1.SplitterDistance = (int)(panelEx1.Height / 3);
-                splitContainer2.SplitterDistance = (int)(panelEx1.Width / 2);
+                splitContainer1.SplitterDistance = 5;
                 splitContainer3.SplitterDistance = (int)(panelEx1.Width / 2);
             }
             catch { }

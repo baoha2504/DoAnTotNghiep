@@ -310,31 +310,36 @@ namespace MTA_Mobile_Forensic.GUI.Android
                 {
                     matchValues.Add(matches[i].Groups[1].Value);
                 }
-
-                apps.Clear();
-                apps = await LayThongTinUngDung(matchValues);
-
-                for (int i = start; i < end; i++)
+                if (apps != null)
                 {
-                    query = $"shell dumpsys package {matches[i].Groups[1].Value}";
+                    apps.Clear();
+                }
 
-                    string str2 = adb.adbCommand(query);
-                    if (str2 != string.Empty)
+                apps = await LayThongTinUngDung(matchValues);
+                if (apps != null)
+                {
+                    for (int i = start; i < end; i++)
                     {
-                        ngaycaidat = LayThongTinNgayCaiDat(str2);
-                        capnhatlancuoi = LayThongTinNgayCapNhatCuoi(str2);
-                        phienban = LayThongTinPhienBan(str2);
-                    }
-                    else
-                    {
-                        ngaycaidat = "Không tìm thấy";
-                        capnhatlancuoi = "Không tìm thấy";
-                        phienban = "Không tìm thấy";
-                    }
+                        query = $"shell dumpsys package {matches[i].Groups[1].Value}";
 
-                    if (apps[i - start].tenungdung != "" && apps[i - start].duongdananh != "")
-                    {
-                        AddData(matches[i].Groups[1].Value, apps[i - start].tenungdung, ngaycaidat, capnhatlancuoi, phienban, apps[i - start].duongdananh);
+                        string str2 = adb.adbCommand(query);
+                        if (str2 != string.Empty)
+                        {
+                            ngaycaidat = LayThongTinNgayCaiDat(str2);
+                            capnhatlancuoi = LayThongTinNgayCapNhatCuoi(str2);
+                            phienban = LayThongTinPhienBan(str2);
+                        }
+                        else
+                        {
+                            ngaycaidat = "Không tìm thấy";
+                            capnhatlancuoi = "Không tìm thấy";
+                            phienban = "Không tìm thấy";
+                        }
+
+                        if (apps[i - start].tenungdung != "" && apps[i - start].duongdananh != "")
+                        {
+                            AddData(matches[i].Groups[1].Value, apps[i - start].tenungdung, ngaycaidat, capnhatlancuoi, phienban, apps[i - start].duongdananh);
+                        }
                     }
                 }
             }

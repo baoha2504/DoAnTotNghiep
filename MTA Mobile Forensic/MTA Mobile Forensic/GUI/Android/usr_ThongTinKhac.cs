@@ -415,7 +415,9 @@ namespace MTA_Mobile_Forensic.GUI.Android
 
             // speed
             string Recent_Disk_Write_Speed = GetValueNumber(str_InfoRom, "Recent Disk Write Speed");
-            int number_Recent_Disk_Write_Speed_ROM = Int32.Parse(Recent_Disk_Write_Speed);
+
+            int number_Recent_Disk_Write_Speed_ROM = 0;
+            try { number_Recent_Disk_Write_Speed_ROM = Int32.Parse(Recent_Disk_Write_Speed); } catch { }
             double number_Recent_Disk_Write_Speed_ROM_GB = ConvertKbToMb(number_Recent_Disk_Write_Speed_ROM);
 
             // Giá trị từng loại

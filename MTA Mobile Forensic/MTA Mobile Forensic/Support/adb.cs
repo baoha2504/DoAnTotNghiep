@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
+using MTA_Mobile_Forensic.Model;
+using MTA_Mobile_Forensic.Support;
 
 namespace MTA_Mobile_Forensic.Support
 {
@@ -7,6 +9,10 @@ namespace MTA_Mobile_Forensic.Support
     {
         public string adbCommand(string command)
         {
+            if(DeviceInfo.serialDevice != string.Empty)
+            {
+                command = $"-s {DeviceInfo.serialDevice} {command}";
+            }
             try
             {
                 Process adbProcess = new Process();

@@ -32,26 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(usr_SaoLuuKhoiPhuc));
             this.panelEx1 = new DevComponents.DotNetBar.PanelEx();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.groupPanel1 = new DevComponents.DotNetBar.Controls.GroupPanel();
-            this.splitContainer2 = new System.Windows.Forms.SplitContainer();
-            this.groupPanel6 = new DevComponents.DotNetBar.Controls.GroupPanel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.txtPhucHoi = new System.Windows.Forms.TextBox();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.progressBar_PhucHoi = new DevComponents.DotNetBar.Controls.ProgressBarX();
-            this.panel56 = new System.Windows.Forms.Panel();
-            this.pictureBox_PhucHoi = new System.Windows.Forms.PictureBox();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.btnPhucHoi = new DevComponents.DotNetBar.ButtonX();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.groupPanel5 = new DevComponents.DotNetBar.Controls.GroupPanel();
-            this.flpDuLieuDaXoa = new System.Windows.Forms.FlowLayoutPanel();
             this.groupPanel2 = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
             this.groupPanel3 = new DevComponents.DotNetBar.Controls.GroupPanel();
@@ -123,23 +103,8 @@
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.panelEx1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
-            this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            this.groupPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
-            this.splitContainer2.Panel1.SuspendLayout();
-            this.splitContainer2.Panel2.SuspendLayout();
-            this.splitContainer2.SuspendLayout();
-            this.groupPanel6.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel6.SuspendLayout();
-            this.panel11.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.panel56.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_PhucHoi)).BeginInit();
-            this.panel3.SuspendLayout();
-            this.groupPanel5.SuspendLayout();
             this.groupPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).BeginInit();
             this.splitContainer3.Panel1.SuspendLayout();
@@ -196,318 +161,12 @@
             this.splitContainer1.Name = "splitContainer1";
             this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
-            // splitContainer1.Panel1
-            // 
-            this.splitContainer1.Panel1.Controls.Add(this.groupPanel1);
-            // 
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.groupPanel2);
             this.splitContainer1.Size = new System.Drawing.Size(1150, 630);
-            this.splitContainer1.SplitterDistance = 232;
+            this.splitContainer1.SplitterDistance = 25;
             this.splitContainer1.TabIndex = 24;
-            // 
-            // groupPanel1
-            // 
-            this.groupPanel1.CanvasColor = System.Drawing.SystemColors.Control;
-            this.groupPanel1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
-            this.groupPanel1.Controls.Add(this.splitContainer2);
-            this.groupPanel1.DisabledBackColor = System.Drawing.Color.Empty;
-            this.groupPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupPanel1.Location = new System.Drawing.Point(0, 0);
-            this.groupPanel1.Name = "groupPanel1";
-            this.groupPanel1.Size = new System.Drawing.Size(1150, 232);
-            // 
-            // 
-            // 
-            this.groupPanel1.Style.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
-            this.groupPanel1.Style.BackColorGradientAngle = 90;
-            this.groupPanel1.Style.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
-            this.groupPanel1.Style.BorderBottom = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.groupPanel1.Style.BorderBottomWidth = 1;
-            this.groupPanel1.Style.BorderColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
-            this.groupPanel1.Style.BorderLeft = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.groupPanel1.Style.BorderLeftWidth = 1;
-            this.groupPanel1.Style.BorderRight = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.groupPanel1.Style.BorderRightWidth = 1;
-            this.groupPanel1.Style.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.groupPanel1.Style.BorderTopWidth = 1;
-            this.groupPanel1.Style.CornerDiameter = 4;
-            this.groupPanel1.Style.CornerType = DevComponents.DotNetBar.eCornerType.Rounded;
-            this.groupPanel1.Style.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
-            this.groupPanel1.Style.TextColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
-            this.groupPanel1.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near;
-            // 
-            // 
-            // 
-            this.groupPanel1.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.groupPanel1.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.groupPanel1.TabIndex = 0;
-            this.groupPanel1.Text = "Phục hồi dữ liệu đã xóa";
-            // 
-            // splitContainer2
-            // 
-            this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer2.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer2.Name = "splitContainer2";
-            // 
-            // splitContainer2.Panel1
-            // 
-            this.splitContainer2.Panel1.Controls.Add(this.groupPanel6);
-            // 
-            // splitContainer2.Panel2
-            // 
-            this.splitContainer2.Panel2.Controls.Add(this.groupPanel5);
-            this.splitContainer2.Size = new System.Drawing.Size(1144, 209);
-            this.splitContainer2.SplitterDistance = 568;
-            this.splitContainer2.TabIndex = 0;
-            // 
-            // groupPanel6
-            // 
-            this.groupPanel6.CanvasColor = System.Drawing.SystemColors.Control;
-            this.groupPanel6.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
-            this.groupPanel6.Controls.Add(this.panel2);
-            this.groupPanel6.DisabledBackColor = System.Drawing.Color.Empty;
-            this.groupPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupPanel6.Location = new System.Drawing.Point(0, 0);
-            this.groupPanel6.Name = "groupPanel6";
-            this.groupPanel6.Size = new System.Drawing.Size(568, 209);
-            // 
-            // 
-            // 
-            this.groupPanel6.Style.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
-            this.groupPanel6.Style.BackColorGradientAngle = 90;
-            this.groupPanel6.Style.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
-            this.groupPanel6.Style.BorderBottom = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.groupPanel6.Style.BorderBottomWidth = 1;
-            this.groupPanel6.Style.BorderColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
-            this.groupPanel6.Style.BorderLeft = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.groupPanel6.Style.BorderLeftWidth = 1;
-            this.groupPanel6.Style.BorderRight = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.groupPanel6.Style.BorderRightWidth = 1;
-            this.groupPanel6.Style.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.groupPanel6.Style.BorderTopWidth = 1;
-            this.groupPanel6.Style.CornerDiameter = 4;
-            this.groupPanel6.Style.CornerType = DevComponents.DotNetBar.eCornerType.Rounded;
-            this.groupPanel6.Style.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
-            this.groupPanel6.Style.TextColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
-            this.groupPanel6.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near;
-            // 
-            // 
-            // 
-            this.groupPanel6.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.groupPanel6.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.groupPanel6.TabIndex = 3;
-            this.groupPanel6.Text = "Phục hồi dữ liệu";
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.panel6);
-            this.panel2.Controls.Add(this.panel5);
-            this.panel2.Controls.Add(this.panel4);
-            this.panel2.Controls.Add(this.panel3);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(562, 186);
-            this.panel2.TabIndex = 0;
-            // 
-            // panel6
-            // 
-            this.panel6.Controls.Add(this.panel11);
-            this.panel6.Controls.Add(this.panel10);
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel6.Location = new System.Drawing.Point(0, 70);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(562, 116);
-            this.panel6.TabIndex = 4;
-            // 
-            // panel11
-            // 
-            this.panel11.Controls.Add(this.txtPhucHoi);
-            this.panel11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel11.Location = new System.Drawing.Point(0, 5);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(562, 111);
-            this.panel11.TabIndex = 6;
-            // 
-            // txtPhucHoi
-            // 
-            this.txtPhucHoi.BackColor = System.Drawing.Color.White;
-            this.txtPhucHoi.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtPhucHoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPhucHoi.Location = new System.Drawing.Point(0, 0);
-            this.txtPhucHoi.Multiline = true;
-            this.txtPhucHoi.Name = "txtPhucHoi";
-            this.txtPhucHoi.ReadOnly = true;
-            this.txtPhucHoi.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtPhucHoi.Size = new System.Drawing.Size(562, 111);
-            this.txtPhucHoi.TabIndex = 0;
-            // 
-            // panel10
-            // 
-            this.panel10.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel10.Location = new System.Drawing.Point(0, 0);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(562, 5);
-            this.panel10.TabIndex = 5;
-            // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.progressBar_PhucHoi);
-            this.panel5.Controls.Add(this.panel56);
-            this.panel5.Controls.Add(this.panel9);
-            this.panel5.Controls.Add(this.panel8);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel5.Location = new System.Drawing.Point(0, 40);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(562, 30);
-            this.panel5.TabIndex = 3;
-            // 
-            // progressBar_PhucHoi
-            // 
-            // 
-            // 
-            // 
-            this.progressBar_PhucHoi.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.progressBar_PhucHoi.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.progressBar_PhucHoi.Location = new System.Drawing.Point(20, 0);
-            this.progressBar_PhucHoi.Name = "progressBar_PhucHoi";
-            this.progressBar_PhucHoi.Size = new System.Drawing.Size(492, 30);
-            this.progressBar_PhucHoi.TabIndex = 7;
-            this.progressBar_PhucHoi.Text = "progressBarX1";
-            // 
-            // panel56
-            // 
-            this.panel56.Controls.Add(this.pictureBox_PhucHoi);
-            this.panel56.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel56.Location = new System.Drawing.Point(512, 0);
-            this.panel56.Name = "panel56";
-            this.panel56.Size = new System.Drawing.Size(30, 30);
-            this.panel56.TabIndex = 8;
-            // 
-            // pictureBox_PhucHoi
-            // 
-            this.pictureBox_PhucHoi.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox_PhucHoi.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_PhucHoi.Image")));
-            this.pictureBox_PhucHoi.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox_PhucHoi.Name = "pictureBox_PhucHoi";
-            this.pictureBox_PhucHoi.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox_PhucHoi.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox_PhucHoi.TabIndex = 1;
-            this.pictureBox_PhucHoi.TabStop = false;
-            this.pictureBox_PhucHoi.Visible = false;
-            // 
-            // panel9
-            // 
-            this.panel9.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel9.Location = new System.Drawing.Point(0, 0);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(20, 30);
-            this.panel9.TabIndex = 6;
-            // 
-            // panel8
-            // 
-            this.panel8.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel8.Location = new System.Drawing.Point(542, 0);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(20, 30);
-            this.panel8.TabIndex = 5;
-            // 
-            // panel4
-            // 
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(0, 35);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(562, 5);
-            this.panel4.TabIndex = 2;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.btnPhucHoi);
-            this.panel3.Controls.Add(this.panel7);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(562, 35);
-            this.panel3.TabIndex = 1;
-            // 
-            // btnPhucHoi
-            // 
-            this.btnPhucHoi.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnPhucHoi.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnPhucHoi.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnPhucHoi.Location = new System.Drawing.Point(422, 0);
-            this.btnPhucHoi.Name = "btnPhucHoi";
-            this.btnPhucHoi.Size = new System.Drawing.Size(120, 35);
-            this.btnPhucHoi.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnPhucHoi.TabIndex = 5;
-            this.btnPhucHoi.Text = "Phục hồi";
-            this.btnPhucHoi.Click += new System.EventHandler(this.btnPhucHoi_Click);
-            // 
-            // panel7
-            // 
-            this.panel7.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel7.Location = new System.Drawing.Point(542, 0);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(20, 35);
-            this.panel7.TabIndex = 4;
-            // 
-            // groupPanel5
-            // 
-            this.groupPanel5.CanvasColor = System.Drawing.SystemColors.Control;
-            this.groupPanel5.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
-            this.groupPanel5.Controls.Add(this.flpDuLieuDaXoa);
-            this.groupPanel5.DisabledBackColor = System.Drawing.Color.Empty;
-            this.groupPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupPanel5.Location = new System.Drawing.Point(0, 0);
-            this.groupPanel5.Name = "groupPanel5";
-            this.groupPanel5.Size = new System.Drawing.Size(572, 209);
-            // 
-            // 
-            // 
-            this.groupPanel5.Style.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
-            this.groupPanel5.Style.BackColorGradientAngle = 90;
-            this.groupPanel5.Style.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
-            this.groupPanel5.Style.BorderBottom = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.groupPanel5.Style.BorderBottomWidth = 1;
-            this.groupPanel5.Style.BorderColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
-            this.groupPanel5.Style.BorderLeft = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.groupPanel5.Style.BorderLeftWidth = 1;
-            this.groupPanel5.Style.BorderRight = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.groupPanel5.Style.BorderRightWidth = 1;
-            this.groupPanel5.Style.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.groupPanel5.Style.BorderTopWidth = 1;
-            this.groupPanel5.Style.CornerDiameter = 4;
-            this.groupPanel5.Style.CornerType = DevComponents.DotNetBar.eCornerType.Rounded;
-            this.groupPanel5.Style.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
-            this.groupPanel5.Style.TextColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
-            this.groupPanel5.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near;
-            // 
-            // 
-            // 
-            this.groupPanel5.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.groupPanel5.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.groupPanel5.TabIndex = 2;
-            this.groupPanel5.Text = "Dữ liệu đã phục hồi";
-            // 
-            // flpDuLieuDaXoa
-            // 
-            this.flpDuLieuDaXoa.AutoScroll = true;
-            this.flpDuLieuDaXoa.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flpDuLieuDaXoa.Location = new System.Drawing.Point(0, 0);
-            this.flpDuLieuDaXoa.Name = "flpDuLieuDaXoa";
-            this.flpDuLieuDaXoa.Size = new System.Drawing.Size(566, 186);
-            this.flpDuLieuDaXoa.TabIndex = 0;
             // 
             // groupPanel2
             // 
@@ -518,7 +177,7 @@
             this.groupPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupPanel2.Location = new System.Drawing.Point(0, 0);
             this.groupPanel2.Name = "groupPanel2";
-            this.groupPanel2.Size = new System.Drawing.Size(1150, 394);
+            this.groupPanel2.Size = new System.Drawing.Size(1150, 601);
             // 
             // 
             // 
@@ -563,7 +222,7 @@
             // splitContainer3.Panel2
             // 
             this.splitContainer3.Panel2.Controls.Add(this.groupPanel4);
-            this.splitContainer3.Size = new System.Drawing.Size(1144, 371);
+            this.splitContainer3.Size = new System.Drawing.Size(1144, 578);
             this.splitContainer3.SplitterDistance = 573;
             this.splitContainer3.TabIndex = 0;
             // 
@@ -576,7 +235,7 @@
             this.groupPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupPanel3.Location = new System.Drawing.Point(0, 0);
             this.groupPanel3.Name = "groupPanel3";
-            this.groupPanel3.Size = new System.Drawing.Size(573, 371);
+            this.groupPanel3.Size = new System.Drawing.Size(573, 578);
             // 
             // 
             // 
@@ -620,7 +279,7 @@
             this.panel12.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel12.Location = new System.Drawing.Point(0, 0);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(567, 348);
+            this.panel12.Size = new System.Drawing.Size(567, 555);
             this.panel12.TabIndex = 0;
             // 
             // panel31
@@ -631,7 +290,7 @@
             this.panel31.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel31.Location = new System.Drawing.Point(0, 115);
             this.panel31.Name = "panel31";
-            this.panel31.Size = new System.Drawing.Size(567, 233);
+            this.panel31.Size = new System.Drawing.Size(567, 440);
             this.panel31.TabIndex = 13;
             // 
             // txtBackup
@@ -644,13 +303,13 @@
             this.txtBackup.Name = "txtBackup";
             this.txtBackup.ReadOnly = true;
             this.txtBackup.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtBackup.Size = new System.Drawing.Size(567, 193);
+            this.txtBackup.Size = new System.Drawing.Size(567, 400);
             this.txtBackup.TabIndex = 3;
             // 
             // panel47
             // 
             this.panel47.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel47.Location = new System.Drawing.Point(0, 193);
+            this.panel47.Location = new System.Drawing.Point(0, 400);
             this.panel47.Name = "panel47";
             this.panel47.Size = new System.Drawing.Size(567, 5);
             this.panel47.TabIndex = 2;
@@ -665,7 +324,7 @@
             this.panel45.Controls.Add(this.btnGiaiNen);
             this.panel45.Controls.Add(this.panel50);
             this.panel45.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel45.Location = new System.Drawing.Point(0, 198);
+            this.panel45.Location = new System.Drawing.Point(0, 405);
             this.panel45.Name = "panel45";
             this.panel45.Size = new System.Drawing.Size(567, 35);
             this.panel45.TabIndex = 1;
@@ -1036,7 +695,7 @@
             this.groupPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupPanel4.Location = new System.Drawing.Point(0, 0);
             this.groupPanel4.Name = "groupPanel4";
-            this.groupPanel4.Size = new System.Drawing.Size(567, 371);
+            this.groupPanel4.Size = new System.Drawing.Size(567, 578);
             // 
             // 
             // 
@@ -1080,7 +739,7 @@
             this.panel13.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel13.Location = new System.Drawing.Point(0, 0);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(561, 348);
+            this.panel13.Size = new System.Drawing.Size(561, 555);
             this.panel13.TabIndex = 1;
             // 
             // panel32
@@ -1091,7 +750,7 @@
             this.panel32.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel32.Location = new System.Drawing.Point(0, 115);
             this.panel32.Name = "panel32";
-            this.panel32.Size = new System.Drawing.Size(561, 233);
+            this.panel32.Size = new System.Drawing.Size(561, 440);
             this.panel32.TabIndex = 13;
             // 
             // txtRestore
@@ -1104,13 +763,13 @@
             this.txtRestore.Name = "txtRestore";
             this.txtRestore.ReadOnly = true;
             this.txtRestore.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtRestore.Size = new System.Drawing.Size(561, 193);
+            this.txtRestore.Size = new System.Drawing.Size(561, 400);
             this.txtRestore.TabIndex = 4;
             // 
             // panel48
             // 
             this.panel48.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel48.Location = new System.Drawing.Point(0, 193);
+            this.panel48.Location = new System.Drawing.Point(0, 400);
             this.panel48.Name = "panel48";
             this.panel48.Size = new System.Drawing.Size(561, 5);
             this.panel48.TabIndex = 3;
@@ -1118,7 +777,7 @@
             // panel46
             // 
             this.panel46.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel46.Location = new System.Drawing.Point(0, 198);
+            this.panel46.Location = new System.Drawing.Point(0, 405);
             this.panel46.Name = "panel46";
             this.panel46.Size = new System.Drawing.Size(561, 35);
             this.panel46.TabIndex = 2;
@@ -1324,25 +983,9 @@
             this.Name = "usr_SaoLuuKhoiPhuc";
             this.Size = new System.Drawing.Size(1150, 650);
             this.panelEx1.ResumeLayout(false);
-            this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            this.groupPanel1.ResumeLayout(false);
-            this.splitContainer2.Panel1.ResumeLayout(false);
-            this.splitContainer2.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
-            this.splitContainer2.ResumeLayout(false);
-            this.groupPanel6.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel6.ResumeLayout(false);
-            this.panel11.ResumeLayout(false);
-            this.panel11.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            this.panel56.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_PhucHoi)).EndInit();
-            this.panel3.ResumeLayout(false);
-            this.groupPanel5.ResumeLayout(false);
             this.groupPanel2.ResumeLayout(false);
             this.splitContainer3.Panel1.ResumeLayout(false);
             this.splitContainer3.Panel2.ResumeLayout(false);
@@ -1384,28 +1027,10 @@
         private DevComponents.DotNetBar.PanelEx panelEx1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.SplitContainer splitContainer1;
-        private DevComponents.DotNetBar.Controls.GroupPanel groupPanel1;
         private DevComponents.DotNetBar.Controls.GroupPanel groupPanel2;
-        private System.Windows.Forms.SplitContainer splitContainer2;
         private System.Windows.Forms.SplitContainer splitContainer3;
         private DevComponents.DotNetBar.Controls.GroupPanel groupPanel3;
         private DevComponents.DotNetBar.Controls.GroupPanel groupPanel4;
-        private DevComponents.DotNetBar.Controls.GroupPanel groupPanel5;
-        private DevComponents.DotNetBar.Controls.GroupPanel groupPanel6;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.FlowLayoutPanel flpDuLieuDaXoa;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Panel panel7;
-        private DevComponents.DotNetBar.ButtonX btnPhucHoi;
-        private System.Windows.Forms.Panel panel11;
-        private System.Windows.Forms.Panel panel10;
-        private DevComponents.DotNetBar.Controls.ProgressBarX progressBar_PhucHoi;
-        private System.Windows.Forms.TextBox txtPhucHoi;
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.Panel panel14;
         private System.Windows.Forms.Panel panel20;
@@ -1470,7 +1095,5 @@
         private System.Windows.Forms.Panel panel54;
         private DevComponents.DotNetBar.Controls.ProgressBarX progressBar_Giainen;
         private System.Windows.Forms.TextBox txtThongBaoGiaiNen;
-        private System.Windows.Forms.Panel panel56;
-        private System.Windows.Forms.PictureBox pictureBox_PhucHoi;
     }
 }

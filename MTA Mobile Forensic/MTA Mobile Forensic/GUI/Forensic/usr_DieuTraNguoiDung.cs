@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.Security.Policy;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
@@ -8,9 +9,15 @@ namespace MTA_Mobile_Forensic.GUI.Forensic
 {
     public partial class usr_DieuTraNguoiDung : UserControl
     {
+        private ToolTip toolTip;
         public usr_DieuTraNguoiDung()
         {
             InitializeComponent();
+            toolTip = new ToolTip();
+            toolTip.SetToolTip(pictureBox_SearchGoogle, "Tìm kiếm Google");
+            toolTip.SetToolTip(pictureBox_SearchFacebook, "Tìm kiếm Facebook");
+            toolTip.SetToolTip(pictureBox_SearchZalo, "Tìm kiếm Zalo");
+            toolTip.SetToolTip(pictureBox_SearchTelegram, "Tìm kiếm Telegram");
         }
 
         private void panelEx1_Resize(object sender, EventArgs e)
@@ -339,6 +346,46 @@ namespace MTA_Mobile_Forensic.GUI.Forensic
             {
                 txtSearch_Telegram.Text = string.Empty;
             }
+        }
+
+        private void pictureBox_SearchGoogle_MouseEnter(object sender, EventArgs e)
+        {
+            pictureBox_SearchGoogle.BackColor = Color.Orange;
+        }
+
+        private void pictureBox_SearchGoogle_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBox_SearchGoogle.BackColor = Color.Transparent;
+        }
+
+        private void pictureBox_SearchFacebook_MouseEnter(object sender, EventArgs e)
+        {
+            pictureBox_SearchFacebook.BackColor = Color.Orange;
+        }
+
+        private void pictureBox_SearchFacebook_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBox_SearchFacebook.BackColor = Color.Transparent;
+        }
+
+        private void pictureBox_SearchZalo_MouseEnter(object sender, EventArgs e)
+        {
+            pictureBox_SearchZalo.BackColor = Color.Orange;
+        }
+
+        private void pictureBox_SearchZalo_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBox_SearchZalo.BackColor = Color.Transparent;
+        }
+
+        private void pictureBox_SearchTelegram_MouseEnter(object sender, EventArgs e)
+        {
+            pictureBox_SearchTelegram.BackColor = Color.Orange;
+        }
+
+        private void pictureBox_SearchTelegram_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBox_SearchTelegram.BackColor = Color.Transparent;
         }
     }
 }
