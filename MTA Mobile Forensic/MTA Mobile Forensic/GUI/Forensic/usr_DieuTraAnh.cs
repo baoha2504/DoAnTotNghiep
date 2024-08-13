@@ -53,6 +53,23 @@ namespace MTA_Mobile_Forensic.GUI.Forensic
             catch { }
         }
 
+        private List<string> GetSmallestSubfolders(string rootFolderPath)
+        {
+            List<string> result = new List<string>();
+
+            // Duyệt qua tất cả các thư mục con trong thư mục gốc
+            foreach (string subfolder in Directory.GetDirectories(rootFolderPath, "*", SearchOption.AllDirectories))
+            {
+                // Kiểm tra xem thư mục này có chứa thư mục con nào không
+                if (Directory.GetDirectories(subfolder).Length == 0)
+                {
+                    result.Add(subfolder);
+                }
+            }
+
+            return result;
+        }
+
         private void btnChonAnhMau_Click(object sender, EventArgs e)
         {
             using (OpenFileDialog openFileDialog = new OpenFileDialog())
@@ -103,13 +120,12 @@ namespace MTA_Mobile_Forensic.GUI.Forensic
                                              .Where(file => imageExtensions.Contains(Path.GetExtension(file).ToLower()))
                                              .ToList();
 
-
-                    var subDirectories = Directory.GetDirectories(folderPath);
-                    foreach (var subDir in subDirectories)
+                    List<string> smallestSubfolders = GetSmallestSubfolders(folderPath);
+                    foreach (var subfolder in smallestSubfolders)
                     {
-                        var subDirFiles = Directory.GetFiles(subDir)
-                                                   .Where(file => imageExtensions.Contains(Path.GetExtension(file).ToLower()))
-                                                   .ToList();
+                        var subDirFiles = Directory.GetFiles(subfolder)
+                            .Where(file => imageExtensions.Contains(Path.GetExtension(file).ToLower()))
+                            .ToList();
                         imageFiles.AddRange(subDirFiles);
                     }
                 }
@@ -425,13 +441,12 @@ namespace MTA_Mobile_Forensic.GUI.Forensic
                                              .Where(file => imageExtensions.Contains(Path.GetExtension(file).ToLower()))
                                              .ToList();
 
-
-                    var subDirectories = Directory.GetDirectories(folderPath);
-                    foreach (var subDir in subDirectories)
+                    List<string> smallestSubfolders = GetSmallestSubfolders(folderPath);
+                    foreach (var subfolder in smallestSubfolders)
                     {
-                        var subDirFiles = Directory.GetFiles(subDir)
-                                                   .Where(file => imageExtensions.Contains(Path.GetExtension(file).ToLower()))
-                                                   .ToList();
+                        var subDirFiles = Directory.GetFiles(subfolder)
+                            .Where(file => imageExtensions.Contains(Path.GetExtension(file).ToLower()))
+                            .ToList();
                         imageFiles_NhieuKhuonMat.AddRange(subDirFiles);
                     }
                 }

@@ -11,7 +11,7 @@ namespace MTA_Mobile_Forensic
         {
             InitializeComponent();
             accordionControl1.Width = 260;
-            HienThiForm(0);
+            HienThiForm(1, "ANDROID");
         }
 
         private void frmMain_Load(object sender, EventArgs e)
@@ -61,7 +61,7 @@ namespace MTA_Mobile_Forensic
 
         //Trợ giúp
 
-        public void HienThiForm(int hienthi)
+        public void HienThiForm(int hienthi, string type)
         {
             if (hienthi == 1)
             {
@@ -123,20 +123,18 @@ namespace MTA_Mobile_Forensic
                 btnMoKhoaThietBi.Enabled = false;
                 btnRoot_JailbreakThietBi.Enabled = false;
             }
+            CheckTypeDevice(type);
         }
 
-        private void CheckTypeDevice()
+        private void CheckTypeDevice(string type)
         {
-            if (lblTenThietBi.Caption != string.Empty)
+            if (type == "IPHONE")
             {
-                if (lblTenThietBi.Caption.Contains("IPHONE"))
-                {
-                    
-                }
-                else
-                {
-
-                }
+                // ẩn form nào
+            }
+            else if (type == "ANDROID")
+            {
+                // hiển thị tất cả
             }
         }
 

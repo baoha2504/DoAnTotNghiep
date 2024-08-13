@@ -7,6 +7,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.UI.WebControls;
 using System.Windows.Forms;
 using MediaToolkit;
 using MediaToolkit.Model;
@@ -74,12 +75,12 @@ namespace MTA_Mobile_Forensic.GUI.Android
 
                     if (cbbTuyChon.Text != "Trong thư mục")
                     {
-                        var subDirectories = Directory.GetDirectories(folderPath);
-                        foreach (var subDir in subDirectories)
+                        List<string> smallestSubfolders = GetSmallestSubfolders(folderPath);
+                        foreach (var subfolder in smallestSubfolders)
                         {
-                            var subDirFiles = Directory.GetFiles(subDir)
-                                                       .Where(file => videoExtensions.Contains(Path.GetExtension(file).ToLower()))
-                                                       .ToList();
+                            var subDirFiles = Directory.GetFiles(subfolder)
+                                .Where(file => videoExtensions.Contains(Path.GetExtension(file).ToLower()))
+                                .ToList();
                             videoFiles.AddRange(subDirFiles);
                         }
                     }
@@ -91,6 +92,23 @@ namespace MTA_Mobile_Forensic.GUI.Android
                     frm_Notification.ShowDialog();
                 }
             }
+        }
+
+        private List<string> GetSmallestSubfolders(string rootFolderPath)
+        {
+            List<string> result = new List<string>();
+
+            // Duyệt qua tất cả các thư mục con trong thư mục gốc
+            foreach (string subfolder in Directory.GetDirectories(rootFolderPath, "*", SearchOption.AllDirectories))
+            {
+                // Kiểm tra xem thư mục này có chứa thư mục con nào không
+                if (Directory.GetDirectories(subfolder).Length == 0)
+                {
+                    result.Add(subfolder);
+                }
+            }
+
+            return result;
         }
 
         private void Add_usr_VideoMini(int pageNumber)

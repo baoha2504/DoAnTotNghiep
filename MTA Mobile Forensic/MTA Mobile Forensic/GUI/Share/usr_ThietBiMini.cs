@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
 
@@ -10,6 +11,7 @@ namespace MTA_Mobile_Forensic.GUI.Share
         public string idthietbi = "";
         public string pathImage = "";
         public string tenthietbi = "";
+        public string loai = "";
 
         public usr_ThietBiMini()
         {
@@ -39,24 +41,45 @@ namespace MTA_Mobile_Forensic.GUI.Share
             string projectDirectory = Directory.GetParent(sourceDirectory).Parent.Parent.FullName;
             string imagePath = Path.Combine(projectDirectory, "Data", "Device");
             string imageName = "";
-            if (lblTenThietBi.Text == "XIAOMI MI 9T")
+            string avatar = "";
+            if (lblTenThietBi.Text.Contains("IPHONE"))
             {
-                imageName = "xiaomi-mi9t.png";
+                avatar = "device-ios-bg.png";
+                loai = "IPHONE";
+                if (lblTenThietBi.Text.Contains("IPHONE 5") || lblTenThietBi.Text.Contains("IPHONE 5s"))
+                {
+                    imageName = "iphone-5s-sliver.png";
 
-            }
-            else if (lblTenThietBi.Text == "SAMSUNG SM-A600G")
-            {
-                imageName = "samsung-galaxy-a6.png";
-            }
-            else if (lblTenThietBi.Text == "OPPO CPH1803")
-            {
-                imageName = "oppo-a3s.png";
+                }
+                else
+                {
+                    imageName = "phone.png";
+                }
             }
             else
             {
-                imageName = "phone.png";
+                avatar = "device-android-bg.png";
+                loai = "ANDROID";
+                if (lblTenThietBi.Text == "XIAOMI MI 9T")
+                {
+                    imageName = "xiaomi-mi9t.png";
+
+                }
+                else if (lblTenThietBi.Text == "SAMSUNG SM-A600G")
+                {
+                    imageName = "samsung-galaxy-a6.png";
+                }
+                else if (lblTenThietBi.Text == "OPPO CPH1803")
+                {
+                    imageName = "oppo-a3s.png";
+                }
+                else
+                {
+                    imageName = "phone.png";
+                }
             }
             string fullImagePath = Path.Combine(imagePath, imageName);
+            pictureBox1.Image = Image.FromFile(Path.Combine(imagePath, avatar));
             return fullImagePath;
         }
     }

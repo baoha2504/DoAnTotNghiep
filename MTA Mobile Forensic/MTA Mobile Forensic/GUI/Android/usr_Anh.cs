@@ -70,12 +70,12 @@ namespace MTA_Mobile_Forensic.GUI.Android
                     // Nếu cbbTuyChon.Text không phải là "Trong thư mục", lấy thêm các tệp ảnh trong các thư mục con
                     if (cbbTuyChon.Text != "Trong thư mục")
                     {
-                        var subDirectories = Directory.GetDirectories(folderPath);
-                        foreach (var subDir in subDirectories)
+                        List<string> smallestSubfolders = GetSmallestSubfolders(folderPath);
+                        foreach (var subfolder in smallestSubfolders)
                         {
-                            var subDirFiles = Directory.GetFiles(subDir)
-                                                       .Where(file => imageExtensions.Contains(Path.GetExtension(file).ToLower()))
-                                                       .ToList();
+                            var subDirFiles = Directory.GetFiles(subfolder)
+                                .Where(file => imageExtensions.Contains(Path.GetExtension(file).ToLower()))
+                                .ToList();
                             imageFiles.AddRange(subDirFiles);
                         }
                     }
@@ -87,6 +87,21 @@ namespace MTA_Mobile_Forensic.GUI.Android
                     frm_Notification.ShowDialog();
                 }
             }
+        }
+
+        private List<string> GetSmallestSubfolders(string rootFolderPath)
+        {
+            List<string> result = new List<string>();
+
+            foreach (string subfolder in Directory.GetDirectories(rootFolderPath, "*", SearchOption.AllDirectories))
+            {
+                if (Directory.GetDirectories(subfolder).Length == 0)
+                {
+                    result.Add(subfolder);
+                }
+            }
+
+            return result;
         }
 
         private void Add_usr_AnhMini(int pageNumber)

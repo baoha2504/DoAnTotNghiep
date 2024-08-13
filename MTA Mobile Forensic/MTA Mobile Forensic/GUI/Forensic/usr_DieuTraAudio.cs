@@ -66,6 +66,21 @@ namespace MTA_Mobile_Forensic.GUI.Forensic
             }
             catch { }
         }
+
+        private List<string> GetSmallestSubfolders(string rootFolderPath)
+        {
+            List<string> result = new List<string>();
+
+            foreach (string subfolder in Directory.GetDirectories(rootFolderPath, "*", SearchOption.AllDirectories))
+            {
+                if (Directory.GetDirectories(subfolder).Length == 0)
+                {
+                    result.Add(subfolder);
+                }
+            }
+            return result;
+        }
+
         #region================================  TAB1  ====================================================================
         private void tab1_btnChonAmThanhMau_Click(object sender, EventArgs e)
         {
@@ -107,12 +122,12 @@ namespace MTA_Mobile_Forensic.GUI.Forensic
                                           .Where(file => audioExtensions.Contains(Path.GetExtension(file).ToLower()))
                                           .ToList();
 
-                    var subDirectories = Directory.GetDirectories(folderPath);
-                    foreach (var subDir in subDirectories)
+                    List<string> smallestSubfolders = GetSmallestSubfolders(folderPath);
+                    foreach (var subfolder in smallestSubfolders)
                     {
-                        var subDirFiles = Directory.GetFiles(subDir)
-                                                   .Where(file => audioExtensions.Contains(Path.GetExtension(file).ToLower()))
-                                                   .ToList();
+                        var subDirFiles = Directory.GetFiles(subfolder)
+                            .Where(file => audioExtensions.Contains(Path.GetExtension(file).ToLower()))
+                            .ToList();
                         audioFiles.AddRange(subDirFiles);
                     }
                 }
@@ -338,12 +353,13 @@ namespace MTA_Mobile_Forensic.GUI.Forensic
                                           .Where(file => videoExtensions.Contains(Path.GetExtension(file).ToLower()))
                                           .ToList();
 
-                    var subDirectories = Directory.GetDirectories(folderPath);
-                    foreach (var subDir in subDirectories)
+
+                    List<string> smallestSubfolders = GetSmallestSubfolders(folderPath);
+                    foreach (var subfolder in smallestSubfolders)
                     {
-                        var subDirFiles = Directory.GetFiles(subDir)
-                                                   .Where(file => videoExtensions.Contains(Path.GetExtension(file).ToLower()))
-                                                   .ToList();
+                        var subDirFiles = Directory.GetFiles(subfolder)
+                            .Where(file => videoExtensions.Contains(Path.GetExtension(file).ToLower()))
+                            .ToList();
                         videoFiles.AddRange(subDirFiles);
                     }
                 }
@@ -507,12 +523,13 @@ namespace MTA_Mobile_Forensic.GUI.Forensic
                                           .Where(file => audioExtensions.Contains(Path.GetExtension(file).ToLower()))
                                           .ToList();
 
-                    var subDirectories = Directory.GetDirectories(folderPath);
-                    foreach (var subDir in subDirectories)
+
+                    List<string> smallestSubfolders = GetSmallestSubfolders(folderPath);
+                    foreach (var subfolder in smallestSubfolders)
                     {
-                        var subDirFiles = Directory.GetFiles(subDir)
-                                                   .Where(file => audioExtensions.Contains(Path.GetExtension(file).ToLower()))
-                                                   .ToList();
+                        var subDirFiles = Directory.GetFiles(subfolder)
+                            .Where(file => audioExtensions.Contains(Path.GetExtension(file).ToLower()))
+                            .ToList();
                         tab3_audioFiles.AddRange(subDirFiles);
                     }
                 }
