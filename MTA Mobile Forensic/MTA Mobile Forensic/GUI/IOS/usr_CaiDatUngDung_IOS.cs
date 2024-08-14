@@ -11,9 +11,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 
-namespace MTA_Mobile_Forensic.GUI.Android
+namespace MTA_Mobile_Forensic.GUI.IOS
 {
-    public partial class usr_CaiDatUngDung : UserControl
+    public partial class usr_CaiDatUngDung_IOS : UserControl
     {
         api api = new api();
         adb adb = new adb();
@@ -32,7 +32,7 @@ namespace MTA_Mobile_Forensic.GUI.Android
         int _progress_GoCaiDat;
 
 
-        public usr_CaiDatUngDung()
+        public usr_CaiDatUngDung_IOS()
         {
             InitializeComponent();
 

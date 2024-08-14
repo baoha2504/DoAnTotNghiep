@@ -197,8 +197,10 @@ namespace MTA_Mobile_Forensic.GUI.Forensic
                 flpAnhDaTimThay.Controls.Clear();
                 btnLuuAnhDaTimKiem.Enabled = true;
                 btnTimKiemKhuonMat.Text = "Đang tìm kiếm ...";
+                tab1_pictureBoxLoad.Visible = true;
                 await LayPathKhuonMatTimKiem(txtPathAnhMau.Text, imageFiles);
                 btnTimKiemKhuonMat.Text = "Tìm kiếm";
+                tab1_pictureBoxLoad.Visible = false;
             }
         }
 
@@ -321,6 +323,7 @@ namespace MTA_Mobile_Forensic.GUI.Forensic
                 flpAnhDaTrichXuat.Controls.Clear();
                 btnLuuAnhDaTrichXuat.Enabled = true;
                 btnTrichXuat.Text = "Đang trích xuất ...";
+                tab3_pictureBoxLoad.Visible = true;
                 pathsTrichXuat = await LayPathKhuonMatTrichXuat(txtPathAnhTrichXuat.Text);
                 if (pathsTrichXuat != null)
                 {
@@ -333,6 +336,7 @@ namespace MTA_Mobile_Forensic.GUI.Forensic
                     }
                 }
                 btnTrichXuat.Text = "Trích xuất";
+                tab3_pictureBoxLoad.Visible = false;
             }
             if (flpAnhDaTrichXuat.Controls.Count == 0)
             {
@@ -537,8 +541,10 @@ namespace MTA_Mobile_Forensic.GUI.Forensic
                 flpAnhNhieuKhuonMat.Controls.Clear();
                 btnLuuAnhNhieuKhuonMat.Enabled = false;
                 btnTimKiemNhieuKhuonMat.Text = "Đang tìm kiếm ...";
+                tab2_pictureBoxLoad.Visible = true;
                 await LayPathNhieuKhuonMatTimKiem(txtPathAnhMau1.Text, txtPathAnhMau2.Text, imageFiles_NhieuKhuonMat);
                 btnTimKiemNhieuKhuonMat.Text = "Tìm kiếm";
+                tab2_pictureBoxLoad.Visible = false;
             }
         }
 

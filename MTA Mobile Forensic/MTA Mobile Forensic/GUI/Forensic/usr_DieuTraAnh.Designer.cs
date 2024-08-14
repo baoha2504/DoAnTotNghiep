@@ -32,30 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(usr_DieuTraAnh));
             this.panelEx1 = new DevComponents.DotNetBar.PanelEx();
             this.tabControl1 = new DevComponents.DotNetBar.TabControl();
-            this.tabControlPanel2 = new DevComponents.DotNetBar.TabControlPanel();
-            this.panelEx3 = new DevComponents.DotNetBar.PanelEx();
-            this.splitContainer2 = new System.Windows.Forms.SplitContainer();
-            this.groupPanel3 = new DevComponents.DotNetBar.Controls.GroupPanel();
-            this.panel13 = new System.Windows.Forms.Panel();
-            this.pictureBox_TrichXuat = new System.Windows.Forms.PictureBox();
-            this.panel14 = new System.Windows.Forms.Panel();
-            this.txtPathAnhTrichXuat = new System.Windows.Forms.TextBox();
-            this.btnChonAnhTrichXuat = new DevComponents.DotNetBar.ButtonX();
-            this.panel15 = new System.Windows.Forms.Panel();
-            this.panel16 = new System.Windows.Forms.Panel();
-            this.panel24 = new System.Windows.Forms.Panel();
-            this.btnTrichXuat = new DevComponents.DotNetBar.ButtonX();
-            this.panel26 = new System.Windows.Forms.Panel();
-            this.panel25 = new System.Windows.Forms.Panel();
-            this.groupPanel4 = new DevComponents.DotNetBar.Controls.GroupPanel();
-            this.panel17 = new System.Windows.Forms.Panel();
-            this.flpAnhDaTrichXuat = new System.Windows.Forms.FlowLayoutPanel();
-            this.panel20 = new System.Windows.Forms.Panel();
-            this.panel21 = new System.Windows.Forms.Panel();
-            this.panel22 = new System.Windows.Forms.Panel();
-            this.btnLuuAnhDaTrichXuat = new DevComponents.DotNetBar.ButtonX();
-            this.panel23 = new System.Windows.Forms.Panel();
-            this.tabItem2 = new DevComponents.DotNetBar.TabItem(this.components);
             this.tabControlPanel3 = new DevComponents.DotNetBar.TabControlPanel();
             this.panelEx4 = new DevComponents.DotNetBar.PanelEx();
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
@@ -113,25 +89,45 @@
             this.btnLuuAnhDaTimKiem = new DevComponents.DotNetBar.ButtonX();
             this.panel4 = new System.Windows.Forms.Panel();
             this.tabItem1 = new DevComponents.DotNetBar.TabItem(this.components);
+            this.tabControlPanel2 = new DevComponents.DotNetBar.TabControlPanel();
+            this.panelEx3 = new DevComponents.DotNetBar.PanelEx();
+            this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.groupPanel3 = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.pictureBox_TrichXuat = new System.Windows.Forms.PictureBox();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.txtPathAnhTrichXuat = new System.Windows.Forms.TextBox();
+            this.btnChonAnhTrichXuat = new DevComponents.DotNetBar.ButtonX();
+            this.panel15 = new System.Windows.Forms.Panel();
+            this.panel16 = new System.Windows.Forms.Panel();
+            this.panel24 = new System.Windows.Forms.Panel();
+            this.btnTrichXuat = new DevComponents.DotNetBar.ButtonX();
+            this.panel26 = new System.Windows.Forms.Panel();
+            this.panel25 = new System.Windows.Forms.Panel();
+            this.groupPanel4 = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.panel17 = new System.Windows.Forms.Panel();
+            this.flpAnhDaTrichXuat = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel20 = new System.Windows.Forms.Panel();
+            this.panel21 = new System.Windows.Forms.Panel();
+            this.panel22 = new System.Windows.Forms.Panel();
+            this.btnLuuAnhDaTrichXuat = new DevComponents.DotNetBar.ButtonX();
+            this.panel23 = new System.Windows.Forms.Panel();
+            this.tabItem2 = new DevComponents.DotNetBar.TabItem(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel39 = new System.Windows.Forms.Panel();
+            this.panel40 = new System.Windows.Forms.Panel();
+            this.panel41 = new System.Windows.Forms.Panel();
+            this.tab1_pictureBoxLoad = new System.Windows.Forms.PictureBox();
+            this.panel42 = new System.Windows.Forms.Panel();
+            this.panel43 = new System.Windows.Forms.Panel();
+            this.tab2_pictureBoxLoad = new System.Windows.Forms.PictureBox();
+            this.panel44 = new System.Windows.Forms.Panel();
+            this.panel45 = new System.Windows.Forms.Panel();
+            this.panel46 = new System.Windows.Forms.Panel();
+            this.tab3_pictureBoxLoad = new System.Windows.Forms.PictureBox();
             this.panelEx1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabControl1)).BeginInit();
             this.tabControl1.SuspendLayout();
-            this.tabControlPanel2.SuspendLayout();
-            this.panelEx3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
-            this.splitContainer2.Panel1.SuspendLayout();
-            this.splitContainer2.Panel2.SuspendLayout();
-            this.splitContainer2.SuspendLayout();
-            this.groupPanel3.SuspendLayout();
-            this.panel13.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_TrichXuat)).BeginInit();
-            this.panel14.SuspendLayout();
-            this.panel16.SuspendLayout();
-            this.panel24.SuspendLayout();
-            this.groupPanel4.SuspendLayout();
-            this.panel17.SuspendLayout();
-            this.panel22.SuspendLayout();
             this.tabControlPanel3.SuspendLayout();
             this.panelEx4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).BeginInit();
@@ -166,6 +162,27 @@
             this.panel10.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel5.SuspendLayout();
+            this.tabControlPanel2.SuspendLayout();
+            this.panelEx3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
+            this.splitContainer2.Panel1.SuspendLayout();
+            this.splitContainer2.Panel2.SuspendLayout();
+            this.splitContainer2.SuspendLayout();
+            this.groupPanel3.SuspendLayout();
+            this.panel13.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_TrichXuat)).BeginInit();
+            this.panel14.SuspendLayout();
+            this.panel16.SuspendLayout();
+            this.panel24.SuspendLayout();
+            this.groupPanel4.SuspendLayout();
+            this.panel17.SuspendLayout();
+            this.panel22.SuspendLayout();
+            this.panel40.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tab1_pictureBoxLoad)).BeginInit();
+            this.panel43.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tab2_pictureBoxLoad)).BeginInit();
+            this.panel46.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tab3_pictureBoxLoad)).BeginInit();
             this.SuspendLayout();
             // 
             // panelEx1
@@ -192,9 +209,9 @@
             // 
             this.tabControl1.BackColor = System.Drawing.Color.Transparent;
             this.tabControl1.CanReorderTabs = true;
+            this.tabControl1.Controls.Add(this.tabControlPanel2);
             this.tabControl1.Controls.Add(this.tabControlPanel3);
             this.tabControl1.Controls.Add(this.tabControlPanel1);
-            this.tabControl1.Controls.Add(this.tabControlPanel2);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 20);
             this.tabControl1.Name = "tabControl1";
@@ -208,336 +225,6 @@
             this.tabControl1.Tabs.Add(this.tabItem2);
             this.tabControl1.Text = "tabControl1";
             this.tabControl1.SelectedTabChanged += new DevComponents.DotNetBar.TabStrip.SelectedTabChangedEventHandler(this.tabControl1_SelectedTabChanged);
-            // 
-            // tabControlPanel2
-            // 
-            this.tabControlPanel2.Controls.Add(this.panelEx3);
-            this.tabControlPanel2.DisabledBackColor = System.Drawing.Color.Empty;
-            this.tabControlPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControlPanel2.Location = new System.Drawing.Point(0, 26);
-            this.tabControlPanel2.Name = "tabControlPanel2";
-            this.tabControlPanel2.Padding = new System.Windows.Forms.Padding(1);
-            this.tabControlPanel2.Size = new System.Drawing.Size(1250, 654);
-            this.tabControlPanel2.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(179)))), ((int)(((byte)(231)))));
-            this.tabControlPanel2.Style.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(237)))), ((int)(((byte)(254)))));
-            this.tabControlPanel2.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
-            this.tabControlPanel2.Style.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(97)))), ((int)(((byte)(156)))));
-            this.tabControlPanel2.Style.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Right) 
-            | DevComponents.DotNetBar.eBorderSide.Bottom)));
-            this.tabControlPanel2.Style.GradientAngle = 90;
-            this.tabControlPanel2.TabIndex = 5;
-            this.tabControlPanel2.TabItem = this.tabItem2;
-            // 
-            // panelEx3
-            // 
-            this.panelEx3.CanvasColor = System.Drawing.SystemColors.Control;
-            this.panelEx3.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.panelEx3.Controls.Add(this.splitContainer2);
-            this.panelEx3.DisabledBackColor = System.Drawing.Color.Empty;
-            this.panelEx3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelEx3.Location = new System.Drawing.Point(1, 1);
-            this.panelEx3.Name = "panelEx3";
-            this.panelEx3.Size = new System.Drawing.Size(1248, 652);
-            this.panelEx3.Style.Alignment = System.Drawing.StringAlignment.Center;
-            this.panelEx3.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
-            this.panelEx3.Style.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
-            this.panelEx3.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
-            this.panelEx3.Style.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
-            this.panelEx3.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
-            this.panelEx3.Style.GradientAngle = 90;
-            this.panelEx3.TabIndex = 4;
-            // 
-            // splitContainer2
-            // 
-            this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer2.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer2.Name = "splitContainer2";
-            // 
-            // splitContainer2.Panel1
-            // 
-            this.splitContainer2.Panel1.Controls.Add(this.groupPanel3);
-            this.splitContainer2.Panel1.Controls.Add(this.panel15);
-            this.splitContainer2.Panel1.Controls.Add(this.panel16);
-            // 
-            // splitContainer2.Panel2
-            // 
-            this.splitContainer2.Panel2.Controls.Add(this.groupPanel4);
-            this.splitContainer2.Panel2.Controls.Add(this.panel20);
-            this.splitContainer2.Panel2.Controls.Add(this.panel21);
-            this.splitContainer2.Panel2.Controls.Add(this.panel22);
-            this.splitContainer2.Panel2.Controls.Add(this.panel23);
-            this.splitContainer2.Size = new System.Drawing.Size(1248, 652);
-            this.splitContainer2.SplitterDistance = 443;
-            this.splitContainer2.TabIndex = 0;
-            // 
-            // groupPanel3
-            // 
-            this.groupPanel3.CanvasColor = System.Drawing.SystemColors.Control;
-            this.groupPanel3.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
-            this.groupPanel3.Controls.Add(this.panel13);
-            this.groupPanel3.Controls.Add(this.panel14);
-            this.groupPanel3.DisabledBackColor = System.Drawing.Color.Empty;
-            this.groupPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupPanel3.Location = new System.Drawing.Point(0, 0);
-            this.groupPanel3.Name = "groupPanel3";
-            this.groupPanel3.Size = new System.Drawing.Size(423, 602);
-            // 
-            // 
-            // 
-            this.groupPanel3.Style.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
-            this.groupPanel3.Style.BackColorGradientAngle = 90;
-            this.groupPanel3.Style.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
-            this.groupPanel3.Style.BorderBottom = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.groupPanel3.Style.BorderBottomWidth = 1;
-            this.groupPanel3.Style.BorderColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
-            this.groupPanel3.Style.BorderLeft = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.groupPanel3.Style.BorderLeftWidth = 1;
-            this.groupPanel3.Style.BorderRight = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.groupPanel3.Style.BorderRightWidth = 1;
-            this.groupPanel3.Style.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.groupPanel3.Style.BorderTopWidth = 1;
-            this.groupPanel3.Style.CornerDiameter = 4;
-            this.groupPanel3.Style.CornerType = DevComponents.DotNetBar.eCornerType.Rounded;
-            this.groupPanel3.Style.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
-            this.groupPanel3.Style.TextColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
-            this.groupPanel3.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near;
-            // 
-            // 
-            // 
-            this.groupPanel3.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.groupPanel3.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.groupPanel3.TabIndex = 3;
-            this.groupPanel3.Text = "Chọn ảnh trích xuất";
-            // 
-            // panel13
-            // 
-            this.panel13.Controls.Add(this.pictureBox_TrichXuat);
-            this.panel13.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel13.Location = new System.Drawing.Point(0, 35);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(417, 544);
-            this.panel13.TabIndex = 1;
-            // 
-            // pictureBox_TrichXuat
-            // 
-            this.pictureBox_TrichXuat.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox_TrichXuat.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_TrichXuat.Image")));
-            this.pictureBox_TrichXuat.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox_TrichXuat.Name = "pictureBox_TrichXuat";
-            this.pictureBox_TrichXuat.Size = new System.Drawing.Size(417, 544);
-            this.pictureBox_TrichXuat.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox_TrichXuat.TabIndex = 0;
-            this.pictureBox_TrichXuat.TabStop = false;
-            // 
-            // panel14
-            // 
-            this.panel14.Controls.Add(this.txtPathAnhTrichXuat);
-            this.panel14.Controls.Add(this.btnChonAnhTrichXuat);
-            this.panel14.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel14.Location = new System.Drawing.Point(0, 0);
-            this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(417, 35);
-            this.panel14.TabIndex = 0;
-            // 
-            // txtPathAnhTrichXuat
-            // 
-            this.txtPathAnhTrichXuat.BackColor = System.Drawing.Color.White;
-            this.txtPathAnhTrichXuat.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtPathAnhTrichXuat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPathAnhTrichXuat.Location = new System.Drawing.Point(0, 0);
-            this.txtPathAnhTrichXuat.Multiline = true;
-            this.txtPathAnhTrichXuat.Name = "txtPathAnhTrichXuat";
-            this.txtPathAnhTrichXuat.ReadOnly = true;
-            this.txtPathAnhTrichXuat.Size = new System.Drawing.Size(382, 35);
-            this.txtPathAnhTrichXuat.TabIndex = 1;
-            // 
-            // btnChonAnhTrichXuat
-            // 
-            this.btnChonAnhTrichXuat.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnChonAnhTrichXuat.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnChonAnhTrichXuat.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnChonAnhTrichXuat.Image = ((System.Drawing.Image)(resources.GetObject("btnChonAnhTrichXuat.Image")));
-            this.btnChonAnhTrichXuat.Location = new System.Drawing.Point(382, 0);
-            this.btnChonAnhTrichXuat.Name = "btnChonAnhTrichXuat";
-            this.btnChonAnhTrichXuat.Size = new System.Drawing.Size(35, 35);
-            this.btnChonAnhTrichXuat.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnChonAnhTrichXuat.TabIndex = 0;
-            this.btnChonAnhTrichXuat.Tooltip = "Chọn ảnh để trích xuất";
-            this.btnChonAnhTrichXuat.Click += new System.EventHandler(this.btnChonAnhTrichXuat_Click);
-            // 
-            // panel15
-            // 
-            this.panel15.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel15.Location = new System.Drawing.Point(423, 0);
-            this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(20, 602);
-            this.panel15.TabIndex = 2;
-            // 
-            // panel16
-            // 
-            this.panel16.Controls.Add(this.panel24);
-            this.panel16.Controls.Add(this.panel25);
-            this.panel16.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel16.Location = new System.Drawing.Point(0, 602);
-            this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(443, 50);
-            this.panel16.TabIndex = 1;
-            // 
-            // panel24
-            // 
-            this.panel24.Controls.Add(this.btnTrichXuat);
-            this.panel24.Controls.Add(this.panel26);
-            this.panel24.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel24.Location = new System.Drawing.Point(0, 5);
-            this.panel24.Name = "panel24";
-            this.panel24.Size = new System.Drawing.Size(443, 35);
-            this.panel24.TabIndex = 4;
-            // 
-            // btnTrichXuat
-            // 
-            this.btnTrichXuat.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnTrichXuat.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnTrichXuat.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnTrichXuat.Location = new System.Drawing.Point(273, 0);
-            this.btnTrichXuat.Name = "btnTrichXuat";
-            this.btnTrichXuat.Size = new System.Drawing.Size(150, 35);
-            this.btnTrichXuat.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnTrichXuat.TabIndex = 4;
-            this.btnTrichXuat.Text = "Trích xuất";
-            this.btnTrichXuat.Tooltip = "Trích xuất khuôn mặt";
-            this.btnTrichXuat.Click += new System.EventHandler(this.btnTrichXuat_Click);
-            // 
-            // panel26
-            // 
-            this.panel26.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel26.Location = new System.Drawing.Point(423, 0);
-            this.panel26.Name = "panel26";
-            this.panel26.Size = new System.Drawing.Size(20, 35);
-            this.panel26.TabIndex = 3;
-            // 
-            // panel25
-            // 
-            this.panel25.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel25.Location = new System.Drawing.Point(0, 40);
-            this.panel25.Name = "panel25";
-            this.panel25.Size = new System.Drawing.Size(443, 10);
-            this.panel25.TabIndex = 3;
-            // 
-            // groupPanel4
-            // 
-            this.groupPanel4.CanvasColor = System.Drawing.SystemColors.Control;
-            this.groupPanel4.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
-            this.groupPanel4.Controls.Add(this.panel17);
-            this.groupPanel4.DisabledBackColor = System.Drawing.Color.Empty;
-            this.groupPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupPanel4.Location = new System.Drawing.Point(20, 0);
-            this.groupPanel4.Name = "groupPanel4";
-            this.groupPanel4.Size = new System.Drawing.Size(781, 602);
-            // 
-            // 
-            // 
-            this.groupPanel4.Style.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
-            this.groupPanel4.Style.BackColorGradientAngle = 90;
-            this.groupPanel4.Style.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
-            this.groupPanel4.Style.BorderBottom = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.groupPanel4.Style.BorderBottomWidth = 1;
-            this.groupPanel4.Style.BorderColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
-            this.groupPanel4.Style.BorderLeft = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.groupPanel4.Style.BorderLeftWidth = 1;
-            this.groupPanel4.Style.BorderRight = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.groupPanel4.Style.BorderRightWidth = 1;
-            this.groupPanel4.Style.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.groupPanel4.Style.BorderTopWidth = 1;
-            this.groupPanel4.Style.CornerDiameter = 4;
-            this.groupPanel4.Style.CornerType = DevComponents.DotNetBar.eCornerType.Rounded;
-            this.groupPanel4.Style.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
-            this.groupPanel4.Style.TextColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
-            this.groupPanel4.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near;
-            // 
-            // 
-            // 
-            this.groupPanel4.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.groupPanel4.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.groupPanel4.TabIndex = 4;
-            this.groupPanel4.Text = "Ảnh đã trích xuất";
-            // 
-            // panel17
-            // 
-            this.panel17.Controls.Add(this.flpAnhDaTrichXuat);
-            this.panel17.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel17.Location = new System.Drawing.Point(0, 0);
-            this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(775, 579);
-            this.panel17.TabIndex = 2;
-            // 
-            // flpAnhDaTrichXuat
-            // 
-            this.flpAnhDaTrichXuat.AutoScroll = true;
-            this.flpAnhDaTrichXuat.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flpAnhDaTrichXuat.Location = new System.Drawing.Point(0, 0);
-            this.flpAnhDaTrichXuat.Name = "flpAnhDaTrichXuat";
-            this.flpAnhDaTrichXuat.Size = new System.Drawing.Size(775, 579);
-            this.flpAnhDaTrichXuat.TabIndex = 0;
-            this.flpAnhDaTrichXuat.Click += new System.EventHandler(this.flpAnhDaTrichXuat_Click);
-            // 
-            // panel20
-            // 
-            this.panel20.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel20.Location = new System.Drawing.Point(20, 602);
-            this.panel20.Name = "panel20";
-            this.panel20.Size = new System.Drawing.Size(781, 5);
-            this.panel20.TabIndex = 5;
-            // 
-            // panel21
-            // 
-            this.panel21.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel21.Location = new System.Drawing.Point(0, 0);
-            this.panel21.Name = "panel21";
-            this.panel21.Size = new System.Drawing.Size(20, 607);
-            this.panel21.TabIndex = 1;
-            // 
-            // panel22
-            // 
-            this.panel22.Controls.Add(this.btnLuuAnhDaTrichXuat);
-            this.panel22.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel22.Location = new System.Drawing.Point(0, 607);
-            this.panel22.Name = "panel22";
-            this.panel22.Size = new System.Drawing.Size(801, 35);
-            this.panel22.TabIndex = 2;
-            // 
-            // btnLuuAnhDaTrichXuat
-            // 
-            this.btnLuuAnhDaTrichXuat.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnLuuAnhDaTrichXuat.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnLuuAnhDaTrichXuat.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnLuuAnhDaTrichXuat.Location = new System.Drawing.Point(681, 0);
-            this.btnLuuAnhDaTrichXuat.Name = "btnLuuAnhDaTrichXuat";
-            this.btnLuuAnhDaTrichXuat.Size = new System.Drawing.Size(120, 35);
-            this.btnLuuAnhDaTrichXuat.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnLuuAnhDaTrichXuat.TabIndex = 1;
-            this.btnLuuAnhDaTrichXuat.Text = "Lưu ảnh";
-            this.btnLuuAnhDaTrichXuat.Tooltip = "Lưu ảnh đến thư mục khác";
-            this.btnLuuAnhDaTrichXuat.Click += new System.EventHandler(this.btnLuuAnhDaTrichXuat_Click);
-            // 
-            // panel23
-            // 
-            this.panel23.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel23.Location = new System.Drawing.Point(0, 642);
-            this.panel23.Name = "panel23";
-            this.panel23.Size = new System.Drawing.Size(801, 10);
-            this.panel23.TabIndex = 1;
-            // 
-            // tabItem2
-            // 
-            this.tabItem2.AttachedControl = this.tabControlPanel2;
-            this.tabItem2.Name = "tabItem2";
-            this.tabItem2.Text = "Trích xuất khuôn mặt";
             // 
             // tabControlPanel3
             // 
@@ -862,6 +549,9 @@
             // panel30
             // 
             this.panel30.Controls.Add(this.txtPathTimKiem);
+            this.panel30.Controls.Add(this.panel44);
+            this.panel30.Controls.Add(this.panel43);
+            this.panel30.Controls.Add(this.panel42);
             this.panel30.Controls.Add(this.btnChonPathTimKiem);
             this.panel30.Controls.Add(this.panel31);
             this.panel30.Controls.Add(this.btnTimKiemNhieuKhuonMat);
@@ -880,7 +570,7 @@
             this.txtPathTimKiem.Multiline = true;
             this.txtPathTimKiem.Name = "txtPathTimKiem";
             this.txtPathTimKiem.ReadOnly = true;
-            this.txtPathTimKiem.Size = new System.Drawing.Size(570, 35);
+            this.txtPathTimKiem.Size = new System.Drawing.Size(525, 35);
             this.txtPathTimKiem.TabIndex = 5;
             // 
             // btnChonPathTimKiem
@@ -1211,6 +901,9 @@
             // panel8
             // 
             this.panel8.Controls.Add(this.txtFolderDaChon);
+            this.panel8.Controls.Add(this.panel41);
+            this.panel8.Controls.Add(this.panel40);
+            this.panel8.Controls.Add(this.panel39);
             this.panel8.Controls.Add(this.btnChonFolderTimKiem);
             this.panel8.Controls.Add(this.panel12);
             this.panel8.Controls.Add(this.btnTimKiemKhuonMat);
@@ -1229,7 +922,7 @@
             this.txtFolderDaChon.Multiline = true;
             this.txtFolderDaChon.Name = "txtFolderDaChon";
             this.txtFolderDaChon.ReadOnly = true;
-            this.txtFolderDaChon.Size = new System.Drawing.Size(570, 35);
+            this.txtFolderDaChon.Size = new System.Drawing.Size(525, 35);
             this.txtFolderDaChon.TabIndex = 5;
             // 
             // btnChonFolderTimKiem
@@ -1321,6 +1014,338 @@
             this.tabItem1.Name = "tabItem1";
             this.tabItem1.Text = "Tìm kiếm khuôn mặt";
             // 
+            // tabControlPanel2
+            // 
+            this.tabControlPanel2.Controls.Add(this.panelEx3);
+            this.tabControlPanel2.DisabledBackColor = System.Drawing.Color.Empty;
+            this.tabControlPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControlPanel2.Location = new System.Drawing.Point(0, 26);
+            this.tabControlPanel2.Name = "tabControlPanel2";
+            this.tabControlPanel2.Padding = new System.Windows.Forms.Padding(1);
+            this.tabControlPanel2.Size = new System.Drawing.Size(1250, 654);
+            this.tabControlPanel2.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(179)))), ((int)(((byte)(231)))));
+            this.tabControlPanel2.Style.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(237)))), ((int)(((byte)(254)))));
+            this.tabControlPanel2.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
+            this.tabControlPanel2.Style.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(97)))), ((int)(((byte)(156)))));
+            this.tabControlPanel2.Style.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Right) 
+            | DevComponents.DotNetBar.eBorderSide.Bottom)));
+            this.tabControlPanel2.Style.GradientAngle = 90;
+            this.tabControlPanel2.TabIndex = 5;
+            this.tabControlPanel2.TabItem = this.tabItem2;
+            // 
+            // panelEx3
+            // 
+            this.panelEx3.CanvasColor = System.Drawing.SystemColors.Control;
+            this.panelEx3.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.panelEx3.Controls.Add(this.splitContainer2);
+            this.panelEx3.DisabledBackColor = System.Drawing.Color.Empty;
+            this.panelEx3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelEx3.Location = new System.Drawing.Point(1, 1);
+            this.panelEx3.Name = "panelEx3";
+            this.panelEx3.Size = new System.Drawing.Size(1248, 652);
+            this.panelEx3.Style.Alignment = System.Drawing.StringAlignment.Center;
+            this.panelEx3.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
+            this.panelEx3.Style.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
+            this.panelEx3.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
+            this.panelEx3.Style.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
+            this.panelEx3.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
+            this.panelEx3.Style.GradientAngle = 90;
+            this.panelEx3.TabIndex = 4;
+            // 
+            // splitContainer2
+            // 
+            this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer2.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer2.Name = "splitContainer2";
+            // 
+            // splitContainer2.Panel1
+            // 
+            this.splitContainer2.Panel1.Controls.Add(this.groupPanel3);
+            this.splitContainer2.Panel1.Controls.Add(this.panel15);
+            this.splitContainer2.Panel1.Controls.Add(this.panel16);
+            // 
+            // splitContainer2.Panel2
+            // 
+            this.splitContainer2.Panel2.Controls.Add(this.groupPanel4);
+            this.splitContainer2.Panel2.Controls.Add(this.panel20);
+            this.splitContainer2.Panel2.Controls.Add(this.panel21);
+            this.splitContainer2.Panel2.Controls.Add(this.panel22);
+            this.splitContainer2.Panel2.Controls.Add(this.panel23);
+            this.splitContainer2.Size = new System.Drawing.Size(1248, 652);
+            this.splitContainer2.SplitterDistance = 443;
+            this.splitContainer2.TabIndex = 0;
+            // 
+            // groupPanel3
+            // 
+            this.groupPanel3.CanvasColor = System.Drawing.SystemColors.Control;
+            this.groupPanel3.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.groupPanel3.Controls.Add(this.panel13);
+            this.groupPanel3.Controls.Add(this.panel14);
+            this.groupPanel3.DisabledBackColor = System.Drawing.Color.Empty;
+            this.groupPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupPanel3.Location = new System.Drawing.Point(0, 0);
+            this.groupPanel3.Name = "groupPanel3";
+            this.groupPanel3.Size = new System.Drawing.Size(423, 602);
+            // 
+            // 
+            // 
+            this.groupPanel3.Style.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
+            this.groupPanel3.Style.BackColorGradientAngle = 90;
+            this.groupPanel3.Style.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
+            this.groupPanel3.Style.BorderBottom = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.groupPanel3.Style.BorderBottomWidth = 1;
+            this.groupPanel3.Style.BorderColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
+            this.groupPanel3.Style.BorderLeft = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.groupPanel3.Style.BorderLeftWidth = 1;
+            this.groupPanel3.Style.BorderRight = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.groupPanel3.Style.BorderRightWidth = 1;
+            this.groupPanel3.Style.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.groupPanel3.Style.BorderTopWidth = 1;
+            this.groupPanel3.Style.CornerDiameter = 4;
+            this.groupPanel3.Style.CornerType = DevComponents.DotNetBar.eCornerType.Rounded;
+            this.groupPanel3.Style.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
+            this.groupPanel3.Style.TextColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
+            this.groupPanel3.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near;
+            // 
+            // 
+            // 
+            this.groupPanel3.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.groupPanel3.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.groupPanel3.TabIndex = 3;
+            this.groupPanel3.Text = "Chọn ảnh trích xuất";
+            // 
+            // panel13
+            // 
+            this.panel13.Controls.Add(this.pictureBox_TrichXuat);
+            this.panel13.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel13.Location = new System.Drawing.Point(0, 35);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(417, 544);
+            this.panel13.TabIndex = 1;
+            // 
+            // pictureBox_TrichXuat
+            // 
+            this.pictureBox_TrichXuat.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox_TrichXuat.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_TrichXuat.Image")));
+            this.pictureBox_TrichXuat.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox_TrichXuat.Name = "pictureBox_TrichXuat";
+            this.pictureBox_TrichXuat.Size = new System.Drawing.Size(417, 544);
+            this.pictureBox_TrichXuat.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox_TrichXuat.TabIndex = 0;
+            this.pictureBox_TrichXuat.TabStop = false;
+            // 
+            // panel14
+            // 
+            this.panel14.Controls.Add(this.txtPathAnhTrichXuat);
+            this.panel14.Controls.Add(this.btnChonAnhTrichXuat);
+            this.panel14.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel14.Location = new System.Drawing.Point(0, 0);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(417, 35);
+            this.panel14.TabIndex = 0;
+            // 
+            // txtPathAnhTrichXuat
+            // 
+            this.txtPathAnhTrichXuat.BackColor = System.Drawing.Color.White;
+            this.txtPathAnhTrichXuat.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtPathAnhTrichXuat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPathAnhTrichXuat.Location = new System.Drawing.Point(0, 0);
+            this.txtPathAnhTrichXuat.Multiline = true;
+            this.txtPathAnhTrichXuat.Name = "txtPathAnhTrichXuat";
+            this.txtPathAnhTrichXuat.ReadOnly = true;
+            this.txtPathAnhTrichXuat.Size = new System.Drawing.Size(382, 35);
+            this.txtPathAnhTrichXuat.TabIndex = 1;
+            // 
+            // btnChonAnhTrichXuat
+            // 
+            this.btnChonAnhTrichXuat.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnChonAnhTrichXuat.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnChonAnhTrichXuat.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnChonAnhTrichXuat.Image = ((System.Drawing.Image)(resources.GetObject("btnChonAnhTrichXuat.Image")));
+            this.btnChonAnhTrichXuat.Location = new System.Drawing.Point(382, 0);
+            this.btnChonAnhTrichXuat.Name = "btnChonAnhTrichXuat";
+            this.btnChonAnhTrichXuat.Size = new System.Drawing.Size(35, 35);
+            this.btnChonAnhTrichXuat.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnChonAnhTrichXuat.TabIndex = 0;
+            this.btnChonAnhTrichXuat.Tooltip = "Chọn ảnh để trích xuất";
+            this.btnChonAnhTrichXuat.Click += new System.EventHandler(this.btnChonAnhTrichXuat_Click);
+            // 
+            // panel15
+            // 
+            this.panel15.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel15.Location = new System.Drawing.Point(423, 0);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(20, 602);
+            this.panel15.TabIndex = 2;
+            // 
+            // panel16
+            // 
+            this.panel16.Controls.Add(this.panel24);
+            this.panel16.Controls.Add(this.panel25);
+            this.panel16.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel16.Location = new System.Drawing.Point(0, 602);
+            this.panel16.Name = "panel16";
+            this.panel16.Size = new System.Drawing.Size(443, 50);
+            this.panel16.TabIndex = 1;
+            // 
+            // panel24
+            // 
+            this.panel24.Controls.Add(this.panel46);
+            this.panel24.Controls.Add(this.panel45);
+            this.panel24.Controls.Add(this.btnTrichXuat);
+            this.panel24.Controls.Add(this.panel26);
+            this.panel24.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel24.Location = new System.Drawing.Point(0, 5);
+            this.panel24.Name = "panel24";
+            this.panel24.Size = new System.Drawing.Size(443, 35);
+            this.panel24.TabIndex = 4;
+            // 
+            // btnTrichXuat
+            // 
+            this.btnTrichXuat.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnTrichXuat.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnTrichXuat.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnTrichXuat.Location = new System.Drawing.Point(273, 0);
+            this.btnTrichXuat.Name = "btnTrichXuat";
+            this.btnTrichXuat.Size = new System.Drawing.Size(150, 35);
+            this.btnTrichXuat.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnTrichXuat.TabIndex = 4;
+            this.btnTrichXuat.Text = "Trích xuất";
+            this.btnTrichXuat.Tooltip = "Trích xuất khuôn mặt";
+            this.btnTrichXuat.Click += new System.EventHandler(this.btnTrichXuat_Click);
+            // 
+            // panel26
+            // 
+            this.panel26.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel26.Location = new System.Drawing.Point(423, 0);
+            this.panel26.Name = "panel26";
+            this.panel26.Size = new System.Drawing.Size(20, 35);
+            this.panel26.TabIndex = 3;
+            // 
+            // panel25
+            // 
+            this.panel25.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel25.Location = new System.Drawing.Point(0, 40);
+            this.panel25.Name = "panel25";
+            this.panel25.Size = new System.Drawing.Size(443, 10);
+            this.panel25.TabIndex = 3;
+            // 
+            // groupPanel4
+            // 
+            this.groupPanel4.CanvasColor = System.Drawing.SystemColors.Control;
+            this.groupPanel4.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.groupPanel4.Controls.Add(this.panel17);
+            this.groupPanel4.DisabledBackColor = System.Drawing.Color.Empty;
+            this.groupPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupPanel4.Location = new System.Drawing.Point(20, 0);
+            this.groupPanel4.Name = "groupPanel4";
+            this.groupPanel4.Size = new System.Drawing.Size(781, 602);
+            // 
+            // 
+            // 
+            this.groupPanel4.Style.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
+            this.groupPanel4.Style.BackColorGradientAngle = 90;
+            this.groupPanel4.Style.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
+            this.groupPanel4.Style.BorderBottom = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.groupPanel4.Style.BorderBottomWidth = 1;
+            this.groupPanel4.Style.BorderColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
+            this.groupPanel4.Style.BorderLeft = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.groupPanel4.Style.BorderLeftWidth = 1;
+            this.groupPanel4.Style.BorderRight = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.groupPanel4.Style.BorderRightWidth = 1;
+            this.groupPanel4.Style.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.groupPanel4.Style.BorderTopWidth = 1;
+            this.groupPanel4.Style.CornerDiameter = 4;
+            this.groupPanel4.Style.CornerType = DevComponents.DotNetBar.eCornerType.Rounded;
+            this.groupPanel4.Style.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
+            this.groupPanel4.Style.TextColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
+            this.groupPanel4.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near;
+            // 
+            // 
+            // 
+            this.groupPanel4.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.groupPanel4.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.groupPanel4.TabIndex = 4;
+            this.groupPanel4.Text = "Ảnh đã trích xuất";
+            // 
+            // panel17
+            // 
+            this.panel17.Controls.Add(this.flpAnhDaTrichXuat);
+            this.panel17.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel17.Location = new System.Drawing.Point(0, 0);
+            this.panel17.Name = "panel17";
+            this.panel17.Size = new System.Drawing.Size(775, 579);
+            this.panel17.TabIndex = 2;
+            // 
+            // flpAnhDaTrichXuat
+            // 
+            this.flpAnhDaTrichXuat.AutoScroll = true;
+            this.flpAnhDaTrichXuat.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flpAnhDaTrichXuat.Location = new System.Drawing.Point(0, 0);
+            this.flpAnhDaTrichXuat.Name = "flpAnhDaTrichXuat";
+            this.flpAnhDaTrichXuat.Size = new System.Drawing.Size(775, 579);
+            this.flpAnhDaTrichXuat.TabIndex = 0;
+            this.flpAnhDaTrichXuat.Click += new System.EventHandler(this.flpAnhDaTrichXuat_Click);
+            // 
+            // panel20
+            // 
+            this.panel20.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel20.Location = new System.Drawing.Point(20, 602);
+            this.panel20.Name = "panel20";
+            this.panel20.Size = new System.Drawing.Size(781, 5);
+            this.panel20.TabIndex = 5;
+            // 
+            // panel21
+            // 
+            this.panel21.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel21.Location = new System.Drawing.Point(0, 0);
+            this.panel21.Name = "panel21";
+            this.panel21.Size = new System.Drawing.Size(20, 607);
+            this.panel21.TabIndex = 1;
+            // 
+            // panel22
+            // 
+            this.panel22.Controls.Add(this.btnLuuAnhDaTrichXuat);
+            this.panel22.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel22.Location = new System.Drawing.Point(0, 607);
+            this.panel22.Name = "panel22";
+            this.panel22.Size = new System.Drawing.Size(801, 35);
+            this.panel22.TabIndex = 2;
+            // 
+            // btnLuuAnhDaTrichXuat
+            // 
+            this.btnLuuAnhDaTrichXuat.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnLuuAnhDaTrichXuat.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnLuuAnhDaTrichXuat.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnLuuAnhDaTrichXuat.Location = new System.Drawing.Point(681, 0);
+            this.btnLuuAnhDaTrichXuat.Name = "btnLuuAnhDaTrichXuat";
+            this.btnLuuAnhDaTrichXuat.Size = new System.Drawing.Size(120, 35);
+            this.btnLuuAnhDaTrichXuat.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnLuuAnhDaTrichXuat.TabIndex = 1;
+            this.btnLuuAnhDaTrichXuat.Text = "Lưu ảnh";
+            this.btnLuuAnhDaTrichXuat.Tooltip = "Lưu ảnh đến thư mục khác";
+            this.btnLuuAnhDaTrichXuat.Click += new System.EventHandler(this.btnLuuAnhDaTrichXuat_Click);
+            // 
+            // panel23
+            // 
+            this.panel23.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel23.Location = new System.Drawing.Point(0, 642);
+            this.panel23.Name = "panel23";
+            this.panel23.Size = new System.Drawing.Size(801, 10);
+            this.panel23.TabIndex = 1;
+            // 
+            // tabItem2
+            // 
+            this.tabItem2.AttachedControl = this.tabControlPanel2;
+            this.tabItem2.Name = "tabItem2";
+            this.tabItem2.Text = "Trích xuất khuôn mặt";
+            // 
             // panel1
             // 
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -1328,6 +1353,109 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1250, 20);
             this.panel1.TabIndex = 22;
+            // 
+            // panel39
+            // 
+            this.panel39.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel39.Location = new System.Drawing.Point(565, 0);
+            this.panel39.Name = "panel39";
+            this.panel39.Size = new System.Drawing.Size(5, 35);
+            this.panel39.TabIndex = 6;
+            // 
+            // panel40
+            // 
+            this.panel40.Controls.Add(this.tab1_pictureBoxLoad);
+            this.panel40.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel40.Location = new System.Drawing.Point(530, 0);
+            this.panel40.Name = "panel40";
+            this.panel40.Size = new System.Drawing.Size(35, 35);
+            this.panel40.TabIndex = 7;
+            // 
+            // panel41
+            // 
+            this.panel41.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel41.Location = new System.Drawing.Point(525, 0);
+            this.panel41.Name = "panel41";
+            this.panel41.Size = new System.Drawing.Size(5, 35);
+            this.panel41.TabIndex = 8;
+            // 
+            // tab1_pictureBoxLoad
+            // 
+            this.tab1_pictureBoxLoad.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tab1_pictureBoxLoad.Image = ((System.Drawing.Image)(resources.GetObject("tab1_pictureBoxLoad.Image")));
+            this.tab1_pictureBoxLoad.Location = new System.Drawing.Point(0, 0);
+            this.tab1_pictureBoxLoad.Name = "tab1_pictureBoxLoad";
+            this.tab1_pictureBoxLoad.Size = new System.Drawing.Size(35, 35);
+            this.tab1_pictureBoxLoad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.tab1_pictureBoxLoad.TabIndex = 0;
+            this.tab1_pictureBoxLoad.TabStop = false;
+            this.tab1_pictureBoxLoad.Visible = false;
+            // 
+            // panel42
+            // 
+            this.panel42.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel42.Location = new System.Drawing.Point(565, 0);
+            this.panel42.Name = "panel42";
+            this.panel42.Size = new System.Drawing.Size(5, 35);
+            this.panel42.TabIndex = 6;
+            // 
+            // panel43
+            // 
+            this.panel43.Controls.Add(this.tab2_pictureBoxLoad);
+            this.panel43.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel43.Location = new System.Drawing.Point(530, 0);
+            this.panel43.Name = "panel43";
+            this.panel43.Size = new System.Drawing.Size(35, 35);
+            this.panel43.TabIndex = 8;
+            // 
+            // tab2_pictureBoxLoad
+            // 
+            this.tab2_pictureBoxLoad.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tab2_pictureBoxLoad.Image = ((System.Drawing.Image)(resources.GetObject("tab2_pictureBoxLoad.Image")));
+            this.tab2_pictureBoxLoad.Location = new System.Drawing.Point(0, 0);
+            this.tab2_pictureBoxLoad.Name = "tab2_pictureBoxLoad";
+            this.tab2_pictureBoxLoad.Size = new System.Drawing.Size(35, 35);
+            this.tab2_pictureBoxLoad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.tab2_pictureBoxLoad.TabIndex = 0;
+            this.tab2_pictureBoxLoad.TabStop = false;
+            this.tab2_pictureBoxLoad.Visible = false;
+            // 
+            // panel44
+            // 
+            this.panel44.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel44.Location = new System.Drawing.Point(525, 0);
+            this.panel44.Name = "panel44";
+            this.panel44.Size = new System.Drawing.Size(5, 35);
+            this.panel44.TabIndex = 9;
+            // 
+            // panel45
+            // 
+            this.panel45.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel45.Location = new System.Drawing.Point(263, 0);
+            this.panel45.Name = "panel45";
+            this.panel45.Size = new System.Drawing.Size(10, 35);
+            this.panel45.TabIndex = 5;
+            // 
+            // panel46
+            // 
+            this.panel46.Controls.Add(this.tab3_pictureBoxLoad);
+            this.panel46.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel46.Location = new System.Drawing.Point(228, 0);
+            this.panel46.Name = "panel46";
+            this.panel46.Size = new System.Drawing.Size(35, 35);
+            this.panel46.TabIndex = 9;
+            // 
+            // tab3_pictureBoxLoad
+            // 
+            this.tab3_pictureBoxLoad.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tab3_pictureBoxLoad.Image = ((System.Drawing.Image)(resources.GetObject("tab3_pictureBoxLoad.Image")));
+            this.tab3_pictureBoxLoad.Location = new System.Drawing.Point(0, 0);
+            this.tab3_pictureBoxLoad.Name = "tab3_pictureBoxLoad";
+            this.tab3_pictureBoxLoad.Size = new System.Drawing.Size(35, 35);
+            this.tab3_pictureBoxLoad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.tab3_pictureBoxLoad.TabIndex = 0;
+            this.tab3_pictureBoxLoad.TabStop = false;
+            this.tab3_pictureBoxLoad.Visible = false;
             // 
             // usr_DieuTraAnh
             // 
@@ -1339,22 +1467,6 @@
             this.panelEx1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tabControl1)).EndInit();
             this.tabControl1.ResumeLayout(false);
-            this.tabControlPanel2.ResumeLayout(false);
-            this.panelEx3.ResumeLayout(false);
-            this.splitContainer2.Panel1.ResumeLayout(false);
-            this.splitContainer2.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
-            this.splitContainer2.ResumeLayout(false);
-            this.groupPanel3.ResumeLayout(false);
-            this.panel13.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_TrichXuat)).EndInit();
-            this.panel14.ResumeLayout(false);
-            this.panel14.PerformLayout();
-            this.panel16.ResumeLayout(false);
-            this.panel24.ResumeLayout(false);
-            this.groupPanel4.ResumeLayout(false);
-            this.panel17.ResumeLayout(false);
-            this.panel22.ResumeLayout(false);
             this.tabControlPanel3.ResumeLayout(false);
             this.panelEx4.ResumeLayout(false);
             this.splitContainer3.Panel1.ResumeLayout(false);
@@ -1394,6 +1506,28 @@
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
             this.panel5.ResumeLayout(false);
+            this.tabControlPanel2.ResumeLayout(false);
+            this.panelEx3.ResumeLayout(false);
+            this.splitContainer2.Panel1.ResumeLayout(false);
+            this.splitContainer2.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
+            this.splitContainer2.ResumeLayout(false);
+            this.groupPanel3.ResumeLayout(false);
+            this.panel13.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_TrichXuat)).EndInit();
+            this.panel14.ResumeLayout(false);
+            this.panel14.PerformLayout();
+            this.panel16.ResumeLayout(false);
+            this.panel24.ResumeLayout(false);
+            this.groupPanel4.ResumeLayout(false);
+            this.panel17.ResumeLayout(false);
+            this.panel22.ResumeLayout(false);
+            this.panel40.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.tab1_pictureBoxLoad)).EndInit();
+            this.panel43.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.tab2_pictureBoxLoad)).EndInit();
+            this.panel46.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.tab3_pictureBoxLoad)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1484,5 +1618,16 @@
         private DevComponents.DotNetBar.ButtonX btnChonAnhMau2;
         private System.Windows.Forms.Panel panel38;
         private System.Windows.Forms.Panel panel37;
+        private System.Windows.Forms.Panel panel41;
+        private System.Windows.Forms.Panel panel40;
+        private System.Windows.Forms.Panel panel39;
+        private System.Windows.Forms.PictureBox tab1_pictureBoxLoad;
+        private System.Windows.Forms.Panel panel44;
+        private System.Windows.Forms.Panel panel43;
+        private System.Windows.Forms.PictureBox tab2_pictureBoxLoad;
+        private System.Windows.Forms.Panel panel42;
+        private System.Windows.Forms.Panel panel45;
+        private System.Windows.Forms.Panel panel46;
+        private System.Windows.Forms.PictureBox tab3_pictureBoxLoad;
     }
 }

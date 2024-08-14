@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 
-namespace MTA_Mobile_Forensic.GUI.Android
+namespace MTA_Mobile_Forensic.GUI.IOS
 {
-    public partial class usr_SaoLuuKhoiPhuc : UserControl
+    public partial class usr_SaoLuuKhoiPhuc_IOS : UserControl
     {
 
         string query = "";
@@ -26,7 +26,7 @@ namespace MTA_Mobile_Forensic.GUI.Android
         int _progress_Backup;
         int _progress_Restore;
         int _progress_Giainen;
-        public usr_SaoLuuKhoiPhuc()
+        public usr_SaoLuuKhoiPhuc_IOS()
         {
             InitializeComponent();
 

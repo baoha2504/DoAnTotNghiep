@@ -454,7 +454,7 @@
             // 
             this.groupPanel2.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.groupPanel2.TabIndex = 1;
-            this.groupPanel2.Text = "Thiết bị đã kết nối";
+            this.groupPanel2.Text = "Thiết bị đang kết nối";
             // 
             // panel10
             // 

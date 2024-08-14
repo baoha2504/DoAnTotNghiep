@@ -58,6 +58,7 @@
             this.btnQuayVideoManHinh = new DevComponents.DotNetBar.ButtonX();
             this.btnChupAnhManHinh = new DevComponents.DotNetBar.ButtonX();
             this.btnBatSangManHinh = new DevComponents.DotNetBar.ButtonX();
+            this.btnXoaDuLieuThuDuoc = new DevComponents.DotNetBar.ButtonX();
             this.panelEx1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -110,7 +111,7 @@
             // 
             this.splitContainer1.Panel2.Controls.Add(this.groupPanel2);
             this.splitContainer1.Size = new System.Drawing.Size(1300, 600);
-            this.splitContainer1.SplitterDistance = 814;
+            this.splitContainer1.SplitterDistance = 684;
             this.splitContainer1.TabIndex = 17;
             // 
             // groupPanel1
@@ -122,7 +123,7 @@
             this.groupPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupPanel1.Location = new System.Drawing.Point(0, 0);
             this.groupPanel1.Name = "groupPanel1";
-            this.groupPanel1.Size = new System.Drawing.Size(814, 600);
+            this.groupPanel1.Size = new System.Drawing.Size(684, 600);
             // 
             // 
             // 
@@ -159,7 +160,7 @@
             this.panelScrcpy.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelScrcpy.Location = new System.Drawing.Point(0, 0);
             this.panelScrcpy.Name = "panelScrcpy";
-            this.panelScrcpy.Size = new System.Drawing.Size(808, 577);
+            this.panelScrcpy.Size = new System.Drawing.Size(678, 577);
             this.panelScrcpy.TabIndex = 0;
             // 
             // groupPanel2
@@ -171,7 +172,7 @@
             this.groupPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupPanel2.Location = new System.Drawing.Point(0, 0);
             this.groupPanel2.Name = "groupPanel2";
-            this.groupPanel2.Size = new System.Drawing.Size(482, 600);
+            this.groupPanel2.Size = new System.Drawing.Size(612, 600);
             // 
             // 
             // 
@@ -210,7 +211,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(476, 577);
+            this.panel2.Size = new System.Drawing.Size(606, 577);
             this.panel2.TabIndex = 1;
             // 
             // panel3
@@ -219,7 +220,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(0, 35);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(476, 542);
+            this.panel3.Size = new System.Drawing.Size(606, 542);
             this.panel3.TabIndex = 3;
             // 
             // flpDuLieuThuDuoc
@@ -227,20 +228,21 @@
             this.flpDuLieuThuDuoc.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flpDuLieuThuDuoc.Location = new System.Drawing.Point(0, 0);
             this.flpDuLieuThuDuoc.Name = "flpDuLieuThuDuoc";
-            this.flpDuLieuThuDuoc.Size = new System.Drawing.Size(476, 542);
+            this.flpDuLieuThuDuoc.Size = new System.Drawing.Size(606, 542);
             this.flpDuLieuThuDuoc.TabIndex = 0;
             this.flpDuLieuThuDuoc.Click += new System.EventHandler(this.flpDuLieuThuDuoc_Click);
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.panel_RecordScreen);
-            this.panel1.Controls.Add(this.btnChonTatCa);
             this.panel1.Controls.Add(this.btnBoChonTatCa);
+            this.panel1.Controls.Add(this.btnChonTatCa);
             this.panel1.Controls.Add(this.btnLayDuLieu);
+            this.panel1.Controls.Add(this.btnXoaDuLieuThuDuoc);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(476, 35);
+            this.panel1.Size = new System.Drawing.Size(606, 35);
             this.panel1.TabIndex = 2;
             // 
             // panel_RecordScreen
@@ -248,7 +250,7 @@
             this.panel_RecordScreen.Controls.Add(this.label1);
             this.panel_RecordScreen.Controls.Add(this.panel6);
             this.panel_RecordScreen.Controls.Add(this.pictureBox1);
-            this.panel_RecordScreen.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel_RecordScreen.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel_RecordScreen.Location = new System.Drawing.Point(0, 0);
             this.panel_RecordScreen.Name = "panel_RecordScreen";
             this.panel_RecordScreen.Size = new System.Drawing.Size(116, 35);
@@ -302,7 +304,7 @@
             this.btnChonTatCa.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnChonTatCa.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btnChonTatCa.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnChonTatCa.Location = new System.Drawing.Point(116, 0);
+            this.btnChonTatCa.Location = new System.Drawing.Point(246, 0);
             this.btnChonTatCa.Name = "btnChonTatCa";
             this.btnChonTatCa.Size = new System.Drawing.Size(120, 35);
             this.btnChonTatCa.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -315,7 +317,7 @@
             this.btnBoChonTatCa.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnBoChonTatCa.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btnBoChonTatCa.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnBoChonTatCa.Location = new System.Drawing.Point(236, 0);
+            this.btnBoChonTatCa.Location = new System.Drawing.Point(126, 0);
             this.btnBoChonTatCa.Name = "btnBoChonTatCa";
             this.btnBoChonTatCa.Size = new System.Drawing.Size(120, 35);
             this.btnBoChonTatCa.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -328,7 +330,7 @@
             this.btnLayDuLieu.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnLayDuLieu.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btnLayDuLieu.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnLayDuLieu.Location = new System.Drawing.Point(356, 0);
+            this.btnLayDuLieu.Location = new System.Drawing.Point(366, 0);
             this.btnLayDuLieu.Name = "btnLayDuLieu";
             this.btnLayDuLieu.Size = new System.Drawing.Size(120, 35);
             this.btnLayDuLieu.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -475,6 +477,20 @@
             this.btnBatSangManHinh.Text = "Bật sáng màn hình";
             this.btnBatSangManHinh.Click += new System.EventHandler(this.btnBatSangManHinh_Click);
             // 
+            // btnXoaDuLieuThuDuoc
+            // 
+            this.btnXoaDuLieuThuDuoc.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnXoaDuLieuThuDuoc.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnXoaDuLieuThuDuoc.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnXoaDuLieuThuDuoc.Location = new System.Drawing.Point(486, 0);
+            this.btnXoaDuLieuThuDuoc.Name = "btnXoaDuLieuThuDuoc";
+            this.btnXoaDuLieuThuDuoc.Size = new System.Drawing.Size(120, 35);
+            this.btnXoaDuLieuThuDuoc.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnXoaDuLieuThuDuoc.TabIndex = 10;
+            this.btnXoaDuLieuThuDuoc.Text = "Xóa";
+            this.btnXoaDuLieuThuDuoc.Tooltip = "Xóa dữ liệu đã thu được";
+            this.btnXoaDuLieuThuDuoc.Click += new System.EventHandler(this.btnXoaDuLieuThuDuoc_Click);
+            // 
             // usr_PhanChieuThietBi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -533,5 +549,6 @@
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private DevComponents.DotNetBar.ButtonX btnXoaDuLieuThuDuoc;
     }
 }

@@ -235,9 +235,20 @@ namespace MTA_Mobile_Forensic.GUI.Android
             }
             else
             {
-                frmMain.lblText.Caption = string.Empty;
-                frmMain.lblTenThietBi.Caption = string.Empty;
-                frmMain.HienThiForm(0, "ANDROID");
+                if (frmMain != null)
+                {
+                    if (frmMain.lblText != null)
+                    {
+                        frmMain.lblText.Caption = string.Empty;
+                    }
+
+                    if (frmMain.lblTenThietBi != null)
+                    {
+                        frmMain.lblTenThietBi.Caption = string.Empty;
+                    }
+
+                    frmMain.HienThiForm(0, "");
+                }
             }
         }
 

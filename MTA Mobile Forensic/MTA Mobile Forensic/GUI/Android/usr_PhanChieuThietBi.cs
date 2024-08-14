@@ -545,5 +545,10 @@ namespace MTA_Mobile_Forensic.GUI.Android
                 MessageBox.Show($"An error occurred: {ex.Message}");
             }
         }
+
+        private void btnXoaDuLieuThuDuoc_Click(object sender, EventArgs e)
+        {
+            flpDuLieuThuDuoc.Controls.Clear();
+        }
     }
 }
