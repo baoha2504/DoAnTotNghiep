@@ -297,6 +297,54 @@
     <Compile Include="GUI\Forensic\usr_DieuTraTaiLieu.Designer.cs">
       <DependentUpon>usr_DieuTraTaiLieu.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\IOS\usr_CaiDatUngDung_IOS.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\IOS\usr_CaiDatUngDung_IOS.Designer.cs">
+      <DependentUpon>usr_CaiDatUngDung_IOS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\IOS\usr_CuocGoi_IOS.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\IOS\usr_CuocGoi_IOS.Designer.cs">
+      <DependentUpon>usr_CuocGoi_IOS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\IOS\usr_DanhBa_IOS.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\IOS\usr_DanhBa_IOS.Designer.cs">
+      <DependentUpon>usr_DanhBa_IOS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\IOS\usr_Lich_IOS.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\IOS\usr_Lich_IOS.Designer.cs">
+      <DependentUpon>usr_Lich_IOS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\IOS\usr_SaoLuuKhoiPhuc_IOS.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\IOS\usr_SaoLuuKhoiPhuc_IOS.Designer.cs">
+      <DependentUpon>usr_SaoLuuKhoiPhuc_IOS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\IOS\usr_ThongTinKhac_IOS.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\IOS\usr_ThongTinKhac_IOS.Designer.cs">
+      <DependentUpon>usr_ThongTinKhac_IOS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\IOS\usr_TinNhan_IOS.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\IOS\usr_TinNhan_IOS.Designer.cs">
+      <DependentUpon>usr_TinNhan_IOS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\IOS\usr_UngDung_IOS.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\IOS\usr_UngDung_IOS.Designer.cs">
+      <DependentUpon>usr_UngDung_IOS.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Share\frm_Notification.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -486,6 +534,30 @@
     <EmbeddedResource Include="GUI\Forensic\usr_DieuTraTaiLieu.resx">
       <DependentUpon>usr_DieuTraTaiLieu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\IOS\usr_CaiDatUngDung_IOS.resx">
+      <DependentUpon>usr_CaiDatUngDung_IOS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\IOS\usr_CuocGoi_IOS.resx">
+      <DependentUpon>usr_CuocGoi_IOS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\IOS\usr_DanhBa_IOS.resx">
+      <DependentUpon>usr_DanhBa_IOS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\IOS\usr_Lich_IOS.resx">
+      <DependentUpon>usr_Lich_IOS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\IOS\usr_SaoLuuKhoiPhuc_IOS.resx">
+      <DependentUpon>usr_SaoLuuKhoiPhuc_IOS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\IOS\usr_ThongTinKhac_IOS.resx">
+      <DependentUpon>usr_ThongTinKhac_IOS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\IOS\usr_TinNhan_IOS.resx">
+      <DependentUpon>usr_TinNhan_IOS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\IOS\usr_UngDung_IOS.resx">
+      <DependentUpon>usr_UngDung_IOS.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Share\frm_Notification.resx">
       <DependentUpon>frm_Notification.cs</DependentUpon>
     </EmbeddedResource>
@@ -557,7 +629,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Cache\" />
-    <Folder Include="GUI\IOS\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Data\Device\bphone-3-black.png" />
