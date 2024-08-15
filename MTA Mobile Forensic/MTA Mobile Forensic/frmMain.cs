@@ -14,7 +14,8 @@ namespace MTA_Mobile_Forensic
         {
             InitializeComponent();
             accordionControl1.Width = 260;
-            HienThiForm(0, "");
+            //HienThiForm(0, "");
+            HienThiForm(1, "IPHONE");
         }
 
         private void frmMain_Load(object sender, EventArgs e)
@@ -766,16 +767,38 @@ namespace MTA_Mobile_Forensic
         {
             lblTieuDe1.Caption = "Nâng cao";
             lblTieuDe2.Caption = "Root thiết bị";
-            if (usr_RootJailbreakThietBi == null)
+
+            if (type_device_connected == "IPHONE")
             {
-                usr_RootJailbreakThietBi = new usr_RootJailbreakThietBi();
-                usr_RootJailbreakThietBi.Dock = DockStyle.Fill;
-                mainContainer.Controls.Add(usr_RootJailbreakThietBi);
-                usr_RootJailbreakThietBi.BringToFront();
+                if (usr_RootJailbreakThietBi == null)
+                {
+                    usr_RootJailbreakThietBi = new usr_RootJailbreakThietBi();
+                    usr_RootJailbreakThietBi.Dock = DockStyle.Fill;
+                    mainContainer.Controls.Add(usr_RootJailbreakThietBi);
+                    usr_RootJailbreakThietBi.BringToFront();
+                    usr_RootJailbreakThietBi.TabIndex = 1;
+                }
+                else
+                {
+                    usr_RootJailbreakThietBi.BringToFront();
+                    usr_RootJailbreakThietBi.TabIndex = 1;
+                }
             }
-            else
+            else if (type_device_connected == "ANDROID")
             {
-                usr_RootJailbreakThietBi.BringToFront();
+                if (usr_RootJailbreakThietBi == null)
+                {
+                    usr_RootJailbreakThietBi = new usr_RootJailbreakThietBi();
+                    usr_RootJailbreakThietBi.Dock = DockStyle.Fill;
+                    mainContainer.Controls.Add(usr_RootJailbreakThietBi);
+                    usr_RootJailbreakThietBi.BringToFront();
+                    usr_RootJailbreakThietBi.TabIndex = 0;
+                }
+                else
+                {
+                    usr_RootJailbreakThietBi.BringToFront();
+                    usr_RootJailbreakThietBi.TabIndex = 0;
+                }
             }
         }
     }
