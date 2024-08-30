@@ -147,7 +147,6 @@ namespace MTA_Mobile_Forensic.GUI.Android
 
         private void flpDSTinNhan_SizeChanged(object sender, EventArgs e)
         {
-            // Duyệt qua tất cả các Control trong parent
             foreach (UserControl control in flpDSTinNhan.Controls)
             {
                 control.Width = flpDSTinNhan.Width;
@@ -234,7 +233,7 @@ namespace MTA_Mobile_Forensic.GUI.Android
         private void btnLamMoi_Click(object sender, EventArgs e)
         {
             flpDSTinNhan.Controls.Clear();
-            flpDSTinNhan.Controls.Clear();
+            flpChiTietTinNhan.Controls.Clear();
             txtAddress.Text = string.Empty;
             txtThoiGianGui.Text = string.Empty;
             txtThoiGianNhan.Text = string.Empty;
@@ -273,7 +272,7 @@ namespace MTA_Mobile_Forensic.GUI.Android
                 messages_TimKiem = new List<TinNhan>();
                 foreach (var item in messages)
                 {
-                    if (item.address.ToLower().Contains(searchText) || item.address.ToLower().Contains(searchText) || item.address.ToLower().Contains(searchText))
+                    if (item.address.ToLower().Contains(searchText) || item.body.ToLower().Contains(searchText))
                     {
                         messages_TimKiem.Add(item);
                     }

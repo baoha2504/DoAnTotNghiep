@@ -51,10 +51,6 @@
             this.btnFileSystem = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btnThongTinKhac = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement4 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.DIEUKHIENTHIETBI = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.btnCaiDatUngDung = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.btnPhanChieuThietBi = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.accordionControlElement5 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.DIEUTRATHONGTIN = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btnDieuTraNguoiDung = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btnDieuTraAnh = new DevExpress.XtraBars.Navigation.AccordionControlElement();
@@ -64,6 +60,10 @@
             this.btnDieuTraMap = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btnDieuTraFile = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement6 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.DIEUKHIENTHIETBI = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.btnCaiDatUngDung = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.btnPhanChieuThietBi = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement5 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.SAOLUUKHOIPHUC = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btnSaoLuu_KhoiPhuc = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btnPhucHoiDuLieu = new DevExpress.XtraBars.Navigation.AccordionControlElement();
@@ -94,10 +94,10 @@
             // mainContainer
             // 
             this.mainContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mainContainer.Location = new System.Drawing.Point(360, 39);
-            this.mainContainer.Margin = new System.Windows.Forms.Padding(118, 118, 118, 118);
+            this.mainContainer.Location = new System.Drawing.Point(371, 39);
+            this.mainContainer.Margin = new System.Windows.Forms.Padding(185, 185, 185, 185);
             this.mainContainer.Name = "mainContainer";
-            this.mainContainer.Size = new System.Drawing.Size(1029, 683);
+            this.mainContainer.Size = new System.Drawing.Size(1018, 683);
             this.mainContainer.TabIndex = 0;
             // 
             // accordionControl1
@@ -106,16 +106,16 @@
             this.accordionControl1.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.TRANGCHU,
             this.DIEUTRADULIEU,
-            this.DIEUKHIENTHIETBI,
             this.DIEUTRATHONGTIN,
+            this.DIEUKHIENTHIETBI,
             this.SAOLUUKHOIPHUC,
             this.NANGCAO,
             this.TROGIUP});
             this.accordionControl1.Location = new System.Drawing.Point(0, 39);
-            this.accordionControl1.Margin = new System.Windows.Forms.Padding(118, 118, 118, 118);
+            this.accordionControl1.Margin = new System.Windows.Forms.Padding(185, 185, 185, 185);
             this.accordionControl1.Name = "accordionControl1";
             this.accordionControl1.ScrollBarMode = DevExpress.XtraBars.Navigation.ScrollBarMode.Touch;
-            this.accordionControl1.Size = new System.Drawing.Size(360, 683);
+            this.accordionControl1.Size = new System.Drawing.Size(371, 683);
             this.accordionControl1.TabIndex = 1;
             this.accordionControl1.ViewType = DevExpress.XtraBars.Navigation.AccordionControlViewType.HamburgerMenu;
             // 
@@ -230,6 +230,7 @@
             this.btnDuLieuLog.Name = "btnDuLieuLog";
             this.btnDuLieuLog.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.btnDuLieuLog.Text = "Dữ liệu log";
+            this.btnDuLieuLog.Visible = false;
             this.btnDuLieuLog.Click += new System.EventHandler(this.btnDuLieuLog_Click);
             // 
             // btnCaiDatCuaThietBi
@@ -264,35 +265,6 @@
             // 
             this.accordionControlElement4.Name = "accordionControlElement4";
             this.accordionControlElement4.Visible = false;
-            // 
-            // DIEUKHIENTHIETBI
-            // 
-            this.DIEUKHIENTHIETBI.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
-            this.btnCaiDatUngDung,
-            this.btnPhanChieuThietBi,
-            this.accordionControlElement5});
-            this.DIEUKHIENTHIETBI.Expanded = true;
-            this.DIEUKHIENTHIETBI.Name = "DIEUKHIENTHIETBI";
-            this.DIEUKHIENTHIETBI.Text = "ĐIỀU KHIỂN THIẾT BỊ";
-            // 
-            // btnCaiDatUngDung
-            // 
-            this.btnCaiDatUngDung.Name = "btnCaiDatUngDung";
-            this.btnCaiDatUngDung.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.btnCaiDatUngDung.Text = "Cài đặt ứng dụng";
-            this.btnCaiDatUngDung.Click += new System.EventHandler(this.btnCaiDatUngDung_Click);
-            // 
-            // btnPhanChieuThietBi
-            // 
-            this.btnPhanChieuThietBi.Name = "btnPhanChieuThietBi";
-            this.btnPhanChieuThietBi.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.btnPhanChieuThietBi.Text = "Phản chiếu thiết bị";
-            this.btnPhanChieuThietBi.Click += new System.EventHandler(this.btnPhanChieuThietBi_Click);
-            // 
-            // accordionControlElement5
-            // 
-            this.accordionControlElement5.Name = "accordionControlElement5";
-            this.accordionControlElement5.Visible = false;
             // 
             // DIEUTRATHONGTIN
             // 
@@ -362,6 +334,35 @@
             // 
             this.accordionControlElement6.Name = "accordionControlElement6";
             this.accordionControlElement6.Visible = false;
+            // 
+            // DIEUKHIENTHIETBI
+            // 
+            this.DIEUKHIENTHIETBI.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
+            this.btnCaiDatUngDung,
+            this.btnPhanChieuThietBi,
+            this.accordionControlElement5});
+            this.DIEUKHIENTHIETBI.Expanded = true;
+            this.DIEUKHIENTHIETBI.Name = "DIEUKHIENTHIETBI";
+            this.DIEUKHIENTHIETBI.Text = "ĐIỀU KHIỂN THIẾT BỊ";
+            // 
+            // btnCaiDatUngDung
+            // 
+            this.btnCaiDatUngDung.Name = "btnCaiDatUngDung";
+            this.btnCaiDatUngDung.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.btnCaiDatUngDung.Text = "Cài đặt ứng dụng";
+            this.btnCaiDatUngDung.Click += new System.EventHandler(this.btnCaiDatUngDung_Click);
+            // 
+            // btnPhanChieuThietBi
+            // 
+            this.btnPhanChieuThietBi.Name = "btnPhanChieuThietBi";
+            this.btnPhanChieuThietBi.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.btnPhanChieuThietBi.Text = "Phản chiếu thiết bị";
+            this.btnPhanChieuThietBi.Click += new System.EventHandler(this.btnPhanChieuThietBi_Click);
+            // 
+            // accordionControlElement5
+            // 
+            this.accordionControlElement5.Name = "accordionControlElement5";
+            this.accordionControlElement5.Visible = false;
             // 
             // SAOLUUKHOIPHUC
             // 

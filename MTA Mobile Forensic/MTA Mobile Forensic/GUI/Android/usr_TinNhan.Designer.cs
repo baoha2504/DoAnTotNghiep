@@ -346,7 +346,7 @@
             // 
             this.groupPanel3.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.groupPanel3.TabIndex = 1;
-            this.groupPanel3.Text = "Chi tiết tin nhắn";
+            this.groupPanel3.Text = "Chi tiết hội thoại";
             // 
             // flpChiTietTinNhan
             // 

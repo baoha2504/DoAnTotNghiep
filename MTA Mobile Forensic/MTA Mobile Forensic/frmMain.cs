@@ -20,7 +20,7 @@ namespace MTA_Mobile_Forensic
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-            btnKetNoiThietBi_Click(sender, e);
+            btnTinNhan_Click(sender, e);
         }
 
         //Trang chủ
@@ -46,6 +46,7 @@ namespace MTA_Mobile_Forensic
         usr_FileHeThong usr_FileHeThong;
         usr_ThongTinKhac usr_ThongTinKhac;
         usr_ThongTinKhac_IOS usr_ThongTinKhac_IOS;
+        usr_LichSuTruyCap_IOS usr_LichSuTruyCap_IOS;
 
 
         //Điều khiển thiết bị
@@ -150,6 +151,7 @@ namespace MTA_Mobile_Forensic
                 btnPhanChieuThietBi.Visible = false;
                 btnThayDoiMatKhau.Visible = false;
                 btnMoKhoaThietBi.Visible = false;
+                btnLichSuTruyCap.Visible = true;
 
                 type_device_connected = "IPHONE";
             }
@@ -163,6 +165,7 @@ namespace MTA_Mobile_Forensic
                 btnPhanChieuThietBi.Visible = true;
                 btnThayDoiMatKhau.Visible = true;
                 btnMoKhoaThietBi.Visible = true;
+                btnLichSuTruyCap.Visible = false;
 
                 type_device_connected = "ANDROID";
             }
@@ -449,7 +452,26 @@ namespace MTA_Mobile_Forensic
 
         private void btnLichSuTruyCap_Click(object sender, EventArgs e)
         {
-
+            lblTieuDe1.Caption = "Điều tra dữ liệu";
+            lblTieuDe2.Caption = "Lịch sử truy cập của thiết bị";
+            if (type_device_connected == "IPHONE")
+            {
+                if (usr_LichSuTruyCap_IOS == null)
+                {
+                    usr_LichSuTruyCap_IOS = new usr_LichSuTruyCap_IOS();
+                    usr_LichSuTruyCap_IOS.Dock = DockStyle.Fill;
+                    mainContainer.Controls.Add(usr_LichSuTruyCap_IOS);
+                    usr_LichSuTruyCap_IOS.BringToFront();
+                }
+                else
+                {
+                    usr_LichSuTruyCap_IOS.BringToFront();
+                }
+            }
+            else if (type_device_connected == "ANDROID")
+            {
+                
+            }
         }
 
         private void btnFileSystem_Click(object sender, EventArgs e)

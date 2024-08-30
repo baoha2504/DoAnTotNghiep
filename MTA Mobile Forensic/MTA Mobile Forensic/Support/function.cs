@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using System.IO;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
@@ -208,6 +209,57 @@ namespace MTA_Mobile_Forensic.Support
             catch (Exception ex)
             {
                 MessageBox.Show($"An error occurred: {ex.Message}");
+            }
+        }
+
+        public string FindFile(string directoryPath, string filename)
+        {
+            try
+            {
+                // Tìm kiếm file trong thư mục hiện tại
+                string[] files = Directory.GetFiles(directoryPath, filename);
+                if (files.Length > 0)
+                {
+                    return files[0]; // Trả về đường dẫn file nếu tìm thấy
+                }
+
+                // Tìm kiếm file trong các thư mục con
+                string[] directories = Directory.GetDirectories(directoryPath);
+                foreach (string dir in directories)
+                {
+                    string result = FindFile(dir, filename); // Gọi đệ quy với tên file
+                    if (result != null)
+                    {
+                        return result; // Trả về kết quả nếu tìm thấy file trong thư mục con
+                    }
+                }
+            }
+            catch (UnauthorizedAccessException)
+            {
+                // Xử lý trường hợp không có quyền truy cập thư mục
+                Console.WriteLine($"Không thể truy cập thư mục: {directoryPath}");
+            }
+            catch (Exception ex)
+            {
+                // Xử lý các lỗi khác
+                Console.WriteLine($"Lỗi: {ex.Message}");
+            }
+
+            // Trả về null nếu không tìm thấy file
+            return null;
+        }
+
+        public string ConvertToCustomFormat(string dateTimeString)
+        {
+            try
+            {
+                DateTime dateTime = DateTime.ParseExact(dateTimeString, "ddd, dd MMM yyyy HH:mm:ss 'GMT'", CultureInfo.InvariantCulture, DateTimeStyles.AssumeUniversal);
+                return dateTime.ToString("HH:mm:ss dd/MM/yyyy");
+            }
+            catch (FormatException)
+            {
+                Console.WriteLine("Định dạng thời gian không hợp lệ.");
+                return null;
             }
         }
     }

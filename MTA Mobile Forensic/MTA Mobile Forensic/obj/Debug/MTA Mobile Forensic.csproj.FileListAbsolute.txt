@@ -239,11 +239,8 @@ E:\Do An\DoAnTotNghiep\MTA Mobile Forensic\MTA Mobile Forensic\bin\Debug\Microso
 E:\Do An\DoAnTotNghiep\MTA Mobile Forensic\MTA Mobile Forensic\bin\Debug\System.Diagnostics.DiagnosticSource.xml
 E:\Do An\DoAnTotNghiep\MTA Mobile Forensic\MTA Mobile Forensic\obj\Debug\MTA_Mobile_Forensic.GUI.Android.usr_KetNoiThietBi.resources
 E:\Do An\DoAnTotNghiep\MTA Mobile Forensic\MTA Mobile Forensic\obj\Debug\MTA_Mobile_Forensic.GUI.Share.usr_ThietBiMini.resources
-E:\Do An\DoAnTotNghiep\MTA Mobile Forensic\MTA Mobile Forensic\obj\Debug\MTA_Mobile_Forensic.GUI.IOS.usr_CaiDatUngDung_IOS.resources
+E:\Do An\DoAnTotNghiep\MTA Mobile Forensic\MTA Mobile Forensic\obj\Debug\MTA_Mobile_Forensic.GUI.IOS.usr_TinNhan_IOS.resources
+E:\Do An\DoAnTotNghiep\MTA Mobile Forensic\MTA Mobile Forensic\obj\Debug\MTA_Mobile_Forensic.GUI.IOS.usr_LichSuTruyCap_IOS.resources
 E:\Do An\DoAnTotNghiep\MTA Mobile Forensic\MTA Mobile Forensic\obj\Debug\MTA_Mobile_Forensic.GUI.IOS.usr_CuocGoi_IOS.resources
 E:\Do An\DoAnTotNghiep\MTA Mobile Forensic\MTA Mobile Forensic\obj\Debug\MTA_Mobile_Forensic.GUI.IOS.usr_DanhBa_IOS.resources
 E:\Do An\DoAnTotNghiep\MTA Mobile Forensic\MTA Mobile Forensic\obj\Debug\MTA_Mobile_Forensic.GUI.IOS.usr_Lich_IOS.resources
-E:\Do An\DoAnTotNghiep\MTA Mobile Forensic\MTA Mobile Forensic\obj\Debug\MTA_Mobile_Forensic.GUI.IOS.usr_SaoLuuKhoiPhuc_IOS.resources
-E:\Do An\DoAnTotNghiep\MTA Mobile Forensic\MTA Mobile Forensic\obj\Debug\MTA_Mobile_Forensic.GUI.IOS.usr_ThongTinKhac_IOS.resources
-E:\Do An\DoAnTotNghiep\MTA Mobile Forensic\MTA Mobile Forensic\obj\Debug\MTA_Mobile_Forensic.GUI.IOS.usr_TinNhan_IOS.resources
-E:\Do An\DoAnTotNghiep\MTA Mobile Forensic\MTA Mobile Forensic\obj\Debug\MTA_Mobile_Forensic.GUI.IOS.usr_UngDung_IOS.resources

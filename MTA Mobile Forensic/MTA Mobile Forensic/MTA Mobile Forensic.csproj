@@ -315,6 +315,12 @@
     <Compile Include="GUI\IOS\usr_DanhBa_IOS.Designer.cs">
       <DependentUpon>usr_DanhBa_IOS.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\IOS\usr_LichSuTruyCap_IOS.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\IOS\usr_LichSuTruyCap_IOS.Designer.cs">
+      <DependentUpon>usr_LichSuTruyCap_IOS.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\IOS\usr_Lich_IOS.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -438,9 +444,14 @@
     <Compile Include="Model\AnalysisDocument.cs" />
     <Compile Include="Model\AppInfo.cs" />
     <Compile Include="Model\AudioResponse.cs" />
+    <Compile Include="Model\CalendarIOS.cs" />
+    <Compile Include="Model\CallHistoryIOS.cs" />
+    <Compile Include="Model\ContactIOS.cs" />
     <Compile Include="Model\DeviceInfo.cs" />
     <Compile Include="Model\OCR.cs" />
+    <Compile Include="Model\SmsIOS.cs" />
     <Compile Include="Model\TinNhan.cs" />
+    <Compile Include="Model\UrlIOS.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Support\abe.cs" />
@@ -534,29 +545,20 @@
     <EmbeddedResource Include="GUI\Forensic\usr_DieuTraTaiLieu.resx">
       <DependentUpon>usr_DieuTraTaiLieu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\IOS\usr_CaiDatUngDung_IOS.resx">
-      <DependentUpon>usr_CaiDatUngDung_IOS.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="GUI\IOS\usr_CuocGoi_IOS.resx">
       <DependentUpon>usr_CuocGoi_IOS.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\IOS\usr_DanhBa_IOS.resx">
       <DependentUpon>usr_DanhBa_IOS.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\IOS\usr_LichSuTruyCap_IOS.resx">
+      <DependentUpon>usr_LichSuTruyCap_IOS.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\IOS\usr_Lich_IOS.resx">
       <DependentUpon>usr_Lich_IOS.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\IOS\usr_SaoLuuKhoiPhuc_IOS.resx">
-      <DependentUpon>usr_SaoLuuKhoiPhuc_IOS.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\IOS\usr_ThongTinKhac_IOS.resx">
-      <DependentUpon>usr_ThongTinKhac_IOS.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="GUI\IOS\usr_TinNhan_IOS.resx">
       <DependentUpon>usr_TinNhan_IOS.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\IOS\usr_UngDung_IOS.resx">
-      <DependentUpon>usr_UngDung_IOS.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Share\frm_Notification.resx">
       <DependentUpon>frm_Notification.cs</DependentUpon>

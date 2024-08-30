@@ -406,5 +406,165 @@ namespace MTA_Mobile_Forensic.Support
                 return null;
             }
         }
+
+        public async Task<List<UrlIOS>> LayDanhSachURL_IOS(string path)
+        {
+            var requestUrl = $"{url}/api/DocDuongDanIOS";
+
+            // Create the JSON payload
+            var jsonPayload = new
+            {
+                path = path
+            };
+
+            var content = new StringContent(
+                JsonConvert.SerializeObject(jsonPayload),
+                System.Text.Encoding.UTF8,
+                "application/json");
+
+            try
+            {
+                var response = await client.PostAsync(requestUrl, content);
+                response.EnsureSuccessStatusCode();
+
+                var jsonResponse = await response.Content.ReadAsStringAsync();
+                var dataWebs = JsonConvert.DeserializeObject<List<UrlIOS>>(jsonResponse);
+
+                return dataWebs;
+            }
+            catch (HttpRequestException e)
+            {
+                Console.WriteLine($"Request error: {e.Message}");
+                return null;
+            }
+        }
+
+        public async Task<List<CallHistoryIOS>> LayDanhSachCuocGoi_IOS(string path)
+        {
+            var requestUrl = $"{url}/api/DocCuocGoiIOS";
+
+            // Create the JSON payload
+            var jsonPayload = new
+            {
+                path = path
+            };
+
+            var content = new StringContent(
+                JsonConvert.SerializeObject(jsonPayload),
+                System.Text.Encoding.UTF8,
+                "application/json");
+
+            try
+            {
+                var response = await client.PostAsync(requestUrl, content);
+                response.EnsureSuccessStatusCode();
+
+                var jsonResponse = await response.Content.ReadAsStringAsync();
+                var dataWebs = JsonConvert.DeserializeObject<List<CallHistoryIOS>>(jsonResponse);
+
+                return dataWebs;
+            }
+            catch (HttpRequestException e)
+            {
+                Console.WriteLine($"Request error: {e.Message}");
+                return null;
+            }
+        }
+
+        public async Task<List<ContactIOS>> LayDanhSachDanhBa_IOS(string path)
+        {
+            var requestUrl = $"{url}/api/DocDanhBaIOS";
+
+            // Create the JSON payload
+            var jsonPayload = new
+            {
+                path = path
+            };
+
+            var content = new StringContent(
+                JsonConvert.SerializeObject(jsonPayload),
+                System.Text.Encoding.UTF8,
+                "application/json");
+
+            try
+            {
+                var response = await client.PostAsync(requestUrl, content);
+                response.EnsureSuccessStatusCode();
+
+                var jsonResponse = await response.Content.ReadAsStringAsync();
+                var dataWebs = JsonConvert.DeserializeObject<List<ContactIOS>>(jsonResponse);
+
+                return dataWebs;
+            }
+            catch (HttpRequestException e)
+            {
+                Console.WriteLine($"Request error: {e.Message}");
+                return null;
+            }
+        }
+
+        public async Task<List<CalendarIOS>> LayDanhSachLich_IOS(string path)
+        {
+            var requestUrl = $"{url}/api/DocLichIOS";
+
+            // Create the JSON payload
+            var jsonPayload = new
+            {
+                path = path
+            };
+
+            var content = new StringContent(
+                JsonConvert.SerializeObject(jsonPayload),
+                System.Text.Encoding.UTF8,
+                "application/json");
+
+            try
+            {
+                var response = await client.PostAsync(requestUrl, content);
+                response.EnsureSuccessStatusCode();
+
+                var jsonResponse = await response.Content.ReadAsStringAsync();
+                var dataWebs = JsonConvert.DeserializeObject<List<CalendarIOS>>(jsonResponse);
+
+                return dataWebs;
+            }
+            catch (HttpRequestException e)
+            {
+                Console.WriteLine($"Request error: {e.Message}");
+                return null;
+            }
+        }
+
+        public async Task<List<SmsIOS>> LayDanhSachTinNhan_IOS(string path)
+        {
+            var requestUrl = $"{url}/api/DocTinNhanIOS";
+
+            // Create the JSON payload
+            var jsonPayload = new
+            {
+                path = path
+            };
+
+            var content = new StringContent(
+                JsonConvert.SerializeObject(jsonPayload),
+                System.Text.Encoding.UTF8,
+                "application/json");
+
+            try
+            {
+                var response = await client.PostAsync(requestUrl, content);
+                response.EnsureSuccessStatusCode();
+
+                var jsonResponse = await response.Content.ReadAsStringAsync();
+                var dataWebs = JsonConvert.DeserializeObject<List<SmsIOS>>(jsonResponse);
+
+                return dataWebs;
+            }
+            catch (HttpRequestException e)
+            {
+                Console.WriteLine($"Request error: {e.Message}");
+                return null;
+            }
+        }
     }
 }
