@@ -368,7 +368,7 @@ namespace MTA_Mobile_Forensic.GUI.Android
             string sourceDirectory = AppDomain.CurrentDomain.BaseDirectory;
             string projectDirectory = Directory.GetParent(sourceDirectory).Parent.Parent.FullName;
             string imagePath = Path.Combine(projectDirectory, "Data", "Image");
-            if (info == "error" && progressBarX_CaiDat.Value == 100)
+            if (info == "error")
             {
                 string imageName = "error.png";
                 string fullImagePath = Path.Combine(imagePath, imageName);
@@ -409,7 +409,7 @@ namespace MTA_Mobile_Forensic.GUI.Android
             string sourceDirectory = AppDomain.CurrentDomain.BaseDirectory;
             string projectDirectory = Directory.GetParent(sourceDirectory).Parent.Parent.FullName;
             string imagePath = Path.Combine(projectDirectory, "Data", "Image");
-            if (info == "error" && progressBarX_GoCaiDat.Value == 100)
+            if (info == "error")
             {
                 string imageName = "error.png";
                 string fullImagePath = Path.Combine(imagePath, imageName);

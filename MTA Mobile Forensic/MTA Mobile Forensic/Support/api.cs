@@ -566,5 +566,38 @@ namespace MTA_Mobile_Forensic.Support
                 return null;
             }
         }
+
+        public async Task<string> UntrackBackup_IOS(string folder, string uuid)
+        {
+            var requestUrl = $"{url}/api/UntrackBackupIOS";
+
+            // Create the JSON payload
+            var jsonPayload = new
+            {
+                folder = folder,
+                uuid = uuid
+            };
+
+            var content = new StringContent(
+                JsonConvert.SerializeObject(jsonPayload),
+                System.Text.Encoding.UTF8,
+                "application/json");
+
+            try
+            {
+                var response = await client.PostAsync(requestUrl, content);
+                response.EnsureSuccessStatusCode();
+
+                var jsonResponse = await response.Content.ReadAsStringAsync();
+                var dataWebs = JsonConvert.DeserializeObject<string>(jsonResponse);
+
+                return dataWebs;
+            }
+            catch (HttpRequestException e)
+            {
+                Console.WriteLine($"Request error: {e.Message}");
+                return null;
+            }
+        }
     }
 }

@@ -3,7 +3,6 @@ using MTA_Mobile_Forensic.Support;
 using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Threading;
@@ -91,9 +90,13 @@ namespace MTA_Mobile_Forensic.GUI.Android
 
             for (int i = start; i < end; i++)
             {
-                usr_GhiAmMini usr_GhiAmMini = new usr_GhiAmMini(recordFiles[i], Path.GetFileName(recordFiles[i]), function.GetLastModified(recordFiles[i]));
-                usr_GhiAmMini.ControlClicked += flpDSGhiAm_Click;
-                flpDSGhiAm.Controls.Add(usr_GhiAmMini);
+                try
+                {
+                    usr_GhiAmMini usr_GhiAmMini = new usr_GhiAmMini(recordFiles[i], Path.GetFileName(recordFiles[i]), function.GetLastModified(recordFiles[i]));
+                    usr_GhiAmMini.ControlClicked += flpDSGhiAm_Click;
+                    flpDSGhiAm.Controls.Add(usr_GhiAmMini);
+                }
+                catch { }
             }
         }
 
@@ -236,7 +239,7 @@ namespace MTA_Mobile_Forensic.GUI.Android
                 string outputFilePath = Path.Combine(outputDirectory, Path.GetFileName(audioFileName) + "_Cut" + solancat.ToString() + Path.GetExtension(linkghiamdachon));
 
                 await Task.Run(() => CutAudioFile(linkghiamdachon, outputFilePath, startTime, endTime));
-                
+
             }
             catch (Exception ex)
             {
@@ -263,15 +266,19 @@ namespace MTA_Mobile_Forensic.GUI.Android
                 {
                     while (!File.Exists(outputFilePath))
                     {
-                        Thread.Sleep(500); 
+                        Thread.Sleep(500);
                     }
 
                     flpDSFileDaCat.Invoke((MethodInvoker)delegate
                     {
-                        usr_GhiAmMini usr_GhiAmMini = new usr_GhiAmMini(outputFilePath, Path.GetFileName(outputFilePath), function.GetLastModified(outputFilePath));
-                        usr_GhiAmMini.ControlClicked += flpDSFileDaCat_Click;
-                        usr_GhiAmMini.checkBox.Visible = false;
-                        flpDSFileDaCat.Controls.Add(usr_GhiAmMini);
+                        try
+                        {
+                            usr_GhiAmMini usr_GhiAmMini = new usr_GhiAmMini(outputFilePath, Path.GetFileName(outputFilePath), function.GetLastModified(outputFilePath));
+                            usr_GhiAmMini.ControlClicked += flpDSFileDaCat_Click;
+                            usr_GhiAmMini.checkBox.Visible = false;
+                            flpDSFileDaCat.Controls.Add(usr_GhiAmMini);
+                        }
+                        catch { }
                     });
                     //MessageBox.Show("Audio file has been successfully cut.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 });

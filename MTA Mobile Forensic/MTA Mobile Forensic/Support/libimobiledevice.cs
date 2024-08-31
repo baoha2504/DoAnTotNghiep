@@ -57,5 +57,29 @@ namespace MTA_Mobile_Forensic.Support
                 return ("Error LIBIMOBILEDEVICE command: " + ex.ToString());
             }
         }
+
+        public string ideviceinstallerCommand(string command)
+        {
+            try
+            {
+                Process libiProcess = new Process();
+                libiProcess.StartInfo.FileName = "ideviceinstaller.exe";
+                libiProcess.StartInfo.Arguments = command;
+                libiProcess.StartInfo.UseShellExecute = false;
+                libiProcess.StartInfo.RedirectStandardOutput = true;
+                libiProcess.StartInfo.CreateNoWindow = true; // Hide the console window (use with caution)
+                libiProcess.StartInfo.StandardOutputEncoding = System.Text.Encoding.UTF8; // Thiết lập mã hóa UTF-8 cho đầu ra
+                libiProcess.Start();
+
+                string output = libiProcess.StandardOutput.ReadToEnd();
+                libiProcess.WaitForExit();
+
+                return output;
+            }
+            catch (Exception ex)
+            {
+                return ("Error ideviceinstaller command: " + ex.ToString());
+            }
+        }
     }
 }

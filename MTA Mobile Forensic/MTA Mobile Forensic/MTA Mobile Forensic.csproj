@@ -333,12 +333,6 @@
     <Compile Include="GUI\IOS\usr_SaoLuuKhoiPhuc_IOS.Designer.cs">
       <DependentUpon>usr_SaoLuuKhoiPhuc_IOS.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\IOS\usr_ThongTinKhac_IOS.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="GUI\IOS\usr_ThongTinKhac_IOS.Designer.cs">
-      <DependentUpon>usr_ThongTinKhac_IOS.cs</DependentUpon>
-    </Compile>
     <Compile Include="GUI\IOS\usr_TinNhan_IOS.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -443,6 +437,7 @@
     </Compile>
     <Compile Include="Model\AnalysisDocument.cs" />
     <Compile Include="Model\AppInfo.cs" />
+    <Compile Include="Model\AppInfoIOS.cs" />
     <Compile Include="Model\AudioResponse.cs" />
     <Compile Include="Model\CalendarIOS.cs" />
     <Compile Include="Model\CallHistoryIOS.cs" />
@@ -545,6 +540,9 @@
     <EmbeddedResource Include="GUI\Forensic\usr_DieuTraTaiLieu.resx">
       <DependentUpon>usr_DieuTraTaiLieu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\IOS\usr_CaiDatUngDung_IOS.resx">
+      <DependentUpon>usr_CaiDatUngDung_IOS.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\IOS\usr_CuocGoi_IOS.resx">
       <DependentUpon>usr_CuocGoi_IOS.cs</DependentUpon>
     </EmbeddedResource>
@@ -557,8 +555,14 @@
     <EmbeddedResource Include="GUI\IOS\usr_Lich_IOS.resx">
       <DependentUpon>usr_Lich_IOS.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\IOS\usr_SaoLuuKhoiPhuc_IOS.resx">
+      <DependentUpon>usr_SaoLuuKhoiPhuc_IOS.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\IOS\usr_TinNhan_IOS.resx">
       <DependentUpon>usr_TinNhan_IOS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\IOS\usr_UngDung_IOS.resx">
+      <DependentUpon>usr_UngDung_IOS.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Share\frm_Notification.resx">
       <DependentUpon>frm_Notification.cs</DependentUpon>

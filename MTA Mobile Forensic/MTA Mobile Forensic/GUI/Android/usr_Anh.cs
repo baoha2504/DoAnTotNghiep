@@ -115,9 +115,13 @@ namespace MTA_Mobile_Forensic.GUI.Android
 
             for (int i = start; i < end; i++)
             {
-                usr_AnhMini usr_AnhMini = new usr_AnhMini(imageFiles[i], Path.GetFileName(imageFiles[i]), function.GetLastModified(imageFiles[i]));
-                usr_AnhMini.ControlClicked += flpDSAnh_Click;
-                flpDSAnh.Controls.Add(usr_AnhMini);
+                try
+                {
+                    usr_AnhMini usr_AnhMini = new usr_AnhMini(imageFiles[i], Path.GetFileName(imageFiles[i]), function.GetLastModified(imageFiles[i]));
+                    usr_AnhMini.ControlClicked += flpDSAnh_Click;
+                    flpDSAnh.Controls.Add(usr_AnhMini);
+                }
+                catch { }
             }
         }
 

@@ -167,7 +167,66 @@ namespace MTA_Mobile_Forensic.GUI.IOS
 
         private void flpDSTinNhan_Click(object sender, EventArgs e)
         {
+            if (sender is usr_TinNhanMini clickedControl)
+            {
+                if (txtAddress.Text != clickedControl.diachi)
+                {
+                    // load tin nhắn vào flpChiTietTinNhan
+                    Load_flpChiTietTinNhan(clickedControl.diachi);
+                }
 
+                txtAddress.Text = clickedControl.diachi;
+                if (clickedControl.sentMessage == 1)
+                {
+                    lblAddress.Text = "Người gửi";
+                }
+                else if (clickedControl.sentMessage == 0)
+                {
+                    lblAddress.Text = "Người nhận";
+                }
+                txtThoiGianGui.Text = clickedControl.dateSent;
+                if (clickedControl.thoigian != "07:00:00 01/01/2001")
+                {
+                    txtThoiGianNhan.Text = clickedControl.thoigian;
+                }
+                else
+                {
+                    txtThoiGianNhan.Text = "Không xác định";
+                }
+                txtDichVu.Text = "SMS";
+            }
+        }
+
+        private void Load_flpChiTietTinNhan(string address)
+        {
+            flpChiTietTinNhan.Controls.Clear();
+            try
+            {
+                foreach (var item in smsIOs)
+                {
+                    if (item.destinationcaller == address)
+                    {
+                        if (item.service == "0")
+                        {
+                            // tin nhắn nhận được
+                            usr_TinNhanTroChuyenNhan usr_TinNhanTroChuyenNhan = new usr_TinNhanTroChuyenNhan(item.text, function.ConvertToCustomFormat(item.date), flpChiTietTinNhan.Width);
+                            usr_TinNhanTroChuyenNhan.Width = flpChiTietTinNhan.Width;
+                            flpChiTietTinNhan.Controls.Add(usr_TinNhanTroChuyenNhan);
+                        }
+                        else if (item.service == "1")
+                        {
+                            // tin nhắn gửi đi
+                            usr_TinNhanTroChuyenGui usr_TinNhanTroChuyenGui = new usr_TinNhanTroChuyenGui(item.text, function.ConvertToCustomFormat(item.date), flpChiTietTinNhan.Width);
+                            usr_TinNhanTroChuyenGui.Width = flpChiTietTinNhan.Width;
+                            flpChiTietTinNhan.Controls.Add(usr_TinNhanTroChuyenGui);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Lỗi: {ex.ToString()}", "Lỗi");
+            }
         }
 
         private void flpDSTinNhan_SizeChanged(object sender, EventArgs e)
@@ -211,9 +270,19 @@ namespace MTA_Mobile_Forensic.GUI.IOS
             txtAddress.Text = string.Empty;
             txtThoiGianGui.Text = string.Empty;
             txtThoiGianNhan.Text = string.Empty;
+            label.Text = string.Empty;
             txtTimKiem.Text = string.Empty;
 
             LoadData();
+        }
+
+        private void txtTimKiem_TextChanged(object sender, EventArgs e)
+        {
+            if(txtTimKiem.Text == string.Empty)
+            {
+                flpDSTinNhan.Controls.Clear();
+                LoadData();
+            }
         }
     }
 }

@@ -52,6 +52,8 @@
             this.txtThongTinVideo = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pbVideoDaChon = new System.Windows.Forms.PictureBox();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.btnXemVideo = new DevComponents.DotNetBar.ButtonX();
             this.panelEx2 = new DevComponents.DotNetBar.PanelEx();
             this.cbbTuyChon = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.cbb_option_folder = new DevComponents.Editors.ComboItem();
@@ -61,8 +63,6 @@
             this.btnChonTatCa = new DevComponents.DotNetBar.ButtonX();
             this.btnNhap = new DevComponents.DotNetBar.ButtonX();
             this.btnXuat = new DevComponents.DotNetBar.ButtonX();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.btnXemVideo = new DevComponents.DotNetBar.ButtonX();
             this.panelEx1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -82,8 +82,8 @@
             this.panel.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbVideoDaChon)).BeginInit();
-            this.panelEx2.SuspendLayout();
             this.panel8.SuspendLayout();
+            this.panelEx2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelEx1
@@ -485,6 +485,27 @@
             this.pbVideoDaChon.TabStop = false;
             this.pbVideoDaChon.DoubleClick += new System.EventHandler(this.pbVideoDaChon_DoubleClick);
             // 
+            // panel8
+            // 
+            this.panel8.Controls.Add(this.btnXemVideo);
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel8.Location = new System.Drawing.Point(0, 494);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(440, 30);
+            this.panel8.TabIndex = 1;
+            // 
+            // btnXemVideo
+            // 
+            this.btnXemVideo.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnXemVideo.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnXemVideo.Location = new System.Drawing.Point(172, 0);
+            this.btnXemVideo.Name = "btnXemVideo";
+            this.btnXemVideo.Size = new System.Drawing.Size(97, 30);
+            this.btnXemVideo.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnXemVideo.TabIndex = 0;
+            this.btnXemVideo.Text = "Xem video";
+            this.btnXemVideo.Click += new System.EventHandler(this.btnXemVideo_Click);
+            // 
             // panelEx2
             // 
             this.panelEx2.CanvasColor = System.Drawing.SystemColors.Control;
@@ -523,7 +544,7 @@
             this.cbbTuyChon.Size = new System.Drawing.Size(200, 28);
             this.cbbTuyChon.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.cbbTuyChon.TabIndex = 6;
-            this.cbbTuyChon.Text = "Trong thư mục";
+            this.cbbTuyChon.Text = "Tất cả trong thư mục";
             this.cbbTuyChon.SelectedIndexChanged += new System.EventHandler(this.cbbTuyChon_SelectedIndexChanged);
             // 
             // cbb_option_folder
@@ -598,27 +619,6 @@
             this.btnXuat.Text = "Xuất";
             this.btnXuat.Click += new System.EventHandler(this.btnXuat_Click);
             // 
-            // panel8
-            // 
-            this.panel8.Controls.Add(this.btnXemVideo);
-            this.panel8.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel8.Location = new System.Drawing.Point(0, 494);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(440, 30);
-            this.panel8.TabIndex = 1;
-            // 
-            // btnXemVideo
-            // 
-            this.btnXemVideo.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnXemVideo.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnXemVideo.Location = new System.Drawing.Point(172, 0);
-            this.btnXemVideo.Name = "btnXemVideo";
-            this.btnXemVideo.Size = new System.Drawing.Size(97, 30);
-            this.btnXemVideo.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnXemVideo.TabIndex = 0;
-            this.btnXemVideo.Text = "Xem video";
-            this.btnXemVideo.Click += new System.EventHandler(this.btnXemVideo_Click);
-            // 
             // usr_Video
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -647,8 +647,8 @@
             this.panel.PerformLayout();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbVideoDaChon)).EndInit();
-            this.panelEx2.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
+            this.panelEx2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

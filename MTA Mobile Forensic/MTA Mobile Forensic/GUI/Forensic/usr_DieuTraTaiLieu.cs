@@ -676,7 +676,5 @@ namespace MTA_Mobile_Forensic.GUI.Forensic
             tab3_pictureBoxImage2.Image = RotateImage(originalImage, angle);
         }
         #endregion
-    
-        
     }
 }

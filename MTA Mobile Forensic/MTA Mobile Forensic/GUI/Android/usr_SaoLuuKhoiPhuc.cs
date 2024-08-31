@@ -12,7 +12,6 @@ namespace MTA_Mobile_Forensic.GUI.Android
 {
     public partial class usr_SaoLuuKhoiPhuc : UserControl
     {
-
         string query = "";
         string str = "";
         string fullFilePath = "";

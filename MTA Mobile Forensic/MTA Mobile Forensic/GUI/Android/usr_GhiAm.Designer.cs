@@ -50,10 +50,16 @@
             this.groupPanel3 = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.flpDSFileDaCat = new System.Windows.Forms.FlowLayoutPanel();
             this.panelEx3 = new DevComponents.DotNetBar.PanelEx();
+            this.labelX2 = new DevComponents.DotNetBar.LabelX();
+            this.labelX1 = new DevComponents.DotNetBar.LabelX();
+            this.timeSpanEdit2 = new DevExpress.XtraEditors.TimeSpanEdit();
+            this.timeSpanEdit1 = new DevExpress.XtraEditors.TimeSpanEdit();
+            this.btnCatGhiAm = new DevComponents.DotNetBar.ButtonX();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
             this.txtThongTinGhiAm = new System.Windows.Forms.TextBox();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
             this.panelEx2 = new DevComponents.DotNetBar.PanelEx();
             this.cbbTuyChon = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.cbb_option_folder = new DevComponents.Editors.ComboItem();
@@ -63,12 +69,6 @@
             this.btnChonTatCa = new DevComponents.DotNetBar.ButtonX();
             this.btnNhap = new DevComponents.DotNetBar.ButtonX();
             this.btnXuat = new DevComponents.DotNetBar.ButtonX();
-            this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
-            this.btnCatGhiAm = new DevComponents.DotNetBar.ButtonX();
-            this.timeSpanEdit1 = new DevExpress.XtraEditors.TimeSpanEdit();
-            this.timeSpanEdit2 = new DevExpress.XtraEditors.TimeSpanEdit();
-            this.labelX1 = new DevComponents.DotNetBar.LabelX();
-            this.labelX2 = new DevComponents.DotNetBar.LabelX();
             this.panelEx1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -86,13 +86,13 @@
             this.panel.SuspendLayout();
             this.groupPanel3.SuspendLayout();
             this.panelEx3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.timeSpanEdit2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.timeSpanEdit1.Properties)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel9.SuspendLayout();
             this.panel8.SuspendLayout();
-            this.panelEx2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.timeSpanEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.timeSpanEdit2.Properties)).BeginInit();
+            this.panelEx2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelEx1
@@ -479,6 +479,62 @@
             this.panelEx3.Style.GradientAngle = 90;
             this.panelEx3.TabIndex = 0;
             // 
+            // labelX2
+            // 
+            // 
+            // 
+            // 
+            this.labelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX2.Location = new System.Drawing.Point(240, 6);
+            this.labelX2.Name = "labelX2";
+            this.labelX2.Size = new System.Drawing.Size(32, 23);
+            this.labelX2.TabIndex = 4;
+            this.labelX2.Text = "Đến";
+            // 
+            // labelX1
+            // 
+            // 
+            // 
+            // 
+            this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX1.Location = new System.Drawing.Point(24, 6);
+            this.labelX1.Name = "labelX1";
+            this.labelX1.Size = new System.Drawing.Size(32, 23);
+            this.labelX1.TabIndex = 3;
+            this.labelX1.Text = "Từ";
+            // 
+            // timeSpanEdit2
+            // 
+            this.timeSpanEdit2.EditValue = System.TimeSpan.Parse("00:00:00");
+            this.timeSpanEdit2.Location = new System.Drawing.Point(278, 6);
+            this.timeSpanEdit2.Name = "timeSpanEdit2";
+            this.timeSpanEdit2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.timeSpanEdit2.Size = new System.Drawing.Size(125, 22);
+            this.timeSpanEdit2.TabIndex = 2;
+            // 
+            // timeSpanEdit1
+            // 
+            this.timeSpanEdit1.EditValue = System.TimeSpan.Parse("00:00:00");
+            this.timeSpanEdit1.Location = new System.Drawing.Point(56, 6);
+            this.timeSpanEdit1.Name = "timeSpanEdit1";
+            this.timeSpanEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.timeSpanEdit1.Size = new System.Drawing.Size(125, 22);
+            this.timeSpanEdit1.TabIndex = 1;
+            // 
+            // btnCatGhiAm
+            // 
+            this.btnCatGhiAm.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnCatGhiAm.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnCatGhiAm.Location = new System.Drawing.Point(459, 6);
+            this.btnCatGhiAm.Name = "btnCatGhiAm";
+            this.btnCatGhiAm.Size = new System.Drawing.Size(91, 23);
+            this.btnCatGhiAm.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnCatGhiAm.TabIndex = 0;
+            this.btnCatGhiAm.Text = "Cắt ghi âm";
+            this.btnCatGhiAm.Click += new System.EventHandler(this.btnCatGhiAm_Click);
+            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.panel9);
@@ -518,6 +574,16 @@
             this.panel8.Size = new System.Drawing.Size(500, 372);
             this.panel8.TabIndex = 1;
             // 
+            // axWindowsMediaPlayer1
+            // 
+            this.axWindowsMediaPlayer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.axWindowsMediaPlayer1.Enabled = true;
+            this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(0, 0);
+            this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
+            this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
+            this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(500, 372);
+            this.axWindowsMediaPlayer1.TabIndex = 0;
+            // 
             // panelEx2
             // 
             this.panelEx2.CanvasColor = System.Drawing.SystemColors.Control;
@@ -556,7 +622,7 @@
             this.cbbTuyChon.Size = new System.Drawing.Size(200, 28);
             this.cbbTuyChon.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.cbbTuyChon.TabIndex = 6;
-            this.cbbTuyChon.Text = "Trong thư mục";
+            this.cbbTuyChon.Text = "Tất cả trong thư mục";
             this.cbbTuyChon.SelectedIndexChanged += new System.EventHandler(this.cbbTuyChon_SelectedIndexChanged);
             // 
             // cbb_option_folder
@@ -631,72 +697,6 @@
             this.btnXuat.Text = "Xuất";
             this.btnXuat.Click += new System.EventHandler(this.btnXuat_Click);
             // 
-            // axWindowsMediaPlayer1
-            // 
-            this.axWindowsMediaPlayer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.axWindowsMediaPlayer1.Enabled = true;
-            this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(0, 0);
-            this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
-            this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
-            this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(500, 372);
-            this.axWindowsMediaPlayer1.TabIndex = 0;
-            // 
-            // btnCatGhiAm
-            // 
-            this.btnCatGhiAm.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnCatGhiAm.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnCatGhiAm.Location = new System.Drawing.Point(459, 6);
-            this.btnCatGhiAm.Name = "btnCatGhiAm";
-            this.btnCatGhiAm.Size = new System.Drawing.Size(91, 23);
-            this.btnCatGhiAm.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnCatGhiAm.TabIndex = 0;
-            this.btnCatGhiAm.Text = "Cắt ghi âm";
-            this.btnCatGhiAm.Click += new System.EventHandler(this.btnCatGhiAm_Click);
-            // 
-            // timeSpanEdit1
-            // 
-            this.timeSpanEdit1.EditValue = System.TimeSpan.Parse("00:00:00");
-            this.timeSpanEdit1.Location = new System.Drawing.Point(56, 6);
-            this.timeSpanEdit1.Name = "timeSpanEdit1";
-            this.timeSpanEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.timeSpanEdit1.Size = new System.Drawing.Size(125, 22);
-            this.timeSpanEdit1.TabIndex = 1;
-            // 
-            // timeSpanEdit2
-            // 
-            this.timeSpanEdit2.EditValue = System.TimeSpan.Parse("00:00:00");
-            this.timeSpanEdit2.Location = new System.Drawing.Point(278, 6);
-            this.timeSpanEdit2.Name = "timeSpanEdit2";
-            this.timeSpanEdit2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.timeSpanEdit2.Size = new System.Drawing.Size(125, 22);
-            this.timeSpanEdit2.TabIndex = 2;
-            // 
-            // labelX1
-            // 
-            // 
-            // 
-            // 
-            this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX1.Location = new System.Drawing.Point(24, 6);
-            this.labelX1.Name = "labelX1";
-            this.labelX1.Size = new System.Drawing.Size(32, 23);
-            this.labelX1.TabIndex = 3;
-            this.labelX1.Text = "Từ";
-            // 
-            // labelX2
-            // 
-            // 
-            // 
-            // 
-            this.labelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX2.Location = new System.Drawing.Point(240, 6);
-            this.labelX2.Name = "labelX2";
-            this.labelX2.Size = new System.Drawing.Size(32, 23);
-            this.labelX2.TabIndex = 4;
-            this.labelX2.Text = "Đến";
-            // 
             // usr_GhiAm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -722,14 +722,14 @@
             this.panel.ResumeLayout(false);
             this.groupPanel3.ResumeLayout(false);
             this.panelEx3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.timeSpanEdit2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.timeSpanEdit1.Properties)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
             this.panel8.ResumeLayout(false);
-            this.panelEx2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.timeSpanEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.timeSpanEdit2.Properties)).EndInit();
+            this.panelEx2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

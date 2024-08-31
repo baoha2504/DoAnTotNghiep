@@ -519,7 +519,7 @@
             this.cbbTuyChon.Size = new System.Drawing.Size(200, 28);
             this.cbbTuyChon.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.cbbTuyChon.TabIndex = 6;
-            this.cbbTuyChon.Text = "Trong thư mục";
+            this.cbbTuyChon.Text = "Tất cả trong thư mục";
             this.cbbTuyChon.SelectedIndexChanged += new System.EventHandler(this.cbbTuyChon_SelectedIndexChanged);
             // 
             // cbb_option_folder

@@ -19,6 +19,7 @@ namespace MTA_Mobile_Forensic.GUI.Share
         public string status = "";
         public string serviceCenter = "";
         public string simId = "";
+        public int sentMessage = -1;
         public event EventHandler ControlClicked;
 
         public usr_TinNhanMini(string diachi, string tinnhan, string thoigian, string dateSent, string read, string status, string serviceCenter, string simId, int sentMessage)
@@ -33,6 +34,7 @@ namespace MTA_Mobile_Forensic.GUI.Share
             this.status = status;
             this.serviceCenter = serviceCenter;
             this.simId = simId;
+            this.sentMessage = sentMessage;
 
             txtAddress.Text = diachi;
             txtTinNhan.Text = tinnhan;

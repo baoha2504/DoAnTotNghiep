@@ -1,19 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Web.UI.WebControls;
-using System.Windows.Forms;
-using MediaToolkit;
+﻿using MediaToolkit;
 using MediaToolkit.Model;
 using MediaToolkit.Options;
 using MTA_Mobile_Forensic.GUI.Share;
 using MTA_Mobile_Forensic.Support;
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.IO;
+using System.Linq;
+using System.Windows.Forms;
 
 namespace MTA_Mobile_Forensic.GUI.Android
 {
@@ -122,9 +117,13 @@ namespace MTA_Mobile_Forensic.GUI.Android
 
             for (int i = start; i < end; i++)
             {
-                usr_VideoMini usr_VideoMini = new usr_VideoMini(videoFiles[i], Path.GetFileName(videoFiles[i]), function.GetLastModified(videoFiles[i]));
-                usr_VideoMini.ControlClicked += flpDSVideo_Click;
-                flpDSVideo.Controls.Add(usr_VideoMini);
+                try
+                {
+                    usr_VideoMini usr_VideoMini = new usr_VideoMini(videoFiles[i], Path.GetFileName(videoFiles[i]), function.GetLastModified(videoFiles[i]));
+                    usr_VideoMini.ControlClicked += flpDSVideo_Click;
+                    flpDSVideo.Controls.Add(usr_VideoMini);
+                }
+                catch { }
             }
         }
 
@@ -193,7 +192,7 @@ namespace MTA_Mobile_Forensic.GUI.Android
 
         private void pbVideoDaChon_DoubleClick(object sender, EventArgs e)
         {
-            if(linkvideodachon != String.Empty)
+            if (linkvideodachon != String.Empty)
             {
                 frm_XemVideo frm_XemVideo = new frm_XemVideo(linkvideodachon);
                 frm_XemVideo.Show();
@@ -272,6 +271,6 @@ namespace MTA_Mobile_Forensic.GUI.Android
             }
         }
 
-        
+
     }
 }
