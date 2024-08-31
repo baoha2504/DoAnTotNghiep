@@ -1,4 +1,5 @@
 ﻿using MTA_Mobile_Forensic.GUI.Share;
+using MTA_Mobile_Forensic.Model;
 using MTA_Mobile_Forensic.Support;
 using System;
 using System.Collections.Generic;
@@ -17,6 +18,10 @@ namespace MTA_Mobile_Forensic.GUI.Android
         {
             InitializeComponent();
             axWindowsMediaPlayer1.settings.volume = 100;
+            if (DeviceInfo.serialDevice != string.Empty)
+            {
+                txtTimKiem.Text = DeviceInfo.pathBackup;
+            }
         }
 
         string query = "";
@@ -142,10 +147,10 @@ namespace MTA_Mobile_Forensic.GUI.Android
 
         private void flpDSGhiAm_Resize(object sender, EventArgs e)
         {
-            foreach (UserControl control in flpDSGhiAm.Controls)
-            {
-                control.Width = flpDSGhiAm.Width;
-            }
+            //foreach (UserControl control in flpDSGhiAm.Controls)
+            //{
+            //    control.Width = flpDSGhiAm.Width;
+            //}
         }
 
         private void btnTrangTruoc_Click(object sender, EventArgs e)

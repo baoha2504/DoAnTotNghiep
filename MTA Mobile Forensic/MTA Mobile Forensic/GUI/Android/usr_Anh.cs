@@ -1,4 +1,5 @@
 ﻿using MTA_Mobile_Forensic.GUI.Share;
+using MTA_Mobile_Forensic.Model;
 using MTA_Mobile_Forensic.Support;
 using System;
 using System.Collections.Generic;
@@ -14,6 +15,10 @@ namespace MTA_Mobile_Forensic.GUI.Android
         public usr_Anh()
         {
             InitializeComponent();
+            if (DeviceInfo.serialDevice != string.Empty)
+            {
+                txtTimKiem.Text = DeviceInfo.pathBackup;
+            }
         }
 
         string query = "";
@@ -157,10 +162,10 @@ namespace MTA_Mobile_Forensic.GUI.Android
 
         private void flpDSAnh_Resize(object sender, EventArgs e)
         {
-            foreach (UserControl control in flpDSAnh.Controls)
-            {
-                control.Width = flpDSAnh.Width;
-            }
+            //foreach (UserControl control in flpDSAnh.Controls)
+            //{
+            //    control.Width = flpDSAnh.Width;
+            //}
         }
 
         private void pbAnhDaChon_DoubleClick(object sender, EventArgs e)

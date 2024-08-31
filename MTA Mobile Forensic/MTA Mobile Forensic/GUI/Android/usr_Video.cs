@@ -2,6 +2,7 @@
 using MediaToolkit.Model;
 using MediaToolkit.Options;
 using MTA_Mobile_Forensic.GUI.Share;
+using MTA_Mobile_Forensic.Model;
 using MTA_Mobile_Forensic.Support;
 using System;
 using System.Collections.Generic;
@@ -17,6 +18,10 @@ namespace MTA_Mobile_Forensic.GUI.Android
         public usr_Video()
         {
             InitializeComponent();
+            if (DeviceInfo.serialDevice != string.Empty)
+            {
+                txtTimKiem.Text = DeviceInfo.pathBackup;
+            }
         }
 
         string query = "";
@@ -184,10 +189,10 @@ namespace MTA_Mobile_Forensic.GUI.Android
 
         private void flpDSVideo_Resize(object sender, EventArgs e)
         {
-            foreach (UserControl control in flpDSVideo.Controls)
-            {
-                control.Width = flpDSVideo.Width;
-            }
+            //foreach (UserControl control in flpDSVideo.Controls)
+            //{
+            //    control.Width = flpDSVideo.Width;
+            //}
         }
 
         private void pbVideoDaChon_DoubleClick(object sender, EventArgs e)
