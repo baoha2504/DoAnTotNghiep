@@ -345,6 +345,12 @@
     <Compile Include="GUI\IOS\usr_UngDung_IOS.Designer.cs">
       <DependentUpon>usr_UngDung_IOS.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Share\frmPathBackUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Share\frmPathBackUp.Designer.cs">
+      <DependentUpon>frmPathBackUp.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Share\frm_Notification.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -563,6 +569,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\IOS\usr_UngDung_IOS.resx">
       <DependentUpon>usr_UngDung_IOS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Share\frmPathBackUp.resx">
+      <DependentUpon>frmPathBackUp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Share\frm_Notification.resx">
       <DependentUpon>frm_Notification.cs</DependentUpon>

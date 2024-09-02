@@ -1,6 +1,7 @@
 ﻿using MTA_Mobile_Forensic.GUI.Android;
 using MTA_Mobile_Forensic.GUI.Forensic;
 using MTA_Mobile_Forensic.GUI.IOS;
+using MTA_Mobile_Forensic.GUI.Share;
 using System;
 using System.Windows.Forms;
 
@@ -16,11 +17,15 @@ namespace MTA_Mobile_Forensic
             accordionControl1.Width = 260;
             //HienThiForm(0, "");
             HienThiForm(1, "IPHONE");
+            btnPathBackup.SuperTip = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipItem toolTipItem = new DevExpress.Utils.ToolTipItem();
+            toolTipItem.Text = "Thư mục sao lưu của thiết bị";
+            btnPathBackup.SuperTip.Items.Add(toolTipItem);
         }
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-            btnDieuTraAudio_Click(sender, e);
+            btnKetNoiThietBi_Click(sender, e);
         }
 
         //Trang chủ
@@ -806,6 +811,12 @@ namespace MTA_Mobile_Forensic
                     usr_RootJailbreakThietBi.TabIndex = 0;
                 }
             }
+        }
+
+        private void btnPathBackup_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            frmPathBackUp frm = new frmPathBackUp();
+            frm.ShowDialog();
         }
     }
 }

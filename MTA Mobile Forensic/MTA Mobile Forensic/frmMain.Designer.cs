@@ -86,6 +86,8 @@
             this.lblTenThietBi = new DevExpress.XtraBars.BarStaticItem();
             this.lblText = new DevExpress.XtraBars.BarStaticItem();
             this.fluentFormDefaultManager1 = new DevExpress.XtraBars.FluentDesignSystem.FluentFormDefaultManager(this.components);
+            this.btnPathBackup = new DevExpress.XtraBars.BarButtonItem();
+            this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentFormDefaultManager1)).BeginInit();
@@ -95,7 +97,7 @@
             // 
             this.mainContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mainContainer.Location = new System.Drawing.Point(371, 39);
-            this.mainContainer.Margin = new System.Windows.Forms.Padding(185, 185, 185, 185);
+            this.mainContainer.Margin = new System.Windows.Forms.Padding(185);
             this.mainContainer.Name = "mainContainer";
             this.mainContainer.Size = new System.Drawing.Size(1018, 683);
             this.mainContainer.TabIndex = 0;
@@ -112,7 +114,7 @@
             this.NANGCAO,
             this.TROGIUP});
             this.accordionControl1.Location = new System.Drawing.Point(0, 39);
-            this.accordionControl1.Margin = new System.Windows.Forms.Padding(185, 185, 185, 185);
+            this.accordionControl1.Margin = new System.Windows.Forms.Padding(185);
             this.accordionControl1.Name = "accordionControl1";
             this.accordionControl1.ScrollBarMode = DevExpress.XtraBars.Navigation.ScrollBarMode.Touch;
             this.accordionControl1.Size = new System.Drawing.Size(371, 683);
@@ -467,7 +469,8 @@
             this.barStaticItem2,
             this.lblTieuDe2,
             this.lblTenThietBi,
-            this.lblText});
+            this.lblText,
+            this.btnPathBackup});
             this.fluentDesignFormControl1.Location = new System.Drawing.Point(0, 0);
             this.fluentDesignFormControl1.Manager = this.fluentFormDefaultManager1;
             this.fluentDesignFormControl1.Name = "fluentDesignFormControl1";
@@ -479,6 +482,7 @@
             this.fluentDesignFormControl1.TitleItemLinks.Add(this.lblTieuDe1);
             this.fluentDesignFormControl1.TitleItemLinks.Add(this.barStaticItem2);
             this.fluentDesignFormControl1.TitleItemLinks.Add(this.lblTieuDe2);
+            this.fluentDesignFormControl1.TitleItemLinks.Add(this.btnPathBackup);
             this.fluentDesignFormControl1.TitleItemLinks.Add(this.lblTenThietBi);
             this.fluentDesignFormControl1.TitleItemLinks.Add(this.lblText);
             // 
@@ -558,8 +562,17 @@
             this.barStaticItem2,
             this.lblTieuDe2,
             this.lblTenThietBi,
-            this.lblText});
-            this.fluentFormDefaultManager1.MaxItemId = 7;
+            this.lblText,
+            this.btnPathBackup});
+            this.fluentFormDefaultManager1.MaxItemId = 8;
+            // 
+            // btnPathBackup
+            // 
+            this.btnPathBackup.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right;
+            this.btnPathBackup.Id = 7;
+            this.btnPathBackup.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem2.ImageOptions.SvgImage")));
+            this.btnPathBackup.Name = "btnPathBackup";
+            this.btnPathBackup.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnPathBackup_ItemClick);
             // 
             // frmMain
             // 
@@ -643,5 +656,7 @@
         private DevExpress.XtraBars.Navigation.AccordionControlElement btnPhucHoiDuLieu;
         public DevExpress.XtraBars.BarStaticItem lblText;
         public DevExpress.XtraBars.BarStaticItem lblTenThietBi;
+        private DevExpress.XtraBars.BarButtonItem btnPathBackup;
+        private System.Windows.Forms.ToolTip toolTip;
     }
 }

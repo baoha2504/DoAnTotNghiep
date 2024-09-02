@@ -156,7 +156,7 @@ namespace MTA_Mobile_Forensic.GUI.Android
                 }
                 else
                 {
-                    query = $"adb backup -apk -shared -all -f \"{fullFilePath}\"";
+                    query = $"adb {command} backup -apk -shared -all -f \"{fullFilePath}\"";
                     await BackupAsync(query);
                 }
 
@@ -473,7 +473,14 @@ namespace MTA_Mobile_Forensic.GUI.Android
                 if (Directory.Exists(Path.GetDirectoryName(fullFilePath)))
                 {
                     string pathTar = fullFilePath.Replace(".ab", ".tar");
-                    query = $"unpack \"{fullFilePath}\" \"{pathTar}\"";
+                    if (txtMatKhau.Text == string.Empty)
+                    {
+                        query = $"unpack \"{fullFilePath}\" \"{pathTar}\"";
+                    }
+                    else
+                    {
+                        query = $"unpack -password \"{txtMatKhau.Text}\" \"{fullFilePath}\" \"{pathTar}\"";
+                    }
                     str = abe.abeCommand(query);
 
                     if (str == string.Empty)
@@ -494,8 +501,9 @@ namespace MTA_Mobile_Forensic.GUI.Android
                             progressBar_Giainen.Value = 100;
                             txtThongBaoGiaiNen.ForeColor = Color.Green;
                             txtThongBaoGiaiNen.Text = $"Giải nén thành công";
+                            DeviceInfo.pathBackup = pathFolder;
                         }));
-                        
+
                         DeleteFileIfExists(pathTar);
                     }
                     else
