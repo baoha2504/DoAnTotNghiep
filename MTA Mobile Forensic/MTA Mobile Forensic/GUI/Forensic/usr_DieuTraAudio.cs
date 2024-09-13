@@ -86,7 +86,7 @@ namespace MTA_Mobile_Forensic.GUI.Forensic
         {
             using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
-                openFileDialog.Filter = "Audio files (*.mp3;*.wav;*.wma)|*.mp3;*.wav;*.wma|All files (*.*)|*.*";
+                openFileDialog.Filter = "Audio files (*.mp3;*.wav;*.wma;*.m4a)|*.mp3;*.wav;*.wma;*.m4a|All files (*.*)|*.*";
                 openFileDialog.Title = "Chọn file âm thanh";
 
                 if (openFileDialog.ShowDialog() == DialogResult.OK)
@@ -317,7 +317,7 @@ namespace MTA_Mobile_Forensic.GUI.Forensic
         {
             using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
-                openFileDialog.Filter = "Audio files (*.mp3;*.wav;*.wma)|*.mp3;*.wav;*.wma|All files (*.*)|*.*";
+                openFileDialog.Filter = "Audio files (*.mp3;*.wav;*.wma;*.m4a)|*.mp3;*.wav;*.wma;*.m4a|All files (*.*)|*.*";
                 openFileDialog.Title = "Chọn file âm thanh";
 
                 if (openFileDialog.ShowDialog() == DialogResult.OK)
@@ -586,6 +586,7 @@ namespace MTA_Mobile_Forensic.GUI.Forensic
                 if (result == DialogResult.OK && !string.IsNullOrWhiteSpace(folderBrowserDialog.SelectedPath))
                 {
                     string selectedFolder = folderBrowserDialog.SelectedPath;
+                    tab3_txtPath.Text = selectedFolder;
                     tab3_flpFile.Controls.Clear();
                     tab3_GetAudioInFolder(selectedFolder);
                     tab3_GetVideoInFolder(selectedFolder);

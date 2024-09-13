@@ -85,9 +85,10 @@
             this.lblTieuDe2 = new DevExpress.XtraBars.BarStaticItem();
             this.lblTenThietBi = new DevExpress.XtraBars.BarStaticItem();
             this.lblText = new DevExpress.XtraBars.BarStaticItem();
-            this.fluentFormDefaultManager1 = new DevExpress.XtraBars.FluentDesignSystem.FluentFormDefaultManager(this.components);
             this.btnPathBackup = new DevExpress.XtraBars.BarButtonItem();
+            this.fluentFormDefaultManager1 = new DevExpress.XtraBars.FluentDesignSystem.FluentFormDefaultManager(this.components);
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.btnDanhSachTrinhSat = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentFormDefaultManager1)).BeginInit();
@@ -287,7 +288,7 @@
             // 
             this.btnDieuTraNguoiDung.Name = "btnDieuTraNguoiDung";
             this.btnDieuTraNguoiDung.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.btnDieuTraNguoiDung.Text = "Điều tra người dùng";
+            this.btnDieuTraNguoiDung.Text = "Điều tra đối tượng";
             this.btnDieuTraNguoiDung.Click += new System.EventHandler(this.btnDieuTraNguoiDung_Click);
             // 
             // btnDieuTraAnh
@@ -400,6 +401,7 @@
             this.NANGCAO.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.btnThayDoiMatKhau,
             this.btnMoKhoaThietBi,
+            this.btnDanhSachTrinhSat,
             this.btnRoot_JailbreakThietBi,
             this.accordionControlElement8});
             this.NANGCAO.Expanded = true;
@@ -552,6 +554,14 @@
             this.lblText.ItemAppearance.Normal.Options.UseFont = true;
             this.lblText.Name = "lblText";
             // 
+            // btnPathBackup
+            // 
+            this.btnPathBackup.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right;
+            this.btnPathBackup.Id = 7;
+            this.btnPathBackup.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnPathBackup.ImageOptions.SvgImage")));
+            this.btnPathBackup.Name = "btnPathBackup";
+            this.btnPathBackup.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnPathBackup_ItemClick);
+            // 
             // fluentFormDefaultManager1
             // 
             this.fluentFormDefaultManager1.Form = this;
@@ -566,13 +576,12 @@
             this.btnPathBackup});
             this.fluentFormDefaultManager1.MaxItemId = 8;
             // 
-            // btnPathBackup
+            // btnDanhSachTrinhSat
             // 
-            this.btnPathBackup.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right;
-            this.btnPathBackup.Id = 7;
-            this.btnPathBackup.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem2.ImageOptions.SvgImage")));
-            this.btnPathBackup.Name = "btnPathBackup";
-            this.btnPathBackup.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnPathBackup_ItemClick);
+            this.btnDanhSachTrinhSat.Name = "btnDanhSachTrinhSat";
+            this.btnDanhSachTrinhSat.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.btnDanhSachTrinhSat.Text = "Danh sách trinh sát";
+            this.btnDanhSachTrinhSat.Click += new System.EventHandler(this.btnDanhSachTrinhSat_Click);
             // 
             // frmMain
             // 
@@ -658,5 +667,6 @@
         public DevExpress.XtraBars.BarStaticItem lblTenThietBi;
         private DevExpress.XtraBars.BarButtonItem btnPathBackup;
         private System.Windows.Forms.ToolTip toolTip;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement btnDanhSachTrinhSat;
     }
 }

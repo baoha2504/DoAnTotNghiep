@@ -384,8 +384,12 @@ namespace MTA_Mobile_Forensic.GUI.Forensic
             {
                 if (webView21.Source.ToString() != "about:blank" || webView21.Source.ToString() != string.Empty)
                 {
-                    frm_OpenWeb frm_OpenWeb = new frm_OpenWeb(webView21.Source.ToString());
-                    frm_OpenWeb.ShowDialog();
+                    try
+                    {
+                        frm_OpenWeb frm_OpenWeb = new frm_OpenWeb(webView21.Source.ToString());
+                        frm_OpenWeb.ShowDialog();
+                    }
+                    catch { }
                 }
                 else
                 {

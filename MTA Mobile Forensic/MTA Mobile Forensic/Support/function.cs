@@ -77,7 +77,7 @@ namespace MTA_Mobile_Forensic.Support
             }
             else
             {
-                throw new FileNotFoundException("File not found: " + filePath);
+                return "";
             }
         }
 

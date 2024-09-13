@@ -534,8 +534,16 @@ namespace MTA_Mobile_Forensic.GUI.Android
             {
                 ListViewItem item = new ListViewItem((i + 1).ToString());
                 item.SubItems.Add(list_SSID[i].Replace("\"", ""));
-                item.SubItems.Add(list_mRandomizedMacAddress[i]);
-                item.SubItems.Add(list_creation_time[i]);
+                try
+                {
+                    item.SubItems.Add(list_mRandomizedMacAddress[i]);
+                }
+                catch { item.SubItems.Add(""); }
+                try
+                {
+                    item.SubItems.Add(list_creation_time[i]);
+                }
+                catch { item.SubItems.Add(""); }
                 item.SubItems.Add(list_Protocols[i]);
 
                 listViewConnect.Items.Add(item);

@@ -109,6 +109,7 @@ namespace MTA_Mobile_Forensic
                 btnPhucHoiDuLieu.Enabled = true;
                 btnThayDoiMatKhau.Enabled = true;
                 btnMoKhoaThietBi.Enabled = true;
+                btnDanhSachTrinhSat.Enabled = true;
                 btnRoot_JailbreakThietBi.Enabled = true;
             }
             else if (hienthi == 0)
@@ -139,6 +140,7 @@ namespace MTA_Mobile_Forensic
                 btnPhucHoiDuLieu.Enabled = false;
                 btnThayDoiMatKhau.Enabled = false;
                 btnMoKhoaThietBi.Enabled = false;
+                btnDanhSachTrinhSat.Enabled = false;
                 btnRoot_JailbreakThietBi.Enabled = false;
             }
         }
@@ -155,23 +157,28 @@ namespace MTA_Mobile_Forensic
                 btnPhanChieuThietBi.Visible = false;
                 btnThayDoiMatKhau.Visible = false;
                 btnMoKhoaThietBi.Visible = false;
+                btnDanhSachTrinhSat.Visible = false;
                 btnThongTinKhac.Visible = false;
                 btnLichSuTruyCap.Visible = true;
+                btnRoot_JailbreakThietBi.Visible = false;
 
                 type_device_connected = "IPHONE";
             }
             else if (type == "ANDROID")
             {
                 // hiển thị tất cả
-                btnDuLieuLog.Visible = true;
+                btnDuLieuLog.Visible = false;
                 btnCaiDatCuaThietBi.Visible = true;
                 btnLichSuTruyCap.Visible = true;
                 btnFileSystem.Visible = true;
                 btnPhanChieuThietBi.Visible = true;
-                btnThayDoiMatKhau.Visible = true;
+                btnThayDoiMatKhau.Visible = false;
                 btnMoKhoaThietBi.Visible = true;
+                btnDanhSachTrinhSat.Visible = true;
                 btnThongTinKhac.Visible = true;
                 btnLichSuTruyCap.Visible = false;
+                btnRoot_JailbreakThietBi.Visible = false;
+                btnRoot_JailbreakThietBi.Visible = false;
 
                 type_device_connected = "ANDROID";
             }
@@ -568,7 +575,7 @@ namespace MTA_Mobile_Forensic
         private void btnDieuTraNguoiDung_Click(object sender, EventArgs e)
         {
             lblTieuDe1.Caption = "Điều tra thông tin";
-            lblTieuDe2.Caption = "Thông tin người dùng";
+            lblTieuDe2.Caption = "Thông tin đối tượng";
             if (usr_DieuTraNguoiDung == null)
             {
                 usr_DieuTraNguoiDung = new usr_DieuTraNguoiDung();
@@ -772,6 +779,11 @@ namespace MTA_Mobile_Forensic
             {
                 usr_MoKhoaThietBi.BringToFront();
             }
+        }
+
+        private void btnDanhSachTrinhSat_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void btnRoot_JailbreakThietBi_Click(object sender, EventArgs e)

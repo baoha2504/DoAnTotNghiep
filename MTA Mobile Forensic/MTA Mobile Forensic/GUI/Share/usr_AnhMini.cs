@@ -32,7 +32,7 @@ namespace MTA_Mobile_Forensic.GUI.Share
             this.thoigian = thoigian;
 
             pbAnh.SizeMode = PictureBoxSizeMode.Zoom;
-            pbAnh.Load(linkanh);
+            try { pbAnh.Load(linkanh); } catch { }
             txtTenAnh.Text = tenfile;
             txtThoiGian.Text = thoigian;
 
