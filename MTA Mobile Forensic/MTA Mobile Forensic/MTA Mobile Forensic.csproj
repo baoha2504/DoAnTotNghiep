@@ -171,6 +171,12 @@
     <Compile Include="GUI\Android\usr_DanhBa.Designer.cs">
       <DependentUpon>usr_DanhBa.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Android\usr_DanhSachTrinhSat.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Android\usr_DanhSachTrinhSat.Designer.cs">
+      <DependentUpon>usr_DanhSachTrinhSat.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Android\usr_DuLieuLog.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -441,6 +447,7 @@
     <Compile Include="GUI\Share\usr_VideoMini.Designer.cs">
       <DependentUpon>usr_VideoMini.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\Account_TrinhSat.cs" />
     <Compile Include="Model\AnalysisDocument.cs" />
     <Compile Include="Model\AppInfo.cs" />
     <Compile Include="Model\AppInfoIOS.cs" />
@@ -449,6 +456,7 @@
     <Compile Include="Model\CallHistoryIOS.cs" />
     <Compile Include="Model\ContactIOS.cs" />
     <Compile Include="Model\DeviceInfo.cs" />
+    <Compile Include="Model\LoginHistory_TrinhSat.cs" />
     <Compile Include="Model\OCR.cs" />
     <Compile Include="Model\SmsIOS.cs" />
     <Compile Include="Model\TinNhan.cs" />
@@ -482,6 +490,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Android\usr_DanhBa.resx">
       <DependentUpon>usr_DanhBa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Android\usr_DanhSachTrinhSat.resx">
+      <DependentUpon>usr_DanhSachTrinhSat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Android\usr_DuLieuLog.resx">
       <DependentUpon>usr_DuLieuLog.cs</DependentUpon>

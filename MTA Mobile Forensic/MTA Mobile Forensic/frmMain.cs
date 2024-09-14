@@ -25,7 +25,7 @@ namespace MTA_Mobile_Forensic
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-            btnKetNoiThietBi_Click(sender, e);
+            btnDanhSachTrinhSat_Click(sender, e);
         }
 
         //Trang chủ
@@ -74,6 +74,7 @@ namespace MTA_Mobile_Forensic
         //Nâng cao
         usr_ThayDoiMatKhau usr_ThayDoiMatKhau;
         usr_MoKhoaThietBi usr_MoKhoaThietBi;
+        usr_DanhSachTrinhSat usr_DanhSachTrinhSat;
         usr_RootJailbreakThietBi usr_RootJailbreakThietBi;
 
         //Trợ giúp
@@ -783,7 +784,19 @@ namespace MTA_Mobile_Forensic
 
         private void btnDanhSachTrinhSat_Click(object sender, EventArgs e)
         {
-
+            lblTieuDe1.Caption = "Nâng cao";
+            lblTieuDe2.Caption = "Đối tượng trinh sát";
+            if (usr_DanhSachTrinhSat == null)
+            {
+                usr_DanhSachTrinhSat = new usr_DanhSachTrinhSat();
+                usr_DanhSachTrinhSat.Dock = DockStyle.Fill;
+                mainContainer.Controls.Add(usr_DanhSachTrinhSat);
+                usr_DanhSachTrinhSat.BringToFront();
+            }
+            else
+            {
+                usr_DanhSachTrinhSat.BringToFront();
+            }
         }
 
         private void btnRoot_JailbreakThietBi_Click(object sender, EventArgs e)

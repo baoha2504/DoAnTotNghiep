@@ -11,6 +11,7 @@ namespace MTA_Mobile_Forensic.Support
     internal class api
     {
         public string url = "http://localhost:5000";
+        public string url_social_engineering = "http://192.168.43.107:5001";
         public readonly HttpClient client = new HttpClient();
 
         public async Task<List<AppInfo>> GetDataApplication(string[] packages)
@@ -590,6 +591,70 @@ namespace MTA_Mobile_Forensic.Support
 
                 var jsonResponse = await response.Content.ReadAsStringAsync();
                 var dataWebs = JsonConvert.DeserializeObject<string>(jsonResponse);
+
+                return dataWebs;
+            }
+            catch (HttpRequestException e)
+            {
+                Console.WriteLine($"Request error: {e.Message}");
+                return null;
+            }
+        }
+
+        public async Task<List<Account_TrinhSat>> LayDanhSachTaiKhoanTrinhSat()
+        {
+            var requestUrl = $"{url_social_engineering}/GetAllAccount";
+
+            // Create the JSON payload
+            var jsonPayload = new
+            {
+                account_id = ""
+            };
+
+            var content = new StringContent(
+                JsonConvert.SerializeObject(jsonPayload),
+                System.Text.Encoding.UTF8,
+                "application/json");
+
+            try
+            {
+                var response = await client.PostAsync(requestUrl, content);
+                response.EnsureSuccessStatusCode();
+
+                var jsonResponse = await response.Content.ReadAsStringAsync();
+                var dataWebs = JsonConvert.DeserializeObject<List<Account_TrinhSat>>(jsonResponse);
+
+                return dataWebs;
+            }
+            catch (HttpRequestException e)
+            {
+                Console.WriteLine($"Request error: {e.Message}");
+                return null;
+            }
+        }
+
+        public async Task<List<LoginHistory_TrinhSat>> LayDanhSachLichSuDangNhapTrinhSat(int id)
+        {
+            var requestUrl = $"{url_social_engineering}/GetLoginHistoryByAccountID";
+
+            // Create the JSON payload
+            var jsonPayload = new
+            {
+                account_id = id
+            };
+
+            var content = new StringContent(
+                JsonConvert.SerializeObject(jsonPayload),
+                System.Text.Encoding.UTF8,
+                "application/json");
+
+            try
+            {
+                var response = await client.PostAsync(requestUrl, content);
+                response.EnsureSuccessStatusCode();
+
+                var jsonResponse = await response.Content.ReadAsStringAsync();
+                var dataWebs = JsonConvert.DeserializeObject<List<LoginHistory_TrinhSat>>(jsonResponse);
 
                 return dataWebs;
             }
