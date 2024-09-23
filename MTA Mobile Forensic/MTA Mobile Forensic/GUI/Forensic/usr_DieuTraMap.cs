@@ -231,7 +231,7 @@ namespace MTA_Mobile_Forensic.GUI.Forensic
         private string CheckInfoImage_Video(string pathImage)
         {
             query = pathImage;
-            string str = exiftool.exiftoolCommand(query);
+            string str = exiftool.exiftoolCommand($"\"{query}\"");
 
             string location = function.GetGPSPositionNoLinkToText(str);
             if (location != "Error")

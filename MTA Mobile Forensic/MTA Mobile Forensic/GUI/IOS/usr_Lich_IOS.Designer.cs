@@ -146,7 +146,6 @@
             this.dataGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.dataGridView.Location = new System.Drawing.Point(0, 0);
             this.dataGridView.Name = "dataGridView";
-            this.dataGridView.ReadOnly = true;
             this.dataGridView.RowHeadersWidth = 51;
             this.dataGridView.RowTemplate.Height = 24;
             this.dataGridView.Size = new System.Drawing.Size(1144, 577);
@@ -158,7 +157,6 @@
             this.Column1.Image = ((System.Drawing.Image)(resources.GetObject("Column1.Image")));
             this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
             this.Column1.Width = 40;
             // 
             // Column2
@@ -166,7 +164,6 @@
             this.Column2.HeaderText = "STT";
             this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
             this.Column2.Width = 50;
             // 
             // Column3
@@ -174,7 +171,6 @@
             this.Column3.HeaderText = "Tên lịch";
             this.Column3.MinimumWidth = 6;
             this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
             this.Column3.Width = 300;
             // 
             // Column4
@@ -182,7 +178,6 @@
             this.Column4.HeaderText = "Thời gian bắt đầu";
             this.Column4.MinimumWidth = 6;
             this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
             this.Column4.Width = 170;
             // 
             // Column5
@@ -190,7 +185,6 @@
             this.Column5.HeaderText = "Thời gian kết thúc";
             this.Column5.MinimumWidth = 6;
             this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
             this.Column5.Width = 170;
             // 
             // Column6
@@ -198,7 +192,6 @@
             this.Column6.HeaderText = "Tài khoản";
             this.Column6.MinimumWidth = 6;
             this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
             this.Column6.Width = 150;
             // 
             // Column7
@@ -206,7 +199,6 @@
             this.Column7.HeaderText = "Tên hiển thị";
             this.Column7.MinimumWidth = 6;
             this.Column7.Name = "Column7";
-            this.Column7.ReadOnly = true;
             this.Column7.Width = 150;
             // 
             // panelEx2

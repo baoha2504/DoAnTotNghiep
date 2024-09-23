@@ -45,6 +45,7 @@ Thumbs.db
 # Ignore the virtual environment folder
 .venv/
 myenv/
+.vs
 
 # Cache folder
 Cache/

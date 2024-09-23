@@ -303,6 +303,12 @@
     <Compile Include="GUI\Forensic\usr_DieuTraTaiLieu.Designer.cs">
       <DependentUpon>usr_DieuTraTaiLieu.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Forensic\usr_DieuTraVideo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Forensic\usr_DieuTraVideo.Designer.cs">
+      <DependentUpon>usr_DieuTraVideo.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\IOS\usr_CaiDatUngDung_IOS.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -556,6 +562,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Forensic\usr_DieuTraTaiLieu.resx">
       <DependentUpon>usr_DieuTraTaiLieu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Forensic\usr_DieuTraVideo.resx">
+      <DependentUpon>usr_DieuTraVideo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\IOS\usr_CaiDatUngDung_IOS.resx">
       <DependentUpon>usr_CaiDatUngDung_IOS.cs</DependentUpon>

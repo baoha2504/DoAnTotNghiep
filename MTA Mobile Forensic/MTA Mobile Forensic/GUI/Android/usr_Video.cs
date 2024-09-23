@@ -47,7 +47,7 @@ namespace MTA_Mobile_Forensic.GUI.Android
         private void CheckInfoImage(string pathImage)
         {
             query = pathImage;
-            string str = exiftool.exiftoolCommand(query);
+            string str = exiftool.exiftoolCommand($"\"{query}\"");
             txtThongTinVideo.Text = str;
 
             string link = function.GetGPSPositionToText(str);
@@ -237,6 +237,10 @@ namespace MTA_Mobile_Forensic.GUI.Android
 
         private void btnLamMoi_Click(object sender, EventArgs e)
         {
+            if (txtTimKiem.Text != DeviceInfo.pathBackup)
+            {
+                txtTimKiem.Text = DeviceInfo.pathBackup;
+            }
             txtThongTinVideo.Text = string.Empty;
             ClearWebView();
             GetVideoInFolder(txtTimKiem.Text);

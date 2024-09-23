@@ -69,13 +69,17 @@ namespace MTA_Mobile_Forensic.GUI.Share
                 {
                     imageName = "samsung-galaxy-a6.png";
                 }
-                else if (lblTenThietBi.Text == "OPPO CPH1803")
+                else if (lblTenThietBi.Text == "OPPO CPH1803" || lblTenThietBi.Text == "OPPO CPH1805+")
                 {
                     imageName = "oppo-a3s.png";
                 }
                 else if (lblTenThietBi.Text == "XIAOMI REDMI NOTE 11")
                 {
                     imageName = "xiaomi-redmi-note-11.png";
+                }
+                else if (lblTenThietBi.Text == "OPPO CPH1801")
+                {
+                    imageName = "oppo-a71-cph-1801.png";
                 }
                 else
                 {

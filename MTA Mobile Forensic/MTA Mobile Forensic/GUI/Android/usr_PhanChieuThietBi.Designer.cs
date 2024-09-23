@@ -43,9 +43,10 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnChonTatCa = new DevComponents.DotNetBar.ButtonX();
             this.btnBoChonTatCa = new DevComponents.DotNetBar.ButtonX();
+            this.btnChonTatCa = new DevComponents.DotNetBar.ButtonX();
             this.btnLayDuLieu = new DevComponents.DotNetBar.ButtonX();
+            this.btnXoaDuLieuThuDuoc = new DevComponents.DotNetBar.ButtonX();
             this.panelEx2 = new DevComponents.DotNetBar.PanelEx();
             this.btnKhoaManHinh = new DevComponents.DotNetBar.ButtonX();
             this.btnLuotVaChup = new DevComponents.DotNetBar.ButtonX();
@@ -58,7 +59,6 @@
             this.btnQuayVideoManHinh = new DevComponents.DotNetBar.ButtonX();
             this.btnChupAnhManHinh = new DevComponents.DotNetBar.ButtonX();
             this.btnBatSangManHinh = new DevComponents.DotNetBar.ButtonX();
-            this.btnXoaDuLieuThuDuoc = new DevComponents.DotNetBar.ButtonX();
             this.panelEx1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -299,19 +299,6 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // btnChonTatCa
-            // 
-            this.btnChonTatCa.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnChonTatCa.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnChonTatCa.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnChonTatCa.Location = new System.Drawing.Point(246, 0);
-            this.btnChonTatCa.Name = "btnChonTatCa";
-            this.btnChonTatCa.Size = new System.Drawing.Size(120, 35);
-            this.btnChonTatCa.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnChonTatCa.TabIndex = 8;
-            this.btnChonTatCa.Text = "Chọn tất cả";
-            this.btnChonTatCa.Click += new System.EventHandler(this.btnChonTatCa_Click);
-            // 
             // btnBoChonTatCa
             // 
             this.btnBoChonTatCa.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
@@ -325,6 +312,19 @@
             this.btnBoChonTatCa.Text = "Bỏ chọn tất cả";
             this.btnBoChonTatCa.Click += new System.EventHandler(this.btnBoChonTatCa_Click);
             // 
+            // btnChonTatCa
+            // 
+            this.btnChonTatCa.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnChonTatCa.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnChonTatCa.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnChonTatCa.Location = new System.Drawing.Point(246, 0);
+            this.btnChonTatCa.Name = "btnChonTatCa";
+            this.btnChonTatCa.Size = new System.Drawing.Size(120, 35);
+            this.btnChonTatCa.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnChonTatCa.TabIndex = 8;
+            this.btnChonTatCa.Text = "Chọn tất cả";
+            this.btnChonTatCa.Click += new System.EventHandler(this.btnChonTatCa_Click);
+            // 
             // btnLayDuLieu
             // 
             this.btnLayDuLieu.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
@@ -337,6 +337,20 @@
             this.btnLayDuLieu.TabIndex = 5;
             this.btnLayDuLieu.Text = "Lấy dữ liệu";
             this.btnLayDuLieu.Click += new System.EventHandler(this.btnLayDuLieu_Click);
+            // 
+            // btnXoaDuLieuThuDuoc
+            // 
+            this.btnXoaDuLieuThuDuoc.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnXoaDuLieuThuDuoc.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnXoaDuLieuThuDuoc.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnXoaDuLieuThuDuoc.Location = new System.Drawing.Point(486, 0);
+            this.btnXoaDuLieuThuDuoc.Name = "btnXoaDuLieuThuDuoc";
+            this.btnXoaDuLieuThuDuoc.Size = new System.Drawing.Size(120, 35);
+            this.btnXoaDuLieuThuDuoc.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnXoaDuLieuThuDuoc.TabIndex = 10;
+            this.btnXoaDuLieuThuDuoc.Text = "Xóa";
+            this.btnXoaDuLieuThuDuoc.Tooltip = "Xóa dữ liệu đã thu được";
+            this.btnXoaDuLieuThuDuoc.Click += new System.EventHandler(this.btnXoaDuLieuThuDuoc_Click);
             // 
             // panelEx2
             // 
@@ -476,20 +490,6 @@
             this.btnBatSangManHinh.TabIndex = 0;
             this.btnBatSangManHinh.Text = "Bật sáng màn hình";
             this.btnBatSangManHinh.Click += new System.EventHandler(this.btnBatSangManHinh_Click);
-            // 
-            // btnXoaDuLieuThuDuoc
-            // 
-            this.btnXoaDuLieuThuDuoc.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnXoaDuLieuThuDuoc.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnXoaDuLieuThuDuoc.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnXoaDuLieuThuDuoc.Location = new System.Drawing.Point(486, 0);
-            this.btnXoaDuLieuThuDuoc.Name = "btnXoaDuLieuThuDuoc";
-            this.btnXoaDuLieuThuDuoc.Size = new System.Drawing.Size(120, 35);
-            this.btnXoaDuLieuThuDuoc.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnXoaDuLieuThuDuoc.TabIndex = 10;
-            this.btnXoaDuLieuThuDuoc.Text = "Xóa";
-            this.btnXoaDuLieuThuDuoc.Tooltip = "Xóa dữ liệu đã thu được";
-            this.btnXoaDuLieuThuDuoc.Click += new System.EventHandler(this.btnXoaDuLieuThuDuoc_Click);
             // 
             // usr_PhanChieuThietBi
             // 

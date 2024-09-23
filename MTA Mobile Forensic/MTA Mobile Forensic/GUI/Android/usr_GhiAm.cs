@@ -219,6 +219,10 @@ namespace MTA_Mobile_Forensic.GUI.Android
 
         private void btnLamMoi_Click(object sender, EventArgs e)
         {
+            if(txtTimKiem.Text != DeviceInfo.pathBackup)
+            {
+                txtTimKiem.Text = DeviceInfo.pathBackup;
+            }
             flpDSGhiAm.Controls.Clear();
             GetRecordInFolder(txtTimKiem.Text);
         }
