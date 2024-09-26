@@ -17,7 +17,15 @@ namespace MTA_Mobile_Forensic.GUI.Android
             InitializeComponent();
             if (DeviceInfo.serialDevice != string.Empty)
             {
-                txtTimKiem.Text = DeviceInfo.pathBackup;
+                if (DeviceInfo.nameDevice.Contains("IPHONE"))
+                {
+                    txtTimKiem.Text = Path.Combine(DeviceInfo.pathBackup, "Media", "DCIM");
+                }
+                else
+                {
+                    txtTimKiem.Text = DeviceInfo.pathBackup;
+                }
+                GetImageInFolder(txtTimKiem.Text);
             }
         }
 
@@ -72,7 +80,7 @@ namespace MTA_Mobile_Forensic.GUI.Android
                                              .Where(file => imageExtensions.Contains(Path.GetExtension(file).ToLower()))
                                              .ToList();
 
-                    // Nếu cbbTuyChon.Text không phải là "Trong thư mục", lấy thêm các tệp ảnh trong các thư mục con
+                    //Nếu cbbTuyChon.Text không phải là "Trong thư mục", lấy thêm các tệp ảnh trong các thư mục con
                     if (cbbTuyChon.Text != "Trong thư mục")
                     {
                         List<string> smallestSubfolders = GetSmallestSubfolders(folderPath);
@@ -84,6 +92,7 @@ namespace MTA_Mobile_Forensic.GUI.Android
                             imageFiles.AddRange(subDirFiles);
                         }
                     }
+
                     Add_usr_AnhMini(currentPage);
                 }
                 catch (Exception ex)
@@ -211,6 +220,11 @@ namespace MTA_Mobile_Forensic.GUI.Android
             }
             txtThongTinAnh.Text = string.Empty;
             ClearWebView();
+            if (DeviceInfo.nameDevice.Contains("IPHONE"))
+            {
+                txtTimKiem.Text = Path.Combine(DeviceInfo.pathBackup, "Media", "DCIM");
+            }
+            
             GetImageInFolder(txtTimKiem.Text);
             pbAnhDaChon.Image = null;
 

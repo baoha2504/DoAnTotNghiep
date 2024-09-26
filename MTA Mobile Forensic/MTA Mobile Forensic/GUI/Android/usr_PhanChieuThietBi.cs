@@ -291,26 +291,38 @@ namespace MTA_Mobile_Forensic.GUI.Android
 
         private void btnChupAnhManHinh_Click(object sender, EventArgs e)
         {
+            // Đường dẫn đến thư mục lưu ảnh trong project
             string sourceDirectory = AppDomain.CurrentDomain.BaseDirectory;
             string projectDirectory = Directory.GetParent(sourceDirectory).Parent.Parent.FullName;
             string filePath = Path.Combine(projectDirectory, "Cache");
 
+            // Tạo thư mục nếu chưa tồn tại
             if (!Directory.Exists(filePath))
             {
                 Directory.CreateDirectory(filePath);
             }
 
+            // Định dạng tên tệp theo thời gian hiện tại
             DateTime dateTime = DateTime.Now;
             string fileName = dateTime.ToString("HH.mm.ss_dd.MM.yyyy") + ".png";
             string fullFilePath = Path.Combine(filePath, fileName);
 
+            // Đường dẫn tạm trên điện thoại
             string tempFilePath = "/sdcard/screenshot.png";
 
+            // Xóa tệp ảnh cũ nếu tồn tại trên thiết bị
+            string removeCommand = $"shell rm {tempFilePath}";
+            adb.adbCommand(removeCommand);
+
+            // Chụp ảnh màn hình và lưu vào đường dẫn tạm trên thiết bị
             string captureCommand = $"shell screencap -p {tempFilePath}";
             adb.adbCommand(captureCommand);
 
+            // Kéo tệp ảnh về máy tính và lưu vào đường dẫn đầy đủ
             string pullCommand = $"pull {tempFilePath} \"{fullFilePath}\"";
             string result = adb.adbCommand(pullCommand);
+
+            // Thêm ảnh vào danh sách và hiển thị lên giao diện
             fullPathImages_Videos.Add(fullFilePath);
             AddImageTo_flpDuLieuThuDuoc(fullFilePath, Path.GetFileName(fullFilePath), function.GetLastModified(fullFilePath));
         }

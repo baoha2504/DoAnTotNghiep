@@ -94,9 +94,9 @@ namespace MTA_Mobile_Forensic.GUI.Forensic
                     string[] image_videoExtensions = new string[] { ".jpg", ".jpeg", ".png", ".bmp", ".gif", ".tiff", ".webp", ".mp4", ".avi", ".mov", ".wmv", ".flv", ".mkv", ".webm", ".m4v" };
 
                     // Lấy tất cả các tệp dạng ảnh trong thư mục
-                    image_videoFiles = Directory.GetFiles(folderPath)
-                                             .Where(file => image_videoExtensions.Contains(Path.GetExtension(file).ToLower()))
-                                             .ToList();
+                    image_videoFiles = Directory.GetFiles(folderPath, "*.*", SearchOption.AllDirectories)
+                                       .Where(file => image_videoExtensions.Contains(Path.GetExtension(file).ToLower()))
+                                       .ToList();
                     Add_To_flpChonAnh();
                 }
                 catch (Exception ex)
@@ -382,21 +382,27 @@ namespace MTA_Mobile_Forensic.GUI.Forensic
         {
             try
             {
-                if (webView21.Source.ToString() != "about:blank" || webView21.Source.ToString() != string.Empty)
+                if (webView21 != null && webView21.Source != null && webView21.Source.ToString() != "about:blank")
                 {
                     try
                     {
                         frm_OpenWeb frm_OpenWeb = new frm_OpenWeb(webView21.Source.ToString());
                         frm_OpenWeb.ShowDialog();
                     }
-                    catch { }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"Có lỗi xảy ra: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
                 else
                 {
                     MessageBox.Show("Trang web hiện tại trống", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            catch { }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Có lỗi xảy ra: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

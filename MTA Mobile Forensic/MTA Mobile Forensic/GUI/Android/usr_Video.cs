@@ -20,7 +20,15 @@ namespace MTA_Mobile_Forensic.GUI.Android
             InitializeComponent();
             if (DeviceInfo.serialDevice != string.Empty)
             {
-                txtTimKiem.Text = DeviceInfo.pathBackup;
+                if (DeviceInfo.nameDevice.Contains("IPHONE"))
+                {
+                    txtTimKiem.Text = Path.Combine(DeviceInfo.pathBackup, "Media", "DCIM");
+                }
+                else
+                {
+                    txtTimKiem.Text = DeviceInfo.pathBackup;
+                }
+                GetVideoInFolder(txtTimKiem.Text);
             }
         }
 
@@ -75,14 +83,9 @@ namespace MTA_Mobile_Forensic.GUI.Android
 
                     if (cbbTuyChon.Text != "Trong thư mục")
                     {
-                        List<string> smallestSubfolders = GetSmallestSubfolders(folderPath);
-                        foreach (var subfolder in smallestSubfolders)
-                        {
-                            var subDirFiles = Directory.GetFiles(subfolder)
-                                .Where(file => videoExtensions.Contains(Path.GetExtension(file).ToLower()))
-                                .ToList();
-                            videoFiles.AddRange(subDirFiles);
-                        }
+                        videoFiles = Directory.GetFiles(folderPath, "*.*", SearchOption.AllDirectories)
+                                       .Where(file => videoExtensions.Contains(Path.GetExtension(file).ToLower()))
+                                       .ToList();
                     }
                     Add_usr_VideoMini(currentPage);
                 }
@@ -242,6 +245,11 @@ namespace MTA_Mobile_Forensic.GUI.Android
                 txtTimKiem.Text = DeviceInfo.pathBackup;
             }
             txtThongTinVideo.Text = string.Empty;
+            if (DeviceInfo.nameDevice.Contains("IPHONE"))
+            {
+                txtTimKiem.Text = Path.Combine(DeviceInfo.pathBackup, "Media", "DCIM");
+            }
+
             ClearWebView();
             GetVideoInFolder(txtTimKiem.Text);
             pbVideoDaChon.Image = null;
@@ -279,7 +287,5 @@ namespace MTA_Mobile_Forensic.GUI.Android
                 btnTrangTiep.Enabled = false;
             }
         }
-
-
     }
 }

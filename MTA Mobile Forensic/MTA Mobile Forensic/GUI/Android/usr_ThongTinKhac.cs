@@ -48,6 +48,8 @@ namespace MTA_Mobile_Forensic.GUI.Android
             listViewConnect.Columns.Add("Thời gian tạo", (int)(2 * panelAccount.Width / 10), HorizontalAlignment.Center);
             listViewConnect.Columns.Add("Địa chỉ MAC", (int)(2 * panelAccount.Width / 10), HorizontalAlignment.Center);
             listViewConnect.Columns.Add("Giao thức", (int)(2 * panelAccount.Width / 10), HorizontalAlignment.Center);
+
+            tabControl1.SelectedTabIndex = 1;
         }
 
         private async void LoadData()
@@ -422,39 +424,48 @@ namespace MTA_Mobile_Forensic.GUI.Android
 
             // Giá trị từng loại
             string App_Size = GetValue(str_InfoRom, "App Size");
-            long number_App_Size_ROM = long.Parse(App_Size);
+            long number_App_Size_ROM = 0;
+            try { number_App_Size_ROM = long.Parse(App_Size); } catch { }
             double number_App_Size_ROM_GB = ConvertByteToGb(number_App_Size_ROM);
 
             string App_Data_Size = GetValue(str_InfoRom, "App Data Size");
-            long number_App_Data_Size_ROM = long.Parse(App_Data_Size);
+            long number_App_Data_Size_ROM = 0;
+            try { number_App_Data_Size_ROM = long.Parse(App_Data_Size); } catch { }
             double number_App_Data_Size_ROM_GB = ConvertByteToGb(number_App_Data_Size_ROM);
 
             string App_Cache_Size = GetValue(str_InfoRom, "App Cache Size");
-            long number_App_Cache_Size_ROM = long.Parse(App_Cache_Size);
+            long number_App_Cache_Size_ROM = 0;
+            try { number_App_Cache_Size_ROM = long.Parse(App_Cache_Size); } catch { }
             double number_App_Cache_Size_ROM_GB = ConvertByteToGb(number_App_Cache_Size_ROM);
 
             string Photos_Size = GetValue(str_InfoRom, "Photos Size");
-            long number_Photos_Size_ROM = long.Parse(Photos_Size);
+            long number_Photos_Size_ROM = 0;
+            try { number_Photos_Size_ROM = long.Parse(Photos_Size); } catch { }
             double number_Photos_Size_ROM_GB = ConvertByteToGb(number_Photos_Size_ROM);
 
             string Videos_Size = GetValue(str_InfoRom, "Videos Size");
-            long number_Videos_Size_ROM = long.Parse(Videos_Size);
+            long number_Videos_Size_ROM = 0;
+            try { number_Videos_Size_ROM = long.Parse(Videos_Size); } catch { }
             double number_Videos_Size_ROM_GB = ConvertByteToGb(number_Videos_Size_ROM);
 
             string Audio_Size = GetValue(str_InfoRom, "Audio Size");
-            long number_Audio_Size_ROM = long.Parse(Audio_Size);
+            long number_Audio_Size_ROM = 0;
+            try { number_Audio_Size_ROM = long.Parse(Audio_Size); } catch { }
             double number_Audio_Size_ROM_GB = ConvertByteToGb(number_Audio_Size_ROM);
 
             string Downloads_Size = GetValue(str_InfoRom, "Downloads Size");
-            long number_Downloads_Size_ROM = long.Parse(Downloads_Size);
+            long number_Downloads_Size_ROM = 0;
+            try { number_Downloads_Size_ROM = long.Parse(Downloads_Size); } catch { }
             double number_Downloads_Size_ROM_GB = ConvertByteToGb(number_Downloads_Size_ROM);
 
             string System_Size = GetValue(str_InfoRom, "System Size");
-            long number_System_Size_ROM = long.Parse(System_Size);
+            long number_System_Size_ROM = 0;
+            try { number_System_Size_ROM = long.Parse(System_Size); } catch { }
             double number_System_Size_ROM_GB = ConvertByteToGb(number_System_Size_ROM);
 
             string Other_Size = GetValue(str_InfoRom, "Other Size");
-            long number_Other_Size_ROM = long.Parse(Other_Size);
+            long number_Other_Size_ROM = 0;
+            try { number_Other_Size_ROM = long.Parse(Other_Size); } catch { }
             double number_Other_Size_ROM_GB = ConvertByteToGb(number_Other_Size_ROM);
 
             // xử lý
@@ -536,12 +547,12 @@ namespace MTA_Mobile_Forensic.GUI.Android
                 item.SubItems.Add(list_SSID[i].Replace("\"", ""));
                 try
                 {
-                    item.SubItems.Add(list_mRandomizedMacAddress[i]);
+                    item.SubItems.Add(list_creation_time[i]);
                 }
                 catch { item.SubItems.Add(""); }
                 try
                 {
-                    item.SubItems.Add(list_creation_time[i]);
+                    item.SubItems.Add(list_mRandomizedMacAddress[i]);
                 }
                 catch { item.SubItems.Add(""); }
                 item.SubItems.Add(list_Protocols[i]);

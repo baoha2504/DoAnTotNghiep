@@ -21,7 +21,7 @@ namespace MTA_Mobile_Forensic.GUI.IOS
         public async void LoadData()
         {
             pathFile = function.FindFile(DeviceInfo.pathBackup, "AddressBook.sqlitedb");
-            if (pathFile != string.Empty)
+            if (!string.IsNullOrEmpty(pathFile))
             {
                 var contacts = await api.LayDanhSachDanhBa_IOS(pathFile);
                 if (contacts != null)

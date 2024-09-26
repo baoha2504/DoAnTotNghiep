@@ -17,7 +17,7 @@ namespace MTA_Mobile_Forensic.GUI.Forensic
         public usr_DieuTraAudio()
         {
             InitializeComponent();
-            tabControl1.SelectedTabIndex = 2;
+            tabControl1.SelectedTabIndex = 0;
             tab1_axWindowsMediaPlayer1.settings.volume = 100;
             tab1_axWindowsMediaPlayer2.settings.volume = 100;
             tab2_axWindowsMediaPlayer1.settings.volume = 100;
@@ -592,21 +592,25 @@ namespace MTA_Mobile_Forensic.GUI.Forensic
                     tab3_GetVideoInFolder(selectedFolder);
                 }
             }
-            foreach (var item in tab3_audioFiles)
+            try
             {
-                usr_GhiAmMini usr_GhiAmMini = new usr_GhiAmMini(item, Path.GetFileName(item), function.GetLastModified(item));
-                usr_GhiAmMini.ControlClicked += tab3_flpFile_Click;
-                usr_GhiAmMini.checkBox.Visible = false;
-                tab3_flpFile.Controls.Add(usr_GhiAmMini);
-            }
+                foreach (var item in tab3_audioFiles)
+                {
+                    usr_GhiAmMini usr_GhiAmMini = new usr_GhiAmMini(item, Path.GetFileName(item), function.GetLastModified(item));
+                    usr_GhiAmMini.ControlClicked += tab3_flpFile_Click;
+                    usr_GhiAmMini.checkBox.Visible = false;
+                    tab3_flpFile.Controls.Add(usr_GhiAmMini);
+                }
 
-            foreach (var item in tab3_videoFiles)
-            {
-                usr_VideoMini usr_VideoMini = new usr_VideoMini(item, Path.GetFileName(item), function.GetLastModified(item));
-                usr_VideoMini.ControlClicked += tab3_flpFile_Click;
-                usr_VideoMini.checkBox.Visible = false;
-                tab3_flpFile.Controls.Add(usr_VideoMini);
+                foreach (var item in tab3_videoFiles)
+                {
+                    usr_VideoMini usr_VideoMini = new usr_VideoMini(item, Path.GetFileName(item), function.GetLastModified(item));
+                    usr_VideoMini.ControlClicked += tab3_flpFile_Click;
+                    usr_VideoMini.checkBox.Visible = false;
+                    tab3_flpFile.Controls.Add(usr_VideoMini);
+                }
             }
+            catch { }
         }
 
         private async Task<AudioResponse> TrichXuatThongTinTuAudio(string path)

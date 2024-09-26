@@ -21,7 +21,7 @@ namespace MTA_Mobile_Forensic.GUI.IOS
         public async void LoadData()
         {
             pathFile = function.FindFile(DeviceInfo.pathBackup, "Calendar.sqlitedb");
-            if (pathFile != string.Empty)
+            if (!string.IsNullOrEmpty(pathFile))
             {
                 var calendars = await api.LayDanhSachLich_IOS(pathFile);
                 if (calendars != null)

@@ -34,12 +34,12 @@
             this.panelAccount = new System.Windows.Forms.Panel();
             this.groupPanel5 = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.tabControl1 = new DevComponents.DotNetBar.TabControl();
-            this.tabControlPanel2 = new DevComponents.DotNetBar.TabControlPanel();
-            this.listViewConnect = new DevComponents.DotNetBar.Controls.ListViewEx();
-            this.tabItem2 = new DevComponents.DotNetBar.TabItem(this.components);
             this.tabControlPanel1 = new DevComponents.DotNetBar.TabControlPanel();
             this.listView = new DevComponents.DotNetBar.Controls.ListViewEx();
             this.tabItem1 = new DevComponents.DotNetBar.TabItem(this.components);
+            this.tabControlPanel2 = new DevComponents.DotNetBar.TabControlPanel();
+            this.listViewConnect = new DevComponents.DotNetBar.Controls.ListViewEx();
+            this.tabItem2 = new DevComponents.DotNetBar.TabItem(this.components);
             this.panel57 = new System.Windows.Forms.Panel();
             this.groupPanel3 = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.panel65 = new System.Windows.Forms.Panel();
@@ -233,8 +233,8 @@
             this.groupPanel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabControl1)).BeginInit();
             this.tabControl1.SuspendLayout();
-            this.tabControlPanel2.SuspendLayout();
             this.tabControlPanel1.SuspendLayout();
+            this.tabControlPanel2.SuspendLayout();
             this.panel57.SuspendLayout();
             this.groupPanel3.SuspendLayout();
             this.panel65.SuspendLayout();
@@ -453,51 +453,6 @@
             this.tabControl1.Tabs.Add(this.tabItem2);
             this.tabControl1.Text = "tabControl1";
             // 
-            // tabControlPanel2
-            // 
-            this.tabControlPanel2.Controls.Add(this.listViewConnect);
-            this.tabControlPanel2.DisabledBackColor = System.Drawing.Color.Empty;
-            this.tabControlPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControlPanel2.Location = new System.Drawing.Point(0, 26);
-            this.tabControlPanel2.Name = "tabControlPanel2";
-            this.tabControlPanel2.Padding = new System.Windows.Forms.Padding(1);
-            this.tabControlPanel2.Size = new System.Drawing.Size(549, 251);
-            this.tabControlPanel2.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(179)))), ((int)(((byte)(231)))));
-            this.tabControlPanel2.Style.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(237)))), ((int)(((byte)(254)))));
-            this.tabControlPanel2.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
-            this.tabControlPanel2.Style.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(97)))), ((int)(((byte)(156)))));
-            this.tabControlPanel2.Style.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Right) 
-            | DevComponents.DotNetBar.eBorderSide.Bottom)));
-            this.tabControlPanel2.Style.GradientAngle = 90;
-            this.tabControlPanel2.TabIndex = 5;
-            this.tabControlPanel2.TabItem = this.tabItem2;
-            // 
-            // listViewConnect
-            // 
-            // 
-            // 
-            // 
-            this.listViewConnect.Border.Class = "ListViewBorder";
-            this.listViewConnect.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.listViewConnect.DisabledBackColor = System.Drawing.Color.Empty;
-            this.listViewConnect.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listViewConnect.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listViewConnect.FullRowSelect = true;
-            this.listViewConnect.GridLines = true;
-            this.listViewConnect.HideSelection = false;
-            this.listViewConnect.Location = new System.Drawing.Point(1, 1);
-            this.listViewConnect.Name = "listViewConnect";
-            this.listViewConnect.Size = new System.Drawing.Size(547, 249);
-            this.listViewConnect.TabIndex = 1;
-            this.listViewConnect.UseCompatibleStateImageBehavior = false;
-            this.listViewConnect.View = System.Windows.Forms.View.Details;
-            // 
-            // tabItem2
-            // 
-            this.tabItem2.AttachedControl = this.tabControlPanel2;
-            this.tabItem2.Name = "tabItem2";
-            this.tabItem2.Text = "Wifi đã kết nối";
-            // 
             // tabControlPanel1
             // 
             this.tabControlPanel1.Controls.Add(this.listView);
@@ -542,6 +497,51 @@
             this.tabItem1.AttachedControl = this.tabControlPanel1;
             this.tabItem1.Name = "tabItem1";
             this.tabItem1.Text = "Tài khoản lưu trên máy";
+            // 
+            // tabControlPanel2
+            // 
+            this.tabControlPanel2.Controls.Add(this.listViewConnect);
+            this.tabControlPanel2.DisabledBackColor = System.Drawing.Color.Empty;
+            this.tabControlPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControlPanel2.Location = new System.Drawing.Point(0, 26);
+            this.tabControlPanel2.Name = "tabControlPanel2";
+            this.tabControlPanel2.Padding = new System.Windows.Forms.Padding(1);
+            this.tabControlPanel2.Size = new System.Drawing.Size(549, 251);
+            this.tabControlPanel2.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(179)))), ((int)(((byte)(231)))));
+            this.tabControlPanel2.Style.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(237)))), ((int)(((byte)(254)))));
+            this.tabControlPanel2.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
+            this.tabControlPanel2.Style.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(97)))), ((int)(((byte)(156)))));
+            this.tabControlPanel2.Style.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Right) 
+            | DevComponents.DotNetBar.eBorderSide.Bottom)));
+            this.tabControlPanel2.Style.GradientAngle = 90;
+            this.tabControlPanel2.TabIndex = 5;
+            this.tabControlPanel2.TabItem = this.tabItem2;
+            // 
+            // listViewConnect
+            // 
+            // 
+            // 
+            // 
+            this.listViewConnect.Border.Class = "ListViewBorder";
+            this.listViewConnect.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.listViewConnect.DisabledBackColor = System.Drawing.Color.Empty;
+            this.listViewConnect.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listViewConnect.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listViewConnect.FullRowSelect = true;
+            this.listViewConnect.GridLines = true;
+            this.listViewConnect.HideSelection = false;
+            this.listViewConnect.Location = new System.Drawing.Point(1, 1);
+            this.listViewConnect.Name = "listViewConnect";
+            this.listViewConnect.Size = new System.Drawing.Size(547, 249);
+            this.listViewConnect.TabIndex = 1;
+            this.listViewConnect.UseCompatibleStateImageBehavior = false;
+            this.listViewConnect.View = System.Windows.Forms.View.Details;
+            // 
+            // tabItem2
+            // 
+            this.tabItem2.AttachedControl = this.tabControlPanel2;
+            this.tabItem2.Name = "tabItem2";
+            this.tabItem2.Text = "Wifi đã kết nối";
             // 
             // panel57
             // 
@@ -2714,8 +2714,8 @@
             this.groupPanel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tabControl1)).EndInit();
             this.tabControl1.ResumeLayout(false);
-            this.tabControlPanel2.ResumeLayout(false);
             this.tabControlPanel1.ResumeLayout(false);
+            this.tabControlPanel2.ResumeLayout(false);
             this.panel57.ResumeLayout(false);
             this.groupPanel3.ResumeLayout(false);
             this.panel65.ResumeLayout(false);

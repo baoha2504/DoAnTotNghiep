@@ -25,7 +25,7 @@ namespace MTA_Mobile_Forensic
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-            btnDieuTraVideo_Click(sender, e);
+            btnKetNoiThietBi_Click(sender, e);
         }
 
         //Trang chủ
@@ -162,6 +162,7 @@ namespace MTA_Mobile_Forensic
                 btnThongTinKhac.Visible = false;
                 btnLichSuTruyCap.Visible = true;
                 btnRoot_JailbreakThietBi.Visible = false;
+                btnCuocGoi.Visible = true;
 
                 type_device_connected = "IPHONE";
             }
@@ -180,6 +181,7 @@ namespace MTA_Mobile_Forensic
                 btnLichSuTruyCap.Visible = false;
                 btnRoot_JailbreakThietBi.Visible = false;
                 btnRoot_JailbreakThietBi.Visible = false;
+                btnCuocGoi.Visible = false;
 
                 type_device_connected = "ANDROID";
             }

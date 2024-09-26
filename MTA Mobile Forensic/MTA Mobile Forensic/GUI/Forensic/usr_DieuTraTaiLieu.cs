@@ -17,7 +17,7 @@ namespace MTA_Mobile_Forensic.GUI.Forensic
         public usr_DieuTraTaiLieu()
         {
             InitializeComponent();
-            tabControl1.SelectedTabIndex = 2;
+            tabControl1.SelectedTabIndex = 0;
 
             tab2_flpChonAnh.DragEnter += Flp_DragEnter;
             tab2_flpAnhDaChon.DragEnter += Flp_DragEnter;
@@ -100,9 +100,9 @@ namespace MTA_Mobile_Forensic.GUI.Forensic
                     string[] docExtensions = new string[] { ".doc", ".docx", ".pdf", ".txt" };
 
                     // Lấy tất cả các tệp dạng âm thanh trong thư mục
-                    tab1_pathFiles = Directory.GetFiles(folderPath)
-                                          .Where(file => docExtensions.Contains(Path.GetExtension(file).ToLower()))
-                                          .ToList();
+                    tab1_pathFiles = Directory.GetFiles(folderPath, "*.*", SearchOption.AllDirectories)
+                                       .Where(file => docExtensions.Contains(Path.GetExtension(file).ToLower()))
+                                       .ToList();
 
                     var subDirectories = Directory.GetDirectories(folderPath);
                     foreach (var subDir in subDirectories)
@@ -232,7 +232,7 @@ namespace MTA_Mobile_Forensic.GUI.Forensic
                     {
                         if (System.IO.File.Exists(tab1_txtPathFileDaChon.Text))
                         {
-                            Process.Start("winword.exe", tab1_txtPathFileDaChon.Text);
+                            Process.Start("winword.exe", $"\"{tab1_txtPathFileDaChon.Text}\"");
                         }
                         else
                         {
@@ -250,7 +250,7 @@ namespace MTA_Mobile_Forensic.GUI.Forensic
                     {
                         if (System.IO.File.Exists(tab1_txtPathFileDaChon.Text))
                         {
-                            Process.Start("notepad.exe", tab1_txtPathFileDaChon.Text);
+                            Process.Start("notepad.exe", $"\"{tab1_txtPathFileDaChon.Text}\"");
                         }
                         else
                         {
@@ -268,7 +268,7 @@ namespace MTA_Mobile_Forensic.GUI.Forensic
                     {
                         if (System.IO.File.Exists(tab1_txtPathFileDaChon.Text))
                         {
-                            Process.Start("msedge.exe", tab1_txtPathFileDaChon.Text);
+                            Process.Start("msedge.exe", $"\"{tab1_txtPathFileDaChon.Text}\"");
                         }
                         else
                         {

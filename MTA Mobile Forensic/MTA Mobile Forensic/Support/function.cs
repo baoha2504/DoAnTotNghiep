@@ -37,7 +37,7 @@ namespace MTA_Mobile_Forensic.Support
 
                 return dateTime.ToString("HH:mm:ss dd/MM/yyyy");
             }
-            catch 
+            catch
             {
                 return "Invalid timestamp";
             }
@@ -59,14 +59,31 @@ namespace MTA_Mobile_Forensic.Support
             }
         }
 
-
         public string GetValue(string source, string key, string nextKey)
         {
-            string searchKey = key + "=";
-            int startIndex = source.IndexOf(searchKey) + searchKey.Length;
-            int endIndex = source.IndexOf(", " + nextKey, startIndex);
-            return source.Substring(startIndex, endIndex - startIndex);
+            try
+            {
+                string searchKey = key + "=";
+                int startIndex = source.IndexOf(searchKey) + searchKey.Length;
+                int endIndex = source.IndexOf(", " + nextKey, startIndex);
+
+                // Ensure the indices are valid before extracting the substring
+                if (startIndex >= searchKey.Length && endIndex > startIndex)
+                {
+                    return source.Substring(startIndex, endIndex - startIndex);
+                }
+                else
+                {
+                    return string.Empty; // Return an empty string if the indices are not valid
+                }
+            }
+            catch (Exception)
+            {
+                // Log the exception if needed, or handle specific types of exceptions
+                return string.Empty; // Return a default value to avoid breaking the code
+            }
         }
+
 
         public string GetLastModified(string filePath)
         {
@@ -145,8 +162,8 @@ namespace MTA_Mobile_Forensic.Support
                 return googleMapsUrl;
             }
             catch
-            { 
-                return "Error"; 
+            {
+                return "Error";
             }
         }
 
@@ -253,8 +270,15 @@ namespace MTA_Mobile_Forensic.Support
         {
             try
             {
-                DateTime dateTime = DateTime.ParseExact(dateTimeString, "ddd, dd MMM yyyy HH:mm:ss 'GMT'", CultureInfo.InvariantCulture, DateTimeStyles.AssumeUniversal);
-                return dateTime.ToString("HH:mm:ss dd/MM/yyyy");
+                if (dateTimeString != null)
+                {
+                    DateTime dateTime = DateTime.ParseExact(dateTimeString, "ddd, dd MMM yyyy HH:mm:ss 'GMT'", CultureInfo.InvariantCulture, DateTimeStyles.AssumeUniversal);
+                    return dateTime.ToString("HH:mm:ss dd/MM/yyyy");
+                }
+                else
+                {
+                    return null;
+                }
             }
             catch (FormatException)
             {

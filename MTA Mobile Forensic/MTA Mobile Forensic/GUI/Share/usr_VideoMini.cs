@@ -1,15 +1,8 @@
-﻿using MediaToolkit.Model;
+﻿using MediaToolkit;
+using MediaToolkit.Model;
 using MediaToolkit.Options;
-using MediaToolkit;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace MTA_Mobile_Forensic.GUI.Share
@@ -38,11 +31,8 @@ namespace MTA_Mobile_Forensic.GUI.Share
 
             string thumbnailPath = Path.Combine(Path.GetTempPath(), tenfile + "_thumbnail.jpg");
 
-            if (!File.Exists(thumbnailPath))
-            {
-                ExtractThumbnail(linkvideo, thumbnailPath);
-            }
-            
+            ExtractThumbnail(linkvideo, thumbnailPath);
+
             if (File.Exists(thumbnailPath))
             {
                 pbAnh.Load(thumbnailPath);
@@ -55,16 +45,20 @@ namespace MTA_Mobile_Forensic.GUI.Share
 
         private void ExtractThumbnail(string videoPath, string thumbnailPath)
         {
-            var inputFile = new MediaFile { Filename = videoPath };
-            var outputFile = new MediaFile { Filename = thumbnailPath };
-
-            using (var engine = new Engine())
+            try
             {
-                engine.GetMetadata(inputFile);
+                var inputFile = new MediaFile { Filename = videoPath };
+                var outputFile = new MediaFile { Filename = thumbnailPath };
 
-                var options = new ConversionOptions { Seek = TimeSpan.FromSeconds(inputFile.Metadata.Duration.TotalSeconds / 2) };
-                engine.GetThumbnail(inputFile, outputFile, options);
+                using (var engine = new Engine())
+                {
+                    engine.GetMetadata(inputFile);
+
+                    var options = new ConversionOptions { Seek = TimeSpan.FromSeconds(inputFile.Metadata.Duration.TotalSeconds / 2) };
+                    engine.GetThumbnail(inputFile, outputFile, options);
+                }
             }
+            catch { }
         }
 
         private void pbAnh_Click(object sender, EventArgs e)

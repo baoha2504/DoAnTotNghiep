@@ -713,5 +713,52 @@ namespace MTA_Mobile_Forensic.Support
             }
         }
 
+        public async Task<List<string>> TrichXuatKhuonMatVideo(string path, string outputdirectory)
+        {
+            var requestUrl = $"{url}/api/TrichXuatKhuonMatVideo";
+
+            // Create the JSON payload
+            var jsonPayload = new
+            {
+                pathVideo = path,
+                output_directory = outputdirectory
+            };
+
+            var content = new StringContent(
+                JsonConvert.SerializeObject(jsonPayload),
+                System.Text.Encoding.UTF8,
+                "application/json");
+
+            // Tạo một CancellationTokenSource với thời gian chờ là 10 phút
+            using (var cts = new CancellationTokenSource(TimeSpan.FromMinutes(10)))
+            {
+                try
+                {
+                    // Gửi yêu cầu HTTP với CancellationToken
+                    var response = await client.PostAsync(requestUrl, content, cts.Token);
+                    response.EnsureSuccessStatusCode();
+
+                    // Hủy bỏ token khi đã nhận được phản hồi thành công
+                    cts.Cancel(); // Hủy ngay khi hoàn thành
+
+                    var jsonResponse = await response.Content.ReadAsStringAsync();
+                    var dataWebs = JsonConvert.DeserializeObject<List<string>>(jsonResponse);
+
+                    return dataWebs;
+                }
+                catch (HttpRequestException e)
+                {
+                    Console.WriteLine($"Request error: {e.Message}");
+                    return null;
+                }
+                catch (TaskCanceledException e)
+                {
+                    // Xử lý khi thời gian chờ hết hoặc yêu cầu bị hủy
+                    Console.WriteLine($"The request was canceled or timed out: {e.Message}");
+                    return null;
+                }
+            }
+        }
+
     }
 }

@@ -28,7 +28,7 @@ namespace MTA_Mobile_Forensic.GUI.IOS
         public async void LoadData()
         {
             pathFile = function.FindFile(DeviceInfo.pathBackup, "CallHistory.storedata");
-            if (pathFile != string.Empty)
+            if (!string.IsNullOrEmpty(pathFile))
             {
                 var calls= await api.LayDanhSachCuocGoi_IOS(pathFile);
                 if (calls != null)
@@ -56,6 +56,7 @@ namespace MTA_Mobile_Forensic.GUI.IOS
                     }
                 }
             }
+            else { }
         }
 
         private void dataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
