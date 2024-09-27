@@ -110,6 +110,7 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(35, 35);
             this.panel2.TabIndex = 0;
+            this.panel2.Click += new System.EventHandler(this.panel2_Click);
             // 
             // usr_TinNhanMini
             // 

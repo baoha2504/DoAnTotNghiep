@@ -286,5 +286,10 @@ namespace MTA_Mobile_Forensic.Support
                 return null;
             }
         }
+
+        public bool IsFileExists(string filePath)
+        {
+            return File.Exists(filePath);
+        }
     }
 }

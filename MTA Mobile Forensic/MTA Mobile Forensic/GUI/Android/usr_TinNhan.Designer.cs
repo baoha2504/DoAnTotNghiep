@@ -670,6 +670,7 @@
             this.btnXuat.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnXuat.TabIndex = 0;
             this.btnXuat.Text = "Xuất";
+            this.btnXuat.Click += new System.EventHandler(this.btnXuat_Click);
             // 
             // usr_TinNhan
             // 

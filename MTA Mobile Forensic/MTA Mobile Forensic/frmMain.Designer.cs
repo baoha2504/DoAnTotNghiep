@@ -71,6 +71,7 @@
             this.NANGCAO = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btnThayDoiMatKhau = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btnMoKhoaThietBi = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.btnDanhSachTrinhSat = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btnRoot_JailbreakThietBi = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement8 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.TROGIUP = new DevExpress.XtraBars.Navigation.AccordionControlElement();
@@ -88,7 +89,6 @@
             this.btnPathBackup = new DevExpress.XtraBars.BarButtonItem();
             this.fluentFormDefaultManager1 = new DevExpress.XtraBars.FluentDesignSystem.FluentFormDefaultManager(this.components);
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.btnDanhSachTrinhSat = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentFormDefaultManager1)).BeginInit();
@@ -422,6 +422,13 @@
             this.btnMoKhoaThietBi.Text = "Mở khóa thiết bị";
             this.btnMoKhoaThietBi.Click += new System.EventHandler(this.btnMoKhoaThietBi_Click);
             // 
+            // btnDanhSachTrinhSat
+            // 
+            this.btnDanhSachTrinhSat.Name = "btnDanhSachTrinhSat";
+            this.btnDanhSachTrinhSat.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.btnDanhSachTrinhSat.Text = "Danh sách trinh sát";
+            this.btnDanhSachTrinhSat.Click += new System.EventHandler(this.btnDanhSachTrinhSat_Click);
+            // 
             // btnRoot_JailbreakThietBi
             // 
             this.btnRoot_JailbreakThietBi.Name = "btnRoot_JailbreakThietBi";
@@ -575,13 +582,6 @@
             this.lblText,
             this.btnPathBackup});
             this.fluentFormDefaultManager1.MaxItemId = 8;
-            // 
-            // btnDanhSachTrinhSat
-            // 
-            this.btnDanhSachTrinhSat.Name = "btnDanhSachTrinhSat";
-            this.btnDanhSachTrinhSat.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.btnDanhSachTrinhSat.Text = "Danh sách trinh sát";
-            this.btnDanhSachTrinhSat.Click += new System.EventHandler(this.btnDanhSachTrinhSat_Click);
             // 
             // frmMain
             // 

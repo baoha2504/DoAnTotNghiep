@@ -37,7 +37,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.txtThoiGianDoc = new System.Windows.Forms.TextBox();
+            this.txtThoiGianNhan = new System.Windows.Forms.TextBox();
             this.txtThoiGianGui = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -89,6 +89,7 @@
             // 
             this.txtNoiDung.BackColor = System.Drawing.Color.White;
             this.txtNoiDung.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtNoiDung.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNoiDung.Location = new System.Drawing.Point(163, 0);
             this.txtNoiDung.Name = "txtNoiDung";
             this.txtNoiDung.ReadOnly = true;
@@ -136,7 +137,7 @@
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.txtThoiGianDoc);
+            this.panel4.Controls.Add(this.txtThoiGianNhan);
             this.panel4.Controls.Add(this.txtThoiGianGui);
             this.panel4.Controls.Add(this.label3);
             this.panel4.Controls.Add(this.label2);
@@ -146,25 +147,25 @@
             this.panel4.Size = new System.Drawing.Size(424, 123);
             this.panel4.TabIndex = 1;
             // 
-            // txtThoiGianDoc
+            // txtThoiGianNhan
             // 
-            this.txtThoiGianDoc.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtThoiGianNhan.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtThoiGianDoc.BackColor = System.Drawing.Color.White;
-            this.txtThoiGianDoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtThoiGianDoc.Location = new System.Drawing.Point(179, 67);
-            this.txtThoiGianDoc.Multiline = true;
-            this.txtThoiGianDoc.Name = "txtThoiGianDoc";
-            this.txtThoiGianDoc.ReadOnly = true;
-            this.txtThoiGianDoc.Size = new System.Drawing.Size(233, 38);
-            this.txtThoiGianDoc.TabIndex = 8;
+            this.txtThoiGianNhan.BackColor = System.Drawing.Color.White;
+            this.txtThoiGianNhan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtThoiGianNhan.Location = new System.Drawing.Point(179, 67);
+            this.txtThoiGianNhan.Multiline = true;
+            this.txtThoiGianNhan.Name = "txtThoiGianNhan";
+            this.txtThoiGianNhan.ReadOnly = true;
+            this.txtThoiGianNhan.Size = new System.Drawing.Size(233, 38);
+            this.txtThoiGianNhan.TabIndex = 8;
             // 
             // txtThoiGianGui
             // 
             this.txtThoiGianGui.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtThoiGianGui.BackColor = System.Drawing.Color.White;
-            this.txtThoiGianGui.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtThoiGianGui.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtThoiGianGui.Location = new System.Drawing.Point(179, 20);
             this.txtThoiGianGui.Multiline = true;
             this.txtThoiGianGui.Name = "txtThoiGianGui";
@@ -178,9 +179,9 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(40, 67);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(109, 20);
+            this.label3.Size = new System.Drawing.Size(118, 20);
             this.label3.TabIndex = 4;
-            this.label3.Text = "Thời gian đọc";
+            this.label3.Text = "Thời gian nhận";
             // 
             // label2
             // 
@@ -209,7 +210,7 @@
             this.txtDiaChi.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtDiaChi.BackColor = System.Drawing.Color.White;
-            this.txtDiaChi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDiaChi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDiaChi.Location = new System.Drawing.Point(160, 67);
             this.txtDiaChi.Multiline = true;
             this.txtDiaChi.Name = "txtDiaChi";
@@ -222,7 +223,7 @@
             this.txtLoaiTinNhan.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtLoaiTinNhan.BackColor = System.Drawing.Color.White;
-            this.txtLoaiTinNhan.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLoaiTinNhan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLoaiTinNhan.Location = new System.Drawing.Point(160, 23);
             this.txtLoaiTinNhan.Multiline = true;
             this.txtLoaiTinNhan.Name = "txtLoaiTinNhan";
@@ -260,7 +261,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frm_ChiTietTinNhan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmChiTietTinNhan";
+            this.Text = "Chi tiết tin nhắn";
             this.panelEx1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
@@ -287,7 +288,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblAddress;
-        private System.Windows.Forms.TextBox txtThoiGianDoc;
+        private System.Windows.Forms.TextBox txtThoiGianNhan;
         private System.Windows.Forms.TextBox txtThoiGianGui;
         private System.Windows.Forms.TextBox txtDiaChi;
         private System.Windows.Forms.TextBox txtLoaiTinNhan;

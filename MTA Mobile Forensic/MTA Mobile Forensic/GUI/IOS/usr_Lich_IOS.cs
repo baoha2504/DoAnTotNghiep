@@ -1,6 +1,11 @@
-﻿using MTA_Mobile_Forensic.Model;
+﻿using MiniSoftware;
+using MTA_Mobile_Forensic.GUI.Share;
+using MTA_Mobile_Forensic.Model;
 using MTA_Mobile_Forensic.Support;
 using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.IO;
 using System.Windows.Forms;
 
 namespace MTA_Mobile_Forensic.GUI.IOS
@@ -10,6 +15,7 @@ namespace MTA_Mobile_Forensic.GUI.IOS
         api api = new api();
         function function = new function();
         string pathFile = "";
+        List<CalendarIOS> list_calendar = new List<CalendarIOS>();
 
         public usr_Lich_IOS()
         {
@@ -26,6 +32,7 @@ namespace MTA_Mobile_Forensic.GUI.IOS
                 var calendars = await api.LayDanhSachLich_IOS(pathFile);
                 if (calendars != null)
                 {
+                    list_calendar = calendars;
                     for (int i = 0; i < calendars.Count; i++)
                     {
                         dataGridView.Rows.Add();
@@ -42,7 +49,58 @@ namespace MTA_Mobile_Forensic.GUI.IOS
 
         private void btnXuat_Click(object sender, EventArgs e)
         {
+            using (FolderBrowserDialog folderDialog = new FolderBrowserDialog())
+            {
+                folderDialog.Description = "Chọn thư mục lưu báo cáo";
+                if (folderDialog.ShowDialog() == DialogResult.OK)
+                {
+                    string selectedPath = folderDialog.SelectedPath;
+                    string fileName = $"Báo cáo về lịch của thiết bị_{DeviceInfo.nameDevice}_{DeviceInfo.serialDevice}.docx";
+                    string PATH_EXPORT = Path.Combine(selectedPath, fileName);
 
+                    string sourceDirectory = AppDomain.CurrentDomain.BaseDirectory;
+                    string projectDirectory = Directory.GetParent(sourceDirectory).Parent.Parent.FullName;
+                    string PATH_TEMPLATE = Path.Combine(projectDirectory, "Data", "Document", "report_calendar.docx");
+                    if (File.Exists(PATH_TEMPLATE))
+                    {
+                        var calendars_export = new List<object>();
+
+                        for (int i = 0; i < list_calendar.Count; i++)
+                        {
+                            var calendar_export = new
+                            {
+                                CalendarDisplayName = list_calendar[i].summary,
+                                Dtstart = list_calendar[i].startdateconverted,
+                                Dtend = list_calendar[i].enddateconverted,
+                                AccountCreated = list_calendar[i].address + "/" + list_calendar[i].displayname,
+                            };
+                            calendars_export.Add(calendar_export);
+                        }
+
+                        var value = new
+                        {
+                            ct = calendars_export,
+                            phut = DateTime.Now.ToString("mm"),
+                            gio = DateTime.Now.ToString("HH"),
+                            ngay = DateTime.Now.ToString("dd"),
+                            thang = DateTime.Now.ToString("MM"),
+                            nam = DateTime.Now.ToString("yyyy"),
+                            device_name = DeviceInfo.nameDevice,
+                            device_serial = DeviceInfo.serialDevice,
+                            path_backup = DeviceInfo.pathBackup,
+                        };
+
+                        MiniWord.SaveAsByTemplate(PATH_EXPORT, PATH_TEMPLATE, value);
+
+                        Process.Start(PATH_EXPORT);
+                        MessageBox.Show("Xuất file thành công", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("File không tồn tại: " + PATH_EXPORT, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
         }
 
         private void btnLamMoi_Click(object sender, EventArgs e)

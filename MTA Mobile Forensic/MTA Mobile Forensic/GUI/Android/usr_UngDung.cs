@@ -1,8 +1,10 @@
-﻿using MTA_Mobile_Forensic.GUI.Share;
+﻿using MiniSoftware;
+using MTA_Mobile_Forensic.GUI.Share;
 using MTA_Mobile_Forensic.Model;
 using MTA_Mobile_Forensic.Support;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Net;
@@ -215,7 +217,59 @@ namespace MTA_Mobile_Forensic.GUI.Android
 
         private void btnXuat_Click(object sender, EventArgs e)
         {
+            using (FolderBrowserDialog folderDialog = new FolderBrowserDialog())
+            {
+                folderDialog.Description = "Chọn thư mục lưu báo cáo";
+                if (folderDialog.ShowDialog() == DialogResult.OK)
+                {
+                    string selectedPath = folderDialog.SelectedPath;
+                    string fileName = $"Báo cáo về ứng dụng của thiết bị_{DeviceInfo.nameDevice}_{DeviceInfo.serialDevice}.docx";
+                    string PATH_EXPORT = Path.Combine(selectedPath, fileName);
 
+                    string sourceDirectory = AppDomain.CurrentDomain.BaseDirectory;
+                    string projectDirectory = Directory.GetParent(sourceDirectory).Parent.Parent.FullName;
+                    string PATH_TEMPLATE = Path.Combine(projectDirectory, "Data", "Document", "report_application.docx");
+                    if (File.Exists(PATH_TEMPLATE))
+                    {
+                        var aplications_export = new List<object>();
+                        foreach (ListViewItem item in listView.Items)
+                        {
+                            var aplication_export = new
+                            {
+                                tenungdung = item.SubItems[2].Text,
+                                goi = item.SubItems[1].Text,
+                                phienban = item.SubItems[5].Text,
+                                ngaycaidat = item.SubItems[3].Text,
+                                ngaycapnhatcuoi = item.SubItems[4].Text,
+                            };
+                            aplications_export.Add(aplication_export);
+
+                        }
+
+                        var value = new
+                        {
+                            ct = aplications_export,
+                            phut = DateTime.Now.ToString("mm"),
+                            gio = DateTime.Now.ToString("HH"),
+                            ngay = DateTime.Now.ToString("dd"),
+                            thang = DateTime.Now.ToString("MM"),
+                            nam = DateTime.Now.ToString("yyyy"),
+                            device_name = DeviceInfo.nameDevice,
+                            device_serial = DeviceInfo.serialDevice,
+                            path_backup = DeviceInfo.pathBackup,
+                        };
+
+                        MiniWord.SaveAsByTemplate(PATH_EXPORT, PATH_TEMPLATE, value);
+
+                        Process.Start(PATH_EXPORT);
+                        MessageBox.Show("Xuất file thành công", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("File không tồn tại: " + PATH_EXPORT, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
         }
 
         private void btnNhap_Click(object sender, EventArgs e)

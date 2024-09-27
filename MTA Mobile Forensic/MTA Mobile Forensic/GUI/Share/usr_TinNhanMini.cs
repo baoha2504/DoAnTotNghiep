@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MTA_Mobile_Forensic.Model;
+using System;
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
@@ -21,6 +22,7 @@ namespace MTA_Mobile_Forensic.GUI.Share
         public string simId = "";
         public int sentMessage = -1;
         public event EventHandler ControlClicked;
+        public string loaitinnhan = "";
 
         public usr_TinNhanMini(string diachi, string tinnhan, string thoigian, string dateSent, string read, string status, string serviceCenter, string simId, int sentMessage)
         {
@@ -50,11 +52,13 @@ namespace MTA_Mobile_Forensic.GUI.Share
             {
                 // tin nhắn nhận được
                 panel2.BackgroundImage = Image.FromFile(fullImagePath);
+                loaitinnhan = "Tin nhắn nhận";
             }
             else if (sentMessage == 1)
             {
                 // tin nhắn gửi đi
                 // giữ hình đã setup sẵn
+                loaitinnhan = "Tin nhắn gửi";
             }
         }
 
@@ -86,6 +90,12 @@ namespace MTA_Mobile_Forensic.GUI.Share
         private void panel1_DoubleClick(object sender, EventArgs e)
         {
             checkBox.Checked = !checkBox.Checked;
+        }
+
+        private void panel2_Click(object sender, EventArgs e)
+        {
+            frm_ChiTietTinNhan frm_ChiTietTinNhan = new frm_ChiTietTinNhan(loaitinnhan, diachi, dateSent, thoigian, tinnhan, GeneralVariables.noidungtimkiem_tinnhan);
+            frm_ChiTietTinNhan.ShowDialog();
         }
     }
 }

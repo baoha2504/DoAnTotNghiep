@@ -1,9 +1,12 @@
-﻿using MTA_Mobile_Forensic.GUI.Share;
+﻿using MiniSoftware;
+using MTA_Mobile_Forensic.GUI.Share;
 using MTA_Mobile_Forensic.Model;
 using MTA_Mobile_Forensic.Support;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Globalization;
+using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
@@ -196,6 +199,10 @@ namespace MTA_Mobile_Forensic.GUI.Android
                 }
                 txtTrungTamDichVu.Text = clickedControl.serviceCenter;
             }
+            else if (sender is usr_TinNhanMini ControlClicked_TimKiem)
+            {
+
+            }
         }
 
         private void Load_flpChiTietTinNhan(string address)
@@ -266,6 +273,7 @@ namespace MTA_Mobile_Forensic.GUI.Android
         {
             currentPage = 0;
             string searchText = txtTimKiem.Text.ToLower();
+            GeneralVariables.noidungtimkiem_tinnhan = searchText;
 
             if (txtTimKiem.Text != String.Empty)
             {
@@ -404,6 +412,72 @@ namespace MTA_Mobile_Forensic.GUI.Android
                 usr_TinNhanMini.ControlClicked += flpDSTinNhan_Click;
                 usr_TinNhanMini.Width = flpDSTinNhan.Width;
                 flpDSTinNhan.Controls.Add(usr_TinNhanMini);
+            }
+        }
+
+        private void btnXuat_Click(object sender, EventArgs e)
+        {
+            using (FolderBrowserDialog folderDialog = new FolderBrowserDialog())
+            {
+                folderDialog.Description = "Chọn thư mục lưu báo cáo";
+                if (folderDialog.ShowDialog() == DialogResult.OK)
+                {
+                    string selectedPath = folderDialog.SelectedPath;
+                    string fileName = $"Báo cáo về tin nhắn của thiết bị_{DeviceInfo.nameDevice}_{DeviceInfo.serialDevice}.docx";
+                    string PATH_EXPORT = Path.Combine(selectedPath, fileName);
+
+                    string sourceDirectory = AppDomain.CurrentDomain.BaseDirectory;
+                    string projectDirectory = Directory.GetParent(sourceDirectory).Parent.Parent.FullName;
+                    string PATH_TEMPLATE = Path.Combine(projectDirectory, "Data", "Document", "report_message.docx");
+                    if (File.Exists(PATH_TEMPLATE))
+                    {
+                        var messages_export = new List<MessageExport>(); // Danh sách để lưu trữ các tin nhắn xuất
+
+                        for (int i = 0; i < messages.Count; i++)
+                        {
+                            var message_export = new MessageExport
+                            {
+                                Address = messages[i].address,
+                                Body = messages[i].body,
+                                SentMessage = messages[i].sentMessage.ToString(),
+                                Date = messages[i].date,
+                                SimId = messages[i].simId
+                            };
+
+                            if (message_export.SentMessage == "1")
+                            {
+                                message_export.SentMessage = "Gửi";
+                            }
+                            else if (message_export.SentMessage == "0")
+                            {
+                                message_export.SentMessage = "Nhận";
+                            }
+                            messages_export.Add(message_export); 
+                        }
+
+                        var value = new
+                        {
+                            ct = messages_export,
+                            phut = DateTime.Now.ToString("mm"),
+                            gio = DateTime.Now.ToString("HH"),
+                            ngay = DateTime.Now.ToString("dd"),
+                            thang = DateTime.Now.ToString("MM"),
+                            nam = DateTime.Now.ToString("yyyy"),
+                            device_name = DeviceInfo.nameDevice,
+                            device_serial = DeviceInfo.serialDevice,
+                            path_backup = DeviceInfo.pathBackup,
+                        };
+
+                        MiniWord.SaveAsByTemplate(PATH_EXPORT, PATH_TEMPLATE, value);
+
+                        Process.Start(PATH_EXPORT);
+                        MessageBox.Show("Xuất file thành công", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("File không tồn tại: " + PATH_EXPORT, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
             }
         }
     }

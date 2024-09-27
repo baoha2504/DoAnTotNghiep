@@ -250,3 +250,7 @@ E:\Do An\DoAnTotNghiep\MTA Mobile Forensic\MTA Mobile Forensic\obj\Debug\MTA Mob
 E:\Do An\DoAnTotNghiep\MTA Mobile Forensic\MTA Mobile Forensic\obj\Debug\MTA_Mobile_Forensic.GUI.Android.usr_DanhSachTrinhSat.resources
 E:\Do An\DoAnTotNghiep\MTA Mobile Forensic\MTA Mobile Forensic\obj\Debug\MTA_Mobile_Forensic.GUI.Forensic.usr_DieuTraVideo.resources
 E:\Do An\DoAnTotNghiep\MTA Mobile Forensic\MTA Mobile Forensic\obj\Debug\MTA_Mobile_Forensic.GUI.Share.frm_ChiTietTinNhan.resources
+E:\Do An\DoAnTotNghiep\MTA Mobile Forensic\MTA Mobile Forensic\obj\Debug\MTA_Mobile_Forensic.GUI.IOS.usr_SaoLuuKhoiPhuc_IOS2.resources
+E:\Do An\DoAnTotNghiep\MTA Mobile Forensic\MTA Mobile Forensic\bin\Debug\DocumentFormat.OpenXml.dll
+E:\Do An\DoAnTotNghiep\MTA Mobile Forensic\MTA Mobile Forensic\bin\Debug\MiniWord.dll
+E:\Do An\DoAnTotNghiep\MTA Mobile Forensic\MTA Mobile Forensic\bin\Debug\DocumentFormat.OpenXml.xml

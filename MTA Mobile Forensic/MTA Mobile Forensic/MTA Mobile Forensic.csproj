@@ -50,6 +50,9 @@
     <Reference Include="DevExpress.XtraLayout.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraPdfViewer.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraTreeList.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DocumentFormat.OpenXml, Version=2.18.0.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocumentFormat.OpenXml.2.18.0\lib\net46\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
     <Reference Include="MediaToolkit, Version=1.1.0.1, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\MediaToolkit.1.1.0.1\lib\net40\MediaToolkit.dll</HintPath>
     </Reference>
@@ -82,6 +85,9 @@
     </Reference>
     <Reference Include="Microsoft.Web.WebView2.Wpf, Version=1.0.2592.51, Culture=neutral, PublicKeyToken=2a8ab48044d2601e, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Web.WebView2.1.0.2592.51\lib\net462\Microsoft.Web.WebView2.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="MiniWord, Version=0.7.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MiniWord.0.7.0\lib\net45\MiniWord.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
@@ -345,6 +351,12 @@
     <Compile Include="GUI\IOS\usr_SaoLuuKhoiPhuc_IOS.Designer.cs">
       <DependentUpon>usr_SaoLuuKhoiPhuc_IOS.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\IOS\usr_SaoLuuKhoiPhuc_IOS2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\IOS\usr_SaoLuuKhoiPhuc_IOS2.Designer.cs">
+      <DependentUpon>usr_SaoLuuKhoiPhuc_IOS2.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\IOS\usr_TinNhan_IOS.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -468,7 +480,9 @@
     <Compile Include="Model\CallHistoryIOS.cs" />
     <Compile Include="Model\ContactIOS.cs" />
     <Compile Include="Model\DeviceInfo.cs" />
+    <Compile Include="Model\GeneralVariables.cs" />
     <Compile Include="Model\LoginHistory_TrinhSat.cs" />
+    <Compile Include="Model\MessageExport.cs" />
     <Compile Include="Model\OCR.cs" />
     <Compile Include="Model\SmsIOS.cs" />
     <Compile Include="Model\TinNhan.cs" />
@@ -589,6 +603,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\IOS\usr_SaoLuuKhoiPhuc_IOS.resx">
       <DependentUpon>usr_SaoLuuKhoiPhuc_IOS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\IOS\usr_SaoLuuKhoiPhuc_IOS2.resx">
+      <DependentUpon>usr_SaoLuuKhoiPhuc_IOS2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\IOS\usr_TinNhan_IOS.resx">
       <DependentUpon>usr_TinNhan_IOS.cs</DependentUpon>

@@ -15,7 +15,7 @@ namespace MTA_Mobile_Forensic
         {
             InitializeComponent();
             accordionControl1.Width = 260;
-            //HienThiForm(0, "");
+            //HienThiForm(1, "ANDROID");
             HienThiForm(1, "IPHONE");
             btnPathBackup.SuperTip = new DevExpress.Utils.SuperToolTip();
             DevExpress.Utils.ToolTipItem toolTipItem = new DevExpress.Utils.ToolTipItem();
@@ -69,7 +69,8 @@ namespace MTA_Mobile_Forensic
 
         //Sao lưu khôi phục
         usr_SaoLuuKhoiPhuc usr_SaoLuuKhoiPhuc;
-        usr_SaoLuuKhoiPhuc_IOS usr_SaoLuuKhoiPhuc_IOS;
+        //usr_SaoLuuKhoiPhuc_IOS usr_SaoLuuKhoiPhuc_IOS;
+        usr_SaoLuuKhoiPhuc_IOS2 usr_SaoLuuKhoiPhuc_IOS2;
 
         //Nâng cao
         usr_ThayDoiMatKhau usr_ThayDoiMatKhau;
@@ -700,16 +701,16 @@ namespace MTA_Mobile_Forensic
             lblTieuDe2.Caption = "Sao lưu và khôi phục dữ liệu";
             if (type_device_connected == "IPHONE")
             {
-                if (usr_SaoLuuKhoiPhuc_IOS == null)
+                if (usr_SaoLuuKhoiPhuc_IOS2 == null)
                 {
-                    usr_SaoLuuKhoiPhuc_IOS = new usr_SaoLuuKhoiPhuc_IOS();
-                    usr_SaoLuuKhoiPhuc_IOS.Dock = DockStyle.Fill;
-                    mainContainer.Controls.Add(usr_SaoLuuKhoiPhuc_IOS);
-                    usr_SaoLuuKhoiPhuc_IOS.BringToFront();
+                    usr_SaoLuuKhoiPhuc_IOS2 = new usr_SaoLuuKhoiPhuc_IOS2();
+                    usr_SaoLuuKhoiPhuc_IOS2.Dock = DockStyle.Fill;
+                    mainContainer.Controls.Add(usr_SaoLuuKhoiPhuc_IOS2);
+                    usr_SaoLuuKhoiPhuc_IOS2.BringToFront();
                 }
                 else
                 {
-                    usr_SaoLuuKhoiPhuc_IOS.BringToFront();
+                    usr_SaoLuuKhoiPhuc_IOS2.BringToFront();
                 }
             }
             else if (type_device_connected == "ANDROID")

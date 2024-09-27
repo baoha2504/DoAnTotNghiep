@@ -1,8 +1,11 @@
-﻿using MTA_Mobile_Forensic.GUI.Share;
+﻿using MiniSoftware;
+using MTA_Mobile_Forensic.GUI.Share;
 using MTA_Mobile_Forensic.Model;
 using MTA_Mobile_Forensic.Support;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.IO;
 using System.Windows.Forms;
 
 namespace MTA_Mobile_Forensic.GUI.IOS
@@ -68,6 +71,7 @@ namespace MTA_Mobile_Forensic.GUI.IOS
         {
             currentPage = 0;
             string searchText = txtTimKiem.Text.ToLower();
+            GeneralVariables.noidungtimkiem_tinnhan = searchText;
 
             if (txtTimKiem.Text != String.Empty)
             {
@@ -244,7 +248,67 @@ namespace MTA_Mobile_Forensic.GUI.IOS
 
         private void btnXuat_Click(object sender, EventArgs e)
         {
+            using (FolderBrowserDialog folderDialog = new FolderBrowserDialog())
+            {
+                folderDialog.Description = "Chọn thư mục lưu báo cáo";
+                if (folderDialog.ShowDialog() == DialogResult.OK)
+                {
+                    string selectedPath = folderDialog.SelectedPath;
+                    string fileName = $"Báo cáo về tin nhắn của thiết bị_{DeviceInfo.nameDevice}_{DeviceInfo.serialDevice}.docx";
+                    string PATH_EXPORT = Path.Combine(selectedPath, fileName);
 
+                    string sourceDirectory = AppDomain.CurrentDomain.BaseDirectory;
+                    string projectDirectory = Directory.GetParent(sourceDirectory).Parent.Parent.FullName;
+                    string PATH_TEMPLATE = Path.Combine(projectDirectory, "Data", "Document", "report_message.docx");
+                    if (File.Exists(PATH_TEMPLATE))
+                    {
+                        var messages_export = new List<MessageExport>();
+
+                        for (int i = 0; i < smsIOs.Count; i++)
+                        {
+                            var message_export = new MessageExport
+                            {
+                                Address = smsIOs[i].destinationcaller,
+                                Body = smsIOs[i].text,
+                                Date = smsIOs[i].date,
+                                SimId = "1"
+                            };
+
+                            if (smsIOs[i].service == "1")
+                            {
+                                message_export.SentMessage = "Gửi";
+                            }
+                            else if (smsIOs[i].service == "0")
+                            {
+                                message_export.SentMessage = "Nhận";
+                            }
+                            messages_export.Add(message_export);
+                        }
+
+                        var value = new
+                        {
+                            ct = messages_export,
+                            phut = DateTime.Now.ToString("mm"),
+                            gio = DateTime.Now.ToString("HH"),
+                            ngay = DateTime.Now.ToString("dd"),
+                            thang = DateTime.Now.ToString("MM"),
+                            nam = DateTime.Now.ToString("yyyy"),
+                            device_name = DeviceInfo.nameDevice,
+                            device_serial = DeviceInfo.serialDevice,
+                            path_backup = DeviceInfo.pathBackup,
+                        };
+
+                        MiniWord.SaveAsByTemplate(PATH_EXPORT, PATH_TEMPLATE, value);
+
+                        Process.Start(PATH_EXPORT);
+                        MessageBox.Show("Xuất file thành công", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("File không tồn tại: " + PATH_EXPORT, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
         }
 
         private void btnChonTatCa_Click(object sender, EventArgs e)
