@@ -25,7 +25,7 @@ namespace MTA_Mobile_Forensic
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-            btnKetNoiThietBi_Click(sender, e);
+            btnTrangChu_Click(sender, e);
         }
 
         //Trang chủ
@@ -79,6 +79,8 @@ namespace MTA_Mobile_Forensic
         usr_RootJailbreakThietBi usr_RootJailbreakThietBi;
 
         //Trợ giúp
+        usr_ThongTinPhanMem usr_ThongTinPhanMem;
+        usr_HuongDanSuDung usr_HuongDanSuDung;
 
         public void HienThiForm(int hienthi, string type)
         {
@@ -151,7 +153,7 @@ namespace MTA_Mobile_Forensic
         {
             if (type == "IPHONE")
             {
-                // ẩn form nào
+                // ẩn form
                 btnDuLieuLog.Visible = false;
                 btnCaiDatCuaThietBi.Visible = false;
                 btnLichSuTruyCap.Visible = false;
@@ -188,16 +190,19 @@ namespace MTA_Mobile_Forensic
             }
         }
 
+        private void HideControlInMainContainer()
+        {
+            foreach (Control control in mainContainer.Controls)
+            {
+                control.Visible = false;
+            }
+        }
 
         private void btnTrangChu_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void btnKetNoiThietBi_Click(object sender, EventArgs e)
-        {
             lblTieuDe1.Caption = "Trang chủ";
             lblTieuDe2.Caption = "Kết nối thiết bị";
+            HideControlInMainContainer();
             if (usr_KetNoiThietBi == null)
             {
                 usr_KetNoiThietBi = new usr_KetNoiThietBi(this);
@@ -207,6 +212,26 @@ namespace MTA_Mobile_Forensic
             }
             else
             {
+                usr_KetNoiThietBi.Visible = true;
+                usr_KetNoiThietBi.BringToFront();
+            }
+        }
+
+        private void btnKetNoiThietBi_Click(object sender, EventArgs e)
+        {
+            lblTieuDe1.Caption = "Trang chủ";
+            lblTieuDe2.Caption = "Kết nối thiết bị";
+            HideControlInMainContainer();
+            if (usr_KetNoiThietBi == null)
+            {
+                usr_KetNoiThietBi = new usr_KetNoiThietBi(this);
+                usr_KetNoiThietBi.Dock = DockStyle.Fill;
+                mainContainer.Controls.Add(usr_KetNoiThietBi);
+                usr_KetNoiThietBi.BringToFront();
+            }
+            else
+            {
+                usr_KetNoiThietBi.Visible = true;
                 usr_KetNoiThietBi.BringToFront();
             }
         }
@@ -216,6 +241,7 @@ namespace MTA_Mobile_Forensic
         {
             lblTieuDe1.Caption = "Điều tra dữ liệu";
             lblTieuDe2.Caption = "Tin nhắn";
+            HideControlInMainContainer();
             if (type_device_connected == "IPHONE")
             {
                 if (usr_TinNhan_IOS == null)
@@ -227,6 +253,7 @@ namespace MTA_Mobile_Forensic
                 }
                 else
                 {
+                    usr_TinNhan_IOS.Visible = true;
                     usr_TinNhan_IOS.BringToFront();
                 }
             }
@@ -241,6 +268,7 @@ namespace MTA_Mobile_Forensic
                 }
                 else
                 {
+                    usr_TinNhan.Visible = true;
                     usr_TinNhan.BringToFront();
                 }
             }
@@ -250,6 +278,7 @@ namespace MTA_Mobile_Forensic
         {
             lblTieuDe1.Caption = "Điều tra dữ liệu";
             lblTieuDe2.Caption = "Cuộc gọi";
+            HideControlInMainContainer();
             if (type_device_connected == "IPHONE")
             {
                 if (usr_CuocGoi_IOS == null)
@@ -261,6 +290,7 @@ namespace MTA_Mobile_Forensic
                 }
                 else
                 {
+                    usr_CuocGoi_IOS.Visible = true;
                     usr_CuocGoi_IOS.BringToFront();
                 }
             }
@@ -275,6 +305,7 @@ namespace MTA_Mobile_Forensic
                 }
                 else
                 {
+                    usr_CuocGoi.Visible = true;
                     usr_CuocGoi.BringToFront();
                 }
             }
@@ -284,6 +315,7 @@ namespace MTA_Mobile_Forensic
         {
             lblTieuDe1.Caption = "Điều tra dữ liệu";
             lblTieuDe2.Caption = "Danh bạ";
+            HideControlInMainContainer();
             if (type_device_connected == "IPHONE")
             {
                 if (usr_DanhBa_IOS == null)
@@ -295,6 +327,7 @@ namespace MTA_Mobile_Forensic
                 }
                 else
                 {
+                    usr_DanhBa_IOS.Visible = true;
                     usr_DanhBa_IOS.BringToFront();
                 }
             }
@@ -309,6 +342,7 @@ namespace MTA_Mobile_Forensic
                 }
                 else
                 {
+                    usr_DanhBa.Visible = true;
                     usr_DanhBa.BringToFront();
                 }
             }
@@ -318,6 +352,7 @@ namespace MTA_Mobile_Forensic
         {
             lblTieuDe1.Caption = "Điều tra dữ liệu";
             lblTieuDe2.Caption = "Lịch";
+            HideControlInMainContainer();
             if (type_device_connected == "IPHONE")
             {
                 if (usr_Lich_IOS == null)
@@ -329,6 +364,7 @@ namespace MTA_Mobile_Forensic
                 }
                 else
                 {
+                    usr_Lich_IOS.Visible = true;
                     usr_Lich_IOS.BringToFront();
                 }
             }
@@ -343,6 +379,7 @@ namespace MTA_Mobile_Forensic
                 }
                 else
                 {
+                    usr_Lich.Visible = true;
                     usr_Lich.BringToFront();
                 }
             }
@@ -352,6 +389,7 @@ namespace MTA_Mobile_Forensic
         {
             lblTieuDe1.Caption = "Điều tra dữ liệu";
             lblTieuDe2.Caption = "Ảnh";
+            HideControlInMainContainer();
             if (usr_Anh == null)
             {
                 usr_Anh = new usr_Anh();
@@ -361,6 +399,7 @@ namespace MTA_Mobile_Forensic
             }
             else
             {
+                usr_Anh.Visible = true;
                 usr_Anh.BringToFront();
             }
         }
@@ -369,6 +408,7 @@ namespace MTA_Mobile_Forensic
         {
             lblTieuDe1.Caption = "Điều tra dữ liệu";
             lblTieuDe2.Caption = "Video";
+            HideControlInMainContainer();
             if (usr_Video == null)
             {
                 usr_Video = new usr_Video();
@@ -378,6 +418,7 @@ namespace MTA_Mobile_Forensic
             }
             else
             {
+                usr_Video.Visible = true;
                 usr_Video.BringToFront();
             }
         }
@@ -386,6 +427,7 @@ namespace MTA_Mobile_Forensic
         {
             lblTieuDe1.Caption = "Điều tra dữ liệu";
             lblTieuDe2.Caption = "Ghi âm";
+            HideControlInMainContainer();
             if (usr_GhiAm == null)
             {
                 usr_GhiAm = new usr_GhiAm();
@@ -395,6 +437,7 @@ namespace MTA_Mobile_Forensic
             }
             else
             {
+                usr_GhiAm.Visible = true;
                 usr_GhiAm.BringToFront();
             }
         }
@@ -403,6 +446,7 @@ namespace MTA_Mobile_Forensic
         {
             lblTieuDe1.Caption = "Điều tra dữ liệu";
             lblTieuDe2.Caption = "Ứng dụng";
+            HideControlInMainContainer();
             if (type_device_connected == "IPHONE")
             {
                 if (usr_UngDung_IOS == null)
@@ -414,6 +458,7 @@ namespace MTA_Mobile_Forensic
                 }
                 else
                 {
+                    usr_UngDung_IOS.Visible = true;
                     usr_UngDung_IOS.BringToFront();
                 }
             }
@@ -428,6 +473,7 @@ namespace MTA_Mobile_Forensic
                 }
                 else
                 {
+                    usr_UngDung.Visible = true;
                     usr_UngDung.BringToFront();
                 }
             }
@@ -437,6 +483,7 @@ namespace MTA_Mobile_Forensic
         {
             lblTieuDe1.Caption = "Điều tra dữ liệu";
             lblTieuDe2.Caption = "Log hệ thống";
+            HideControlInMainContainer();
             if (usr_DuLieuLog == null)
             {
                 usr_DuLieuLog = new usr_DuLieuLog();
@@ -446,6 +493,7 @@ namespace MTA_Mobile_Forensic
             }
             else
             {
+                usr_DuLieuLog.Visible = true;
                 usr_DuLieuLog.BringToFront();
             }
         }
@@ -454,6 +502,7 @@ namespace MTA_Mobile_Forensic
         {
             lblTieuDe1.Caption = "Điều tra dữ liệu";
             lblTieuDe2.Caption = "Cài đặt trên thiết bị";
+            HideControlInMainContainer();
             if (usr_CaiDat == null)
             {
                 usr_CaiDat = new usr_CaiDat();
@@ -463,6 +512,7 @@ namespace MTA_Mobile_Forensic
             }
             else
             {
+                usr_CaiDat.Visible = true;
                 usr_CaiDat.BringToFront();
             }
         }
@@ -471,6 +521,7 @@ namespace MTA_Mobile_Forensic
         {
             lblTieuDe1.Caption = "Điều tra dữ liệu";
             lblTieuDe2.Caption = "Lịch sử truy cập của thiết bị";
+            HideControlInMainContainer();
             if (type_device_connected == "IPHONE")
             {
                 if (usr_LichSuTruyCap_IOS == null)
@@ -482,6 +533,7 @@ namespace MTA_Mobile_Forensic
                 }
                 else
                 {
+                    usr_LichSuTruyCap_IOS.Visible = true;
                     usr_LichSuTruyCap_IOS.BringToFront();
                 }
             }
@@ -495,6 +547,7 @@ namespace MTA_Mobile_Forensic
         {
             lblTieuDe1.Caption = "Điều tra dữ liệu";
             lblTieuDe2.Caption = "File hệ thống";
+            HideControlInMainContainer();
             if (usr_FileHeThong == null)
             {
                 usr_FileHeThong = new usr_FileHeThong();
@@ -504,6 +557,7 @@ namespace MTA_Mobile_Forensic
             }
             else
             {
+                usr_FileHeThong.Visible = true;
                 usr_FileHeThong.BringToFront();
             }
         }
@@ -512,6 +566,7 @@ namespace MTA_Mobile_Forensic
         {
             lblTieuDe1.Caption = "Điều tra dữ liệu";
             lblTieuDe2.Caption = "Thông tin khác";
+            HideControlInMainContainer();
             if (usr_ThongTinKhac == null)
             {
                 usr_ThongTinKhac = new usr_ThongTinKhac();
@@ -521,6 +576,7 @@ namespace MTA_Mobile_Forensic
             }
             else
             {
+                usr_ThongTinKhac.Visible = true;
                 usr_ThongTinKhac.BringToFront();
             }
         }
@@ -529,6 +585,7 @@ namespace MTA_Mobile_Forensic
         {
             lblTieuDe1.Caption = "Điều khiển thiết bị";
             lblTieuDe2.Caption = "Cài đặt và gỡ cài đặt";
+            HideControlInMainContainer();
             if (type_device_connected == "IPHONE")
             {
                 if (usr_CaiDatUngDung_IOS == null)
@@ -540,6 +597,7 @@ namespace MTA_Mobile_Forensic
                 }
                 else
                 {
+                    usr_CaiDatUngDung_IOS.Visible = true;
                     usr_CaiDatUngDung_IOS.BringToFront();
                 }
             }
@@ -554,6 +612,7 @@ namespace MTA_Mobile_Forensic
                 }
                 else
                 {
+                    usr_CaiDatUngDung.Visible = true;
                     usr_CaiDatUngDung.BringToFront();
                 }
             }
@@ -563,6 +622,7 @@ namespace MTA_Mobile_Forensic
         {
             lblTieuDe1.Caption = "Điều khiển thiết bị";
             lblTieuDe2.Caption = "Phản chiếu thiết bị";
+            HideControlInMainContainer();
             if (usr_PhanChieuThietBi == null)
             {
                 usr_PhanChieuThietBi = new usr_PhanChieuThietBi();
@@ -572,6 +632,7 @@ namespace MTA_Mobile_Forensic
             }
             else
             {
+                usr_PhanChieuThietBi.Visible = true;
                 usr_PhanChieuThietBi.BringToFront();
             }
         }
@@ -580,6 +641,7 @@ namespace MTA_Mobile_Forensic
         {
             lblTieuDe1.Caption = "Điều tra thông tin";
             lblTieuDe2.Caption = "Thông tin đối tượng";
+            HideControlInMainContainer();
             if (usr_DieuTraNguoiDung == null)
             {
                 usr_DieuTraNguoiDung = new usr_DieuTraNguoiDung();
@@ -589,6 +651,7 @@ namespace MTA_Mobile_Forensic
             }
             else
             {
+                usr_DieuTraNguoiDung.Visible = true;
                 usr_DieuTraNguoiDung.BringToFront();
             }
         }
@@ -597,6 +660,7 @@ namespace MTA_Mobile_Forensic
         {
             lblTieuDe1.Caption = "Điều tra thông tin";
             lblTieuDe2.Caption = "Ảnh";
+            HideControlInMainContainer();
             if (usr_DieuTraAnh == null)
             {
                 usr_DieuTraAnh = new usr_DieuTraAnh();
@@ -606,6 +670,7 @@ namespace MTA_Mobile_Forensic
             }
             else
             {
+                usr_DieuTraAnh.Visible = true;
                 usr_DieuTraAnh.BringToFront();
             }
         }
@@ -614,6 +679,7 @@ namespace MTA_Mobile_Forensic
         {
             lblTieuDe1.Caption = "Điều tra thông tin";
             lblTieuDe2.Caption = "Video";
+            HideControlInMainContainer();
             if (usr_DieuTraVideo == null)
             {
                 usr_DieuTraVideo = new usr_DieuTraVideo();
@@ -623,6 +689,7 @@ namespace MTA_Mobile_Forensic
             }
             else
             {
+                usr_DieuTraVideo.Visible = true;
                 usr_DieuTraVideo.BringToFront();
             }
         }
@@ -631,6 +698,7 @@ namespace MTA_Mobile_Forensic
         {
             lblTieuDe1.Caption = "Điều tra thông tin";
             lblTieuDe2.Caption = "Âm thanh";
+            HideControlInMainContainer();
             if (usr_DieuTraAudio == null)
             {
                 usr_DieuTraAudio = new usr_DieuTraAudio();
@@ -640,6 +708,7 @@ namespace MTA_Mobile_Forensic
             }
             else
             {
+                usr_DieuTraAudio.Visible = true;
                 usr_DieuTraAudio.BringToFront();
             }
         }
@@ -648,6 +717,7 @@ namespace MTA_Mobile_Forensic
         {
             lblTieuDe1.Caption = "Điều tra thông tin";
             lblTieuDe2.Caption = "Tài liệu";
+            HideControlInMainContainer();
             if (usr_DieuTraTaiLieu == null)
             {
                 usr_DieuTraTaiLieu = new usr_DieuTraTaiLieu();
@@ -657,6 +727,7 @@ namespace MTA_Mobile_Forensic
             }
             else
             {
+                usr_DieuTraTaiLieu.Visible = true;
                 usr_DieuTraTaiLieu.BringToFront();
             }
         }
@@ -665,6 +736,7 @@ namespace MTA_Mobile_Forensic
         {
             lblTieuDe1.Caption = "Điều tra thông tin";
             lblTieuDe2.Caption = "Map";
+            HideControlInMainContainer();
             if (usr_DieuTraMap == null)
             {
                 usr_DieuTraMap = new usr_DieuTraMap();
@@ -674,6 +746,7 @@ namespace MTA_Mobile_Forensic
             }
             else
             {
+                usr_DieuTraMap.Visible = true;
                 usr_DieuTraMap.BringToFront();
             }
         }
@@ -682,6 +755,7 @@ namespace MTA_Mobile_Forensic
         {
             lblTieuDe1.Caption = "Điều tra thông tin";
             lblTieuDe2.Caption = "File";
+            HideControlInMainContainer();
             if (usr_DieuTraFile == null)
             {
                 usr_DieuTraFile = new usr_DieuTraFile();
@@ -691,6 +765,7 @@ namespace MTA_Mobile_Forensic
             }
             else
             {
+                usr_DieuTraFile.Visible = true;
                 usr_DieuTraFile.BringToFront();
             }
         }
@@ -699,6 +774,7 @@ namespace MTA_Mobile_Forensic
         {
             lblTieuDe1.Caption = "Sao lưu và khôi phục";
             lblTieuDe2.Caption = "Sao lưu và khôi phục dữ liệu";
+            HideControlInMainContainer();
             if (type_device_connected == "IPHONE")
             {
                 if (usr_SaoLuuKhoiPhuc_IOS2 == null)
@@ -710,6 +786,7 @@ namespace MTA_Mobile_Forensic
                 }
                 else
                 {
+                    usr_SaoLuuKhoiPhuc_IOS2.Visible = true;
                     usr_SaoLuuKhoiPhuc_IOS2.BringToFront();
                 }
             }
@@ -724,6 +801,7 @@ namespace MTA_Mobile_Forensic
                 }
                 else
                 {
+                    usr_SaoLuuKhoiPhuc.Visible = true;
                     usr_SaoLuuKhoiPhuc.BringToFront();
                 }
             }
@@ -733,6 +811,7 @@ namespace MTA_Mobile_Forensic
         {
             lblTieuDe1.Caption = "Điều khiển thiết bị";
             lblTieuDe2.Caption = "Phục hồi dữ liệu";
+            HideControlInMainContainer();
             if (type_device_connected == "IPHONE")
             {
                 if (usr_CaiDatUngDung_IOS == null)
@@ -744,6 +823,7 @@ namespace MTA_Mobile_Forensic
                 }
                 else
                 {
+                    usr_CaiDatUngDung_IOS.Visible = true;
                     usr_CaiDatUngDung_IOS.BringToFront();
                 }
             }
@@ -758,6 +838,7 @@ namespace MTA_Mobile_Forensic
                 }
                 else
                 {
+                    usr_CaiDatUngDung.Visible = true;
                     usr_CaiDatUngDung.BringToFront();
                 }
             }
@@ -767,6 +848,7 @@ namespace MTA_Mobile_Forensic
         {
             lblTieuDe1.Caption = "Nâng cao";
             lblTieuDe2.Caption = "Thay đổi mật khẩu";
+            HideControlInMainContainer();
             if (usr_ThayDoiMatKhau == null)
             {
                 usr_ThayDoiMatKhau = new usr_ThayDoiMatKhau();
@@ -776,6 +858,7 @@ namespace MTA_Mobile_Forensic
             }
             else
             {
+                usr_ThayDoiMatKhau.Visible = true;
                 usr_ThayDoiMatKhau.BringToFront();
             }
         }
@@ -784,6 +867,7 @@ namespace MTA_Mobile_Forensic
         {
             lblTieuDe1.Caption = "Nâng cao";
             lblTieuDe2.Caption = "Mở khóa thiết bị";
+            HideControlInMainContainer();
             if (usr_MoKhoaThietBi == null)
             {
                 usr_MoKhoaThietBi = new usr_MoKhoaThietBi();
@@ -793,6 +877,7 @@ namespace MTA_Mobile_Forensic
             }
             else
             {
+                usr_MoKhoaThietBi.Visible = true;
                 usr_MoKhoaThietBi.BringToFront();
             }
         }
@@ -801,6 +886,7 @@ namespace MTA_Mobile_Forensic
         {
             lblTieuDe1.Caption = "Nâng cao";
             lblTieuDe2.Caption = "Đối tượng trinh sát";
+            HideControlInMainContainer();
             if (usr_DanhSachTrinhSat == null)
             {
                 usr_DanhSachTrinhSat = new usr_DanhSachTrinhSat();
@@ -810,6 +896,7 @@ namespace MTA_Mobile_Forensic
             }
             else
             {
+                usr_DanhSachTrinhSat.Visible = true;
                 usr_DanhSachTrinhSat.BringToFront();
             }
         }
@@ -817,7 +904,8 @@ namespace MTA_Mobile_Forensic
         private void btnRoot_JailbreakThietBi_Click(object sender, EventArgs e)
         {
             lblTieuDe1.Caption = "Nâng cao";
-            lblTieuDe2.Caption = "Root thiết bị";
+            lblTieuDe2.Caption = "Root & Jailbreak thiết bị";
+            HideControlInMainContainer();
 
             if (type_device_connected == "IPHONE")
             {
@@ -831,6 +919,7 @@ namespace MTA_Mobile_Forensic
                 }
                 else
                 {
+                    usr_RootJailbreakThietBi.Visible = true;
                     usr_RootJailbreakThietBi.BringToFront();
                     usr_RootJailbreakThietBi.TabIndex = 1;
                 }
@@ -847,6 +936,7 @@ namespace MTA_Mobile_Forensic
                 }
                 else
                 {
+                    usr_RootJailbreakThietBi.Visible = true;
                     usr_RootJailbreakThietBi.BringToFront();
                     usr_RootJailbreakThietBi.TabIndex = 0;
                 }
@@ -857,6 +947,46 @@ namespace MTA_Mobile_Forensic
         {
             frmPathBackUp frm = new frmPathBackUp();
             frm.ShowDialog();
+        }
+
+        private void btnHuongDanSuDung_Click(object sender, EventArgs e)
+        {
+            lblTieuDe1.Caption = "Trợ giúp";
+            lblTieuDe2.Caption = "Hướng dẫn sử dụng";
+            HideControlInMainContainer();
+
+            if (usr_HuongDanSuDung == null)
+            {
+                usr_HuongDanSuDung = new usr_HuongDanSuDung();
+                usr_HuongDanSuDung.Dock = DockStyle.Fill;
+                mainContainer.Controls.Add(usr_HuongDanSuDung);
+                usr_HuongDanSuDung.BringToFront();
+            }
+            else
+            {
+                usr_HuongDanSuDung.Visible = true;
+                usr_HuongDanSuDung.BringToFront();
+            }
+        }
+
+        private void btnThongTinPhanMem_Click(object sender, EventArgs e)
+        {
+            lblTieuDe1.Caption = "Trợ giúp";
+            lblTieuDe2.Caption = "Thông tin phần mềm";
+            HideControlInMainContainer();
+
+            if (usr_ThongTinPhanMem == null)
+            {
+                usr_ThongTinPhanMem = new usr_ThongTinPhanMem();
+                usr_ThongTinPhanMem.Dock = DockStyle.Fill;
+                mainContainer.Controls.Add(usr_ThongTinPhanMem);
+                usr_ThongTinPhanMem.BringToFront();
+            }
+            else
+            {
+                usr_ThongTinPhanMem.Visible = true;
+                usr_ThongTinPhanMem.BringToFront();
+            }
         }
     }
 }

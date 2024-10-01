@@ -29,7 +29,7 @@ namespace MTA_Mobile_Forensic.GUI.Forensic
         public usr_DieuTraVideo()
         {
             InitializeComponent();
-            tabControl1.SelectedTabIndex = 1;
+            tabControl1.SelectedTabIndex = 0;
         }
 
         private void tabControl1_SelectedTabChanged(object sender, DevComponents.DotNetBar.TabStripTabChangedEventArgs e)

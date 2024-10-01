@@ -181,7 +181,8 @@ namespace MTA_Mobile_Forensic.GUI.Android
             foreach (var device in deviceList_IOS)
             {
                 string text = libimobiledevice.ideviceinfoCommand($"-u {device}");
-                string hangthietbi = GetValueFromInput(text, "DeviceClass").Trim().ToUpper();
+                string hangthietbi = "";
+                try { hangthietbi = GetValueFromInput(text, "DeviceClass").Trim().ToUpper(); } catch { }
                 string tenthietbi = GetValueFromInput(text, "DeviceName").Trim();
                 string loai = GetValueFromInput(text, "ProductType");
                 loai = XuLyType(loai);

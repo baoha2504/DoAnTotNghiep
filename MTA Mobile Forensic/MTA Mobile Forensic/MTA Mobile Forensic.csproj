@@ -435,6 +435,12 @@
     <Compile Include="GUI\Share\usr_GhiAmMini.Designer.cs">
       <DependentUpon>usr_GhiAmMini.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Share\usr_HuongDanSuDung.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Share\usr_HuongDanSuDung.Designer.cs">
+      <DependentUpon>usr_HuongDanSuDung.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Share\usr_LichMini.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -446,6 +452,12 @@
     </Compile>
     <Compile Include="GUI\Share\usr_ThietBiMini.Designer.cs">
       <DependentUpon>usr_ThietBiMini.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Share\usr_ThongTinPhanMem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Share\usr_ThongTinPhanMem.Designer.cs">
+      <DependentUpon>usr_ThongTinPhanMem.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\Share\usr_TinNhanMini.cs">
       <SubType>UserControl</SubType>
@@ -646,11 +658,17 @@
     <EmbeddedResource Include="GUI\Share\usr_GhiAmMini.resx">
       <DependentUpon>usr_GhiAmMini.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Share\usr_HuongDanSuDung.resx">
+      <DependentUpon>usr_HuongDanSuDung.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Share\usr_LichMini.resx">
       <DependentUpon>usr_LichMini.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Share\usr_ThietBiMini.resx">
       <DependentUpon>usr_ThietBiMini.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Share\usr_ThongTinPhanMem.resx">
+      <DependentUpon>usr_ThongTinPhanMem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Share\usr_TinNhanMini.resx">
       <DependentUpon>usr_TinNhanMini.cs</DependentUpon>
