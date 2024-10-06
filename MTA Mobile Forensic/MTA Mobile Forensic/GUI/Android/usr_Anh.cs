@@ -15,16 +15,21 @@ namespace MTA_Mobile_Forensic.GUI.Android
         public usr_Anh()
         {
             InitializeComponent();
+            //if (DeviceInfo.serialDevice != string.Empty)
+            //{
+            //    if (DeviceInfo.nameDevice.Contains("IPHONE"))
+            //    {
+            //        txtTimKiem.Text = Path.Combine(DeviceInfo.pathBackup, "Media", "DCIM");
+            //    }
+            //    else
+            //    {
+            //        txtTimKiem.Text = DeviceInfo.pathBackup;
+            //    }
+            //    GetImageInFolder(txtTimKiem.Text);
+            //}
             if (DeviceInfo.serialDevice != string.Empty)
             {
-                if (DeviceInfo.nameDevice.Contains("IPHONE"))
-                {
-                    txtTimKiem.Text = Path.Combine(DeviceInfo.pathBackup, "Media", "DCIM");
-                }
-                else
-                {
-                    txtTimKiem.Text = DeviceInfo.pathBackup;
-                }
+                txtTimKiem.Text = DeviceInfo.pathBackup;
                 GetImageInFolder(txtTimKiem.Text);
             }
         }
@@ -220,11 +225,11 @@ namespace MTA_Mobile_Forensic.GUI.Android
             }
             txtThongTinAnh.Text = string.Empty;
             ClearWebView();
-            if (DeviceInfo.nameDevice.Contains("IPHONE"))
-            {
-                txtTimKiem.Text = Path.Combine(DeviceInfo.pathBackup, "Media", "DCIM");
-            }
-            
+            //if (DeviceInfo.nameDevice.Contains("IPHONE"))
+            //{
+            //    txtTimKiem.Text = Path.Combine(DeviceInfo.pathBackup, "Media", "DCIM");
+            //}
+
             GetImageInFolder(txtTimKiem.Text);
             pbAnhDaChon.Image = null;
 

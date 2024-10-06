@@ -672,8 +672,13 @@ namespace MTA_Mobile_Forensic.GUI.Forensic
 
         private void tab3_zoomTrackBarControl_ValueChanged(object sender, EventArgs e)
         {
-            float angle = tab3_zoomTrackBarControl.Value - 90;
-            tab3_pictureBoxImage2.Image = RotateImage(originalImage, angle);
+            try
+            {
+                float angle = tab3_zoomTrackBarControl.Value - 90;
+                tab3_pictureBoxImage2.Image = RotateImage(originalImage, angle);
+            }
+            catch { }
+
         }
         #endregion
     }

@@ -90,6 +90,7 @@
             this.fluentFormDefaultManager1 = new DevExpress.XtraBars.FluentDesignSystem.FluentFormDefaultManager(this.components);
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.accordionControlElement1 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.btnKiemTraTinhToanVen = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentFormDefaultManager1)).BeginInit();
@@ -430,6 +431,7 @@
             this.btnMoKhoaThietBi,
             this.btnDanhSachTrinhSat,
             this.btnRoot_JailbreakThietBi,
+            this.btnKiemTraTinhToanVen,
             this.accordionControlElement8});
             this.NANGCAO.Expanded = true;
             this.NANGCAO.Name = "NANGCAO";
@@ -492,7 +494,7 @@
             // 
             // btnThongTinPhanMem
             // 
-            this.btnThongTinPhanMem.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("accordionControlElement10.ImageOptions.SvgImage")));
+            this.btnThongTinPhanMem.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnThongTinPhanMem.ImageOptions.SvgImage")));
             this.btnThongTinPhanMem.Name = "btnThongTinPhanMem";
             this.btnThongTinPhanMem.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.btnThongTinPhanMem.Text = "Thông tin phần mềm";
@@ -623,6 +625,14 @@
             this.accordionControlElement1.Name = "accordionControlElement1";
             this.accordionControlElement1.Visible = false;
             // 
+            // btnKiemTraTinhToanVen
+            // 
+            this.btnKiemTraTinhToanVen.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnKiemTraTinhToanVen.ImageOptions.SvgImage")));
+            this.btnKiemTraTinhToanVen.Name = "btnKiemTraTinhToanVen";
+            this.btnKiemTraTinhToanVen.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.btnKiemTraTinhToanVen.Text = "Kiểm tra tính toàn vẹn";
+            this.btnKiemTraTinhToanVen.Click += new System.EventHandler(this.btnKiemTraTinhToanVen_Click);
+            // 
             // frmMain
             // 
             this.Appearance.BackColor = System.Drawing.Color.White;
@@ -709,5 +719,6 @@
         private DevExpress.XtraBars.Navigation.AccordionControlElement btnDanhSachTrinhSat;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement1;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement2;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement btnKiemTraTinhToanVen;
     }
 }

@@ -79,7 +79,6 @@
             this.panelEx1.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
             this.panelEx1.Style.GradientAngle = 90;
             this.panelEx1.TabIndex = 18;
-            this.panelEx1.Text = "Không hiển thị được ảnh";
             // 
             // pictureBox
             // 

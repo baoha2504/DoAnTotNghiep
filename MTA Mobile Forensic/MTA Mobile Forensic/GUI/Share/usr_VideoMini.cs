@@ -54,8 +54,15 @@ namespace MTA_Mobile_Forensic.GUI.Share
                 {
                     engine.GetMetadata(inputFile);
 
-                    var options = new ConversionOptions { Seek = TimeSpan.FromSeconds(inputFile.Metadata.Duration.TotalSeconds / 2) };
-                    engine.GetThumbnail(inputFile, outputFile, options);
+                    //var options = new ConversionOptions { Seek = TimeSpan.FromSeconds(inputFile.Metadata.Duration.TotalSeconds / 2) };
+                    //engine.GetThumbnail(inputFile, outputFile, options);
+
+                    if (inputFile.Metadata != null && inputFile.Metadata.Duration != null)
+                    {
+                        // Set the seek point at the middle of the video
+                        var options = new ConversionOptions { Seek = TimeSpan.FromSeconds(inputFile.Metadata.Duration.TotalSeconds / 2) };
+                        engine.GetThumbnail(inputFile, outputFile, options);
+                    }
                 }
             }
             catch { }

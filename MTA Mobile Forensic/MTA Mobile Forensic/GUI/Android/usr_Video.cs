@@ -18,16 +18,21 @@ namespace MTA_Mobile_Forensic.GUI.Android
         public usr_Video()
         {
             InitializeComponent();
+            //if (DeviceInfo.serialDevice != string.Empty)
+            //{
+            //    if (DeviceInfo.nameDevice.Contains("IPHONE"))
+            //    {
+            //        txtTimKiem.Text = Path.Combine(DeviceInfo.pathBackup, "Media", "DCIM");
+            //    }
+            //    else
+            //    {
+            //        txtTimKiem.Text = DeviceInfo.pathBackup;
+            //    }
+            //    GetVideoInFolder(txtTimKiem.Text);
+            //}
             if (DeviceInfo.serialDevice != string.Empty)
             {
-                if (DeviceInfo.nameDevice.Contains("IPHONE"))
-                {
-                    txtTimKiem.Text = Path.Combine(DeviceInfo.pathBackup, "Media", "DCIM");
-                }
-                else
-                {
-                    txtTimKiem.Text = DeviceInfo.pathBackup;
-                }
+                txtTimKiem.Text = DeviceInfo.pathBackup;
                 GetVideoInFolder(txtTimKiem.Text);
             }
         }
@@ -245,10 +250,10 @@ namespace MTA_Mobile_Forensic.GUI.Android
                 txtTimKiem.Text = DeviceInfo.pathBackup;
             }
             txtThongTinVideo.Text = string.Empty;
-            if (DeviceInfo.nameDevice.Contains("IPHONE"))
-            {
-                txtTimKiem.Text = Path.Combine(DeviceInfo.pathBackup, "Media", "DCIM");
-            }
+            //if (DeviceInfo.nameDevice.Contains("IPHONE"))
+            //{
+            //    txtTimKiem.Text = Path.Combine(DeviceInfo.pathBackup, "Media", "DCIM");
+            //}
 
             ClearWebView();
             GetVideoInFolder(txtTimKiem.Text);

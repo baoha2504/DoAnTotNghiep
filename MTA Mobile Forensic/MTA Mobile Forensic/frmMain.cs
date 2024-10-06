@@ -15,8 +15,8 @@ namespace MTA_Mobile_Forensic
         {
             InitializeComponent();
             accordionControl1.Width = 260;
-            //HienThiForm(1, "ANDROID");
-            HienThiForm(1, "IPHONE");
+            HienThiForm(1, "ANDROID");
+            //HienThiForm(1, "IPHONE");
             btnPathBackup.SuperTip = new DevExpress.Utils.SuperToolTip();
             DevExpress.Utils.ToolTipItem toolTipItem = new DevExpress.Utils.ToolTipItem();
             toolTipItem.Text = "Thư mục sao lưu của thiết bị";
@@ -36,6 +36,7 @@ namespace MTA_Mobile_Forensic
         usr_TinNhan usr_TinNhan;
         usr_TinNhan_IOS usr_TinNhan_IOS;
         usr_CuocGoi usr_CuocGoi;
+        usr_CuocGoi2 usr_CuocGoi2;
         usr_CuocGoi_IOS usr_CuocGoi_IOS;
         usr_DanhBa usr_DanhBa;
         usr_DanhBa_IOS usr_DanhBa_IOS;
@@ -77,6 +78,7 @@ namespace MTA_Mobile_Forensic
         usr_MoKhoaThietBi usr_MoKhoaThietBi;
         usr_DanhSachTrinhSat usr_DanhSachTrinhSat;
         usr_RootJailbreakThietBi usr_RootJailbreakThietBi;
+        usr_KiemTraTinhToanVen usr_KiemTraTinhToanVen;
 
         //Trợ giúp
         usr_ThongTinPhanMem usr_ThongTinPhanMem;
@@ -115,6 +117,7 @@ namespace MTA_Mobile_Forensic
                 btnMoKhoaThietBi.Enabled = true;
                 btnDanhSachTrinhSat.Enabled = true;
                 btnRoot_JailbreakThietBi.Enabled = true;
+                btnKiemTraTinhToanVen.Enabled = true;
             }
             else if (hienthi == 0)
             {
@@ -146,6 +149,7 @@ namespace MTA_Mobile_Forensic
                 btnMoKhoaThietBi.Enabled = false;
                 btnDanhSachTrinhSat.Enabled = false;
                 btnRoot_JailbreakThietBi.Enabled = false;
+                btnKiemTraTinhToanVen.Enabled = false;
             }
         }
 
@@ -296,17 +300,17 @@ namespace MTA_Mobile_Forensic
             }
             else if (type_device_connected == "ANDROID")
             {
-                if (usr_CuocGoi == null)
+                if (usr_CuocGoi2 == null)
                 {
-                    usr_CuocGoi = new usr_CuocGoi();
-                    usr_CuocGoi.Dock = DockStyle.Fill;
-                    mainContainer.Controls.Add(usr_CuocGoi);
-                    usr_CuocGoi.BringToFront();
+                    usr_CuocGoi2 = new usr_CuocGoi2();
+                    usr_CuocGoi2.Dock = DockStyle.Fill;
+                    mainContainer.Controls.Add(usr_CuocGoi2);
+                    usr_CuocGoi2.BringToFront();
                 }
                 else
                 {
-                    usr_CuocGoi.Visible = true;
-                    usr_CuocGoi.BringToFront();
+                    usr_CuocGoi2.Visible = true;
+                    usr_CuocGoi2.BringToFront();
                 }
             }
         }
@@ -940,6 +944,25 @@ namespace MTA_Mobile_Forensic
                     usr_RootJailbreakThietBi.BringToFront();
                     usr_RootJailbreakThietBi.TabIndex = 0;
                 }
+            }
+        }
+
+        private void btnKiemTraTinhToanVen_Click(object sender, EventArgs e)
+        {
+            lblTieuDe1.Caption = "Nâng cao";
+            lblTieuDe2.Caption = "Kiểm tra tính toàn vẹn";
+            HideControlInMainContainer();
+            if (usr_KiemTraTinhToanVen == null)
+            {
+                usr_KiemTraTinhToanVen = new usr_KiemTraTinhToanVen();
+                usr_KiemTraTinhToanVen.Dock = DockStyle.Fill;
+                mainContainer.Controls.Add(usr_KiemTraTinhToanVen);
+                usr_KiemTraTinhToanVen.BringToFront();
+            }
+            else
+            {
+                usr_KiemTraTinhToanVen.Visible = true;
+                usr_KiemTraTinhToanVen.BringToFront();
             }
         }
 

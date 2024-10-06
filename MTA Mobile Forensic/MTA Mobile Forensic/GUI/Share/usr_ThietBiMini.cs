@@ -73,7 +73,7 @@ namespace MTA_Mobile_Forensic.GUI.Share
                 {
                     imageName = "oppo-a3s.png";
                 }
-                else if (lblTenThietBi.Text == "XIAOMI REDMI NOTE 11")
+                else if (lblTenThietBi.Text == "REDMI 2201117TG")
                 {
                     imageName = "xiaomi-redmi-note-11.png";
                 }

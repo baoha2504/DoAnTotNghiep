@@ -61,7 +61,7 @@ namespace MTA_Mobile_Forensic.GUI.Android
             int width = int.Parse(parts[0]);
             int height = int.Parse(parts[1]);
 
-            toado_X = width - 200;
+            toado_X = width - 250;
             toado_Y = height - 200;
         }
 
@@ -220,7 +220,9 @@ namespace MTA_Mobile_Forensic.GUI.Android
                             if (count >= 5)
                             {
                                 txtThongTinTamDung.Text = "Tạm dừng 40s";
-                                await Task.Delay(Int32.Parse(numericUpDown_TamDung.Text) * 1000);
+                                //await Task.Delay(Int32.Parse(numericUpDown_TamDung.Text) * 1000);
+                                Thread.Sleep(Int32.Parse(numericUpDown_TamDung.Text) * 1000);
+
 
                                 query = "shell input keyevent 26";
                                 str = adb.adbCommand(query);
@@ -254,6 +256,7 @@ namespace MTA_Mobile_Forensic.GUI.Android
             {
                 query = $"shell input text \"{line.Trim()}\"";
                 str = adb.adbCommand(query);
+                Thread.Sleep(500);
 
                 if (CheckDisplayPower())
                 {

@@ -171,6 +171,12 @@
     <Compile Include="GUI\Android\usr_CuocGoi.Designer.cs">
       <DependentUpon>usr_CuocGoi.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Android\usr_CuocGoi2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Android\usr_CuocGoi2.Designer.cs">
+      <DependentUpon>usr_CuocGoi2.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Android\usr_DanhBa.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -441,6 +447,12 @@
     <Compile Include="GUI\Share\usr_HuongDanSuDung.Designer.cs">
       <DependentUpon>usr_HuongDanSuDung.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Share\usr_KiemTraTinhToanVen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Share\usr_KiemTraTinhToanVen.Designer.cs">
+      <DependentUpon>usr_KiemTraTinhToanVen.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Share\usr_LichMini.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -490,6 +502,7 @@
     <Compile Include="Model\AudioResponse.cs" />
     <Compile Include="Model\CalendarIOS.cs" />
     <Compile Include="Model\CallHistoryIOS.cs" />
+    <Compile Include="Model\CallRecord.cs" />
     <Compile Include="Model\ContactIOS.cs" />
     <Compile Include="Model\DeviceInfo.cs" />
     <Compile Include="Model\GeneralVariables.cs" />
@@ -525,6 +538,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Android\usr_CuocGoi.resx">
       <DependentUpon>usr_CuocGoi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Android\usr_CuocGoi2.resx">
+      <DependentUpon>usr_CuocGoi2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Android\usr_DanhBa.resx">
       <DependentUpon>usr_DanhBa.cs</DependentUpon>
@@ -660,6 +676,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Share\usr_HuongDanSuDung.resx">
       <DependentUpon>usr_HuongDanSuDung.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Share\usr_KiemTraTinhToanVen.resx">
+      <DependentUpon>usr_KiemTraTinhToanVen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Share\usr_LichMini.resx">
       <DependentUpon>usr_LichMini.cs</DependentUpon>
