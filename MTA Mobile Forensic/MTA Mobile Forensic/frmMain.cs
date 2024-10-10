@@ -188,7 +188,7 @@ namespace MTA_Mobile_Forensic
                 btnLichSuTruyCap.Visible = false;
                 btnRoot_JailbreakThietBi.Visible = false;
                 btnRoot_JailbreakThietBi.Visible = false;
-                btnCuocGoi.Visible = false;
+                btnCuocGoi.Visible = true;
 
                 type_device_connected = "ANDROID";
             }

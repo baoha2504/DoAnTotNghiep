@@ -189,34 +189,38 @@ namespace MTA_Mobile_Forensic.GUI.Forensic
 
         private async void tab1_btnTimKiemKhuonMat_Click(object sender, EventArgs e)
         {
-            if (tab1_txtPathImage.Text != string.Empty || tab1_txtPathVideo.Text != string.Empty)
+            try
             {
-                if (tab1_response[tab1_sttVideo] != "Item")
+                if (tab1_txtPathImage.Text != string.Empty || tab1_txtPathVideo.Text != string.Empty)
                 {
-                    if (tab1_response[tab1_sttVideo] != "false")
+                    if (tab1_response[tab1_sttVideo] != "Item")
                     {
-                        tab1_txtThongTinTimDuoc.ForeColor = Color.Green;
-                        tab1_txtThongTinTimDuoc.Text = tab1_response[tab1_sttVideo].Replace("\n", Environment.NewLine);
+                        if (tab1_response[tab1_sttVideo] != "false")
+                        {
+                            tab1_txtThongTinTimDuoc.ForeColor = Color.Green;
+                            tab1_txtThongTinTimDuoc.Text = tab1_response[tab1_sttVideo].Replace("\n", Environment.NewLine);
+                        }
+                        else
+                        {
+                            tab1_txtThongTinTimDuoc.ForeColor = Color.Red;
+                            tab1_txtThongTinTimDuoc.Text = "Không xuất hiện khuôn mặt trong video";
+                        }
                     }
                     else
                     {
-                        tab1_txtThongTinTimDuoc.ForeColor = Color.Red;
-                        tab1_txtThongTinTimDuoc.Text = "Không xuất hiện khuôn mặt trong video";
+                        tab1_txtThongTinTimDuoc.Text = string.Empty;
+                        tab1_ImageLoad.Visible = true;
+                        List<string> pathVideos = new List<string>();
+                        pathVideos.Add(tab1_txtPathVideo.Text);
+                        await TimKiemKhuonMatVideo(tab1_pathImage_dachon, pathVideos);
                     }
                 }
                 else
                 {
-                    tab1_txtThongTinTimDuoc.Text = string.Empty;
-                    tab1_ImageLoad.Visible = true;
-                    List<string> pathVideos = new List<string>();
-                    pathVideos.Add(tab1_txtPathVideo.Text);
-                    await TimKiemKhuonMatVideo(tab1_pathImage_dachon, pathVideos);
+                    MessageBox.Show("Chưa chọn ảnh hoặc video!");
                 }
             }
-            else
-            {
-                MessageBox.Show("Chưa chọn ảnh hoặc video!");
-            }
+            catch { }
         }
 
         private void tab2_GetVideoInFolder(string folderPath)
